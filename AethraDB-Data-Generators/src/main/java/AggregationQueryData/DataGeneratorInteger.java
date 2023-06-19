@@ -23,7 +23,7 @@ import static org.apache.commons.math3.genetics.GeneticAlgorithm.getRandomGenera
 
 /**
  * This data generator is aimed at reproducing datasets which are similar to the PCQ paper.
- * (https://linmagit.github.io/publications/2020.pcq.vldb.pdf).
+ * (<a href="https://linmagit.github.io/publications/2020.pcq.vldb.pdf">PCQ paper</a>).
  * However, since the exact construction of the dataset is unavailable, we make some assumptions.
  * These are noted below whenever applicable.
  * There are two dataset types to generate: one which has a varying number of aggregations in the
@@ -70,6 +70,7 @@ public class DataGeneratorInteger {
         int[] keySetSizes = new int[] {
                 1, // 2^0
                 2, // 2^1
+                2 << 1,
                 2 << 2,
                 2 << 3,
                 2 << 4,
@@ -195,7 +196,7 @@ public class DataGeneratorInteger {
      */
     private static void generateSkewedKeys() {
         // As in the paper, for this kind of dataset, we fix the number of keys at ~200k
-        int[] keys = generateKeys(2 << 18);
+        int[] keys = generateKeys(2 << 17);
 
         // Then, we generate a dataset with a skewed key distribution using a zipfian distribution
         // with varying skew. We assume that the paper uses the following skew parameters
@@ -217,7 +218,8 @@ public class DataGeneratorInteger {
 
         // We generate a dataset for each skew factor
         for (double skewFactor : skewFactors) {
-            String datasetFolderName = targetDirectoryPrefix + "_size_" + datasetSize + "_keys_" + keys.length + "_skew_" + skewFactor;
+            int greaterDatasetSize = 2 * datasetSize; // Use twice as many records to allow more skew
+            String datasetFolderName = targetDirectoryPrefix + "_size_" + greaterDatasetSize + "_keys_" + keys.length + "_skew_" + skewFactor;
             File datasetFolder = new File(datasetFolderName);
 
             if (datasetFolder.exists())
@@ -226,14 +228,14 @@ public class DataGeneratorInteger {
             if (!datasetFolder.mkdir())
                 throw new RuntimeException("Could not create folder " + datasetFolderName);
 
-            generateSkewedKey(datasetFolder, skewFactor, keys, datasetSize);
+            generateSkewedKey(datasetFolder, skewFactor, keys, greaterDatasetSize);
         }
     }
 
     /**
      * Method which generates a dataset where the distribution of rows per key is skewed according
      * to a skewed zipfian distribution.
-     * (https://jasoncrease.medium.com/zipf-54912d5651cc)
+     * (<a href="https://jasoncrease.medium.com/zipf-54912d5651cc">Zipfian Distribution in Java</a>)
      * @param targetFolder The folder in which the generated dataset should be stored.
      * @param skewFactor The skew factor to use in the zipfian distribution.
      * @param keys The key-set to use in the experiment.
@@ -248,6 +250,10 @@ public class DataGeneratorInteger {
         double seed = (skewFactor + 1) * 140623;
         randomGenerator.setSeed((int) seed);
         ZipfDistribution keyDistribution = new ZipfDistribution(randomGenerator, keys.length, skewFactor);
+
+        // Initialise variables to generate a value for each key first, so that we know the number of
+        // keys is really equal to keys.length
+        int keyPregenIndex = 0;
 
         // Generate the records and store them in an arrow file
         // Get an allocator to allocate the vectors
@@ -292,9 +298,14 @@ public class DataGeneratorInteger {
                     col4Vector.allocateNew(trueVectorLength);
 
                     for (int i = 0; i < trueVectorLength; i++) {
-                        // Pick a skewed key from the key set
-                        int keyIndex = keyDistribution.sample() - 1;
-                        col1Vector.set(i, keys[keyIndex]);
+                        if (keyPregenIndex >= keys.length) {
+                            // Pick a skewed key from the key set
+                            int keyIndex = keyDistribution.sample() - 1;
+                            col1Vector.set(i, keys[keyIndex]);
+                        } else {
+                            // Generate a value for keys[keyPregenIndex] first, so we know it is present in the dataset
+                            col1Vector.set(i, keys[keyPregenIndex++]);
+                        }
 
                         // Generate the remaining values randomly in their domain
                         col2Vector.set(i, randomGenerator.nextInt());
@@ -331,7 +342,6 @@ public class DataGeneratorInteger {
 
         // Generate enough keys
         for (int k = 0; k < keys.length; k++) {
-            boolean notUnique = true;
             int key;
 
             // Generate a new unique value
