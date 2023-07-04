@@ -2,13 +2,12 @@ from pathlib import Path
 import duckdb
 import pyarrow as pa
 import pyarrow.dataset as ds
-import pandas
 import json
 from contextlib import redirect_stdout
 import io
 
 # The base directory for the datasets
-datasets_path = Path("/nvtmp/AethraTestData/aggregation_query_int")
+datasets_path = Path("/nvtmp/AethraTestData/filter_query_int")
 
 # Get the directories of the actual datasets
 dataset_directories = [p for p in datasets_path.glob("*") if p.is_dir()]
@@ -17,21 +16,21 @@ print("DuckDB Version " + duckdb.__version__ + " - PyArrow Version " + pa.__vers
 
 # For each dataset, execute the query using duckdb and compute the average query time over 10 runs
 for dataset in dataset_directories:
-    dataset_file = dataset / 'aggregation_query_table.arrow'
+    dataset_file = dataset / 'filter_query_table.arrow'
     temp_profile_file = dataset / 'duckdb_profile.json'
 
     con = duckdb.connect()
     con.sql("PRAGMA enable_profiling='json'")
     con.sql("PRAGMA profile_output='" + str(temp_profile_file) + "'")
     con.sql("SET threads TO 1;")
-    aggregation_query_table = ds.dataset(dataset_file, format='arrow')
+    filter_query_table = ds.dataset(dataset_file, format='arrow')
     
     cumulative_query_time = 0
 
     for i in range(10):
         # Execute the query
         with redirect_stdout(io.StringIO()) as f:
-            con.sql("SELECT col1, SUM(col2), SUM(col3), SUM(col4) FROM aggregation_query_table GROUP BY col1").show()
+            con.sql("SELECT COUNT(*) FROM filter_query_table WHERE col1 < 3000 AND col2 < 3000 AND col3 < 3000").show()
 
         # Read the total query time back
         with open(temp_profile_file) as temp_profile:
