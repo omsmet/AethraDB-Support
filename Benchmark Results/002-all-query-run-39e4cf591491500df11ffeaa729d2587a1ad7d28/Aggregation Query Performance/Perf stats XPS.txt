@@ -1,0 +1,20 @@
+Performance counter stats for '/nvtmp/openjdk-20.0.1/bin/java -jar target/AethraDB-benchmarks.jar benchmarks.aggregation_query.NonVectorisedNonSimd_No_Verification':
+
+           127,051      context-switches                                                      
+             1,570      cpu-migrations                                                        
+         4,149,402      page-faults                                                           
+ 1,708,025,246,170      cycles                                                                  (40.08%)
+ 1,369,975,750,883      instructions                     #    0.80  insn per cycle              (50.09%)
+   209,405,624,067      branches                                                                (50.05%)
+     3,103,586,411      branch-misses                    #    1.48% of all branches             (50.03%)
+   213,161,592,880      cache-references                                                        (50.01%)
+    36,299,402,124      cache-misses                     #   17.029 % of all cache refs         (50.01%)
+    82,530,058,591      L1-dcache-load-misses            #   15.77% of all L1-dcache accesses   (40.02%)
+   523,389,149,191      L1-dcache-loads                                                         (40.06%)
+   100,225,858,564      L1-dcache-stores                                                        (40.07%)
+     2,554,921,206      L1-icache-load-misses                                                   (40.08%)
+
+     584.657228241 seconds time elapsed
+
+     584.904000000 seconds user
+      19.810930000 seconds sys 

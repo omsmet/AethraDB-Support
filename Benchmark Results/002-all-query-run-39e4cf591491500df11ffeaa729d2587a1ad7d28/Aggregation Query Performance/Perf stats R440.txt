@@ -1,0 +1,20 @@
+Performance counter stats for '/home/olivier/external_software/openjdk-20.0.1/bin/java -jar ./AethraDB-benchmarks.jar benchmarks.aggregation_query.NonVectorisedNonSimd_No_Verification':
+
+           128,532      context-switches                                            
+               650      cpu-migrations                                              
+        13,944,404      page-faults                                                 
+ 3,406,181,400,053      cycles                                                        (40.04%)
+   812,459,763,427      instructions              #    0.24  insn per cycle           (50.04%)
+   126,794,312,646      branches                                                      (50.05%)
+     1,744,794,628      branch-misses             #    1.38% of all branches          (50.06%)
+    35,332,019,108      cache-references                                              (50.06%)
+    12,171,881,672      cache-misses              #   34.450 % of all cache refs      (50.05%)
+    56,027,382,100      L1-dcache-load-misses     #   18.68% of all L1-dcache accesses  (40.04%)
+   299,921,573,559      L1-dcache-loads                                               (40.03%)
+    66,582,324,618      L1-dcache-stores                                              (40.02%)
+     2,302,870,560      L1-icache-load-misses                                         (40.03%)
+
+     964.791719318 seconds time elapsed
+
+     973.799135000 seconds user
+      25.265216000 seconds sys

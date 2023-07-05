@@ -1,0 +1,4 @@
+DuckDB Version 0.8.0 - PyArrow Version 12.0.0 - Single Threaded Mode
+/nvtmp/AethraTestData/filter_query_int/arrow_col1_002_col2_098_col3_098/filter_query_table.arrow, 0.07149319999999999
+/nvtmp/AethraTestData/filter_query_int/arrow_col1_098_col2_098_col3_002/filter_query_table.arrow, 0.07771779999999999
+/nvtmp/AethraTestData/filter_query_int/arrow_col1_098_col2_002_col3_098/filter_query_table.arrow, 0.07624210000000001

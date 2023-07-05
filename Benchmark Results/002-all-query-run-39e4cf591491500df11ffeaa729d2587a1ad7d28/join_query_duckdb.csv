@@ -1,0 +1,17 @@
+Dataset,Running-Time
+/nvtmp/AethraTestData/join_query_int/A_B_0.8_C_0.8,0.6694621
+/nvtmp/AethraTestData/join_query_int/A_B_0.8_C_0.2,0.6139865999999999
+/nvtmp/AethraTestData/join_query_int/A_B_0.6_C_0.8,0.6182274
+/nvtmp/AethraTestData/join_query_int/A_B_0.4_C_0.2,0.5208787
+/nvtmp/AethraTestData/join_query_int/A_B_0.2_C_0.6,0.4862892
+/nvtmp/AethraTestData/join_query_int/A_B_0.8_C_0.4,0.6376674
+/nvtmp/AethraTestData/join_query_int/A_B_0.6_C_0.2,0.5707618999999999
+/nvtmp/AethraTestData/join_query_int/A_B_0.4_C_0.8,0.5592667
+/nvtmp/AethraTestData/join_query_int/A_B_0.2_C_0.4,0.4847646
+/nvtmp/AethraTestData/join_query_int/A_B_0.2_C_0.8,0.4978878
+/nvtmp/AethraTestData/join_query_int/A_B_0.6_C_0.6,0.6047819999999999
+/nvtmp/AethraTestData/join_query_int/A_B_0.2_C_0.2,0.47477790000000003
+/nvtmp/AethraTestData/join_query_int/A_B_0.4_C_0.4,0.5397653
+/nvtmp/AethraTestData/join_query_int/A_B_0.4_C_0.6,0.5476139999999999
+/nvtmp/AethraTestData/join_query_int/A_B_0.6_C_0.4,0.5837947
+/nvtmp/AethraTestData/join_query_int/A_B_0.8_C_0.6,0.6459889

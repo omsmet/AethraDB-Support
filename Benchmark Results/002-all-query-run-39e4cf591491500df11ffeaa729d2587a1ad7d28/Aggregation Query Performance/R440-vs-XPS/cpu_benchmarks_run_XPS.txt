@@ -1,0 +1,1747 @@
+# JMH version: 1.36
+# VM version: JDK 20.0.1, OpenJDK 64-Bit Server VM, 20.0.1+9
+# VM invoker: /usr/lib/jvm/java-20-openjdk/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: benchmarks.cpu_benchmarks.BiggestPrime.computeLargestPrime
+
+# Run progress: 0.00% complete, ETA 00:41:40
+# Fork: 1 of 5
+# Warmup Iteration   1: 2969.816 ±(99.9%) 7.021 ns/op
+# Warmup Iteration   2: 3020.834 ±(99.9%) 3.631 ns/op
+# Warmup Iteration   3: 2252.176 ±(99.9%) 0.339 ns/op
+# Warmup Iteration   4: 2523.815 ±(99.9%) 2.792 ns/op
+# Warmup Iteration   5: 2245.250 ±(99.9%) 20.758 ns/op
+Iteration   1: 2122.489 ±(99.9%) 2.195 ns/op
+                 computeLargestPrime·p0.00:   2104.000 ns/op
+                 computeLargestPrime·p0.50:   2120.000 ns/op
+                 computeLargestPrime·p0.90:   2128.000 ns/op
+                 computeLargestPrime·p0.95:   2132.000 ns/op
+                 computeLargestPrime·p0.99:   2136.000 ns/op
+                 computeLargestPrime·p0.999:  3314.944 ns/op
+                 computeLargestPrime·p0.9999: 4881.472 ns/op
+                 computeLargestPrime·p1.00:   195840.000 ns/op
+
+Iteration   2: 2199.081 ±(99.9%) 0.418 ns/op
+                 computeLargestPrime·p0.00:   2184.000 ns/op
+                 computeLargestPrime·p0.50:   2196.000 ns/op
+                 computeLargestPrime·p0.90:   2200.000 ns/op
+                 computeLargestPrime·p0.95:   2204.000 ns/op
+                 computeLargestPrime·p0.99:   2208.000 ns/op
+                 computeLargestPrime·p0.999:  3399.204 ns/op
+                 computeLargestPrime·p0.9999: 4591.682 ns/op
+                 computeLargestPrime·p1.00:   13520.000 ns/op
+
+Iteration   3: 2568.035 ±(99.9%) 0.536 ns/op
+                 computeLargestPrime·p0.00:   2552.000 ns/op
+                 computeLargestPrime·p0.50:   2564.000 ns/op
+                 computeLargestPrime·p0.90:   2572.000 ns/op
+                 computeLargestPrime·p0.95:   2576.000 ns/op
+                 computeLargestPrime·p0.99:   2580.000 ns/op
+                 computeLargestPrime·p0.999:  3832.000 ns/op
+                 computeLargestPrime·p0.9999: 5060.800 ns/op
+                 computeLargestPrime·p1.00:   14752.000 ns/op
+
+Iteration   4: 4083.558 ±(99.9%) 0.654 ns/op
+                 computeLargestPrime·p0.00:   4056.000 ns/op
+                 computeLargestPrime·p0.50:   4076.000 ns/op
+                 computeLargestPrime·p0.90:   4092.000 ns/op
+                 computeLargestPrime·p0.95:   4096.000 ns/op
+                 computeLargestPrime·p0.99:   4104.000 ns/op
+                 computeLargestPrime·p0.999:  5816.000 ns/op
+                 computeLargestPrime·p0.9999: 7245.814 ns/op
+                 computeLargestPrime·p1.00:   20000.000 ns/op
+
+Iteration   5: 2192.199 ±(99.9%) 0.393 ns/op
+                 computeLargestPrime·p0.00:   2176.000 ns/op
+                 computeLargestPrime·p0.50:   2192.000 ns/op
+                 computeLargestPrime·p0.90:   2196.000 ns/op
+                 computeLargestPrime·p0.95:   2196.000 ns/op
+                 computeLargestPrime·p0.99:   2200.000 ns/op
+                 computeLargestPrime·p0.999:  3363.952 ns/op
+                 computeLargestPrime·p0.9999: 4654.395 ns/op
+                 computeLargestPrime·p1.00:   13760.000 ns/op
+
+
+# Run progress: 4.00% complete, ETA 00:40:05
+# Fork: 2 of 5
+# Warmup Iteration   1: 2756.183 ±(99.9%) 4.992 ns/op
+# Warmup Iteration   2: 3024.955 ±(99.9%) 4.506 ns/op
+# Warmup Iteration   3: 2253.312 ±(99.9%) 0.662 ns/op
+# Warmup Iteration   4: 2522.432 ±(99.9%) 1.277 ns/op
+# Warmup Iteration   5: 2224.514 ±(99.9%) 0.374 ns/op
+Iteration   1: 2120.335 ±(99.9%) 0.569 ns/op
+                 computeLargestPrime·p0.00:   2104.000 ns/op
+                 computeLargestPrime·p0.50:   2120.000 ns/op
+                 computeLargestPrime·p0.90:   2124.000 ns/op
+                 computeLargestPrime·p0.95:   2124.000 ns/op
+                 computeLargestPrime·p0.99:   2128.000 ns/op
+                 computeLargestPrime·p0.999:  2688.892 ns/op
+                 computeLargestPrime·p0.9999: 4382.757 ns/op
+                 computeLargestPrime·p1.00:   17216.000 ns/op
+
+Iteration   2: 2202.865 ±(99.9%) 2.265 ns/op
+                 computeLargestPrime·p0.00:   2184.000 ns/op
+                 computeLargestPrime·p0.50:   2200.000 ns/op
+                 computeLargestPrime·p0.90:   2208.000 ns/op
+                 computeLargestPrime·p0.95:   2208.000 ns/op
+                 computeLargestPrime·p0.99:   2212.000 ns/op
+                 computeLargestPrime·p0.999:  3119.312 ns/op
+                 computeLargestPrime·p0.9999: 4964.698 ns/op
+                 computeLargestPrime·p1.00:   189184.000 ns/op
+
+Iteration   3: 2566.439 ±(99.9%) 1.051 ns/op
+                 computeLargestPrime·p0.00:   2548.000 ns/op
+                 computeLargestPrime·p0.50:   2564.000 ns/op
+                 computeLargestPrime·p0.90:   2568.000 ns/op
+                 computeLargestPrime·p0.95:   2572.000 ns/op
+                 computeLargestPrime·p0.99:   2576.000 ns/op
+                 computeLargestPrime·p0.999:  3834.576 ns/op
+                 computeLargestPrime·p0.9999: 11597.152 ns/op
+                 computeLargestPrime·p1.00:   33856.000 ns/op
+
+Iteration   4: 4078.972 ±(99.9%) 0.656 ns/op
+                 computeLargestPrime·p0.00:   4056.000 ns/op
+                 computeLargestPrime·p0.50:   4076.000 ns/op
+                 computeLargestPrime·p0.90:   4084.000 ns/op
+                 computeLargestPrime·p0.95:   4088.000 ns/op
+                 computeLargestPrime·p0.99:   4092.000 ns/op
+                 computeLargestPrime·p0.999:  5360.000 ns/op
+                 computeLargestPrime·p0.9999: 6986.800 ns/op
+                 computeLargestPrime·p1.00:   19296.000 ns/op
+
+Iteration   5: 2191.990 ±(99.9%) 0.720 ns/op
+                 computeLargestPrime·p0.00:   2176.000 ns/op
+                 computeLargestPrime·p0.50:   2188.000 ns/op
+                 computeLargestPrime·p0.90:   2196.000 ns/op
+                 computeLargestPrime·p0.95:   2196.000 ns/op
+                 computeLargestPrime·p0.99:   2200.000 ns/op
+                 computeLargestPrime·p0.999:  2820.000 ns/op
+                 computeLargestPrime·p0.9999: 4458.679 ns/op
+                 computeLargestPrime·p1.00:   20608.000 ns/op
+
+
+# Run progress: 8.00% complete, ETA 00:38:24
+# Fork: 3 of 5
+# Warmup Iteration   1: 2788.815 ±(99.9%) 4.674 ns/op
+# Warmup Iteration   2: 3067.113 ±(99.9%) 3.814 ns/op
+# Warmup Iteration   3: 2254.221 ±(99.9%) 0.447 ns/op
+# Warmup Iteration   4: 2522.577 ±(99.9%) 0.622 ns/op
+# Warmup Iteration   5: 2230.265 ±(99.9%) 0.466 ns/op
+Iteration   1: 2122.968 ±(99.9%) 2.153 ns/op
+                 computeLargestPrime·p0.00:   2104.000 ns/op
+                 computeLargestPrime·p0.50:   2120.000 ns/op
+                 computeLargestPrime·p0.90:   2128.000 ns/op
+                 computeLargestPrime·p0.95:   2128.000 ns/op
+                 computeLargestPrime·p0.99:   2132.000 ns/op
+                 computeLargestPrime·p0.999:  3192.000 ns/op
+                 computeLargestPrime·p0.9999: 4496.000 ns/op
+                 computeLargestPrime·p1.00:   191232.000 ns/op
+
+Iteration   2: 2201.572 ±(99.9%) 2.177 ns/op
+                 computeLargestPrime·p0.00:   2184.000 ns/op
+                 computeLargestPrime·p0.50:   2200.000 ns/op
+                 computeLargestPrime·p0.90:   2204.000 ns/op
+                 computeLargestPrime·p0.95:   2208.000 ns/op
+                 computeLargestPrime·p0.99:   2212.000 ns/op
+                 computeLargestPrime·p0.999:  3452.000 ns/op
+                 computeLargestPrime·p0.9999: 4551.818 ns/op
+                 computeLargestPrime·p1.00:   186880.000 ns/op
+
+Iteration   3: 2564.452 ±(99.9%) 0.699 ns/op
+                 computeLargestPrime·p0.00:   2548.000 ns/op
+                 computeLargestPrime·p0.50:   2560.000 ns/op
+                 computeLargestPrime·p0.90:   2568.000 ns/op
+                 computeLargestPrime·p0.95:   2568.000 ns/op
+                 computeLargestPrime·p0.99:   2576.000 ns/op
+                 computeLargestPrime·p0.999:  3832.000 ns/op
+                 computeLargestPrime·p0.9999: 5688.651 ns/op
+                 computeLargestPrime·p1.00:   27136.000 ns/op
+
+Iteration   4: 4080.319 ±(99.9%) 0.575 ns/op
+                 computeLargestPrime·p0.00:   4056.000 ns/op
+                 computeLargestPrime·p0.50:   4076.000 ns/op
+                 computeLargestPrime·p0.90:   4088.000 ns/op
+                 computeLargestPrime·p0.95:   4092.000 ns/op
+                 computeLargestPrime·p0.99:   4096.000 ns/op
+                 computeLargestPrime·p0.999:  5416.000 ns/op
+                 computeLargestPrime·p0.9999: 7016.076 ns/op
+                 computeLargestPrime·p1.00:   15856.000 ns/op
+
+Iteration   5: 2194.127 ±(99.9%) 0.480 ns/op
+                 computeLargestPrime·p0.00:   2176.000 ns/op
+                 computeLargestPrime·p0.50:   2192.000 ns/op
+                 computeLargestPrime·p0.90:   2200.000 ns/op
+                 computeLargestPrime·p0.95:   2204.000 ns/op
+                 computeLargestPrime·p0.99:   2204.000 ns/op
+                 computeLargestPrime·p0.999:  3436.000 ns/op
+                 computeLargestPrime·p0.9999: 4798.520 ns/op
+                 computeLargestPrime·p1.00:   10992.000 ns/op
+
+
+# Run progress: 12.00% complete, ETA 00:36:43
+# Fork: 4 of 5
+# Warmup Iteration   1: 2795.176 ±(99.9%) 4.585 ns/op
+# Warmup Iteration   2: 3025.879 ±(99.9%) 4.916 ns/op
+# Warmup Iteration   3: 2253.997 ±(99.9%) 2.196 ns/op
+# Warmup Iteration   4: 2521.536 ±(99.9%) 0.565 ns/op
+# Warmup Iteration   5: 2226.617 ±(99.9%) 0.715 ns/op
+Iteration   1: 2120.151 ±(99.9%) 0.456 ns/op
+                 computeLargestPrime·p0.00:   2064.000 ns/op
+                 computeLargestPrime·p0.50:   2116.000 ns/op
+                 computeLargestPrime·p0.90:   2124.000 ns/op
+                 computeLargestPrime·p0.95:   2128.000 ns/op
+                 computeLargestPrime·p0.99:   2132.000 ns/op
+                 computeLargestPrime·p0.999:  3129.500 ns/op
+                 computeLargestPrime·p0.9999: 4245.000 ns/op
+                 computeLargestPrime·p1.00:   15360.000 ns/op
+
+Iteration   2: 2199.675 ±(99.9%) 0.505 ns/op
+                 computeLargestPrime·p0.00:   2184.000 ns/op
+                 computeLargestPrime·p0.50:   2196.000 ns/op
+                 computeLargestPrime·p0.90:   2204.000 ns/op
+                 computeLargestPrime·p0.95:   2204.000 ns/op
+                 computeLargestPrime·p0.99:   2208.000 ns/op
+                 computeLargestPrime·p0.999:  3366.280 ns/op
+                 computeLargestPrime·p0.9999: 4699.828 ns/op
+                 computeLargestPrime·p1.00:   22176.000 ns/op
+
+Iteration   3: 2565.354 ±(99.9%) 0.461 ns/op
+                 computeLargestPrime·p0.00:   2548.000 ns/op
+                 computeLargestPrime·p0.50:   2564.000 ns/op
+                 computeLargestPrime·p0.90:   2572.000 ns/op
+                 computeLargestPrime·p0.95:   2572.000 ns/op
+                 computeLargestPrime·p0.99:   2580.000 ns/op
+                 computeLargestPrime·p0.999:  3818.752 ns/op
+                 computeLargestPrime·p0.9999: 5196.550 ns/op
+                 computeLargestPrime·p1.00:   11696.000 ns/op
+
+Iteration   4: 4080.561 ±(99.9%) 2.080 ns/op
+                 computeLargestPrime·p0.00:   4056.000 ns/op
+                 computeLargestPrime·p0.50:   4076.000 ns/op
+                 computeLargestPrime·p0.90:   4088.000 ns/op
+                 computeLargestPrime·p0.95:   4092.000 ns/op
+                 computeLargestPrime·p0.99:   4096.000 ns/op
+                 computeLargestPrime·p0.999:  5392.000 ns/op
+                 computeLargestPrime·p0.9999: 6893.357 ns/op
+                 computeLargestPrime·p1.00:   192000.000 ns/op
+
+Iteration   5: 2191.651 ±(99.9%) 0.367 ns/op
+                 computeLargestPrime·p0.00:   2176.000 ns/op
+                 computeLargestPrime·p0.50:   2188.000 ns/op
+                 computeLargestPrime·p0.90:   2196.000 ns/op
+                 computeLargestPrime·p0.95:   2196.000 ns/op
+                 computeLargestPrime·p0.99:   2200.000 ns/op
+                 computeLargestPrime·p0.999:  3377.600 ns/op
+                 computeLargestPrime·p0.9999: 4699.120 ns/op
+                 computeLargestPrime·p1.00:   9872.000 ns/op
+
+
+# Run progress: 16.00% complete, ETA 00:35:03
+# Fork: 5 of 5
+# Warmup Iteration   1: 2788.259 ±(99.9%) 5.608 ns/op
+# Warmup Iteration   2: 3017.832 ±(99.9%) 2.215 ns/op
+# Warmup Iteration   3: 2252.796 ±(99.9%) 2.221 ns/op
+# Warmup Iteration   4: 2519.424 ±(99.9%) 0.386 ns/op
+# Warmup Iteration   5: 2226.250 ±(99.9%) 0.351 ns/op
+Iteration   1: 2122.480 ±(99.9%) 0.346 ns/op
+                 computeLargestPrime·p0.00:   2104.000 ns/op
+                 computeLargestPrime·p0.50:   2120.000 ns/op
+                 computeLargestPrime·p0.90:   2132.000 ns/op
+                 computeLargestPrime·p0.95:   2132.000 ns/op
+                 computeLargestPrime·p0.99:   2136.000 ns/op
+                 computeLargestPrime·p0.999:  2981.512 ns/op
+                 computeLargestPrime·p0.9999: 4081.027 ns/op
+                 computeLargestPrime·p1.00:   11760.000 ns/op
+
+Iteration   2: 2199.563 ±(99.9%) 0.442 ns/op
+                 computeLargestPrime·p0.00:   2184.000 ns/op
+                 computeLargestPrime·p0.50:   2196.000 ns/op
+                 computeLargestPrime·p0.90:   2204.000 ns/op
+                 computeLargestPrime·p0.95:   2208.000 ns/op
+                 computeLargestPrime·p0.99:   2212.000 ns/op
+                 computeLargestPrime·p0.999:  3208.000 ns/op
+                 computeLargestPrime·p0.9999: 4571.021 ns/op
+                 computeLargestPrime·p1.00:   14592.000 ns/op
+
+Iteration   3: 2567.086 ±(99.9%) 2.549 ns/op
+                 computeLargestPrime·p0.00:   2548.000 ns/op
+                 computeLargestPrime·p0.50:   2564.000 ns/op
+                 computeLargestPrime·p0.90:   2576.000 ns/op
+                 computeLargestPrime·p0.95:   2580.000 ns/op
+                 computeLargestPrime·p0.99:   2584.000 ns/op
+                 computeLargestPrime·p0.999:  3539.536 ns/op
+                 computeLargestPrime·p0.9999: 4596.707 ns/op
+                 computeLargestPrime·p1.00:   187136.000 ns/op
+
+Iteration   4: 4077.946 ±(99.9%) 0.413 ns/op
+                 computeLargestPrime·p0.00:   4056.000 ns/op
+                 computeLargestPrime·p0.50:   4076.000 ns/op
+                 computeLargestPrime·p0.90:   4084.000 ns/op
+                 computeLargestPrime·p0.95:   4088.000 ns/op
+                 computeLargestPrime·p0.99:   4092.000 ns/op
+                 computeLargestPrime·p0.999:  5336.000 ns/op
+                 computeLargestPrime·p0.9999: 6114.600 ns/op
+                 computeLargestPrime·p1.00:   15888.000 ns/op
+
+Iteration   5: 2192.387 ±(99.9%) 0.409 ns/op
+                 computeLargestPrime·p0.00:   2176.000 ns/op
+                 computeLargestPrime·p0.50:   2188.000 ns/op
+                 computeLargestPrime·p0.90:   2200.000 ns/op
+                 computeLargestPrime·p0.95:   2204.000 ns/op
+                 computeLargestPrime·p0.99:   2208.000 ns/op
+                 computeLargestPrime·p0.999:  3126.632 ns/op
+                 computeLargestPrime·p0.9999: 4275.109 ns/op
+                 computeLargestPrime·p1.00:   13088.000 ns/op
+
+
+
+Result "benchmarks.cpu_benchmarks.BiggestPrime.computeLargestPrime":
+  N = 7088782
+  mean =   2652.013 ±(99.9%) 0.975 ns/op
+
+  Histogram, ns/op:
+    [     0.000,  12500.000) = 7088654 
+    [ 12500.000,  25000.000) = 119 
+    [ 25000.000,  37500.000) = 3 
+    [ 37500.000,  50000.000) = 0 
+    [ 50000.000,  62500.000) = 0 
+    [ 62500.000,  75000.000) = 0 
+    [ 75000.000,  87500.000) = 0 
+    [ 87500.000, 100000.000) = 0 
+    [100000.000, 112500.000) = 0 
+    [112500.000, 125000.000) = 0 
+    [125000.000, 137500.000) = 0 
+    [137500.000, 150000.000) = 0 
+    [150000.000, 162500.000) = 0 
+    [162500.000, 175000.000) = 0 
+    [175000.000, 187500.000) = 2 
+
+  Percentiles, ns/op:
+      p(0.0000) =   2064.000 ns/op
+     p(50.0000) =   2196.000 ns/op
+     p(90.0000) =   4076.000 ns/op
+     p(95.0000) =   4084.000 ns/op
+     p(99.0000) =   4092.000 ns/op
+     p(99.9000) =   4104.000 ns/op
+     p(99.9900) =   6112.000 ns/op
+     p(99.9990) =  14609.795 ns/op
+     p(99.9999) =  33259.378 ns/op
+    p(100.0000) = 195840.000 ns/op
+
+
+# JMH version: 1.36
+# VM version: JDK 20.0.1, OpenJDK 64-Bit Server VM, 20.0.1+9
+# VM invoker: /usr/lib/jvm/java-20-openjdk/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: benchmarks.cpu_benchmarks.Euclid.computeGcdDiv
+
+# Run progress: 20.00% complete, ETA 00:33:23
+# Fork: 1 of 5
+# Warmup Iteration   1: 5577.755 ±(99.9%) 89.546 ns/op
+# Warmup Iteration   2: 5641.428 ±(99.9%) 32.529 ns/op
+# Warmup Iteration   3: 6595.299 ±(99.9%) 39.029 ns/op
+# Warmup Iteration   4: 5635.717 ±(99.9%) 34.092 ns/op
+# Warmup Iteration   5: 5678.519 ±(99.9%) 43.029 ns/op
+Iteration   1: 5239.207 ±(99.9%) 26.748 ns/op
+                 computeGcdDiv·p0.00:   5056.000 ns/op
+                 computeGcdDiv·p0.50:   5192.000 ns/op
+                 computeGcdDiv·p0.90:   5248.000 ns/op
+                 computeGcdDiv·p0.95:   5304.000 ns/op
+                 computeGcdDiv·p0.99:   5440.000 ns/op
+                 computeGcdDiv·p0.999:  7656.000 ns/op
+                 computeGcdDiv·p0.9999: 15071.144 ns/op
+                 computeGcdDiv·p1.00:   637952.000 ns/op
+
+Iteration   2: 5303.450 ±(99.9%) 34.170 ns/op
+                 computeGcdDiv·p0.00:   5016.000 ns/op
+                 computeGcdDiv·p0.50:   5256.000 ns/op
+                 computeGcdDiv·p0.90:   5312.000 ns/op
+                 computeGcdDiv·p0.95:   5360.000 ns/op
+                 computeGcdDiv·p0.99:   5504.000 ns/op
+                 computeGcdDiv·p0.999:  7809.168 ns/op
+                 computeGcdDiv·p0.9999: 18826.067 ns/op
+                 computeGcdDiv·p1.00:   821248.000 ns/op
+
+Iteration   3: 6378.824 ±(99.9%) 45.795 ns/op
+                 computeGcdDiv·p0.00:   6048.000 ns/op
+                 computeGcdDiv·p0.50:   6312.000 ns/op
+                 computeGcdDiv·p0.90:   6384.000 ns/op
+                 computeGcdDiv·p0.95:   6448.000 ns/op
+                 computeGcdDiv·p0.99:   6584.000 ns/op
+                 computeGcdDiv·p0.999:  9876.352 ns/op
+                 computeGcdDiv·p0.9999: 22515.302 ns/op
+                 computeGcdDiv·p1.00:   1038336.000 ns/op
+
+Iteration   4: 5588.633 ±(99.9%) 29.944 ns/op
+                 computeGcdDiv·p0.00:   5296.000 ns/op
+                 computeGcdDiv·p0.50:   5536.000 ns/op
+                 computeGcdDiv·p0.90:   5600.000 ns/op
+                 computeGcdDiv·p0.95:   5656.000 ns/op
+                 computeGcdDiv·p0.99:   5792.000 ns/op
+                 computeGcdDiv·p0.999:  8752.000 ns/op
+                 computeGcdDiv·p0.9999: 19157.741 ns/op
+                 computeGcdDiv·p1.00:   652288.000 ns/op
+
+Iteration   5: 5067.684 ±(99.9%) 15.263 ns/op
+                 computeGcdDiv·p0.00:   4824.000 ns/op
+                 computeGcdDiv·p0.50:   5040.000 ns/op
+                 computeGcdDiv·p0.90:   5096.000 ns/op
+                 computeGcdDiv·p0.95:   5152.000 ns/op
+                 computeGcdDiv·p0.99:   5288.000 ns/op
+                 computeGcdDiv·p0.999:  8741.904 ns/op
+                 computeGcdDiv·p0.9999: 18666.781 ns/op
+                 computeGcdDiv·p1.00:   737280.000 ns/op
+
+
+# Run progress: 24.00% complete, ETA 00:31:43
+# Fork: 2 of 5
+# Warmup Iteration   1: 5654.593 ±(99.9%) 108.573 ns/op
+# Warmup Iteration   2: 5604.832 ±(99.9%) 43.268 ns/op
+# Warmup Iteration   3: 6579.898 ±(99.9%) 44.760 ns/op
+# Warmup Iteration   4: 5618.463 ±(99.9%) 26.929 ns/op
+# Warmup Iteration   5: 5638.677 ±(99.9%) 23.266 ns/op
+Iteration   1: 5210.649 ±(99.9%) 25.413 ns/op
+                 computeGcdDiv·p0.00:   4920.000 ns/op
+                 computeGcdDiv·p0.50:   5168.000 ns/op
+                 computeGcdDiv·p0.90:   5232.000 ns/op
+                 computeGcdDiv·p0.95:   5272.000 ns/op
+                 computeGcdDiv·p0.99:   5416.000 ns/op
+                 computeGcdDiv·p0.999:  7556.480 ns/op
+                 computeGcdDiv·p0.9999: 16823.488 ns/op
+                 computeGcdDiv·p1.00:   730112.000 ns/op
+
+Iteration   2: 5306.049 ±(99.9%) 25.151 ns/op
+                 computeGcdDiv·p0.00:   4992.000 ns/op
+                 computeGcdDiv·p0.50:   5240.000 ns/op
+                 computeGcdDiv·p0.90:   5304.000 ns/op
+                 computeGcdDiv·p0.95:   5352.000 ns/op
+                 computeGcdDiv·p0.99:   6048.000 ns/op
+                 computeGcdDiv·p0.999:  10560.000 ns/op
+                 computeGcdDiv·p0.9999: 18636.870 ns/op
+                 computeGcdDiv·p1.00:   636928.000 ns/op
+
+Iteration   3: 6410.320 ±(99.9%) 50.699 ns/op
+                 computeGcdDiv·p0.00:   6032.000 ns/op
+                 computeGcdDiv·p0.50:   6304.000 ns/op
+                 computeGcdDiv·p0.90:   6376.000 ns/op
+                 computeGcdDiv·p0.95:   6440.000 ns/op
+                 computeGcdDiv·p0.99:   6592.000 ns/op
+                 computeGcdDiv·p0.999:  11056.000 ns/op
+                 computeGcdDiv·p0.9999: 482327.962 ns/op
+                 computeGcdDiv·p1.00:   723968.000 ns/op
+
+Iteration   4: 5567.925 ±(99.9%) 30.640 ns/op
+                 computeGcdDiv·p0.00:   5272.000 ns/op
+                 computeGcdDiv·p0.50:   5520.000 ns/op
+                 computeGcdDiv·p0.90:   5584.000 ns/op
+                 computeGcdDiv·p0.95:   5632.000 ns/op
+                 computeGcdDiv·p0.99:   5784.000 ns/op
+                 computeGcdDiv·p0.999:  9790.032 ns/op
+                 computeGcdDiv·p0.9999: 20271.606 ns/op
+                 computeGcdDiv·p1.00:   885760.000 ns/op
+
+Iteration   5: 5068.084 ±(99.9%) 22.981 ns/op
+                 computeGcdDiv·p0.00:   4800.000 ns/op
+                 computeGcdDiv·p0.50:   5024.000 ns/op
+                 computeGcdDiv·p0.90:   5088.000 ns/op
+                 computeGcdDiv·p0.95:   5136.000 ns/op
+                 computeGcdDiv·p0.99:   5280.000 ns/op
+                 computeGcdDiv·p0.999:  7470.064 ns/op
+                 computeGcdDiv·p0.9999: 18472.826 ns/op
+                 computeGcdDiv·p1.00:   673792.000 ns/op
+
+
+# Run progress: 28.00% complete, ETA 00:30:03
+# Fork: 3 of 5
+# Warmup Iteration   1: 5610.460 ±(99.9%) 107.081 ns/op
+# Warmup Iteration   2: 5605.068 ±(99.9%) 33.265 ns/op
+# Warmup Iteration   3: 6523.959 ±(99.9%) 39.119 ns/op
+# Warmup Iteration   4: 5577.650 ±(99.9%) 39.759 ns/op
+# Warmup Iteration   5: 5577.572 ±(99.9%) 30.325 ns/op
+Iteration   1: 5175.311 ±(99.9%) 25.020 ns/op
+                 computeGcdDiv·p0.00:   4920.000 ns/op
+                 computeGcdDiv·p0.50:   5128.000 ns/op
+                 computeGcdDiv·p0.90:   5192.000 ns/op
+                 computeGcdDiv·p0.95:   5232.000 ns/op
+                 computeGcdDiv·p0.99:   5376.000 ns/op
+                 computeGcdDiv·p0.999:  7765.960 ns/op
+                 computeGcdDiv·p0.9999: 19104.000 ns/op
+                 computeGcdDiv·p1.00:   584704.000 ns/op
+
+Iteration   2: 5262.628 ±(99.9%) 35.069 ns/op
+                 computeGcdDiv·p0.00:   4984.000 ns/op
+                 computeGcdDiv·p0.50:   5192.000 ns/op
+                 computeGcdDiv·p0.90:   5256.000 ns/op
+                 computeGcdDiv·p0.95:   5304.000 ns/op
+                 computeGcdDiv·p0.99:   5456.000 ns/op
+                 computeGcdDiv·p0.999:  8622.464 ns/op
+                 computeGcdDiv·p0.9999: 27752.141 ns/op
+                 computeGcdDiv·p1.00:   877568.000 ns/op
+
+Iteration   3: 6329.979 ±(99.9%) 39.986 ns/op
+                 computeGcdDiv·p0.00:   6000.000 ns/op
+                 computeGcdDiv·p0.50:   6248.000 ns/op
+                 computeGcdDiv·p0.90:   6312.000 ns/op
+                 computeGcdDiv·p0.95:   6368.000 ns/op
+                 computeGcdDiv·p0.99:   6512.000 ns/op
+                 computeGcdDiv·p0.999:  11669.456 ns/op
+                 computeGcdDiv·p0.9999: 83394.822 ns/op
+                 computeGcdDiv·p1.00:   781312.000 ns/op
+
+Iteration   4: 5531.857 ±(99.9%) 29.235 ns/op
+                 computeGcdDiv·p0.00:   5256.000 ns/op
+                 computeGcdDiv·p0.50:   5480.000 ns/op
+                 computeGcdDiv·p0.90:   5536.000 ns/op
+                 computeGcdDiv·p0.95:   5584.000 ns/op
+                 computeGcdDiv·p0.99:   5728.000 ns/op
+                 computeGcdDiv·p0.999:  7778.040 ns/op
+                 computeGcdDiv·p0.9999: 18445.312 ns/op
+                 computeGcdDiv·p1.00:   709632.000 ns/op
+
+Iteration   5: 5032.293 ±(99.9%) 26.688 ns/op
+                 computeGcdDiv·p0.00:   4768.000 ns/op
+                 computeGcdDiv·p0.50:   4984.000 ns/op
+                 computeGcdDiv·p0.90:   5040.000 ns/op
+                 computeGcdDiv·p0.95:   5080.000 ns/op
+                 computeGcdDiv·p0.99:   5240.000 ns/op
+                 computeGcdDiv·p0.999:  8219.632 ns/op
+                 computeGcdDiv·p0.9999: 18681.590 ns/op
+                 computeGcdDiv·p1.00:   728064.000 ns/op
+
+
+# Run progress: 32.00% complete, ETA 00:28:22
+# Fork: 4 of 5
+# Warmup Iteration   1: 5670.092 ±(99.9%) 113.631 ns/op
+# Warmup Iteration   2: 5575.419 ±(99.9%) 30.111 ns/op
+# Warmup Iteration   3: 6542.069 ±(99.9%) 34.524 ns/op
+# Warmup Iteration   4: 5599.848 ±(99.9%) 31.590 ns/op
+# Warmup Iteration   5: 5609.710 ±(99.9%) 28.876 ns/op
+Iteration   1: 5187.450 ±(99.9%) 25.426 ns/op
+                 computeGcdDiv·p0.00:   4904.000 ns/op
+                 computeGcdDiv·p0.50:   5144.000 ns/op
+                 computeGcdDiv·p0.90:   5208.000 ns/op
+                 computeGcdDiv·p0.95:   5248.000 ns/op
+                 computeGcdDiv·p0.99:   5392.000 ns/op
+                 computeGcdDiv·p0.999:  7922.392 ns/op
+                 computeGcdDiv·p0.9999: 18490.557 ns/op
+                 computeGcdDiv·p1.00:   664576.000 ns/op
+
+Iteration   2: 5274.953 ±(99.9%) 32.058 ns/op
+                 computeGcdDiv·p0.00:   4992.000 ns/op
+                 computeGcdDiv·p0.50:   5224.000 ns/op
+                 computeGcdDiv·p0.90:   5280.000 ns/op
+                 computeGcdDiv·p0.95:   5320.000 ns/op
+                 computeGcdDiv·p0.99:   5464.000 ns/op
+                 computeGcdDiv·p0.999:  7814.096 ns/op
+                 computeGcdDiv·p0.9999: 18934.554 ns/op
+                 computeGcdDiv·p1.00:   922624.000 ns/op
+
+Iteration   3: 6332.831 ±(99.9%) 35.758 ns/op
+                 computeGcdDiv·p0.00:   6040.000 ns/op
+                 computeGcdDiv·p0.50:   6272.000 ns/op
+                 computeGcdDiv·p0.90:   6344.000 ns/op
+                 computeGcdDiv·p0.95:   6392.000 ns/op
+                 computeGcdDiv·p0.99:   6536.000 ns/op
+                 computeGcdDiv·p0.999:  8560.000 ns/op
+                 computeGcdDiv·p0.9999: 16363.120 ns/op
+                 computeGcdDiv·p1.00:   851968.000 ns/op
+
+Iteration   4: 5549.955 ±(99.9%) 28.841 ns/op
+                 computeGcdDiv·p0.00:   5264.000 ns/op
+                 computeGcdDiv·p0.50:   5504.000 ns/op
+                 computeGcdDiv·p0.90:   5568.000 ns/op
+                 computeGcdDiv·p0.95:   5616.000 ns/op
+                 computeGcdDiv·p0.99:   5760.000 ns/op
+                 computeGcdDiv·p0.999:  9441.376 ns/op
+                 computeGcdDiv·p0.9999: 20602.150 ns/op
+                 computeGcdDiv·p1.00:   817152.000 ns/op
+
+Iteration   5: 5054.502 ±(99.9%) 26.082 ns/op
+                 computeGcdDiv·p0.00:   4768.000 ns/op
+                 computeGcdDiv·p0.50:   5008.000 ns/op
+                 computeGcdDiv·p0.90:   5064.000 ns/op
+                 computeGcdDiv·p0.95:   5112.000 ns/op
+                 computeGcdDiv·p0.99:   5264.000 ns/op
+                 computeGcdDiv·p0.999:  7837.920 ns/op
+                 computeGcdDiv·p0.9999: 19115.200 ns/op
+                 computeGcdDiv·p1.00:   727040.000 ns/op
+
+
+# Run progress: 36.00% complete, ETA 00:26:42
+# Fork: 5 of 5
+# Warmup Iteration   1: 5661.561 ±(99.9%) 102.256 ns/op
+# Warmup Iteration   2: 5612.312 ±(99.9%) 33.326 ns/op
+# Warmup Iteration   3: 6537.516 ±(99.9%) 42.187 ns/op
+# Warmup Iteration   4: 5586.634 ±(99.9%) 35.259 ns/op
+# Warmup Iteration   5: 5591.798 ±(99.9%) 31.889 ns/op
+Iteration   1: 5172.026 ±(99.9%) 21.848 ns/op
+                 computeGcdDiv·p0.00:   4896.000 ns/op
+                 computeGcdDiv·p0.50:   5128.000 ns/op
+                 computeGcdDiv·p0.90:   5192.000 ns/op
+                 computeGcdDiv·p0.95:   5240.000 ns/op
+                 computeGcdDiv·p0.99:   5384.000 ns/op
+                 computeGcdDiv·p0.999:  8352.000 ns/op
+                 computeGcdDiv·p0.9999: 21793.587 ns/op
+                 computeGcdDiv·p1.00:   635904.000 ns/op
+
+Iteration   2: 5261.285 ±(99.9%) 40.419 ns/op
+                 computeGcdDiv·p0.00:   4968.000 ns/op
+                 computeGcdDiv·p0.50:   5192.000 ns/op
+                 computeGcdDiv·p0.90:   5256.000 ns/op
+                 computeGcdDiv·p0.95:   5304.000 ns/op
+                 computeGcdDiv·p0.99:   5456.000 ns/op
+                 computeGcdDiv·p0.999:  9840.000 ns/op
+                 computeGcdDiv·p0.9999: 23988.656 ns/op
+                 computeGcdDiv·p1.00:   993280.000 ns/op
+
+Iteration   3: 6326.138 ±(99.9%) 42.334 ns/op
+                 computeGcdDiv·p0.00:   5968.000 ns/op
+                 computeGcdDiv·p0.50:   6248.000 ns/op
+                 computeGcdDiv·p0.90:   6320.000 ns/op
+                 computeGcdDiv·p0.95:   6368.000 ns/op
+                 computeGcdDiv·p0.99:   6528.000 ns/op
+                 computeGcdDiv·p0.999:  19456.000 ns/op
+                 computeGcdDiv·p0.9999: 417565.696 ns/op
+                 computeGcdDiv·p1.00:   706560.000 ns/op
+
+Iteration   4: 5526.021 ±(99.9%) 29.738 ns/op
+                 computeGcdDiv·p0.00:   5232.000 ns/op
+                 computeGcdDiv·p0.50:   5472.000 ns/op
+                 computeGcdDiv·p0.90:   5536.000 ns/op
+                 computeGcdDiv·p0.95:   5576.000 ns/op
+                 computeGcdDiv·p0.99:   5744.000 ns/op
+                 computeGcdDiv·p0.999:  18560.000 ns/op
+                 computeGcdDiv·p0.9999: 26577.702 ns/op
+                 computeGcdDiv·p1.00:   649216.000 ns/op
+
+Iteration   5: 5035.449 ±(99.9%) 28.175 ns/op
+                 computeGcdDiv·p0.00:   4760.000 ns/op
+                 computeGcdDiv·p0.50:   4984.000 ns/op
+                 computeGcdDiv·p0.90:   5040.000 ns/op
+                 computeGcdDiv·p0.95:   5080.000 ns/op
+                 computeGcdDiv·p0.99:   5224.000 ns/op
+                 computeGcdDiv·p0.999:  8635.280 ns/op
+                 computeGcdDiv·p0.9999: 23787.456 ns/op
+                 computeGcdDiv·p1.00:   665600.000 ns/op
+
+
+
+Result "benchmarks.cpu_benchmarks.Euclid.computeGcdDiv":
+  N = 5754109
+  mean =   5452.111 ±(99.9%) 6.236 ns/op
+
+  Histogram, ns/op:
+    [      0.000,  125000.000) = 5753729 
+    [ 125000.000,  250000.000) = 8 
+    [ 250000.000,  375000.000) = 12 
+    [ 375000.000,  500000.000) = 124 
+    [ 500000.000,  625000.000) = 153 
+    [ 625000.000,  750000.000) = 56 
+    [ 750000.000,  875000.000) = 21 
+    [ 875000.000, 1000000.000) = 5 
+    [1000000.000, 1125000.000) = 1 
+    [1125000.000, 1250000.000) = 0 
+    [1250000.000, 1375000.000) = 0 
+    [1375000.000, 1500000.000) = 0 
+    [1500000.000, 1625000.000) = 0 
+    [1625000.000, 1750000.000) = 0 
+    [1750000.000, 1875000.000) = 0 
+
+  Percentiles, ns/op:
+      p(0.0000) =   4760.000 ns/op
+     p(50.0000) =   5216.000 ns/op
+     p(90.0000) =   6272.000 ns/op
+     p(95.0000) =   6312.000 ns/op
+     p(99.0000) =   6432.000 ns/op
+     p(99.9000) =   9504.000 ns/op
+     p(99.9900) =  21056.000 ns/op
+     p(99.9990) = 658901.914 ns/op
+     p(99.9999) = 879582.331 ns/op
+    p(100.0000) = 1038336.000 ns/op
+
+
+# JMH version: 1.36
+# VM version: JDK 20.0.1, OpenJDK 64-Bit Server VM, 20.0.1+9
+# VM invoker: /usr/lib/jvm/java-20-openjdk/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: benchmarks.cpu_benchmarks.Euclid.computeGcdSub
+
+# Run progress: 40.00% complete, ETA 00:25:02
+# Fork: 1 of 5
+# Warmup Iteration   1: 42603.818 ±(99.9%) 241.309 ns/op
+# Warmup Iteration   2: 10854.685 ±(99.9%) 35.929 ns/op
+# Warmup Iteration   3: 9143.761 ±(99.9%) 29.874 ns/op
+# Warmup Iteration   4: 34071.435 ±(99.9%) 67.033 ns/op
+# Warmup Iteration   5: 15758.571 ±(99.9%) 63.158 ns/op
+Iteration   1: 21201.997 ±(99.9%) 40.440 ns/op
+                 computeGcdSub·p0.00:   20512.000 ns/op
+                 computeGcdSub·p0.50:   21088.000 ns/op
+                 computeGcdSub·p0.90:   21184.000 ns/op
+                 computeGcdSub·p0.95:   21312.000 ns/op
+                 computeGcdSub·p0.99:   22496.000 ns/op
+                 computeGcdSub·p0.999:  27430.208 ns/op
+                 computeGcdSub·p0.9999: 488611.533 ns/op
+                 computeGcdSub·p1.00:   806912.000 ns/op
+
+Iteration   2: 13081.573 ±(99.9%) 43.433 ns/op
+                 computeGcdSub·p0.00:   12560.000 ns/op
+                 computeGcdSub·p0.50:   12960.000 ns/op
+                 computeGcdSub·p0.90:   13168.000 ns/op
+                 computeGcdSub·p0.95:   13248.000 ns/op
+                 computeGcdSub·p0.99:   14064.000 ns/op
+                 computeGcdSub·p0.999:  17334.528 ns/op
+                 computeGcdSub·p0.9999: 459956.224 ns/op
+                 computeGcdSub·p1.00:   687104.000 ns/op
+
+Iteration   3: 10659.078 ±(99.9%) 35.865 ns/op
+                 computeGcdSub·p0.00:   10208.000 ns/op
+                 computeGcdSub·p0.50:   10528.000 ns/op
+                 computeGcdSub·p0.90:   10688.000 ns/op
+                 computeGcdSub·p0.95:   10720.000 ns/op
+                 computeGcdSub·p0.99:   11856.000 ns/op
+                 computeGcdSub·p0.999:  20800.000 ns/op
+                 computeGcdSub·p0.9999: 31504.064 ns/op
+                 computeGcdSub·p1.00:   861184.000 ns/op
+
+Iteration   4: 7331.079 ±(99.9%) 29.854 ns/op
+                 computeGcdSub·p0.00:   7016.000 ns/op
+                 computeGcdSub·p0.50:   7272.000 ns/op
+                 computeGcdSub·p0.90:   7352.000 ns/op
+                 computeGcdSub·p0.95:   7416.000 ns/op
+                 computeGcdSub·p0.99:   7544.000 ns/op
+                 computeGcdSub·p0.999:  9924.720 ns/op
+                 computeGcdSub·p0.9999: 20794.544 ns/op
+                 computeGcdSub·p1.00:   1765376.000 ns/op
+
+Iteration   5: 12122.280 ±(99.9%) 40.639 ns/op
+                 computeGcdSub·p0.00:   11632.000 ns/op
+                 computeGcdSub·p0.50:   12016.000 ns/op
+                 computeGcdSub·p0.90:   12176.000 ns/op
+                 computeGcdSub·p0.95:   12272.000 ns/op
+                 computeGcdSub·p0.99:   13024.000 ns/op
+                 computeGcdSub·p0.999:  15817.552 ns/op
+                 computeGcdSub·p0.9999: 402991.309 ns/op
+                 computeGcdSub·p1.00:   828416.000 ns/op
+
+
+# Run progress: 44.00% complete, ETA 00:23:22
+# Fork: 2 of 5
+# Warmup Iteration   1: 42754.465 ±(99.9%) 236.101 ns/op
+# Warmup Iteration   2: 10847.104 ±(99.9%) 35.858 ns/op
+# Warmup Iteration   3: 9140.603 ±(99.9%) 29.824 ns/op
+# Warmup Iteration   4: 34073.115 ±(99.9%) 84.294 ns/op
+# Warmup Iteration   5: 15742.972 ±(99.9%) 75.113 ns/op
+Iteration   1: 21200.290 ±(99.9%) 48.508 ns/op
+                 computeGcdSub·p0.00:   20480.000 ns/op
+                 computeGcdSub·p0.50:   21088.000 ns/op
+                 computeGcdSub·p0.90:   21152.000 ns/op
+                 computeGcdSub·p0.95:   21248.000 ns/op
+                 computeGcdSub·p0.99:   22400.000 ns/op
+                 computeGcdSub·p0.999:  25088.000 ns/op
+                 computeGcdSub·p0.9999: 529119.642 ns/op
+                 computeGcdSub·p1.00:   1112064.000 ns/op
+
+Iteration   2: 13066.128 ±(99.9%) 45.252 ns/op
+                 computeGcdSub·p0.00:   12544.000 ns/op
+                 computeGcdSub·p0.50:   12944.000 ns/op
+                 computeGcdSub·p0.90:   13152.000 ns/op
+                 computeGcdSub·p0.95:   13248.000 ns/op
+                 computeGcdSub·p0.99:   13968.000 ns/op
+                 computeGcdSub·p0.999:  17899.616 ns/op
+                 computeGcdSub·p0.9999: 450224.742 ns/op
+                 computeGcdSub·p1.00:   788480.000 ns/op
+
+Iteration   3: 10583.254 ±(99.9%) 34.681 ns/op
+                 computeGcdSub·p0.00:   10192.000 ns/op
+                 computeGcdSub·p0.50:   10512.000 ns/op
+                 computeGcdSub·p0.90:   10592.000 ns/op
+                 computeGcdSub·p0.95:   10704.000 ns/op
+                 computeGcdSub·p0.99:   11264.000 ns/op
+                 computeGcdSub·p0.999:  13784.448 ns/op
+                 computeGcdSub·p0.9999: 26256.742 ns/op
+                 computeGcdSub·p1.00:   716800.000 ns/op
+
+Iteration   4: 7283.989 ±(99.9%) 20.175 ns/op
+                 computeGcdSub·p0.00:   7000.000 ns/op
+                 computeGcdSub·p0.50:   7232.000 ns/op
+                 computeGcdSub·p0.90:   7344.000 ns/op
+                 computeGcdSub·p0.95:   7400.000 ns/op
+                 computeGcdSub·p0.99:   7512.000 ns/op
+                 computeGcdSub·p0.999:  9472.000 ns/op
+                 computeGcdSub·p0.9999: 13002.658 ns/op
+                 computeGcdSub·p1.00:   676864.000 ns/op
+
+Iteration   5: 12114.163 ±(99.9%) 42.853 ns/op
+                 computeGcdSub·p0.00:   11616.000 ns/op
+                 computeGcdSub·p0.50:   12000.000 ns/op
+                 computeGcdSub·p0.90:   12176.000 ns/op
+                 computeGcdSub·p0.95:   12272.000 ns/op
+                 computeGcdSub·p0.99:   12896.000 ns/op
+                 computeGcdSub·p0.999:  15360.000 ns/op
+                 computeGcdSub·p0.9999: 504312.627 ns/op
+                 computeGcdSub·p1.00:   799744.000 ns/op
+
+
+# Run progress: 48.00% complete, ETA 00:21:42
+# Fork: 3 of 5
+# Warmup Iteration   1: 42763.588 ±(99.9%) 255.588 ns/op
+# Warmup Iteration   2: 10817.940 ±(99.9%) 34.034 ns/op
+# Warmup Iteration   3: 9136.700 ±(99.9%) 24.737 ns/op
+# Warmup Iteration   4: 34046.460 ±(99.9%) 89.763 ns/op
+# Warmup Iteration   5: 15721.394 ±(99.9%) 59.801 ns/op
+Iteration   1: 21196.349 ±(99.9%) 29.993 ns/op
+                 computeGcdSub·p0.00:   20512.000 ns/op
+                 computeGcdSub·p0.50:   21088.000 ns/op
+                 computeGcdSub·p0.90:   21152.000 ns/op
+                 computeGcdSub·p0.95:   21312.000 ns/op
+                 computeGcdSub·p0.99:   23040.000 ns/op
+                 computeGcdSub·p0.999:  29504.000 ns/op
+                 computeGcdSub·p0.9999: 375003.955 ns/op
+                 computeGcdSub·p1.00:   633856.000 ns/op
+
+Iteration   2: 13069.653 ±(99.9%) 42.897 ns/op
+                 computeGcdSub·p0.00:   12816.000 ns/op
+                 computeGcdSub·p0.50:   12928.000 ns/op
+                 computeGcdSub·p0.90:   13168.000 ns/op
+                 computeGcdSub·p0.95:   13264.000 ns/op
+                 computeGcdSub·p0.99:   14032.000 ns/op
+                 computeGcdSub·p0.999:  19211.904 ns/op
+                 computeGcdSub·p0.9999: 438962.586 ns/op
+                 computeGcdSub·p1.00:   766976.000 ns/op
+
+Iteration   3: 10617.657 ±(99.9%) 41.472 ns/op
+                 computeGcdSub·p0.00:   10208.000 ns/op
+                 computeGcdSub·p0.50:   10528.000 ns/op
+                 computeGcdSub·p0.90:   10672.000 ns/op
+                 computeGcdSub·p0.95:   10720.000 ns/op
+                 computeGcdSub·p0.99:   11344.000 ns/op
+                 computeGcdSub·p0.999:  14882.944 ns/op
+                 computeGcdSub·p0.9999: 25178.189 ns/op
+                 computeGcdSub·p1.00:   766976.000 ns/op
+
+Iteration   4: 7314.416 ±(99.9%) 22.642 ns/op
+                 computeGcdSub·p0.00:   7160.000 ns/op
+                 computeGcdSub·p0.50:   7256.000 ns/op
+                 computeGcdSub·p0.90:   7360.000 ns/op
+                 computeGcdSub·p0.95:   7416.000 ns/op
+                 computeGcdSub·p0.99:   7560.000 ns/op
+                 computeGcdSub·p0.999:  9584.000 ns/op
+                 computeGcdSub·p0.9999: 13583.768 ns/op
+                 computeGcdSub·p1.00:   790528.000 ns/op
+
+Iteration   5: 12166.183 ±(99.9%) 56.860 ns/op
+                 computeGcdSub·p0.00:   11872.000 ns/op
+                 computeGcdSub·p0.50:   12016.000 ns/op
+                 computeGcdSub·p0.90:   12192.000 ns/op
+                 computeGcdSub·p0.95:   12288.000 ns/op
+                 computeGcdSub·p0.99:   13056.000 ns/op
+                 computeGcdSub·p0.999:  15984.000 ns/op
+                 computeGcdSub·p0.9999: 610666.598 ns/op
+                 computeGcdSub·p1.00:   894976.000 ns/op
+
+
+# Run progress: 52.00% complete, ETA 00:20:02
+# Fork: 4 of 5
+# Warmup Iteration   1: 42754.005 ±(99.9%) 234.162 ns/op
+# Warmup Iteration   2: 10830.197 ±(99.9%) 40.113 ns/op
+# Warmup Iteration   3: 9164.219 ±(99.9%) 30.498 ns/op
+# Warmup Iteration   4: 34093.071 ±(99.9%) 72.089 ns/op
+# Warmup Iteration   5: 15776.631 ±(99.9%) 61.137 ns/op
+Iteration   1: 21228.928 ±(99.9%) 49.979 ns/op
+                 computeGcdSub·p0.00:   20512.000 ns/op
+                 computeGcdSub·p0.50:   21120.000 ns/op
+                 computeGcdSub·p0.90:   21248.000 ns/op
+                 computeGcdSub·p0.95:   21344.000 ns/op
+                 computeGcdSub·p0.99:   22528.000 ns/op
+                 computeGcdSub·p0.999:  28960.000 ns/op
+                 computeGcdSub·p0.9999: 600850.842 ns/op
+                 computeGcdSub·p1.00:   816128.000 ns/op
+
+Iteration   2: 13102.570 ±(99.9%) 50.052 ns/op
+                 computeGcdSub·p0.00:   12560.000 ns/op
+                 computeGcdSub·p0.50:   12976.000 ns/op
+                 computeGcdSub·p0.90:   13184.000 ns/op
+                 computeGcdSub·p0.95:   13248.000 ns/op
+                 computeGcdSub·p0.99:   14032.000 ns/op
+                 computeGcdSub·p0.999:  17005.632 ns/op
+                 computeGcdSub·p0.9999: 519122.534 ns/op
+                 computeGcdSub·p1.00:   719872.000 ns/op
+
+Iteration   3: 10645.147 ±(99.9%) 35.490 ns/op
+                 computeGcdSub·p0.00:   10224.000 ns/op
+                 computeGcdSub·p0.50:   10560.000 ns/op
+                 computeGcdSub·p0.90:   10704.000 ns/op
+                 computeGcdSub·p0.95:   10736.000 ns/op
+                 computeGcdSub·p0.99:   11488.000 ns/op
+                 computeGcdSub·p0.999:  16302.736 ns/op
+                 computeGcdSub·p0.9999: 45267.360 ns/op
+                 computeGcdSub·p1.00:   851968.000 ns/op
+
+Iteration   4: 7319.371 ±(99.9%) 22.466 ns/op
+                 computeGcdSub·p0.00:   7008.000 ns/op
+                 computeGcdSub·p0.50:   7272.000 ns/op
+                 computeGcdSub·p0.90:   7352.000 ns/op
+                 computeGcdSub·p0.95:   7416.000 ns/op
+                 computeGcdSub·p0.99:   7528.000 ns/op
+                 computeGcdSub·p0.999:  9488.000 ns/op
+                 computeGcdSub·p0.9999: 20768.000 ns/op
+                 computeGcdSub·p1.00:   783360.000 ns/op
+
+Iteration   5: 12154.602 ±(99.9%) 49.043 ns/op
+                 computeGcdSub·p0.00:   11648.000 ns/op
+                 computeGcdSub·p0.50:   12032.000 ns/op
+                 computeGcdSub·p0.90:   12176.000 ns/op
+                 computeGcdSub·p0.95:   12240.000 ns/op
+                 computeGcdSub·p0.99:   13216.000 ns/op
+                 computeGcdSub·p0.999:  18966.912 ns/op
+                 computeGcdSub·p0.9999: 479934.259 ns/op
+                 computeGcdSub·p1.00:   868352.000 ns/op
+
+
+# Run progress: 56.00% complete, ETA 00:18:21
+# Fork: 5 of 5
+# Warmup Iteration   1: 42756.526 ±(99.9%) 253.953 ns/op
+# Warmup Iteration   2: 10960.141 ±(99.9%) 41.608 ns/op
+# Warmup Iteration   3: 9192.400 ±(99.9%) 34.311 ns/op
+# Warmup Iteration   4: 34165.869 ±(99.9%) 72.353 ns/op
+# Warmup Iteration   5: 15823.166 ±(99.9%) 86.671 ns/op
+Iteration   1: 21294.125 ±(99.9%) 50.690 ns/op
+                 computeGcdSub·p0.00:   20544.000 ns/op
+                 computeGcdSub·p0.50:   21152.000 ns/op
+                 computeGcdSub·p0.90:   21344.000 ns/op
+                 computeGcdSub·p0.95:   21376.000 ns/op
+                 computeGcdSub·p0.99:   22528.000 ns/op
+                 computeGcdSub·p0.999:  25760.000 ns/op
+                 computeGcdSub·p0.9999: 571456.307 ns/op
+                 computeGcdSub·p1.00:   882688.000 ns/op
+
+Iteration   2: 13115.496 ±(99.9%) 45.968 ns/op
+                 computeGcdSub·p0.00:   12592.000 ns/op
+                 computeGcdSub·p0.50:   12992.000 ns/op
+                 computeGcdSub·p0.90:   13168.000 ns/op
+                 computeGcdSub·p0.95:   13216.000 ns/op
+                 computeGcdSub·p0.99:   14048.000 ns/op
+                 computeGcdSub·p0.999:  16320.864 ns/op
+                 computeGcdSub·p0.9999: 499310.592 ns/op
+                 computeGcdSub·p1.00:   772096.000 ns/op
+
+Iteration   3: 10635.906 ±(99.9%) 32.884 ns/op
+                 computeGcdSub·p0.00:   10224.000 ns/op
+                 computeGcdSub·p0.50:   10560.000 ns/op
+                 computeGcdSub·p0.90:   10704.000 ns/op
+                 computeGcdSub·p0.95:   10736.000 ns/op
+                 computeGcdSub·p0.99:   11280.000 ns/op
+                 computeGcdSub·p0.999:  12896.000 ns/op
+                 computeGcdSub·p0.9999: 25023.232 ns/op
+                 computeGcdSub·p1.00:   816128.000 ns/op
+
+Iteration   4: 7348.236 ±(99.9%) 22.853 ns/op
+                 computeGcdSub·p0.00:   7032.000 ns/op
+                 computeGcdSub·p0.50:   7296.000 ns/op
+                 computeGcdSub·p0.90:   7368.000 ns/op
+                 computeGcdSub·p0.95:   7432.000 ns/op
+                 computeGcdSub·p0.99:   7584.000 ns/op
+                 computeGcdSub·p0.999:  9600.000 ns/op
+                 computeGcdSub·p0.9999: 16510.182 ns/op
+                 computeGcdSub·p1.00:   860160.000 ns/op
+
+Iteration   5: 12130.506 ±(99.9%) 54.159 ns/op
+                 computeGcdSub·p0.00:   11632.000 ns/op
+                 computeGcdSub·p0.50:   12016.000 ns/op
+                 computeGcdSub·p0.90:   12176.000 ns/op
+                 computeGcdSub·p0.95:   12256.000 ns/op
+                 computeGcdSub·p0.99:   13184.000 ns/op
+                 computeGcdSub·p0.999:  21874.752 ns/op
+                 computeGcdSub·p0.9999: 160419.994 ns/op
+                 computeGcdSub·p1.00:   1873920.000 ns/op
+
+
+
+Result "benchmarks.cpu_benchmarks.Euclid.computeGcdSub":
+  N = 6053229
+  mean =  12400.402 ±(99.9%) 9.990 ns/op
+
+  Histogram, ns/op:
+    [      0.000,  125000.000) = 6052646 
+    [ 125000.000,  250000.000) = 3 
+    [ 250000.000,  375000.000) = 12 
+    [ 375000.000,  500000.000) = 145 
+    [ 500000.000,  625000.000) = 256 
+    [ 625000.000,  750000.000) = 114 
+    [ 750000.000,  875000.000) = 45 
+    [ 875000.000, 1000000.000) = 4 
+    [1000000.000, 1125000.000) = 2 
+    [1125000.000, 1250000.000) = 0 
+    [1250000.000, 1375000.000) = 0 
+    [1375000.000, 1500000.000) = 0 
+    [1500000.000, 1625000.000) = 0 
+    [1625000.000, 1750000.000) = 0 
+    [1750000.000, 1875000.000) = 2 
+
+  Percentiles, ns/op:
+      p(0.0000) =   7000.000 ns/op
+     p(50.0000) =  11968.000 ns/op
+     p(90.0000) =  21088.000 ns/op
+     p(95.0000) =  21152.000 ns/op
+     p(99.0000) =  21344.000 ns/op
+     p(99.9000) =  23328.000 ns/op
+     p(99.9900) =  44033.984 ns/op
+     p(99.9990) = 741854.925 ns/op
+     p(99.9999) = 899823.462 ns/op
+    p(100.0000) = 1873920.000 ns/op
+
+
+# JMH version: 1.36
+# VM version: JDK 20.0.1, OpenJDK 64-Bit Server VM, 20.0.1+9
+# VM invoker: /usr/lib/jvm/java-20-openjdk/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: benchmarks.cpu_benchmarks.Factorial.computeNFactorial
+
+# Run progress: 60.00% complete, ETA 00:16:41
+# Fork: 1 of 5
+# Warmup Iteration   1: 526132.645 ±(99.9%) 313.078 ns/op
+# Warmup Iteration   2: 663795.275 ±(99.9%) 66.455 ns/op
+# Warmup Iteration   3: 633029.978 ±(99.9%) 30.086 ns/op
+# Warmup Iteration   4: 531986.712 ±(99.9%) 21.774 ns/op
+# Warmup Iteration   5: 604382.202 ±(99.9%) 14.938 ns/op
+Iteration   1: 596183.135 ±(99.9%) 14.622 ns/op
+                 computeNFactorial·p0.00:   594944.000 ns/op
+                 computeNFactorial·p0.50:   595968.000 ns/op
+                 computeNFactorial·p0.90:   596992.000 ns/op
+                 computeNFactorial·p0.95:   596992.000 ns/op
+                 computeNFactorial·p0.99:   598016.000 ns/op
+                 computeNFactorial·p0.999:  602112.000 ns/op
+                 computeNFactorial·p0.9999: 608918.528 ns/op
+                 computeNFactorial·p1.00:   610304.000 ns/op
+
+Iteration   2: 594144.051 ±(99.9%) 15.343 ns/op
+                 computeNFactorial·p0.00:   592896.000 ns/op
+                 computeNFactorial·p0.50:   593920.000 ns/op
+                 computeNFactorial·p0.90:   594944.000 ns/op
+                 computeNFactorial·p0.95:   594944.000 ns/op
+                 computeNFactorial·p0.99:   595968.000 ns/op
+                 computeNFactorial·p0.999:  601088.000 ns/op
+                 computeNFactorial·p0.9999: 608581.632 ns/op
+                 computeNFactorial·p1.00:   609280.000 ns/op
+
+Iteration   3: 561347.382 ±(99.9%) 13.157 ns/op
+                 computeNFactorial·p0.00:   561152.000 ns/op
+                 computeNFactorial·p0.50:   561152.000 ns/op
+                 computeNFactorial·p0.90:   562176.000 ns/op
+                 computeNFactorial·p0.95:   562176.000 ns/op
+                 computeNFactorial·p0.99:   562176.000 ns/op
+                 computeNFactorial·p0.999:  567296.000 ns/op
+                 computeNFactorial·p0.9999: 574337.024 ns/op
+                 computeNFactorial·p1.00:   577536.000 ns/op
+
+Iteration   4: 693495.172 ±(99.9%) 16.084 ns/op
+                 computeNFactorial·p0.00:   692224.000 ns/op
+                 computeNFactorial·p0.50:   693248.000 ns/op
+                 computeNFactorial·p0.90:   694272.000 ns/op
+                 computeNFactorial·p0.95:   694272.000 ns/op
+                 computeNFactorial·p0.99:   695296.000 ns/op
+                 computeNFactorial·p0.999:  699992.064 ns/op
+                 computeNFactorial·p0.9999: 705204.019 ns/op
+                 computeNFactorial·p1.00:   706560.000 ns/op
+
+Iteration   5: 561326.270 ±(99.9%) 14.442 ns/op
+                 computeNFactorial·p0.00:   560128.000 ns/op
+                 computeNFactorial·p0.50:   561152.000 ns/op
+                 computeNFactorial·p0.90:   562176.000 ns/op
+                 computeNFactorial·p0.95:   562176.000 ns/op
+                 computeNFactorial·p0.99:   562176.000 ns/op
+                 computeNFactorial·p0.999:  568320.000 ns/op
+                 computeNFactorial·p0.9999: 576832.922 ns/op
+                 computeNFactorial·p1.00:   581632.000 ns/op
+
+
+# Run progress: 64.00% complete, ETA 00:15:01
+# Fork: 2 of 5
+# Warmup Iteration   1: 525597.522 ±(99.9%) 205.974 ns/op
+# Warmup Iteration   2: 664001.953 ±(99.9%) 31.724 ns/op
+# Warmup Iteration   3: 633069.161 ±(99.9%) 22.773 ns/op
+# Warmup Iteration   4: 531827.932 ±(99.9%) 35.651 ns/op
+# Warmup Iteration   5: 603498.591 ±(99.9%) 39.393 ns/op
+Iteration   1: 596195.121 ±(99.9%) 15.117 ns/op
+                 computeNFactorial·p0.00:   594944.000 ns/op
+                 computeNFactorial·p0.50:   595968.000 ns/op
+                 computeNFactorial·p0.90:   596992.000 ns/op
+                 computeNFactorial·p0.95:   596992.000 ns/op
+                 computeNFactorial·p0.99:   598016.000 ns/op
+                 computeNFactorial·p0.999:  601088.000 ns/op
+                 computeNFactorial·p0.9999: 614400.000 ns/op
+                 computeNFactorial·p1.00:   614400.000 ns/op
+
+Iteration   2: 594150.688 ±(99.9%) 14.421 ns/op
+                 computeNFactorial·p0.00:   592896.000 ns/op
+                 computeNFactorial·p0.50:   593920.000 ns/op
+                 computeNFactorial·p0.90:   594944.000 ns/op
+                 computeNFactorial·p0.95:   594944.000 ns/op
+                 computeNFactorial·p0.99:   595968.000 ns/op
+                 computeNFactorial·p0.999:  598200.320 ns/op
+                 computeNFactorial·p0.9999: 606208.000 ns/op
+                 computeNFactorial·p1.00:   606208.000 ns/op
+
+Iteration   3: 561351.303 ±(99.9%) 12.748 ns/op
+                 computeNFactorial·p0.00:   560128.000 ns/op
+                 computeNFactorial·p0.50:   561152.000 ns/op
+                 computeNFactorial·p0.90:   562176.000 ns/op
+                 computeNFactorial·p0.95:   562176.000 ns/op
+                 computeNFactorial·p0.99:   563200.000 ns/op
+                 computeNFactorial·p0.999:  565248.000 ns/op
+                 computeNFactorial·p0.9999: 574113.075 ns/op
+                 computeNFactorial·p1.00:   576512.000 ns/op
+
+Iteration   4: 693532.634 ±(99.9%) 17.563 ns/op
+                 computeNFactorial·p0.00:   692224.000 ns/op
+                 computeNFactorial·p0.50:   693248.000 ns/op
+                 computeNFactorial·p0.90:   694272.000 ns/op
+                 computeNFactorial·p0.95:   695296.000 ns/op
+                 computeNFactorial·p0.99:   695296.000 ns/op
+                 computeNFactorial·p0.999:  698969.088 ns/op
+                 computeNFactorial·p0.9999: 705084.109 ns/op
+                 computeNFactorial·p1.00:   705536.000 ns/op
+
+Iteration   5: 561354.857 ±(99.9%) 13.107 ns/op
+                 computeNFactorial·p0.00:   561152.000 ns/op
+                 computeNFactorial·p0.50:   561152.000 ns/op
+                 computeNFactorial·p0.90:   562176.000 ns/op
+                 computeNFactorial·p0.95:   562176.000 ns/op
+                 computeNFactorial·p0.99:   563200.000 ns/op
+                 computeNFactorial·p0.999:  566272.000 ns/op
+                 computeNFactorial·p0.9999: 574912.512 ns/op
+                 computeNFactorial·p1.00:   576512.000 ns/op
+
+
+# Run progress: 68.00% complete, ETA 00:13:21
+# Fork: 3 of 5
+# Warmup Iteration   1: 525614.923 ±(99.9%) 205.129 ns/op
+# Warmup Iteration   2: 664034.251 ±(99.9%) 51.260 ns/op
+# Warmup Iteration   3: 633099.398 ±(99.9%) 46.179 ns/op
+# Warmup Iteration   4: 532089.084 ±(99.9%) 29.008 ns/op
+# Warmup Iteration   5: 603494.941 ±(99.9%) 41.029 ns/op
+Iteration   1: 596191.945 ±(99.9%) 14.554 ns/op
+                 computeNFactorial·p0.00:   594944.000 ns/op
+                 computeNFactorial·p0.50:   595968.000 ns/op
+                 computeNFactorial·p0.90:   596992.000 ns/op
+                 computeNFactorial·p0.95:   596992.000 ns/op
+                 computeNFactorial·p0.99:   598016.000 ns/op
+                 computeNFactorial·p0.999:  601088.000 ns/op
+                 computeNFactorial·p0.9999: 611629.466 ns/op
+                 computeNFactorial·p1.00:   614400.000 ns/op
+
+Iteration   2: 594146.913 ±(99.9%) 15.251 ns/op
+                 computeNFactorial·p0.00:   592896.000 ns/op
+                 computeNFactorial·p0.50:   593920.000 ns/op
+                 computeNFactorial·p0.90:   594944.000 ns/op
+                 computeNFactorial·p0.95:   594944.000 ns/op
+                 computeNFactorial·p0.99:   595968.000 ns/op
+                 computeNFactorial·p0.999:  601088.000 ns/op
+                 computeNFactorial·p0.9999: 607557.632 ns/op
+                 computeNFactorial·p1.00:   608256.000 ns/op
+
+Iteration   3: 561353.419 ±(99.9%) 13.157 ns/op
+                 computeNFactorial·p0.00:   560128.000 ns/op
+                 computeNFactorial·p0.50:   561152.000 ns/op
+                 computeNFactorial·p0.90:   562176.000 ns/op
+                 computeNFactorial·p0.95:   562176.000 ns/op
+                 computeNFactorial·p0.99:   563200.000 ns/op
+                 computeNFactorial·p0.999:  566272.000 ns/op
+                 computeNFactorial·p0.9999: 574337.024 ns/op
+                 computeNFactorial·p1.00:   577536.000 ns/op
+
+Iteration   4: 693512.597 ±(99.9%) 16.782 ns/op
+                 computeNFactorial·p0.00:   692224.000 ns/op
+                 computeNFactorial·p0.50:   693248.000 ns/op
+                 computeNFactorial·p0.90:   694272.000 ns/op
+                 computeNFactorial·p0.95:   694272.000 ns/op
+                 computeNFactorial·p0.99:   695296.000 ns/op
+                 computeNFactorial·p0.999:  698368.000 ns/op
+                 computeNFactorial·p0.9999: 708728.218 ns/op
+                 computeNFactorial·p1.00:   709632.000 ns/op
+
+Iteration   5: 561358.536 ±(99.9%) 13.703 ns/op
+                 computeNFactorial·p0.00:   561152.000 ns/op
+                 computeNFactorial·p0.50:   561152.000 ns/op
+                 computeNFactorial·p0.90:   562176.000 ns/op
+                 computeNFactorial·p0.95:   562176.000 ns/op
+                 computeNFactorial·p0.99:   563200.000 ns/op
+                 computeNFactorial·p0.999:  566272.000 ns/op
+                 computeNFactorial·p0.9999: 576258.048 ns/op
+                 computeNFactorial·p1.00:   582656.000 ns/op
+
+
+# Run progress: 72.00% complete, ETA 00:11:41
+# Fork: 4 of 5
+# Warmup Iteration   1: 525598.976 ±(99.9%) 204.455 ns/op
+# Warmup Iteration   2: 664004.199 ±(99.9%) 52.197 ns/op
+# Warmup Iteration   3: 633044.517 ±(99.9%) 13.470 ns/op
+# Warmup Iteration   4: 531960.199 ±(99.9%) 36.635 ns/op
+# Warmup Iteration   5: 603461.087 ±(99.9%) 44.073 ns/op
+Iteration   1: 596169.880 ±(99.9%) 13.328 ns/op
+                 computeNFactorial·p0.00:   594944.000 ns/op
+                 computeNFactorial·p0.50:   595968.000 ns/op
+                 computeNFactorial·p0.90:   596992.000 ns/op
+                 computeNFactorial·p0.95:   596992.000 ns/op
+                 computeNFactorial·p0.99:   596992.000 ns/op
+                 computeNFactorial·p0.999:  602112.000 ns/op
+                 computeNFactorial·p0.9999: 608256.000 ns/op
+                 computeNFactorial·p1.00:   608256.000 ns/op
+
+Iteration   2: 594127.844 ±(99.9%) 13.697 ns/op
+                 computeNFactorial·p0.00:   592896.000 ns/op
+                 computeNFactorial·p0.50:   593920.000 ns/op
+                 computeNFactorial·p0.90:   594944.000 ns/op
+                 computeNFactorial·p0.95:   594944.000 ns/op
+                 computeNFactorial·p0.99:   595968.000 ns/op
+                 computeNFactorial·p0.999:  600064.000 ns/op
+                 computeNFactorial·p0.9999: 608581.530 ns/op
+                 computeNFactorial·p1.00:   609280.000 ns/op
+
+Iteration   3: 561336.687 ±(99.9%) 12.053 ns/op
+                 computeNFactorial·p0.00:   560128.000 ns/op
+                 computeNFactorial·p0.50:   561152.000 ns/op
+                 computeNFactorial·p0.90:   562176.000 ns/op
+                 computeNFactorial·p0.95:   562176.000 ns/op
+                 computeNFactorial·p0.99:   562176.000 ns/op
+                 computeNFactorial·p0.999:  566272.000 ns/op
+                 computeNFactorial·p0.9999: 576512.000 ns/op
+                 computeNFactorial·p1.00:   576512.000 ns/op
+
+Iteration   4: 693477.198 ±(99.9%) 14.212 ns/op
+                 computeNFactorial·p0.00:   692224.000 ns/op
+                 computeNFactorial·p0.50:   693248.000 ns/op
+                 computeNFactorial·p0.90:   694272.000 ns/op
+                 computeNFactorial·p0.95:   694272.000 ns/op
+                 computeNFactorial·p0.99:   694272.000 ns/op
+                 computeNFactorial·p0.999:  698368.000 ns/op
+                 computeNFactorial·p0.9999: 707492.045 ns/op
+                 computeNFactorial·p1.00:   710656.000 ns/op
+
+Iteration   5: 561287.978 ±(99.9%) 13.336 ns/op
+                 computeNFactorial·p0.00:   560128.000 ns/op
+                 computeNFactorial·p0.50:   561152.000 ns/op
+                 computeNFactorial·p0.90:   562176.000 ns/op
+                 computeNFactorial·p0.95:   562176.000 ns/op
+                 computeNFactorial·p0.99:   562176.000 ns/op
+                 computeNFactorial·p0.999:  566272.000 ns/op
+                 computeNFactorial·p0.9999: 574688.154 ns/op
+                 computeNFactorial·p1.00:   575488.000 ns/op
+
+
+# Run progress: 76.00% complete, ETA 00:10:01
+# Fork: 5 of 5
+# Warmup Iteration   1: 524117.602 ±(99.9%) 225.186 ns/op
+# Warmup Iteration   2: 663967.005 ±(99.9%) 52.391 ns/op
+# Warmup Iteration   3: 633071.431 ±(99.9%) 14.739 ns/op
+# Warmup Iteration   4: 531654.525 ±(99.9%) 76.166 ns/op
+# Warmup Iteration   5: 601946.176 ±(99.9%) 117.482 ns/op
+Iteration   1: 596180.814 ±(99.9%) 14.176 ns/op
+                 computeNFactorial·p0.00:   594944.000 ns/op
+                 computeNFactorial·p0.50:   595968.000 ns/op
+                 computeNFactorial·p0.90:   596992.000 ns/op
+                 computeNFactorial·p0.95:   596992.000 ns/op
+                 computeNFactorial·p0.99:   598016.000 ns/op
+                 computeNFactorial·p0.999:  602112.000 ns/op
+                 computeNFactorial·p0.9999: 609611.264 ns/op
+                 computeNFactorial·p1.00:   610304.000 ns/op
+
+Iteration   2: 594169.272 ±(99.9%) 59.039 ns/op
+                 computeNFactorial·p0.00:   592896.000 ns/op
+                 computeNFactorial·p0.50:   593920.000 ns/op
+                 computeNFactorial·p0.90:   594944.000 ns/op
+                 computeNFactorial·p0.95:   594944.000 ns/op
+                 computeNFactorial·p0.99:   595968.000 ns/op
+                 computeNFactorial·p0.999:  601273.344 ns/op
+                 computeNFactorial·p0.9999: 702162.944 ns/op
+                 computeNFactorial·p1.00:   883712.000 ns/op
+
+Iteration   3: 561352.959 ±(99.9%) 13.926 ns/op
+                 computeNFactorial·p0.00:   561152.000 ns/op
+                 computeNFactorial·p0.50:   561152.000 ns/op
+                 computeNFactorial·p0.90:   562176.000 ns/op
+                 computeNFactorial·p0.95:   562176.000 ns/op
+                 computeNFactorial·p0.99:   563200.000 ns/op
+                 computeNFactorial·p0.999:  567296.000 ns/op
+                 computeNFactorial·p0.9999: 576736.256 ns/op
+                 computeNFactorial·p1.00:   577536.000 ns/op
+
+Iteration   4: 693500.714 ±(99.9%) 16.013 ns/op
+                 computeNFactorial·p0.00:   692224.000 ns/op
+                 computeNFactorial·p0.50:   693248.000 ns/op
+                 computeNFactorial·p0.90:   694272.000 ns/op
+                 computeNFactorial·p0.95:   694272.000 ns/op
+                 computeNFactorial·p0.99:   695296.000 ns/op
+                 computeNFactorial·p0.999:  699392.000 ns/op
+                 computeNFactorial·p0.9999: 703036.006 ns/op
+                 computeNFactorial·p1.00:   703488.000 ns/op
+
+Iteration   5: 561342.944 ±(99.9%) 12.446 ns/op
+                 computeNFactorial·p0.00:   561152.000 ns/op
+                 computeNFactorial·p0.50:   561152.000 ns/op
+                 computeNFactorial·p0.90:   562176.000 ns/op
+                 computeNFactorial·p0.95:   562176.000 ns/op
+                 computeNFactorial·p0.99:   562176.000 ns/op
+                 computeNFactorial·p0.999:  566272.000 ns/op
+                 computeNFactorial·p0.9999: 574688.154 ns/op
+                 computeNFactorial·p1.00:   575488.000 ns/op
+
+
+
+Result "benchmarks.cpu_benchmarks.Factorial.computeNFactorial":
+  N = 418068
+  mean = 597706.971 ±(99.9%) 235.905 ns/op
+
+  Histogram, ns/op:
+    [500000.000, 525000.000) = 0 
+    [525000.000, 550000.000) = 0 
+    [550000.000, 575000.000) = 178077 
+    [575000.000, 600000.000) = 167603 
+    [600000.000, 625000.000) = 324 
+    [625000.000, 650000.000) = 0 
+    [650000.000, 675000.000) = 0 
+    [675000.000, 700000.000) = 72016 
+    [700000.000, 725000.000) = 47 
+    [725000.000, 750000.000) = 0 
+    [750000.000, 775000.000) = 0 
+    [775000.000, 800000.000) = 0 
+    [800000.000, 825000.000) = 0 
+    [825000.000, 850000.000) = 0 
+    [850000.000, 875000.000) = 0 
+
+  Percentiles, ns/op:
+      p(0.0000) = 560128.000 ns/op
+     p(50.0000) = 593920.000 ns/op
+     p(90.0000) = 693248.000 ns/op
+     p(95.0000) = 693248.000 ns/op
+     p(99.0000) = 694272.000 ns/op
+     p(99.9000) = 695296.000 ns/op
+     p(99.9900) = 700416.000 ns/op
+     p(99.9990) = 707398.973 ns/op
+     p(99.9999) = 883712.000 ns/op
+    p(100.0000) = 883712.000 ns/op
+
+
+# JMH version: 1.36
+# VM version: JDK 20.0.1, OpenJDK 64-Bit Server VM, 20.0.1+9
+# VM invoker: /usr/lib/jvm/java-20-openjdk/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: benchmarks.cpu_benchmarks.Fibonacci.computeFibN
+
+# Run progress: 80.00% complete, ETA 00:08:20
+# Fork: 1 of 5
+# Warmup Iteration   1: 214454.440 ±(99.9%) 147.336 ns/op
+# Warmup Iteration   2: 218463.064 ±(99.9%) 15.136 ns/op
+# Warmup Iteration   3: 224036.306 ±(99.9%) 17.711 ns/op
+# Warmup Iteration   4: 213080.503 ±(99.9%) 5.576 ns/op
+# Warmup Iteration   5: 214359.258 ±(99.9%) 5.496 ns/op
+Iteration   1: 188751.115 ±(99.9%) 4.997 ns/op
+                 computeFibN·p0.00:   188672.000 ns/op
+                 computeFibN·p0.50:   188672.000 ns/op
+                 computeFibN·p0.90:   188672.000 ns/op
+                 computeFibN·p0.95:   189952.000 ns/op
+                 computeFibN·p0.99:   189952.000 ns/op
+                 computeFibN·p0.999:  190976.000 ns/op
+                 computeFibN·p0.9999: 196201.370 ns/op
+                 computeFibN·p1.00:   201984.000 ns/op
+
+Iteration   2: 232291.805 ±(99.9%) 6.226 ns/op
+                 computeFibN·p0.00:   232192.000 ns/op
+                 computeFibN·p0.50:   232192.000 ns/op
+                 computeFibN·p0.90:   232192.000 ns/op
+                 computeFibN·p0.95:   233472.000 ns/op
+                 computeFibN·p0.99:   233728.000 ns/op
+                 computeFibN·p0.999:  235520.000 ns/op
+                 computeFibN·p0.9999: 240331.674 ns/op
+                 computeFibN·p1.00:   243712.000 ns/op
+
+Iteration   3: 193873.193 ±(99.9%) 5.169 ns/op
+                 computeFibN·p0.00:   193792.000 ns/op
+                 computeFibN·p0.50:   193792.000 ns/op
+                 computeFibN·p0.90:   193792.000 ns/op
+                 computeFibN·p0.95:   195072.000 ns/op
+                 computeFibN·p0.99:   195072.000 ns/op
+                 computeFibN·p0.999:  196352.000 ns/op
+                 computeFibN·p0.9999: 202986.419 ns/op
+                 computeFibN·p1.00:   207360.000 ns/op
+
+Iteration   4: 222223.256 ±(99.9%) 11.385 ns/op
+                 computeFibN·p0.00:   217088.000 ns/op
+                 computeFibN·p0.50:   222208.000 ns/op
+                 computeFibN·p0.90:   222208.000 ns/op
+                 computeFibN·p0.95:   223488.000 ns/op
+                 computeFibN·p0.99:   223488.000 ns/op
+                 computeFibN·p0.999:  225792.000 ns/op
+                 computeFibN·p0.9999: 233600.282 ns/op
+                 computeFibN·p1.00:   236544.000 ns/op
+
+Iteration   5: 217178.902 ±(99.9%) 5.788 ns/op
+                 computeFibN·p0.00:   217088.000 ns/op
+                 computeFibN·p0.50:   217088.000 ns/op
+                 computeFibN·p0.90:   217088.000 ns/op
+                 computeFibN·p0.95:   218368.000 ns/op
+                 computeFibN·p0.99:   218368.000 ns/op
+                 computeFibN·p0.999:  220672.000 ns/op
+                 computeFibN·p0.9999: 225381.939 ns/op
+                 computeFibN·p1.00:   231424.000 ns/op
+
+
+# Run progress: 84.00% complete, ETA 00:06:40
+# Fork: 2 of 5
+# Warmup Iteration   1: 214428.494 ±(99.9%) 145.714 ns/op
+# Warmup Iteration   2: 218463.652 ±(99.9%) 14.997 ns/op
+# Warmup Iteration   3: 224096.085 ±(99.9%) 16.789 ns/op
+# Warmup Iteration   4: 213081.791 ±(99.9%) 5.652 ns/op
+# Warmup Iteration   5: 214320.126 ±(99.9%) 9.120 ns/op
+Iteration   1: 188744.800 ±(99.9%) 5.903 ns/op
+                 computeFibN·p0.00:   184320.000 ns/op
+                 computeFibN·p0.50:   188672.000 ns/op
+                 computeFibN·p0.90:   188672.000 ns/op
+                 computeFibN·p0.95:   189952.000 ns/op
+                 computeFibN·p0.99:   189952.000 ns/op
+                 computeFibN·p0.999:  191488.000 ns/op
+                 computeFibN·p0.9999: 198324.608 ns/op
+                 computeFibN·p1.00:   207104.000 ns/op
+
+Iteration   2: 232409.738 ±(99.9%) 19.571 ns/op
+                 computeFibN·p0.00:   232192.000 ns/op
+                 computeFibN·p0.50:   232192.000 ns/op
+                 computeFibN·p0.90:   232192.000 ns/op
+                 computeFibN·p0.95:   233472.000 ns/op
+                 computeFibN·p0.99:   235008.000 ns/op
+                 computeFibN·p0.999:  246016.000 ns/op
+                 computeFibN·p0.9999: 252160.000 ns/op
+                 computeFibN·p1.00:   274944.000 ns/op
+
+Iteration   3: 193927.263 ±(99.9%) 13.975 ns/op
+                 computeFibN·p0.00:   189440.000 ns/op
+                 computeFibN·p0.50:   193792.000 ns/op
+                 computeFibN·p0.90:   193792.000 ns/op
+                 computeFibN·p0.95:   195072.000 ns/op
+                 computeFibN·p0.99:   195584.000 ns/op
+                 computeFibN·p0.999:  205824.000 ns/op
+                 computeFibN·p0.9999: 211160.704 ns/op
+                 computeFibN·p1.00:   232192.000 ns/op
+
+Iteration   4: 222401.805 ±(99.9%) 23.870 ns/op
+                 computeFibN·p0.00:   221952.000 ns/op
+                 computeFibN·p0.50:   222208.000 ns/op
+                 computeFibN·p0.90:   222208.000 ns/op
+                 computeFibN·p0.95:   223488.000 ns/op
+                 computeFibN·p0.99:   224000.000 ns/op
+                 computeFibN·p0.999:  236032.000 ns/op
+                 computeFibN·p0.9999: 257952.486 ns/op
+                 computeFibN·p1.00:   416256.000 ns/op
+
+Iteration   5: 217273.534 ±(99.9%) 17.964 ns/op
+                 computeFibN·p0.00:   217088.000 ns/op
+                 computeFibN·p0.50:   217088.000 ns/op
+                 computeFibN·p0.90:   217088.000 ns/op
+                 computeFibN·p0.95:   218368.000 ns/op
+                 computeFibN·p0.99:   218880.000 ns/op
+                 computeFibN·p0.999:  231424.000 ns/op
+                 computeFibN·p0.9999: 242790.451 ns/op
+                 computeFibN·p1.00:   260864.000 ns/op
+
+
+# Run progress: 88.00% complete, ETA 00:05:00
+# Fork: 3 of 5
+# Warmup Iteration   1: 214550.940 ±(99.9%) 149.161 ns/op
+# Warmup Iteration   2: 218561.094 ±(99.9%) 23.107 ns/op
+# Warmup Iteration   3: 224199.718 ±(99.9%) 20.307 ns/op
+# Warmup Iteration   4: 213110.545 ±(99.9%) 11.575 ns/op
+# Warmup Iteration   5: 214416.806 ±(99.9%) 19.802 ns/op
+Iteration   1: 188830.795 ±(99.9%) 15.450 ns/op
+                 computeFibN·p0.00:   188672.000 ns/op
+                 computeFibN·p0.50:   188672.000 ns/op
+                 computeFibN·p0.90:   188672.000 ns/op
+                 computeFibN·p0.95:   189952.000 ns/op
+                 computeFibN·p0.99:   190464.000 ns/op
+                 computeFibN·p0.999:  202516.224 ns/op
+                 computeFibN·p0.9999: 208309.222 ns/op
+                 computeFibN·p1.00:   232704.000 ns/op
+
+Iteration   2: 232397.093 ±(99.9%) 19.901 ns/op
+                 computeFibN·p0.00:   232192.000 ns/op
+                 computeFibN·p0.50:   232192.000 ns/op
+                 computeFibN·p0.90:   232192.000 ns/op
+                 computeFibN·p0.95:   233472.000 ns/op
+                 computeFibN·p0.99:   234240.000 ns/op
+                 computeFibN·p0.999:  247296.000 ns/op
+                 computeFibN·p0.9999: 260813.619 ns/op
+                 computeFibN·p1.00:   275456.000 ns/op
+
+Iteration   3: 193965.283 ±(99.9%) 16.954 ns/op
+                 computeFibN·p0.00:   193792.000 ns/op
+                 computeFibN·p0.50:   193792.000 ns/op
+                 computeFibN·p0.90:   193792.000 ns/op
+                 computeFibN·p0.95:   195072.000 ns/op
+                 computeFibN·p0.99:   195840.000 ns/op
+                 computeFibN·p0.999:  208128.000 ns/op
+                 computeFibN·p0.9999: 222602.880 ns/op
+                 computeFibN·p1.00:   234496.000 ns/op
+
+Iteration   4: 222367.149 ±(99.9%) 16.917 ns/op
+                 computeFibN·p0.00:   221952.000 ns/op
+                 computeFibN·p0.50:   222208.000 ns/op
+                 computeFibN·p0.90:   222208.000 ns/op
+                 computeFibN·p0.95:   223488.000 ns/op
+                 computeFibN·p0.99:   223744.000 ns/op
+                 computeFibN·p0.999:  234496.000 ns/op
+                 computeFibN·p0.9999: 242311.168 ns/op
+                 computeFibN·p1.00:   306176.000 ns/op
+
+Iteration   5: 217245.196 ±(99.9%) 16.107 ns/op
+                 computeFibN·p0.00:   217088.000 ns/op
+                 computeFibN·p0.50:   217088.000 ns/op
+                 computeFibN·p0.90:   217088.000 ns/op
+                 computeFibN·p0.95:   218368.000 ns/op
+                 computeFibN·p0.99:   218880.000 ns/op
+                 computeFibN·p0.999:  230654.976 ns/op
+                 computeFibN·p0.9999: 241611.571 ns/op
+                 computeFibN·p1.00:   289280.000 ns/op
+
+
+# Run progress: 92.00% complete, ETA 00:03:20
+# Fork: 4 of 5
+# Warmup Iteration   1: 214455.732 ±(99.9%) 145.788 ns/op
+# Warmup Iteration   2: 218464.941 ±(99.9%) 15.142 ns/op
+# Warmup Iteration   3: 224096.248 ±(99.9%) 6.589 ns/op
+# Warmup Iteration   4: 213088.733 ±(99.9%) 15.819 ns/op
+# Warmup Iteration   5: 214358.715 ±(99.9%) 5.558 ns/op
+Iteration   1: 188750.675 ±(99.9%) 5.019 ns/op
+                 computeFibN·p0.00:   188672.000 ns/op
+                 computeFibN·p0.50:   188672.000 ns/op
+                 computeFibN·p0.90:   188672.000 ns/op
+                 computeFibN·p0.95:   189952.000 ns/op
+                 computeFibN·p0.99:   189952.000 ns/op
+                 computeFibN·p0.999:  190720.000 ns/op
+                 computeFibN·p0.9999: 197376.000 ns/op
+                 computeFibN·p1.00:   200704.000 ns/op
+
+Iteration   2: 232292.161 ±(99.9%) 6.637 ns/op
+                 computeFibN·p0.00:   232192.000 ns/op
+                 computeFibN·p0.50:   232192.000 ns/op
+                 computeFibN·p0.90:   232192.000 ns/op
+                 computeFibN·p0.95:   233472.000 ns/op
+                 computeFibN·p0.99:   233728.000 ns/op
+                 computeFibN·p0.999:  234496.000 ns/op
+                 computeFibN·p0.9999: 242993.818 ns/op
+                 computeFibN·p1.00:   256256.000 ns/op
+
+Iteration   3: 193875.781 ±(99.9%) 5.488 ns/op
+                 computeFibN·p0.00:   193792.000 ns/op
+                 computeFibN·p0.50:   193792.000 ns/op
+                 computeFibN·p0.90:   193792.000 ns/op
+                 computeFibN·p0.95:   195072.000 ns/op
+                 computeFibN·p0.99:   195072.000 ns/op
+                 computeFibN·p0.999:  196096.000 ns/op
+                 computeFibN·p0.9999: 204208.691 ns/op
+                 computeFibN·p1.00:   216320.000 ns/op
+
+Iteration   4: 222310.704 ±(99.9%) 6.502 ns/op
+                 computeFibN·p0.00:   221952.000 ns/op
+                 computeFibN·p0.50:   222208.000 ns/op
+                 computeFibN·p0.90:   222208.000 ns/op
+                 computeFibN·p0.95:   223488.000 ns/op
+                 computeFibN·p0.99:   223744.000 ns/op
+                 computeFibN·p0.999:  225280.000 ns/op
+                 computeFibN·p0.9999: 233602.304 ns/op
+                 computeFibN·p1.00:   234496.000 ns/op
+
+Iteration   5: 217194.110 ±(99.9%) 6.560 ns/op
+                 computeFibN·p0.00:   217088.000 ns/op
+                 computeFibN·p0.50:   217088.000 ns/op
+                 computeFibN·p0.90:   217088.000 ns/op
+                 computeFibN·p0.95:   218368.000 ns/op
+                 computeFibN·p0.99:   218624.000 ns/op
+                 computeFibN·p0.999:  220416.000 ns/op
+                 computeFibN·p0.9999: 228556.083 ns/op
+                 computeFibN·p1.00:   235520.000 ns/op
+
+
+# Run progress: 96.00% complete, ETA 00:01:40
+# Fork: 5 of 5
+# Warmup Iteration   1: 214456.248 ±(99.9%) 148.036 ns/op
+# Warmup Iteration   2: 218467.451 ±(99.9%) 11.411 ns/op
+# Warmup Iteration   3: 224103.302 ±(99.9%) 16.627 ns/op
+# Warmup Iteration   4: 213093.082 ±(99.9%) 7.398 ns/op
+# Warmup Iteration   5: 214368.075 ±(99.9%) 6.992 ns/op
+Iteration   1: 188760.997 ±(99.9%) 5.896 ns/op
+                 computeFibN·p0.00:   188672.000 ns/op
+                 computeFibN·p0.50:   188672.000 ns/op
+                 computeFibN·p0.90:   188672.000 ns/op
+                 computeFibN·p0.95:   189952.000 ns/op
+                 computeFibN·p0.99:   190464.000 ns/op
+                 computeFibN·p0.999:  192000.000 ns/op
+                 computeFibN·p0.9999: 199890.944 ns/op
+                 computeFibN·p1.00:   207360.000 ns/op
+
+Iteration   2: 232296.861 ±(99.9%) 6.813 ns/op
+                 computeFibN·p0.00:   232192.000 ns/op
+                 computeFibN·p0.50:   232192.000 ns/op
+                 computeFibN·p0.90:   232192.000 ns/op
+                 computeFibN·p0.95:   233472.000 ns/op
+                 computeFibN·p0.99:   233728.000 ns/op
+                 computeFibN·p0.999:  235008.000 ns/op
+                 computeFibN·p0.9999: 243456.000 ns/op
+                 computeFibN·p1.00:   253696.000 ns/op
+
+Iteration   3: 193885.343 ±(99.9%) 7.035 ns/op
+                 computeFibN·p0.00:   193792.000 ns/op
+                 computeFibN·p0.50:   193792.000 ns/op
+                 computeFibN·p0.90:   193792.000 ns/op
+                 computeFibN·p0.95:   195072.000 ns/op
+                 computeFibN·p0.99:   195584.000 ns/op
+                 computeFibN·p0.999:  196864.000 ns/op
+                 computeFibN·p0.9999: 209505.792 ns/op
+                 computeFibN·p1.00:   230656.000 ns/op
+
+Iteration   4: 222307.583 ±(99.9%) 13.284 ns/op
+                 computeFibN·p0.00:   221952.000 ns/op
+                 computeFibN·p0.50:   222208.000 ns/op
+                 computeFibN·p0.90:   222208.000 ns/op
+                 computeFibN·p0.95:   223488.000 ns/op
+                 computeFibN·p0.99:   223744.000 ns/op
+                 computeFibN·p0.999:  224768.000 ns/op
+                 computeFibN·p0.9999: 235906.074 ns/op
+                 computeFibN·p1.00:   381440.000 ns/op
+
+Iteration   5: 217185.951 ±(99.9%) 6.332 ns/op
+                 computeFibN·p0.00:   217088.000 ns/op
+                 computeFibN·p0.50:   217088.000 ns/op
+                 computeFibN·p0.90:   217088.000 ns/op
+                 computeFibN·p0.95:   218368.000 ns/op
+                 computeFibN·p0.99:   218624.000 ns/op
+                 computeFibN·p0.999:  220668.160 ns/op
+                 computeFibN·p0.9999: 227224.064 ns/op
+                 computeFibN·p1.00:   233472.000 ns/op
+
+
+
+Result "benchmarks.cpu_benchmarks.Fibonacci.computeFibN":
+  N = 1192273
+  mean = 209551.826 ±(99.9%) 50.889 ns/op
+
+  Histogram, ns/op:
+    [100000.000, 125000.000) = 0 
+    [125000.000, 150000.000) = 0 
+    [150000.000, 175000.000) = 0 
+    [175000.000, 200000.000) = 521360 
+    [200000.000, 225000.000) = 454460 
+    [225000.000, 250000.000) = 216415 
+    [250000.000, 275000.000) = 32 
+    [275000.000, 300000.000) = 3 
+    [300000.000, 325000.000) = 1 
+    [325000.000, 350000.000) = 0 
+    [350000.000, 375000.000) = 0 
+    [375000.000, 400000.000) = 1 
+    [400000.000, 425000.000) = 1 
+    [425000.000, 450000.000) = 0 
+    [450000.000, 475000.000) = 0 
+
+  Percentiles, ns/op:
+      p(0.0000) = 184320.000 ns/op
+     p(50.0000) = 217088.000 ns/op
+     p(90.0000) = 232192.000 ns/op
+     p(95.0000) = 232192.000 ns/op
+     p(99.0000) = 233472.000 ns/op
+     p(99.9000) = 234496.000 ns/op
+     p(99.9900) = 246784.000 ns/op
+     p(99.9990) = 261139.779 ns/op
+     p(99.9999) = 409561.788 ns/op
+    p(100.0000) = 416256.000 ns/op
+
+
+# Run complete. Total time: 00:41:44
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                                       Mode      Cnt        Score     Error  Units
+BiggestPrime.computeLargestPrime                              sample  7088782     2652.013 ±   0.975  ns/op
+BiggestPrime.computeLargestPrime:computeLargestPrime·p0.00    sample              2064.000            ns/op
+BiggestPrime.computeLargestPrime:computeLargestPrime·p0.50    sample              2196.000            ns/op
+BiggestPrime.computeLargestPrime:computeLargestPrime·p0.90    sample              4076.000            ns/op
+BiggestPrime.computeLargestPrime:computeLargestPrime·p0.95    sample              4084.000            ns/op
+BiggestPrime.computeLargestPrime:computeLargestPrime·p0.99    sample              4092.000            ns/op
+BiggestPrime.computeLargestPrime:computeLargestPrime·p0.999   sample              4104.000            ns/op
+BiggestPrime.computeLargestPrime:computeLargestPrime·p0.9999  sample              6112.000            ns/op
+BiggestPrime.computeLargestPrime:computeLargestPrime·p1.00    sample            195840.000            ns/op
+Euclid.computeGcdDiv                                          sample  5754109     5452.111 ±   6.236  ns/op
+Euclid.computeGcdDiv:computeGcdDiv·p0.00                      sample              4760.000            ns/op
+Euclid.computeGcdDiv:computeGcdDiv·p0.50                      sample              5216.000            ns/op
+Euclid.computeGcdDiv:computeGcdDiv·p0.90                      sample              6272.000            ns/op
+Euclid.computeGcdDiv:computeGcdDiv·p0.95                      sample              6312.000            ns/op
+Euclid.computeGcdDiv:computeGcdDiv·p0.99                      sample              6432.000            ns/op
+Euclid.computeGcdDiv:computeGcdDiv·p0.999                     sample              9504.000            ns/op
+Euclid.computeGcdDiv:computeGcdDiv·p0.9999                    sample             21056.000            ns/op
+Euclid.computeGcdDiv:computeGcdDiv·p1.00                      sample           1038336.000            ns/op
+Euclid.computeGcdSub                                          sample  6053229    12400.402 ±   9.990  ns/op
+Euclid.computeGcdSub:computeGcdSub·p0.00                      sample              7000.000            ns/op
+Euclid.computeGcdSub:computeGcdSub·p0.50                      sample             11968.000            ns/op
+Euclid.computeGcdSub:computeGcdSub·p0.90                      sample             21088.000            ns/op
+Euclid.computeGcdSub:computeGcdSub·p0.95                      sample             21152.000            ns/op
+Euclid.computeGcdSub:computeGcdSub·p0.99                      sample             21344.000            ns/op
+Euclid.computeGcdSub:computeGcdSub·p0.999                     sample             23328.000            ns/op
+Euclid.computeGcdSub:computeGcdSub·p0.9999                    sample             44033.984            ns/op
+Euclid.computeGcdSub:computeGcdSub·p1.00                      sample           1873920.000            ns/op
+Factorial.computeNFactorial                                   sample   418068   597706.971 ± 235.905  ns/op
+Factorial.computeNFactorial:computeNFactorial·p0.00           sample            560128.000            ns/op
+Factorial.computeNFactorial:computeNFactorial·p0.50           sample            593920.000            ns/op
+Factorial.computeNFactorial:computeNFactorial·p0.90           sample            693248.000            ns/op
+Factorial.computeNFactorial:computeNFactorial·p0.95           sample            693248.000            ns/op
+Factorial.computeNFactorial:computeNFactorial·p0.99           sample            694272.000            ns/op
+Factorial.computeNFactorial:computeNFactorial·p0.999          sample            695296.000            ns/op
+Factorial.computeNFactorial:computeNFactorial·p0.9999         sample            700416.000            ns/op
+Factorial.computeNFactorial:computeNFactorial·p1.00           sample            883712.000            ns/op
+Fibonacci.computeFibN                                         sample  1192273   209551.826 ±  50.889  ns/op
+Fibonacci.computeFibN:computeFibN·p0.00                       sample            184320.000            ns/op
+Fibonacci.computeFibN:computeFibN·p0.50                       sample            217088.000            ns/op
+Fibonacci.computeFibN:computeFibN·p0.90                       sample            232192.000            ns/op
+Fibonacci.computeFibN:computeFibN·p0.95                       sample            232192.000            ns/op
+Fibonacci.computeFibN:computeFibN·p0.99                       sample            233472.000            ns/op
+Fibonacci.computeFibN:computeFibN·p0.999                      sample            234496.000            ns/op
+Fibonacci.computeFibN:computeFibN·p0.9999                     sample            246784.000            ns/op
+Fibonacci.computeFibN:computeFibN·p1.00                       sample            416256.000            ns/op
+
+Benchmark result is saved to jmh-result.csv
