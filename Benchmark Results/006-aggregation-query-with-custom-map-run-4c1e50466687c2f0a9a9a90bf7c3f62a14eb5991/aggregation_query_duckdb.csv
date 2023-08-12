@@ -1,0 +1,9 @@
+Dataset,Running-Time
+/nvtmp/AethraTestData/aggregation_query_int/arrow_size_31457280_keys_128/aggregation_query_table.arrow, 0.46453160000000004
+/nvtmp/AethraTestData/aggregation_query_int/arrow_size_31457280_keys_524288/aggregation_query_table.arrow, 2.7504904
+/nvtmp/AethraTestData/aggregation_query_int/arrow_size_31457280_keys_262144/aggregation_query_table.arrow, 2.3816352000000003
+/nvtmp/AethraTestData/aggregation_query_int/arrow_size_31457280_keys_1024/aggregation_query_table.arrow, 0.5679394
+/nvtmp/AethraTestData/aggregation_query_int/arrow_size_31457280_keys_16/aggregation_query_table.arrow, 0.4617285
+/nvtmp/AethraTestData/aggregation_query_int/arrow_size_31457280_keys_8192/aggregation_query_table.arrow, 0.9280246
+/nvtmp/AethraTestData/aggregation_query_int/arrow_size_31457280_keys_65536/aggregation_query_table.arrow, 1.4131696999999999
+/nvtmp/AethraTestData/aggregation_query_int/arrow_size_31457280_keys_2/aggregation_query_table.arrow, 0.45782740000000005

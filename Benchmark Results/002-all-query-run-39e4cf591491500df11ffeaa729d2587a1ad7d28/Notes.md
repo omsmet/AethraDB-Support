@@ -30,6 +30,7 @@ Observations on the result (Varying number of keys):
 - SIMD only becomes beneficial for keys >= 131072, especially for the non-vectorised implementation
     - Here, the optimal number of SIMD elements is actually used, since we need to convert the integer SIMD vectors to long SIMD vectors anyhow
     - But: the conversion allows to specify "parts", which we currently do not use, which might make the computation faster still
+    - Alternatively: SIMD is not beneficial, but for keys >= 131072 the running-time of non-vec, non-simd explodes
 - For the number of keys <= 262144, we see that most implementations are within a factor 2 of the DuckDB performance (and usually quite a lot closer)
 
 Observations on the result (Varying the key skew):
