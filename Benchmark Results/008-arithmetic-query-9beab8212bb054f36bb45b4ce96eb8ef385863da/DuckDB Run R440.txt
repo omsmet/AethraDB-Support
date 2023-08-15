@@ -1,0 +1,2 @@
+DuckDB Version 0.7.1 - PyArrow Version 11.0.0 - Single Threaded Mode
+/nvtmp/duckdb/arrow_tpch/lineitem_doubles.arrow, 0.03925490000000001 

@@ -1,0 +1,1420 @@
+# JMH version: 1.36
+# VM version: JDK 20.0.1, OpenJDK 64-Bit Server VM, 20.0.1+9-29
+# VM invoker: /home/olivier/external_software/openjdk-20.0.1/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-opens=java.base/java.nio=ALL-UNNAMED -Darrow.enable_unsafe_memory_access=true -Darrow.enable_null_check_for_get=false --enable-preview -Xmx16g -Xms8g
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: benchmarks.arithmetic_query_hard_coded.NonVectorisedNonSimd.executeQuery
+# Parameters: (tableFilePath = /nvtmp/duckdb/arrow_tpch)
+
+# Run progress: 0.00% complete, ETA 00:33:20
+# Fork: 1 of 5
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: 18.530 ±(99.9%) 3.153 ms/op
+# Warmup Iteration   2: 17.505 ±(99.9%) 0.022 ms/op
+# Warmup Iteration   3: 17.512 ±(99.9%) 0.030 ms/op
+# Warmup Iteration   4: 17.518 ±(99.9%) 0.049 ms/op
+# Warmup Iteration   5: 17.512 ±(99.9%) 0.034 ms/op
+Iteration   1: 17.507 ±(99.9%) 0.049 ms/op
+                 executeQuery·p0.00:   17.465 ms/op
+                 executeQuery·p0.50:   17.498 ms/op
+                 executeQuery·p0.90:   17.537 ms/op
+                 executeQuery·p0.95:   17.723 ms/op
+                 executeQuery·p0.99:   17.826 ms/op
+                 executeQuery·p0.999:  17.826 ms/op
+                 executeQuery·p0.9999: 17.826 ms/op
+                 executeQuery·p1.00:   17.826 ms/op
+
+Iteration   2: 17.507 ±(99.9%) 0.023 ms/op
+                 executeQuery·p0.00:   17.433 ms/op
+                 executeQuery·p0.50:   17.498 ms/op
+                 executeQuery·p0.90:   17.534 ms/op
+                 executeQuery·p0.95:   17.564 ms/op
+                 executeQuery·p0.99:   17.564 ms/op
+                 executeQuery·p0.999:  17.564 ms/op
+                 executeQuery·p0.9999: 17.564 ms/op
+                 executeQuery·p1.00:   17.564 ms/op
+
+Iteration   3: 17.505 ±(99.9%) 0.024 ms/op
+                 executeQuery·p0.00:   17.465 ms/op
+                 executeQuery·p0.50:   17.498 ms/op
+                 executeQuery·p0.90:   17.564 ms/op
+                 executeQuery·p0.95:   17.564 ms/op
+                 executeQuery·p0.99:   17.564 ms/op
+                 executeQuery·p0.999:  17.564 ms/op
+                 executeQuery·p0.9999: 17.564 ms/op
+                 executeQuery·p1.00:   17.564 ms/op
+
+Iteration   4: 17.500 ±(99.9%) 0.028 ms/op
+                 executeQuery·p0.00:   17.465 ms/op
+                 executeQuery·p0.50:   17.498 ms/op
+                 executeQuery·p0.90:   17.567 ms/op
+                 executeQuery·p0.95:   17.596 ms/op
+                 executeQuery·p0.99:   17.596 ms/op
+                 executeQuery·p0.999:  17.596 ms/op
+                 executeQuery·p0.9999: 17.596 ms/op
+                 executeQuery·p1.00:   17.596 ms/op
+
+Iteration   5: 17.529 ±(99.9%) 0.053 ms/op
+                 executeQuery·p0.00:   17.465 ms/op
+                 executeQuery·p0.50:   17.498 ms/op
+                 executeQuery·p0.90:   17.665 ms/op
+                 executeQuery·p0.95:   17.695 ms/op
+                 executeQuery·p0.99:   17.695 ms/op
+                 executeQuery·p0.999:  17.695 ms/op
+                 executeQuery·p0.9999: 17.695 ms/op
+                 executeQuery·p1.00:   17.695 ms/op
+
+
+# Run progress: 5.00% complete, ETA 00:32:35
+# Fork: 2 of 5
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: 20.420 ±(99.9%) 5.899 ms/op
+# Warmup Iteration   2: 17.558 ±(99.9%) 0.028 ms/op
+# Warmup Iteration   3: 17.591 ±(99.9%) 0.029 ms/op
+# Warmup Iteration   4: 17.588 ±(99.9%) 0.055 ms/op
+# Warmup Iteration   5: 17.593 ±(99.9%) 0.045 ms/op
+Iteration   1: 17.592 ±(99.9%) 0.051 ms/op
+                 executeQuery·p0.00:   17.433 ms/op
+                 executeQuery·p0.50:   17.580 ms/op
+                 executeQuery·p0.90:   17.665 ms/op
+                 executeQuery·p0.95:   17.803 ms/op
+                 executeQuery·p0.99:   17.891 ms/op
+                 executeQuery·p0.999:  17.891 ms/op
+                 executeQuery·p0.9999: 17.891 ms/op
+                 executeQuery·p1.00:   17.891 ms/op
+
+Iteration   2: 17.577 ±(99.9%) 0.027 ms/op
+                 executeQuery·p0.00:   17.531 ms/op
+                 executeQuery·p0.50:   17.564 ms/op
+                 executeQuery·p0.90:   17.632 ms/op
+                 executeQuery·p0.95:   17.662 ms/op
+                 executeQuery·p0.99:   17.662 ms/op
+                 executeQuery·p0.999:  17.662 ms/op
+                 executeQuery·p0.9999: 17.662 ms/op
+                 executeQuery·p1.00:   17.662 ms/op
+
+Iteration   3: 17.598 ±(99.9%) 0.023 ms/op
+                 executeQuery·p0.00:   17.564 ms/op
+                 executeQuery·p0.50:   17.596 ms/op
+                 executeQuery·p0.90:   17.632 ms/op
+                 executeQuery·p0.95:   17.680 ms/op
+                 executeQuery·p0.99:   17.695 ms/op
+                 executeQuery·p0.999:  17.695 ms/op
+                 executeQuery·p0.9999: 17.695 ms/op
+                 executeQuery·p1.00:   17.695 ms/op
+
+Iteration   4: 17.606 ±(99.9%) 0.026 ms/op
+                 executeQuery·p0.00:   17.564 ms/op
+                 executeQuery·p0.50:   17.596 ms/op
+                 executeQuery·p0.90:   17.665 ms/op
+                 executeQuery·p0.95:   17.695 ms/op
+                 executeQuery·p0.99:   17.695 ms/op
+                 executeQuery·p0.999:  17.695 ms/op
+                 executeQuery·p0.9999: 17.695 ms/op
+                 executeQuery·p1.00:   17.695 ms/op
+
+Iteration   5: 17.636 ±(99.9%) 0.072 ms/op
+                 executeQuery·p0.00:   17.531 ms/op
+                 executeQuery·p0.50:   17.596 ms/op
+                 executeQuery·p0.90:   17.770 ms/op
+                 executeQuery·p0.95:   17.913 ms/op
+                 executeQuery·p0.99:   17.957 ms/op
+                 executeQuery·p0.999:  17.957 ms/op
+                 executeQuery·p0.9999: 17.957 ms/op
+                 executeQuery·p1.00:   17.957 ms/op
+
+
+# Run progress: 10.00% complete, ETA 00:30:56
+# Fork: 3 of 5
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: 19.278 ±(99.9%) 6.393 ms/op
+# Warmup Iteration   2: 17.489 ±(99.9%) 0.051 ms/op
+# Warmup Iteration   3: 17.469 ±(99.9%) 0.092 ms/op
+# Warmup Iteration   4: 17.512 ±(99.9%) 0.146 ms/op
+# Warmup Iteration   5: 17.456 ±(99.9%) 0.098 ms/op
+Iteration   1: 17.256 ±(99.9%) 0.042 ms/op
+                 executeQuery·p0.00:   17.203 ms/op
+                 executeQuery·p0.50:   17.252 ms/op
+                 executeQuery·p0.90:   17.334 ms/op
+                 executeQuery·p0.95:   17.334 ms/op
+                 executeQuery·p0.99:   17.334 ms/op
+                 executeQuery·p0.999:  17.334 ms/op
+                 executeQuery·p0.9999: 17.334 ms/op
+                 executeQuery·p1.00:   17.334 ms/op
+
+Iteration   2: 17.325 ±(99.9%) 0.101 ms/op
+                 executeQuery·p0.00:   17.236 ms/op
+                 executeQuery·p0.50:   17.252 ms/op
+                 executeQuery·p0.90:   17.498 ms/op
+                 executeQuery·p0.95:   17.498 ms/op
+                 executeQuery·p0.99:   17.498 ms/op
+                 executeQuery·p0.999:  17.498 ms/op
+                 executeQuery·p0.9999: 17.498 ms/op
+                 executeQuery·p1.00:   17.498 ms/op
+
+Iteration   3: 17.462 ±(99.9%) 0.053 ms/op
+                 executeQuery·p0.00:   17.400 ms/op
+                 executeQuery·p0.50:   17.449 ms/op
+                 executeQuery·p0.90:   17.567 ms/op
+                 executeQuery·p0.95:   17.596 ms/op
+                 executeQuery·p0.99:   17.596 ms/op
+                 executeQuery·p0.999:  17.596 ms/op
+                 executeQuery·p0.9999: 17.596 ms/op
+                 executeQuery·p1.00:   17.596 ms/op
+
+Iteration   4: 17.480 ±(99.9%) 0.133 ms/op
+                 executeQuery·p0.00:   17.334 ms/op
+                 executeQuery·p0.50:   17.433 ms/op
+                 executeQuery·p0.90:   17.662 ms/op
+                 executeQuery·p0.95:   17.957 ms/op
+                 executeQuery·p0.99:   17.957 ms/op
+                 executeQuery·p0.999:  17.957 ms/op
+                 executeQuery·p0.9999: 17.957 ms/op
+                 executeQuery·p1.00:   17.957 ms/op
+
+Iteration   5: 17.453 ±(99.9%) 0.077 ms/op
+                 executeQuery·p0.00:   17.400 ms/op
+                 executeQuery·p0.50:   17.433 ms/op
+                 executeQuery·p0.90:   17.636 ms/op
+                 executeQuery·p0.95:   17.695 ms/op
+                 executeQuery·p0.99:   17.695 ms/op
+                 executeQuery·p0.999:  17.695 ms/op
+                 executeQuery·p0.9999: 17.695 ms/op
+                 executeQuery·p1.00:   17.695 ms/op
+
+
+# Run progress: 15.00% complete, ETA 00:29:15
+# Fork: 4 of 5
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: 20.488 ±(99.9%) 6.849 ms/op
+# Warmup Iteration   2: 17.290 ±(99.9%) 0.046 ms/op
+# Warmup Iteration   3: 17.306 ±(99.9%) 0.049 ms/op
+# Warmup Iteration   4: 17.264 ±(99.9%) 0.038 ms/op
+# Warmup Iteration   5: 17.247 ±(99.9%) 0.042 ms/op
+Iteration   1: 17.256 ±(99.9%) 0.046 ms/op
+                 executeQuery·p0.00:   17.203 ms/op
+                 executeQuery·p0.50:   17.236 ms/op
+                 executeQuery·p0.90:   17.302 ms/op
+                 executeQuery·p0.95:   17.419 ms/op
+                 executeQuery·p0.99:   17.433 ms/op
+                 executeQuery·p0.999:  17.433 ms/op
+                 executeQuery·p0.9999: 17.433 ms/op
+                 executeQuery·p1.00:   17.433 ms/op
+
+Iteration   2: 17.261 ±(99.9%) 0.068 ms/op
+                 executeQuery·p0.00:   17.203 ms/op
+                 executeQuery·p0.50:   17.236 ms/op
+                 executeQuery·p0.90:   17.406 ms/op
+                 executeQuery·p0.95:   17.521 ms/op
+                 executeQuery·p0.99:   17.531 ms/op
+                 executeQuery·p0.999:  17.531 ms/op
+                 executeQuery·p0.9999: 17.531 ms/op
+                 executeQuery·p1.00:   17.531 ms/op
+
+Iteration   3: 17.245 ±(99.9%) 0.042 ms/op
+                 executeQuery·p0.00:   17.203 ms/op
+                 executeQuery·p0.50:   17.236 ms/op
+                 executeQuery·p0.90:   17.321 ms/op
+                 executeQuery·p0.95:   17.393 ms/op
+                 executeQuery·p0.99:   17.400 ms/op
+                 executeQuery·p0.999:  17.400 ms/op
+                 executeQuery·p0.9999: 17.400 ms/op
+                 executeQuery·p1.00:   17.400 ms/op
+
+Iteration   4: 17.230 ±(99.9%) 0.022 ms/op
+                 executeQuery·p0.00:   17.203 ms/op
+                 executeQuery·p0.50:   17.236 ms/op
+                 executeQuery·p0.90:   17.269 ms/op
+                 executeQuery·p0.95:   17.298 ms/op
+                 executeQuery·p0.99:   17.302 ms/op
+                 executeQuery·p0.999:  17.302 ms/op
+                 executeQuery·p0.9999: 17.302 ms/op
+                 executeQuery·p1.00:   17.302 ms/op
+
+Iteration   5: 17.255 ±(99.9%) 0.055 ms/op
+                 executeQuery·p0.00:   17.203 ms/op
+                 executeQuery·p0.50:   17.236 ms/op
+                 executeQuery·p0.90:   17.328 ms/op
+                 executeQuery·p0.95:   17.482 ms/op
+                 executeQuery·p0.99:   17.498 ms/op
+                 executeQuery·p0.999:  17.498 ms/op
+                 executeQuery·p0.9999: 17.498 ms/op
+                 executeQuery·p1.00:   17.498 ms/op
+
+
+# Run progress: 20.00% complete, ETA 00:27:34
+# Fork: 5 of 5
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: 18.552 ±(99.9%) 3.542 ms/op
+# Warmup Iteration   2: 17.447 ±(99.9%) 0.018 ms/op
+# Warmup Iteration   3: 17.462 ±(99.9%) 0.030 ms/op
+# Warmup Iteration   4: 17.445 ±(99.9%) 0.039 ms/op
+# Warmup Iteration   5: 17.465 ±(99.9%) 0.035 ms/op
+Iteration   1: 17.463 ±(99.9%) 0.073 ms/op
+                 executeQuery·p0.00:   17.400 ms/op
+                 executeQuery·p0.50:   17.433 ms/op
+                 executeQuery·p0.90:   17.521 ms/op
+                 executeQuery·p0.95:   17.818 ms/op
+                 executeQuery·p0.99:   17.891 ms/op
+                 executeQuery·p0.999:  17.891 ms/op
+                 executeQuery·p0.9999: 17.891 ms/op
+                 executeQuery·p1.00:   17.891 ms/op
+
+Iteration   2: 17.448 ±(99.9%) 0.024 ms/op
+                 executeQuery·p0.00:   17.400 ms/op
+                 executeQuery·p0.50:   17.433 ms/op
+                 executeQuery·p0.90:   17.498 ms/op
+                 executeQuery·p0.95:   17.498 ms/op
+                 executeQuery·p0.99:   17.498 ms/op
+                 executeQuery·p0.999:  17.498 ms/op
+                 executeQuery·p0.9999: 17.498 ms/op
+                 executeQuery·p1.00:   17.498 ms/op
+
+Iteration   3: 17.464 ±(99.9%) 0.048 ms/op
+                 executeQuery·p0.00:   17.400 ms/op
+                 executeQuery·p0.50:   17.433 ms/op
+                 executeQuery·p0.90:   17.501 ms/op
+                 executeQuery·p0.95:   17.657 ms/op
+                 executeQuery·p0.99:   17.760 ms/op
+                 executeQuery·p0.999:  17.760 ms/op
+                 executeQuery·p0.9999: 17.760 ms/op
+                 executeQuery·p1.00:   17.760 ms/op
+
+Iteration   4: 17.459 ±(99.9%) 0.048 ms/op
+                 executeQuery·p0.00:   17.400 ms/op
+                 executeQuery·p0.50:   17.433 ms/op
+                 executeQuery·p0.90:   17.567 ms/op
+                 executeQuery·p0.95:   17.650 ms/op
+                 executeQuery·p0.99:   17.695 ms/op
+                 executeQuery·p0.999:  17.695 ms/op
+                 executeQuery·p0.9999: 17.695 ms/op
+                 executeQuery·p1.00:   17.695 ms/op
+
+Iteration   5: 17.474 ±(99.9%) 0.062 ms/op
+                 executeQuery·p0.00:   17.400 ms/op
+                 executeQuery·p0.50:   17.433 ms/op
+                 executeQuery·p0.90:   17.632 ms/op
+                 executeQuery·p0.95:   17.716 ms/op
+                 executeQuery·p0.99:   17.760 ms/op
+                 executeQuery·p0.999:  17.760 ms/op
+                 executeQuery·p0.9999: 17.760 ms/op
+                 executeQuery·p1.00:   17.760 ms/op
+
+
+
+Result "benchmarks.arithmetic_query_hard_coded.NonVectorisedNonSimd.executeQuery":
+  N = 615
+  mean =     17.458 ±(99.9%) 0.018 ms/op
+
+  Histogram, ms/op:
+    [17.200, 17.250) = 90 
+    [17.250, 17.300) = 21 
+    [17.300, 17.350) = 19 
+    [17.350, 17.400) = 48 
+    [17.400, 17.450) = 72 
+    [17.450, 17.500) = 158 
+    [17.500, 17.550) = 39 
+    [17.550, 17.600) = 113 
+    [17.600, 17.650) = 21 
+    [17.650, 17.700) = 22 
+    [17.700, 17.750) = 1 
+    [17.750, 17.800) = 5 
+    [17.800, 17.850) = 1 
+    [17.850, 17.900) = 3 
+    [17.900, 17.950) = 0 
+    [17.950, 18.000) = 2 
+
+  Percentiles, ms/op:
+      p(0.0000) =     17.203 ms/op
+     p(50.0000) =     17.465 ms/op
+     p(90.0000) =     17.596 ms/op
+     p(95.0000) =     17.662 ms/op
+     p(99.0000) =     17.815 ms/op
+     p(99.9000) =     17.957 ms/op
+     p(99.9900) =     17.957 ms/op
+     p(99.9990) =     17.957 ms/op
+     p(99.9999) =     17.957 ms/op
+    p(100.0000) =     17.957 ms/op
+
+
+# JMH version: 1.36
+# VM version: JDK 20.0.1, OpenJDK 64-Bit Server VM, 20.0.1+9-29
+# VM invoker: /home/olivier/external_software/openjdk-20.0.1/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-opens=java.base/java.nio=ALL-UNNAMED -Darrow.enable_unsafe_memory_access=true -Darrow.enable_null_check_for_get=false --enable-preview --enable-native-access=ALL-UNNAMED -Xmx16g -Xms8g
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: benchmarks.arithmetic_query_hard_coded.NonVectorisedSimd.executeQuery
+# Parameters: (tableFilePath = /nvtmp/duckdb/arrow_tpch)
+
+# Run progress: 25.00% complete, ETA 00:25:49
+# Fork: 1 of 5
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: 194.824 ±(99.9%) 73.718 ms/op
+# Warmup Iteration   2: 115.868 ±(99.9%) 3.098 ms/op
+# Warmup Iteration   3: 114.876 ±(99.9%) 1.824 ms/op
+# Warmup Iteration   4: 115.925 ±(99.9%) 3.121 ms/op
+# Warmup Iteration   5: 114.950 ±(99.9%) 1.837 ms/op
+Iteration   1: 116.044 ±(99.9%) 3.409 ms/op
+                 executeQuery·p0.00:   114.295 ms/op
+                 executeQuery·p0.50:   114.426 ms/op
+                 executeQuery·p0.90:   126.117 ms/op
+                 executeQuery·p0.95:   128.005 ms/op
+                 executeQuery·p0.99:   128.451 ms/op
+                 executeQuery·p0.999:  128.451 ms/op
+                 executeQuery·p0.9999: 128.451 ms/op
+                 executeQuery·p1.00:   128.451 ms/op
+
+Iteration   2: 114.814 ±(99.9%) 2.518 ms/op
+                 executeQuery·p0.00:   113.639 ms/op
+                 executeQuery·p0.50:   113.902 ms/op
+                 executeQuery·p0.90:   119.734 ms/op
+                 executeQuery·p0.95:   125.501 ms/op
+                 executeQuery·p0.99:   125.567 ms/op
+                 executeQuery·p0.999:  125.567 ms/op
+                 executeQuery·p0.9999: 125.567 ms/op
+                 executeQuery·p1.00:   125.567 ms/op
+
+Iteration   3: 114.814 ±(99.9%) 2.444 ms/op
+                 executeQuery·p0.00:   113.639 ms/op
+                 executeQuery·p0.50:   113.770 ms/op
+                 executeQuery·p0.90:   119.538 ms/op
+                 executeQuery·p0.95:   125.272 ms/op
+                 executeQuery·p0.99:   125.436 ms/op
+                 executeQuery·p0.999:  125.436 ms/op
+                 executeQuery·p0.9999: 125.436 ms/op
+                 executeQuery·p1.00:   125.436 ms/op
+
+Iteration   4: 114.764 ±(99.9%) 2.530 ms/op
+                 executeQuery·p0.00:   113.639 ms/op
+                 executeQuery·p0.50:   113.770 ms/op
+                 executeQuery·p0.90:   119.734 ms/op
+                 executeQuery·p0.95:   125.501 ms/op
+                 executeQuery·p0.99:   125.567 ms/op
+                 executeQuery·p0.999:  125.567 ms/op
+                 executeQuery·p0.9999: 125.567 ms/op
+                 executeQuery·p1.00:   125.567 ms/op
+
+Iteration   5: 114.819 ±(99.9%) 2.399 ms/op
+                 executeQuery·p0.00:   113.639 ms/op
+                 executeQuery·p0.50:   113.902 ms/op
+                 executeQuery·p0.90:   119.538 ms/op
+                 executeQuery·p0.95:   125.043 ms/op
+                 executeQuery·p0.99:   125.174 ms/op
+                 executeQuery·p0.999:  125.174 ms/op
+                 executeQuery·p0.9999: 125.174 ms/op
+                 executeQuery·p1.00:   125.174 ms/op
+
+
+# Run progress: 30.00% complete, ETA 00:24:05
+# Fork: 2 of 5
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: 171.256 ±(99.9%) 70.073 ms/op
+# Warmup Iteration   2: 87.913 ±(99.9%) 2.781 ms/op
+# Warmup Iteration   3: 86.875 ±(99.9%) 1.685 ms/op
+# Warmup Iteration   4: 87.724 ±(99.9%) 2.791 ms/op
+# Warmup Iteration   5: 87.771 ±(99.9%) 2.804 ms/op
+Iteration   1: 87.415 ±(99.9%) 2.332 ms/op
+                 executeQuery·p0.00:   86.245 ms/op
+                 executeQuery·p0.50:   86.508 ms/op
+                 executeQuery·p0.90:   91.541 ms/op
+                 executeQuery·p0.95:   97.793 ms/op
+                 executeQuery·p0.99:   97.911 ms/op
+                 executeQuery·p0.999:  97.911 ms/op
+                 executeQuery·p0.9999: 97.911 ms/op
+                 executeQuery·p1.00:   97.911 ms/op
+
+Iteration   2: 87.446 ±(99.9%) 2.322 ms/op
+                 executeQuery·p0.00:   86.376 ms/op
+                 executeQuery·p0.50:   86.508 ms/op
+                 executeQuery·p0.90:   91.514 ms/op
+                 executeQuery·p0.95:   97.740 ms/op
+                 executeQuery·p0.99:   97.780 ms/op
+                 executeQuery·p0.999:  97.780 ms/op
+                 executeQuery·p0.9999: 97.780 ms/op
+                 executeQuery·p1.00:   97.780 ms/op
+
+Iteration   3: 87.797 ±(99.9%) 2.785 ms/op
+                 executeQuery·p0.00:   86.245 ms/op
+                 executeQuery·p0.50:   86.508 ms/op
+                 executeQuery·p0.90:   96.941 ms/op
+                 executeQuery·p0.95:   98.409 ms/op
+                 executeQuery·p0.99:   98.566 ms/op
+                 executeQuery·p0.999:  98.566 ms/op
+                 executeQuery·p0.9999: 98.566 ms/op
+                 executeQuery·p1.00:   98.566 ms/op
+
+Iteration   4: 87.761 ±(99.9%) 2.732 ms/op
+                 executeQuery·p0.00:   86.245 ms/op
+                 executeQuery·p0.50:   86.376 ms/op
+                 executeQuery·p0.90:   97.386 ms/op
+                 executeQuery·p0.95:   97.478 ms/op
+                 executeQuery·p0.99:   97.518 ms/op
+                 executeQuery·p0.999:  97.518 ms/op
+                 executeQuery·p0.9999: 97.518 ms/op
+                 executeQuery·p1.00:   97.518 ms/op
+
+Iteration   5: 86.953 ±(99.9%) 1.757 ms/op
+                 executeQuery·p0.00:   86.245 ms/op
+                 executeQuery·p0.50:   86.508 ms/op
+                 executeQuery·p0.90:   86.927 ms/op
+                 executeQuery·p0.95:   94.870 ms/op
+                 executeQuery·p0.99:   98.173 ms/op
+                 executeQuery·p0.999:  98.173 ms/op
+                 executeQuery·p0.9999: 98.173 ms/op
+                 executeQuery·p1.00:   98.173 ms/op
+
+
+# Run progress: 35.00% complete, ETA 00:22:23
+# Fork: 3 of 5
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: 203.038 ±(99.9%) 69.252 ms/op
+# Warmup Iteration   2: 125.550 ±(99.9%) 3.182 ms/op
+# Warmup Iteration   3: 124.137 ±(99.9%) 1.968 ms/op
+# Warmup Iteration   4: 125.225 ±(99.9%) 3.239 ms/op
+# Warmup Iteration   5: 124.376 ±(99.9%) 1.934 ms/op
+Iteration   1: 125.368 ±(99.9%) 2.911 ms/op
+                 executeQuery·p0.00:   123.863 ms/op
+                 executeQuery·p0.50:   123.994 ms/op
+                 executeQuery·p0.90:   134.532 ms/op
+                 executeQuery·p0.95:   134.952 ms/op
+                 executeQuery·p0.99:   135.004 ms/op
+                 executeQuery·p0.999:  135.004 ms/op
+                 executeQuery·p0.9999: 135.004 ms/op
+                 executeQuery·p1.00:   135.004 ms/op
+
+Iteration   2: 125.008 ±(99.9%) 2.691 ms/op
+                 executeQuery·p0.00:   123.863 ms/op
+                 executeQuery·p0.50:   123.994 ms/op
+                 executeQuery·p0.90:   131.177 ms/op
+                 executeQuery·p0.95:   135.791 ms/op
+                 executeQuery·p0.99:   135.791 ms/op
+                 executeQuery·p0.999:  135.791 ms/op
+                 executeQuery·p0.9999: 135.791 ms/op
+                 executeQuery·p1.00:   135.791 ms/op
+
+Iteration   3: 125.271 ±(99.9%) 3.162 ms/op
+                 executeQuery·p0.00:   123.863 ms/op
+                 executeQuery·p0.50:   123.994 ms/op
+                 executeQuery·p0.90:   131.963 ms/op
+                 executeQuery·p0.95:   138.517 ms/op
+                 executeQuery·p0.99:   138.936 ms/op
+                 executeQuery·p0.999:  138.936 ms/op
+                 executeQuery·p0.9999: 138.936 ms/op
+                 executeQuery·p1.00:   138.936 ms/op
+
+Iteration   4: 124.689 ±(99.9%) 2.489 ms/op
+                 executeQuery·p0.00:   123.339 ms/op
+                 executeQuery·p0.50:   123.601 ms/op
+                 executeQuery·p0.90:   130.233 ms/op
+                 executeQuery·p0.95:   134.847 ms/op
+                 executeQuery·p0.99:   135.004 ms/op
+                 executeQuery·p0.999:  135.004 ms/op
+                 executeQuery·p0.9999: 135.004 ms/op
+                 executeQuery·p1.00:   135.004 ms/op
+
+Iteration   5: 124.558 ±(99.9%) 2.451 ms/op
+                 executeQuery·p0.00:   123.339 ms/op
+                 executeQuery·p0.50:   123.601 ms/op
+                 executeQuery·p0.90:   130.023 ms/op
+                 executeQuery·p0.95:   134.585 ms/op
+                 executeQuery·p0.99:   134.742 ms/op
+                 executeQuery·p0.999:  134.742 ms/op
+                 executeQuery·p0.9999: 134.742 ms/op
+                 executeQuery·p1.00:   134.742 ms/op
+
+
+# Run progress: 40.00% complete, ETA 00:20:41
+# Fork: 4 of 5
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: 192.494 ±(99.9%) 68.659 ms/op
+# Warmup Iteration   2: 108.702 ±(99.9%) 2.348 ms/op
+# Warmup Iteration   3: 108.659 ±(99.9%) 2.474 ms/op
+# Warmup Iteration   4: 108.675 ±(99.9%) 2.947 ms/op
+# Warmup Iteration   5: 108.156 ±(99.9%) 2.371 ms/op
+Iteration   1: 109.363 ±(99.9%) 3.238 ms/op
+                 executeQuery·p0.00:   106.824 ms/op
+                 executeQuery·p0.50:   107.545 ms/op
+                 executeQuery·p0.90:   118.555 ms/op
+                 executeQuery·p0.95:   118.718 ms/op
+                 executeQuery·p0.99:   118.751 ms/op
+                 executeQuery·p0.999:  118.751 ms/op
+                 executeQuery·p0.9999: 118.751 ms/op
+                 executeQuery·p1.00:   118.751 ms/op
+
+Iteration   2: 108.102 ±(99.9%) 1.687 ms/op
+                 executeQuery·p0.00:   107.479 ms/op
+                 executeQuery·p0.50:   107.610 ms/op
+                 executeQuery·p0.90:   108.200 ms/op
+                 executeQuery·p0.95:   115.835 ms/op
+                 executeQuery·p0.99:   118.358 ms/op
+                 executeQuery·p0.999:  118.358 ms/op
+                 executeQuery·p0.9999: 118.358 ms/op
+                 executeQuery·p1.00:   118.358 ms/op
+
+Iteration   3: 108.992 ±(99.9%) 2.815 ms/op
+                 executeQuery·p0.00:   107.479 ms/op
+                 executeQuery·p0.50:   107.610 ms/op
+                 executeQuery·p0.90:   118.161 ms/op
+                 executeQuery·p0.95:   118.882 ms/op
+                 executeQuery·p0.99:   119.013 ms/op
+                 executeQuery·p0.999:  119.013 ms/op
+                 executeQuery·p0.9999: 119.013 ms/op
+                 executeQuery·p1.00:   119.013 ms/op
+
+Iteration   4: 108.872 ±(99.9%) 2.810 ms/op
+                 executeQuery·p0.00:   107.217 ms/op
+                 executeQuery·p0.50:   107.479 ms/op
+                 executeQuery·p0.90:   118.292 ms/op
+                 executeQuery·p0.95:   118.358 ms/op
+                 executeQuery·p0.99:   118.358 ms/op
+                 executeQuery·p0.999:  118.358 ms/op
+                 executeQuery·p0.9999: 118.358 ms/op
+                 executeQuery·p1.00:   118.358 ms/op
+
+Iteration   5: 107.943 ±(99.9%) 1.781 ms/op
+                 executeQuery·p0.00:   107.217 ms/op
+                 executeQuery·p0.50:   107.414 ms/op
+                 executeQuery·p0.90:   108.134 ms/op
+                 executeQuery·p0.95:   116.130 ms/op
+                 executeQuery·p0.99:   118.751 ms/op
+                 executeQuery·p0.999:  118.751 ms/op
+                 executeQuery·p0.9999: 118.751 ms/op
+                 executeQuery·p1.00:   118.751 ms/op
+
+
+# Run progress: 45.00% complete, ETA 00:18:59
+# Fork: 5 of 5
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: 190.906 ±(99.9%) 70.962 ms/op
+# Warmup Iteration   2: 107.878 ±(99.9%) 2.439 ms/op
+# Warmup Iteration   3: 108.216 ±(99.9%) 2.732 ms/op
+# Warmup Iteration   4: 108.686 ±(99.9%) 3.291 ms/op
+# Warmup Iteration   5: 107.829 ±(99.9%) 2.404 ms/op
+Iteration   1: 108.358 ±(99.9%) 2.850 ms/op
+                 executeQuery·p0.00:   106.693 ms/op
+                 executeQuery·p0.50:   106.955 ms/op
+                 executeQuery·p0.90:   117.768 ms/op
+                 executeQuery·p0.95:   118.227 ms/op
+                 executeQuery·p0.99:   118.227 ms/op
+                 executeQuery·p0.999:  118.227 ms/op
+                 executeQuery·p0.9999: 118.227 ms/op
+                 executeQuery·p1.00:   118.227 ms/op
+
+Iteration   2: 107.894 ±(99.9%) 2.459 ms/op
+                 executeQuery·p0.00:   106.693 ms/op
+                 executeQuery·p0.50:   106.955 ms/op
+                 executeQuery·p0.90:   112.722 ms/op
+                 executeQuery·p0.95:   118.555 ms/op
+                 executeQuery·p0.99:   118.882 ms/op
+                 executeQuery·p0.999:  118.882 ms/op
+                 executeQuery·p0.9999: 118.882 ms/op
+                 executeQuery·p1.00:   118.882 ms/op
+
+Iteration   3: 107.812 ±(99.9%) 2.314 ms/op
+                 executeQuery·p0.00:   106.824 ms/op
+                 executeQuery·p0.50:   106.955 ms/op
+                 executeQuery·p0.90:   112.394 ms/op
+                 executeQuery·p0.95:   117.637 ms/op
+                 executeQuery·p0.99:   117.703 ms/op
+                 executeQuery·p0.999:  117.703 ms/op
+                 executeQuery·p0.9999: 117.703 ms/op
+                 executeQuery·p1.00:   117.703 ms/op
+
+Iteration   4: 108.375 ±(99.9%) 2.945 ms/op
+                 executeQuery·p0.00:   106.693 ms/op
+                 executeQuery·p0.50:   106.955 ms/op
+                 executeQuery·p0.90:   117.899 ms/op
+                 executeQuery·p0.95:   118.784 ms/op
+                 executeQuery·p0.99:   119.013 ms/op
+                 executeQuery·p0.999:  119.013 ms/op
+                 executeQuery·p0.9999: 119.013 ms/op
+                 executeQuery·p1.00:   119.013 ms/op
+
+Iteration   5: 107.785 ±(99.9%) 2.185 ms/op
+                 executeQuery·p0.00:   106.693 ms/op
+                 executeQuery·p0.50:   106.955 ms/op
+                 executeQuery·p0.90:   111.608 ms/op
+                 executeQuery·p0.95:   117.506 ms/op
+                 executeQuery·p0.99:   118.096 ms/op
+                 executeQuery·p0.999:  118.096 ms/op
+                 executeQuery·p0.9999: 118.096 ms/op
+                 executeQuery·p1.00:   118.096 ms/op
+
+
+
+Result "benchmarks.arithmetic_query_hard_coded.NonVectorisedSimd.executeQuery":
+  N = 599
+  mean =    108.516 ±(99.9%) 1.731 ms/op
+
+  Histogram, ms/op:
+    [ 80.000,  85.000) = 0 
+    [ 85.000,  90.000) = 114 
+    [ 90.000,  95.000) = 0 
+    [ 95.000, 100.000) = 11 
+    [100.000, 105.000) = 0 
+    [105.000, 110.000) = 216 
+    [110.000, 115.000) = 108 
+    [115.000, 120.000) = 24 
+    [120.000, 125.000) = 106 
+    [125.000, 130.000) = 9 
+    [130.000, 135.000) = 5 
+
+  Percentiles, ms/op:
+      p(0.0000) =     86.245 ms/op
+     p(50.0000) =    107.610 ms/op
+     p(90.0000) =    123.994 ms/op
+     p(95.0000) =    124.256 ms/op
+     p(99.0000) =    135.004 ms/op
+     p(99.9000) =    138.936 ms/op
+     p(99.9900) =    138.936 ms/op
+     p(99.9990) =    138.936 ms/op
+     p(99.9999) =    138.936 ms/op
+    p(100.0000) =    138.936 ms/op
+
+
+# JMH version: 1.36
+# VM version: JDK 20.0.1, OpenJDK 64-Bit Server VM, 20.0.1+9-29
+# VM invoker: /home/olivier/external_software/openjdk-20.0.1/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-opens=java.base/java.nio=ALL-UNNAMED -Darrow.enable_unsafe_memory_access=true -Darrow.enable_null_check_for_get=false --enable-preview -Xmx16g -Xms8g
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: benchmarks.arithmetic_query_hard_coded.VectorisedNonSimd.executeQuery
+# Parameters: (tableFilePath = /nvtmp/duckdb/arrow_tpch)
+
+# Run progress: 50.00% complete, ETA 00:17:16
+# Fork: 1 of 5
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: 30.512 ±(99.9%) 19.243 ms/op
+# Warmup Iteration   2: 24.750 ±(99.9%) 0.212 ms/op
+# Warmup Iteration   3: 24.536 ±(99.9%) 0.292 ms/op
+# Warmup Iteration   4: 24.611 ±(99.9%) 0.244 ms/op
+# Warmup Iteration   5: 24.592 ±(99.9%) 0.261 ms/op
+Iteration   1: 24.536 ±(99.9%) 0.246 ms/op
+                 executeQuery·p0.00:   23.888 ms/op
+                 executeQuery·p0.50:   24.592 ms/op
+                 executeQuery·p0.90:   25.002 ms/op
+                 executeQuery·p0.95:   25.097 ms/op
+                 executeQuery·p0.99:   25.133 ms/op
+                 executeQuery·p0.999:  25.133 ms/op
+                 executeQuery·p0.9999: 25.133 ms/op
+                 executeQuery·p1.00:   25.133 ms/op
+
+Iteration   2: 24.503 ±(99.9%) 0.254 ms/op
+                 executeQuery·p0.00:   23.757 ms/op
+                 executeQuery·p0.50:   24.461 ms/op
+                 executeQuery·p0.90:   25.002 ms/op
+                 executeQuery·p0.95:   25.100 ms/op
+                 executeQuery·p0.99:   25.100 ms/op
+                 executeQuery·p0.999:  25.100 ms/op
+                 executeQuery·p0.9999: 25.100 ms/op
+                 executeQuery·p1.00:   25.100 ms/op
+
+Iteration   3: 24.683 ±(99.9%) 0.215 ms/op
+                 executeQuery·p0.00:   23.888 ms/op
+                 executeQuery·p0.50:   24.642 ms/op
+                 executeQuery·p0.90:   25.153 ms/op
+                 executeQuery·p0.95:   25.213 ms/op
+                 executeQuery·p0.99:   25.231 ms/op
+                 executeQuery·p0.999:  25.231 ms/op
+                 executeQuery·p0.9999: 25.231 ms/op
+                 executeQuery·p1.00:   25.231 ms/op
+
+Iteration   4: 24.552 ±(99.9%) 0.243 ms/op
+                 executeQuery·p0.00:   23.888 ms/op
+                 executeQuery·p0.50:   24.625 ms/op
+                 executeQuery·p0.90:   24.963 ms/op
+                 executeQuery·p0.95:   25.259 ms/op
+                 executeQuery·p0.99:   25.494 ms/op
+                 executeQuery·p0.999:  25.494 ms/op
+                 executeQuery·p0.9999: 25.494 ms/op
+                 executeQuery·p1.00:   25.494 ms/op
+
+Iteration   5: 24.547 ±(99.9%) 0.238 ms/op
+                 executeQuery·p0.00:   23.822 ms/op
+                 executeQuery·p0.50:   24.592 ms/op
+                 executeQuery·p0.90:   25.035 ms/op
+                 executeQuery·p0.95:   25.127 ms/op
+                 executeQuery·p0.99:   25.199 ms/op
+                 executeQuery·p0.999:  25.199 ms/op
+                 executeQuery·p0.9999: 25.199 ms/op
+                 executeQuery·p1.00:   25.199 ms/op
+
+
+# Run progress: 55.00% complete, ETA 00:15:33
+# Fork: 2 of 5
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: 35.159 ±(99.9%) 23.757 ms/op
+# Warmup Iteration   2: 24.587 ±(99.9%) 0.205 ms/op
+# Warmup Iteration   3: 24.482 ±(99.9%) 0.188 ms/op
+# Warmup Iteration   4: 24.441 ±(99.9%) 0.245 ms/op
+# Warmup Iteration   5: 24.517 ±(99.9%) 0.242 ms/op
+Iteration   1: 24.402 ±(99.9%) 0.211 ms/op
+                 executeQuery·p0.00:   23.790 ms/op
+                 executeQuery·p0.50:   24.478 ms/op
+                 executeQuery·p0.90:   24.828 ms/op
+                 executeQuery·p0.95:   24.945 ms/op
+                 executeQuery·p0.99:   25.035 ms/op
+                 executeQuery·p0.999:  25.035 ms/op
+                 executeQuery·p0.9999: 25.035 ms/op
+                 executeQuery·p1.00:   25.035 ms/op
+
+Iteration   2: 24.368 ±(99.9%) 0.211 ms/op
+                 executeQuery·p0.00:   23.724 ms/op
+                 executeQuery·p0.50:   24.412 ms/op
+                 executeQuery·p0.90:   24.769 ms/op
+                 executeQuery·p0.95:   24.802 ms/op
+                 executeQuery·p0.99:   24.838 ms/op
+                 executeQuery·p0.999:  24.838 ms/op
+                 executeQuery·p0.9999: 24.838 ms/op
+                 executeQuery·p1.00:   24.838 ms/op
+
+Iteration   3: 24.501 ±(99.9%) 0.225 ms/op
+                 executeQuery·p0.00:   23.888 ms/op
+                 executeQuery·p0.50:   24.445 ms/op
+                 executeQuery·p0.90:   25.031 ms/op
+                 executeQuery·p0.95:   25.049 ms/op
+                 executeQuery·p0.99:   25.068 ms/op
+                 executeQuery·p0.999:  25.068 ms/op
+                 executeQuery·p0.9999: 25.068 ms/op
+                 executeQuery·p1.00:   25.068 ms/op
+
+Iteration   4: 24.497 ±(99.9%) 0.220 ms/op
+                 executeQuery·p0.00:   23.921 ms/op
+                 executeQuery·p0.50:   24.461 ms/op
+                 executeQuery·p0.90:   24.802 ms/op
+                 executeQuery·p0.95:   25.274 ms/op
+                 executeQuery·p0.99:   25.526 ms/op
+                 executeQuery·p0.999:  25.526 ms/op
+                 executeQuery·p0.9999: 25.526 ms/op
+                 executeQuery·p1.00:   25.526 ms/op
+
+Iteration   5: 24.512 ±(99.9%) 0.210 ms/op
+                 executeQuery·p0.00:   23.757 ms/op
+                 executeQuery·p0.50:   24.543 ms/op
+                 executeQuery·p0.90:   25.005 ms/op
+                 executeQuery·p0.95:   25.171 ms/op
+                 executeQuery·p0.99:   25.297 ms/op
+                 executeQuery·p0.999:  25.297 ms/op
+                 executeQuery·p0.9999: 25.297 ms/op
+                 executeQuery·p1.00:   25.297 ms/op
+
+
+# Run progress: 60.00% complete, ETA 00:13:50
+# Fork: 3 of 5
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: 31.403 ±(99.9%) 19.737 ms/op
+# Warmup Iteration   2: 24.637 ±(99.9%) 0.267 ms/op
+# Warmup Iteration   3: 24.582 ±(99.9%) 0.209 ms/op
+# Warmup Iteration   4: 24.523 ±(99.9%) 0.260 ms/op
+# Warmup Iteration   5: 24.572 ±(99.9%) 0.212 ms/op
+Iteration   1: 24.625 ±(99.9%) 0.244 ms/op
+                 executeQuery·p0.00:   23.691 ms/op
+                 executeQuery·p0.50:   24.609 ms/op
+                 executeQuery·p0.90:   25.100 ms/op
+                 executeQuery·p0.95:   25.346 ms/op
+                 executeQuery·p0.99:   25.592 ms/op
+                 executeQuery·p0.999:  25.592 ms/op
+                 executeQuery·p0.9999: 25.592 ms/op
+                 executeQuery·p1.00:   25.592 ms/op
+
+Iteration   2: 24.883 ±(99.9%) 0.636 ms/op
+                 executeQuery·p0.00:   24.052 ms/op
+                 executeQuery·p0.50:   24.740 ms/op
+                 executeQuery·p0.90:   25.166 ms/op
+                 executeQuery·p0.95:   27.361 ms/op
+                 executeQuery·p0.99:   29.491 ms/op
+                 executeQuery·p0.999:  29.491 ms/op
+                 executeQuery·p0.9999: 29.491 ms/op
+                 executeQuery·p1.00:   29.491 ms/op
+
+Iteration   3: 24.539 ±(99.9%) 0.225 ms/op
+                 executeQuery·p0.00:   23.790 ms/op
+                 executeQuery·p0.50:   24.609 ms/op
+                 executeQuery·p0.90:   24.904 ms/op
+                 executeQuery·p0.95:   25.133 ms/op
+                 executeQuery·p0.99:   25.166 ms/op
+                 executeQuery·p0.999:  25.166 ms/op
+                 executeQuery·p0.9999: 25.166 ms/op
+                 executeQuery·p1.00:   25.166 ms/op
+
+Iteration   4: 24.655 ±(99.9%) 0.265 ms/op
+                 executeQuery·p0.00:   23.921 ms/op
+                 executeQuery·p0.50:   24.674 ms/op
+                 executeQuery·p0.90:   25.166 ms/op
+                 executeQuery·p0.95:   25.395 ms/op
+                 executeQuery·p0.99:   25.428 ms/op
+                 executeQuery·p0.999:  25.428 ms/op
+                 executeQuery·p0.9999: 25.428 ms/op
+                 executeQuery·p1.00:   25.428 ms/op
+
+Iteration   5: 24.603 ±(99.9%) 0.235 ms/op
+                 executeQuery·p0.00:   23.921 ms/op
+                 executeQuery·p0.50:   24.609 ms/op
+                 executeQuery·p0.90:   25.097 ms/op
+                 executeQuery·p0.95:   25.233 ms/op
+                 executeQuery·p0.99:   25.395 ms/op
+                 executeQuery·p0.999:  25.395 ms/op
+                 executeQuery·p0.9999: 25.395 ms/op
+                 executeQuery·p1.00:   25.395 ms/op
+
+
+# Run progress: 65.00% complete, ETA 00:12:06
+# Fork: 4 of 5
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: 31.364 ±(99.9%) 19.662 ms/op
+# Warmup Iteration   2: 24.358 ±(99.9%) 0.275 ms/op
+# Warmup Iteration   3: 24.313 ±(99.9%) 0.285 ms/op
+# Warmup Iteration   4: 24.429 ±(99.9%) 0.271 ms/op
+# Warmup Iteration   5: 24.413 ±(99.9%) 0.267 ms/op
+Iteration   1: 24.425 ±(99.9%) 0.238 ms/op
+                 executeQuery·p0.00:   23.560 ms/op
+                 executeQuery·p0.50:   24.412 ms/op
+                 executeQuery·p0.90:   24.992 ms/op
+                 executeQuery·p0.95:   25.108 ms/op
+                 executeQuery·p0.99:   25.199 ms/op
+                 executeQuery·p0.999:  25.199 ms/op
+                 executeQuery·p0.9999: 25.199 ms/op
+                 executeQuery·p1.00:   25.199 ms/op
+
+Iteration   2: 24.382 ±(99.9%) 0.262 ms/op
+                 executeQuery·p0.00:   23.462 ms/op
+                 executeQuery·p0.50:   24.412 ms/op
+                 executeQuery·p0.90:   24.904 ms/op
+                 executeQuery·p0.95:   25.061 ms/op
+                 executeQuery·p0.99:   25.133 ms/op
+                 executeQuery·p0.999:  25.133 ms/op
+                 executeQuery·p0.9999: 25.133 ms/op
+                 executeQuery·p1.00:   25.133 ms/op
+
+Iteration   3: 24.436 ±(99.9%) 0.223 ms/op
+                 executeQuery·p0.00:   23.790 ms/op
+                 executeQuery·p0.50:   24.445 ms/op
+                 executeQuery·p0.90:   24.897 ms/op
+                 executeQuery·p0.95:   25.043 ms/op
+                 executeQuery·p0.99:   25.133 ms/op
+                 executeQuery·p0.999:  25.133 ms/op
+                 executeQuery·p0.9999: 25.133 ms/op
+                 executeQuery·p1.00:   25.133 ms/op
+
+Iteration   4: 24.447 ±(99.9%) 0.282 ms/op
+                 executeQuery·p0.00:   23.527 ms/op
+                 executeQuery·p0.50:   24.412 ms/op
+                 executeQuery·p0.90:   25.035 ms/op
+                 executeQuery·p0.95:   25.266 ms/op
+                 executeQuery·p0.99:   25.428 ms/op
+                 executeQuery·p0.999:  25.428 ms/op
+                 executeQuery·p0.9999: 25.428 ms/op
+                 executeQuery·p1.00:   25.428 ms/op
+
+Iteration   5: 24.383 ±(99.9%) 0.226 ms/op
+                 executeQuery·p0.00:   23.560 ms/op
+                 executeQuery·p0.50:   24.412 ms/op
+                 executeQuery·p0.90:   24.835 ms/op
+                 executeQuery·p0.95:   24.918 ms/op
+                 executeQuery·p0.99:   24.936 ms/op
+                 executeQuery·p0.999:  24.936 ms/op
+                 executeQuery·p0.9999: 24.936 ms/op
+                 executeQuery·p1.00:   24.936 ms/op
+
+
+# Run progress: 70.00% complete, ETA 00:10:22
+# Fork: 5 of 5
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: 32.270 ±(99.9%) 21.040 ms/op
+# Warmup Iteration   2: 24.478 ±(99.9%) 0.208 ms/op
+# Warmup Iteration   3: 24.492 ±(99.9%) 0.286 ms/op
+# Warmup Iteration   4: 24.510 ±(99.9%) 0.249 ms/op
+# Warmup Iteration   5: 24.593 ±(99.9%) 0.625 ms/op
+Iteration   1: 24.388 ±(99.9%) 0.243 ms/op
+                 executeQuery·p0.00:   23.495 ms/op
+                 executeQuery·p0.50:   24.412 ms/op
+                 executeQuery·p0.90:   24.832 ms/op
+                 executeQuery·p0.95:   25.004 ms/op
+                 executeQuery·p0.99:   25.166 ms/op
+                 executeQuery·p0.999:  25.166 ms/op
+                 executeQuery·p0.9999: 25.166 ms/op
+                 executeQuery·p1.00:   25.166 ms/op
+
+Iteration   2: 24.433 ±(99.9%) 0.217 ms/op
+                 executeQuery·p0.00:   23.888 ms/op
+                 executeQuery·p0.50:   24.429 ms/op
+                 executeQuery·p0.90:   24.894 ms/op
+                 executeQuery·p0.95:   25.013 ms/op
+                 executeQuery·p0.99:   25.068 ms/op
+                 executeQuery·p0.999:  25.068 ms/op
+                 executeQuery·p0.9999: 25.068 ms/op
+                 executeQuery·p1.00:   25.068 ms/op
+
+Iteration   3: 24.518 ±(99.9%) 0.267 ms/op
+                 executeQuery·p0.00:   23.527 ms/op
+                 executeQuery·p0.50:   24.461 ms/op
+                 executeQuery·p0.90:   25.025 ms/op
+                 executeQuery·p0.95:   25.269 ms/op
+                 executeQuery·p0.99:   25.395 ms/op
+                 executeQuery·p0.999:  25.395 ms/op
+                 executeQuery·p0.9999: 25.395 ms/op
+                 executeQuery·p1.00:   25.395 ms/op
+
+Iteration   4: 24.488 ±(99.9%) 0.245 ms/op
+                 executeQuery·p0.00:   23.658 ms/op
+                 executeQuery·p0.50:   24.478 ms/op
+                 executeQuery·p0.90:   24.933 ms/op
+                 executeQuery·p0.95:   25.248 ms/op
+                 executeQuery·p0.99:   25.428 ms/op
+                 executeQuery·p0.999:  25.428 ms/op
+                 executeQuery·p0.9999: 25.428 ms/op
+                 executeQuery·p1.00:   25.428 ms/op
+
+Iteration   5: 24.565 ±(99.9%) 0.278 ms/op
+                 executeQuery·p0.00:   23.527 ms/op
+                 executeQuery·p0.50:   24.527 ms/op
+                 executeQuery·p0.90:   25.163 ms/op
+                 executeQuery·p0.95:   25.356 ms/op
+                 executeQuery·p0.99:   25.428 ms/op
+                 executeQuery·p0.999:  25.428 ms/op
+                 executeQuery·p0.9999: 25.428 ms/op
+                 executeQuery·p1.00:   25.428 ms/op
+
+
+
+Result "benchmarks.arithmetic_query_hard_coded.VectorisedNonSimd.executeQuery":
+  N = 746
+  mean =     24.514 ±(99.9%) 0.049 ms/op
+
+  Histogram, ms/op:
+    [23.000, 23.500) = 2 
+    [23.500, 24.000) = 68 
+    [24.000, 24.500) = 286 
+    [24.500, 25.000) = 310 
+    [25.000, 25.500) = 77 
+    [25.500, 26.000) = 2 
+    [26.000, 26.500) = 0 
+    [26.500, 27.000) = 0 
+    [27.000, 27.500) = 0 
+    [27.500, 28.000) = 0 
+    [28.000, 28.500) = 0 
+    [28.500, 29.000) = 0 
+    [29.000, 29.500) = 1 
+
+  Percentiles, ms/op:
+      p(0.0000) =     23.462 ms/op
+     p(50.0000) =     24.510 ms/op
+     p(90.0000) =     25.002 ms/op
+     p(95.0000) =     25.100 ms/op
+     p(99.0000) =     25.428 ms/op
+     p(99.9000) =     29.491 ms/op
+     p(99.9900) =     29.491 ms/op
+     p(99.9990) =     29.491 ms/op
+     p(99.9999) =     29.491 ms/op
+    p(100.0000) =     29.491 ms/op
+
+
+# JMH version: 1.36
+# VM version: JDK 20.0.1, OpenJDK 64-Bit Server VM, 20.0.1+9-29
+# VM invoker: /home/olivier/external_software/openjdk-20.0.1/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-opens=java.base/java.nio=ALL-UNNAMED -Darrow.enable_unsafe_memory_access=true -Darrow.enable_null_check_for_get=false --enable-preview --enable-native-access=ALL-UNNAMED -Xmx16g -Xms8g
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: benchmarks.arithmetic_query_hard_coded.VectorisedSimd.executeQuery
+# Parameters: (tableFilePath = /nvtmp/duckdb/arrow_tpch)
+
+# Run progress: 75.00% complete, ETA 00:08:38
+# Fork: 1 of 5
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: 27.252 ±(99.9%) 7.597 ms/op
+# Warmup Iteration   2: 24.434 ±(99.9%) 0.187 ms/op
+# Warmup Iteration   3: 24.530 ±(99.9%) 0.253 ms/op
+# Warmup Iteration   4: 24.463 ±(99.9%) 0.194 ms/op
+# Warmup Iteration   5: 24.457 ±(99.9%) 0.199 ms/op
+Iteration   1: 24.784 ±(99.9%) 0.999 ms/op
+                 executeQuery·p0.00:   24.216 ms/op
+                 executeQuery·p0.50:   24.379 ms/op
+                 executeQuery·p0.90:   25.100 ms/op
+                 executeQuery·p0.95:   28.672 ms/op
+                 executeQuery·p0.99:   32.244 ms/op
+                 executeQuery·p0.999:  32.244 ms/op
+                 executeQuery·p0.9999: 32.244 ms/op
+                 executeQuery·p1.00:   32.244 ms/op
+
+Iteration   2: 24.888 ±(99.9%) 1.536 ms/op
+                 executeQuery·p0.00:   24.216 ms/op
+                 executeQuery·p0.50:   24.379 ms/op
+                 executeQuery·p0.90:   25.166 ms/op
+                 executeQuery·p0.95:   30.835 ms/op
+                 executeQuery·p0.99:   36.504 ms/op
+                 executeQuery·p0.999:  36.504 ms/op
+                 executeQuery·p0.9999: 36.504 ms/op
+                 executeQuery·p1.00:   36.504 ms/op
+
+Iteration   3: 24.473 ±(99.9%) 0.182 ms/op
+                 executeQuery·p0.00:   24.248 ms/op
+                 executeQuery·p0.50:   24.347 ms/op
+                 executeQuery·p0.90:   25.035 ms/op
+                 executeQuery·p0.95:   25.084 ms/op
+                 executeQuery·p0.99:   25.100 ms/op
+                 executeQuery·p0.999:  25.100 ms/op
+                 executeQuery·p0.9999: 25.100 ms/op
+                 executeQuery·p1.00:   25.100 ms/op
+
+Iteration   4: 24.535 ±(99.9%) 0.176 ms/op
+                 executeQuery·p0.00:   24.248 ms/op
+                 executeQuery·p0.50:   24.445 ms/op
+                 executeQuery·p0.90:   25.002 ms/op
+                 executeQuery·p0.95:   25.051 ms/op
+                 executeQuery·p0.99:   25.068 ms/op
+                 executeQuery·p0.999:  25.068 ms/op
+                 executeQuery·p0.9999: 25.068 ms/op
+                 executeQuery·p1.00:   25.068 ms/op
+
+Iteration   5: 24.453 ±(99.9%) 0.179 ms/op
+                 executeQuery·p0.00:   24.150 ms/op
+                 executeQuery·p0.50:   24.379 ms/op
+                 executeQuery·p0.90:   24.969 ms/op
+                 executeQuery·p0.95:   25.117 ms/op
+                 executeQuery·p0.99:   25.133 ms/op
+                 executeQuery·p0.999:  25.133 ms/op
+                 executeQuery·p0.9999: 25.133 ms/op
+                 executeQuery·p1.00:   25.133 ms/op
+
+
+# Run progress: 80.00% complete, ETA 00:06:54
+# Fork: 2 of 5
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: 27.622 ±(99.9%) 6.645 ms/op
+# Warmup Iteration   2: 24.535 ±(99.9%) 0.173 ms/op
+# Warmup Iteration   3: 24.591 ±(99.9%) 0.208 ms/op
+# Warmup Iteration   4: 24.515 ±(99.9%) 0.181 ms/op
+# Warmup Iteration   5: 24.689 ±(99.9%) 0.499 ms/op
+Iteration   1: 24.778 ±(99.9%) 1.051 ms/op
+                 executeQuery·p0.00:   23.921 ms/op
+                 executeQuery·p0.50:   24.445 ms/op
+                 executeQuery·p0.90:   25.035 ms/op
+                 executeQuery·p0.95:   28.869 ms/op
+                 executeQuery·p0.99:   32.670 ms/op
+                 executeQuery·p0.999:  32.670 ms/op
+                 executeQuery·p0.9999: 32.670 ms/op
+                 executeQuery·p1.00:   32.670 ms/op
+
+Iteration   2: 24.520 ±(99.9%) 0.179 ms/op
+                 executeQuery·p0.00:   24.248 ms/op
+                 executeQuery·p0.50:   24.412 ms/op
+                 executeQuery·p0.90:   25.035 ms/op
+                 executeQuery·p0.95:   25.215 ms/op
+                 executeQuery·p0.99:   25.231 ms/op
+                 executeQuery·p0.999:  25.231 ms/op
+                 executeQuery·p0.9999: 25.231 ms/op
+                 executeQuery·p1.00:   25.231 ms/op
+
+Iteration   3: 24.509 ±(99.9%) 0.206 ms/op
+                 executeQuery·p0.00:   23.691 ms/op
+                 executeQuery·p0.50:   24.478 ms/op
+                 executeQuery·p0.90:   25.100 ms/op
+                 executeQuery·p0.95:   25.149 ms/op
+                 executeQuery·p0.99:   25.166 ms/op
+                 executeQuery·p0.999:  25.166 ms/op
+                 executeQuery·p0.9999: 25.166 ms/op
+                 executeQuery·p1.00:   25.166 ms/op
+
+Iteration   4: 24.609 ±(99.9%) 0.226 ms/op
+                 executeQuery·p0.00:   24.150 ms/op
+                 executeQuery·p0.50:   24.510 ms/op
+                 executeQuery·p0.90:   25.068 ms/op
+                 executeQuery·p0.95:   25.428 ms/op
+                 executeQuery·p0.99:   25.690 ms/op
+                 executeQuery·p0.999:  25.690 ms/op
+                 executeQuery·p0.9999: 25.690 ms/op
+                 executeQuery·p1.00:   25.690 ms/op
+
+Iteration   5: 24.527 ±(99.9%) 0.152 ms/op
+                 executeQuery·p0.00:   24.281 ms/op
+                 executeQuery·p0.50:   24.445 ms/op
+                 executeQuery·p0.90:   24.904 ms/op
+                 executeQuery·p0.95:   25.100 ms/op
+                 executeQuery·p0.99:   25.100 ms/op
+                 executeQuery·p0.999:  25.100 ms/op
+                 executeQuery·p0.9999: 25.100 ms/op
+                 executeQuery·p1.00:   25.100 ms/op
+
+
+# Run progress: 85.00% complete, ETA 00:05:11
+# Fork: 3 of 5
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: 28.246 ±(99.9%) 8.879 ms/op
+# Warmup Iteration   2: 24.462 ±(99.9%) 0.243 ms/op
+# Warmup Iteration   3: 24.422 ±(99.9%) 0.201 ms/op
+# Warmup Iteration   4: 24.593 ±(99.9%) 0.565 ms/op
+# Warmup Iteration   5: 24.445 ±(99.9%) 0.209 ms/op
+Iteration   1: 24.830 ±(99.9%) 1.449 ms/op
+                 executeQuery·p0.00:   24.150 ms/op
+                 executeQuery·p0.50:   24.314 ms/op
+                 executeQuery·p0.90:   25.002 ms/op
+                 executeQuery·p0.95:   30.441 ms/op
+                 executeQuery·p0.99:   35.783 ms/op
+                 executeQuery·p0.999:  35.783 ms/op
+                 executeQuery·p0.9999: 35.783 ms/op
+                 executeQuery·p1.00:   35.783 ms/op
+
+Iteration   2: 24.407 ±(99.9%) 0.186 ms/op
+                 executeQuery·p0.00:   24.183 ms/op
+                 executeQuery·p0.50:   24.281 ms/op
+                 executeQuery·p0.90:   24.969 ms/op
+                 executeQuery·p0.95:   25.068 ms/op
+                 executeQuery·p0.99:   25.068 ms/op
+                 executeQuery·p0.999:  25.068 ms/op
+                 executeQuery·p0.9999: 25.068 ms/op
+                 executeQuery·p1.00:   25.068 ms/op
+
+Iteration   3: 24.379 ±(99.9%) 0.201 ms/op
+                 executeQuery·p0.00:   23.462 ms/op
+                 executeQuery·p0.50:   24.281 ms/op
+                 executeQuery·p0.90:   24.871 ms/op
+                 executeQuery·p0.95:   24.936 ms/op
+                 executeQuery·p0.99:   24.969 ms/op
+                 executeQuery·p0.999:  24.969 ms/op
+                 executeQuery·p0.9999: 24.969 ms/op
+                 executeQuery·p1.00:   24.969 ms/op
+
+Iteration   4: 24.452 ±(99.9%) 0.171 ms/op
+                 executeQuery·p0.00:   23.986 ms/op
+                 executeQuery·p0.50:   24.379 ms/op
+                 executeQuery·p0.90:   24.936 ms/op
+                 executeQuery·p0.95:   25.002 ms/op
+                 executeQuery·p0.99:   25.002 ms/op
+                 executeQuery·p0.999:  25.002 ms/op
+                 executeQuery·p0.9999: 25.002 ms/op
+                 executeQuery·p1.00:   25.002 ms/op
+
+Iteration   5: 24.686 ±(99.9%) 1.039 ms/op
+                 executeQuery·p0.00:   24.150 ms/op
+                 executeQuery·p0.50:   24.314 ms/op
+                 executeQuery·p0.90:   25.002 ms/op
+                 executeQuery·p0.95:   28.787 ms/op
+                 executeQuery·p0.99:   32.506 ms/op
+                 executeQuery·p0.999:  32.506 ms/op
+                 executeQuery·p0.9999: 32.506 ms/op
+                 executeQuery·p1.00:   32.506 ms/op
+
+
+# Run progress: 90.00% complete, ETA 00:03:27
+# Fork: 4 of 5
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: 27.392 ±(99.9%) 7.435 ms/op
+# Warmup Iteration   2: 24.631 ±(99.9%) 0.228 ms/op
+# Warmup Iteration   3: 24.662 ±(99.9%) 0.227 ms/op
+# Warmup Iteration   4: 24.542 ±(99.9%) 0.218 ms/op
+# Warmup Iteration   5: 24.757 ±(99.9%) 0.492 ms/op
+Iteration   1: 24.538 ±(99.9%) 0.208 ms/op
+                 executeQuery·p0.00:   23.921 ms/op
+                 executeQuery·p0.50:   24.445 ms/op
+                 executeQuery·p0.90:   25.120 ms/op
+                 executeQuery·p0.95:   25.181 ms/op
+                 executeQuery·p0.99:   25.199 ms/op
+                 executeQuery·p0.999:  25.199 ms/op
+                 executeQuery·p0.9999: 25.199 ms/op
+                 executeQuery·p1.00:   25.199 ms/op
+
+Iteration   2: 24.586 ±(99.9%) 0.242 ms/op
+                 executeQuery·p0.00:   23.953 ms/op
+                 executeQuery·p0.50:   24.445 ms/op
+                 executeQuery·p0.90:   25.163 ms/op
+                 executeQuery·p0.95:   25.412 ms/op
+                 executeQuery·p0.99:   25.592 ms/op
+                 executeQuery·p0.999:  25.592 ms/op
+                 executeQuery·p0.9999: 25.592 ms/op
+                 executeQuery·p1.00:   25.592 ms/op
+
+Iteration   3: 24.601 ±(99.9%) 0.231 ms/op
+                 executeQuery·p0.00:   23.953 ms/op
+                 executeQuery·p0.50:   24.461 ms/op
+                 executeQuery·p0.90:   25.228 ms/op
+                 executeQuery·p0.95:   25.231 ms/op
+                 executeQuery·p0.99:   25.231 ms/op
+                 executeQuery·p0.999:  25.231 ms/op
+                 executeQuery·p0.9999: 25.231 ms/op
+                 executeQuery·p1.00:   25.231 ms/op
+
+Iteration   4: 24.898 ±(99.9%) 0.975 ms/op
+                 executeQuery·p0.00:   24.084 ms/op
+                 executeQuery·p0.50:   24.510 ms/op
+                 executeQuery·p0.90:   25.346 ms/op
+                 executeQuery·p0.95:   28.587 ms/op
+                 executeQuery·p0.99:   32.408 ms/op
+                 executeQuery·p0.999:  32.408 ms/op
+                 executeQuery·p0.9999: 32.408 ms/op
+                 executeQuery·p1.00:   32.408 ms/op
+
+Iteration   5: 24.635 ±(99.9%) 0.245 ms/op
+                 executeQuery·p0.00:   23.953 ms/op
+                 executeQuery·p0.50:   24.478 ms/op
+                 executeQuery·p0.90:   25.199 ms/op
+                 executeQuery·p0.95:   25.246 ms/op
+                 executeQuery·p0.99:   25.264 ms/op
+                 executeQuery·p0.999:  25.264 ms/op
+                 executeQuery·p0.9999: 25.264 ms/op
+                 executeQuery·p1.00:   25.264 ms/op
+
+
+# Run progress: 95.00% complete, ETA 00:01:43
+# Fork: 5 of 5
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: 27.582 ±(99.9%) 7.538 ms/op
+# Warmup Iteration   2: 24.379 ±(99.9%) 0.184 ms/op
+# Warmup Iteration   3: 24.369 ±(99.9%) 0.213 ms/op
+# Warmup Iteration   4: 24.383 ±(99.9%) 0.183 ms/op
+# Warmup Iteration   5: 24.438 ±(99.9%) 0.187 ms/op
+Iteration   1: 24.776 ±(99.9%) 1.102 ms/op
+                 executeQuery·p0.00:   24.117 ms/op
+                 executeQuery·p0.50:   24.314 ms/op
+                 executeQuery·p0.90:   25.559 ms/op
+                 executeQuery·p0.95:   29.524 ms/op
+                 executeQuery·p0.99:   32.834 ms/op
+                 executeQuery·p0.999:  32.834 ms/op
+                 executeQuery·p0.9999: 32.834 ms/op
+                 executeQuery·p1.00:   32.834 ms/op
+
+Iteration   2: 24.953 ±(99.9%) 1.471 ms/op
+                 executeQuery·p0.00:   24.117 ms/op
+                 executeQuery·p0.50:   24.281 ms/op
+                 executeQuery·p0.90:   24.969 ms/op
+                 executeQuery·p0.95:   32.686 ms/op
+                 executeQuery·p0.99:   32.702 ms/op
+                 executeQuery·p0.999:  32.702 ms/op
+                 executeQuery·p0.9999: 32.702 ms/op
+                 executeQuery·p1.00:   32.702 ms/op
+
+Iteration   3: 24.348 ±(99.9%) 0.139 ms/op
+                 executeQuery·p0.00:   24.150 ms/op
+                 executeQuery·p0.50:   24.281 ms/op
+                 executeQuery·p0.90:   24.773 ms/op
+                 executeQuery·p0.95:   24.855 ms/op
+                 executeQuery·p0.99:   24.904 ms/op
+                 executeQuery·p0.999:  24.904 ms/op
+                 executeQuery·p0.9999: 24.904 ms/op
+                 executeQuery·p1.00:   24.904 ms/op
+
+Iteration   4: 24.431 ±(99.9%) 0.208 ms/op
+                 executeQuery·p0.00:   24.150 ms/op
+                 executeQuery·p0.50:   24.281 ms/op
+                 executeQuery·p0.90:   24.838 ms/op
+                 executeQuery·p0.95:   25.149 ms/op
+                 executeQuery·p0.99:   25.428 ms/op
+                 executeQuery·p0.999:  25.428 ms/op
+                 executeQuery·p0.9999: 25.428 ms/op
+                 executeQuery·p1.00:   25.428 ms/op
+
+Iteration   5: 24.386 ±(99.9%) 0.165 ms/op
+                 executeQuery·p0.00:   24.150 ms/op
+                 executeQuery·p0.50:   24.281 ms/op
+                 executeQuery·p0.90:   24.871 ms/op
+                 executeQuery·p0.95:   24.953 ms/op
+                 executeQuery·p0.99:   24.969 ms/op
+                 executeQuery·p0.999:  24.969 ms/op
+                 executeQuery·p0.9999: 24.969 ms/op
+                 executeQuery·p1.00:   24.969 ms/op
+
+
+
+Result "benchmarks.arithmetic_query_hard_coded.VectorisedSimd.executeQuery":
+  N = 730
+  mean =     24.600 ±(99.9%) 0.127 ms/op
+
+  Histogram, ms/op:
+    [20.000, 21.250) = 0 
+    [21.250, 22.500) = 0 
+    [22.500, 23.750) = 2 
+    [23.750, 25.000) = 645 
+    [25.000, 26.250) = 74 
+    [26.250, 27.500) = 0 
+    [27.500, 28.750) = 0 
+    [28.750, 30.000) = 0 
+    [30.000, 31.250) = 0 
+    [31.250, 32.500) = 2 
+    [32.500, 33.750) = 5 
+    [33.750, 35.000) = 0 
+    [35.000, 36.250) = 1 
+    [36.250, 37.500) = 1 
+    [37.500, 38.750) = 0 
+
+  Percentiles, ms/op:
+      p(0.0000) =     23.462 ms/op
+     p(50.0000) =     24.412 ms/op
+     p(90.0000) =     25.002 ms/op
+     p(95.0000) =     25.148 ms/op
+     p(99.0000) =     32.475 ms/op
+     p(99.9000) =     36.504 ms/op
+     p(99.9900) =     36.504 ms/op
+     p(99.9990) =     36.504 ms/op
+     p(99.9999) =     36.504 ms/op
+    p(100.0000) =     36.504 ms/op
+
+
+# Run complete. Total time: 00:34:33
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                                        (tableFilePath)    Mode  Cnt    Score   Error  Units
+NonVectorisedNonSimd.executeQuery                       /nvtmp/duckdb/arrow_tpch  sample  615   17.458 ± 0.018  ms/op
+NonVectorisedNonSimd.executeQuery:executeQuery·p0.00    /nvtmp/duckdb/arrow_tpch  sample        17.203          ms/op
+NonVectorisedNonSimd.executeQuery:executeQuery·p0.50    /nvtmp/duckdb/arrow_tpch  sample        17.465          ms/op
+NonVectorisedNonSimd.executeQuery:executeQuery·p0.90    /nvtmp/duckdb/arrow_tpch  sample        17.596          ms/op
+NonVectorisedNonSimd.executeQuery:executeQuery·p0.95    /nvtmp/duckdb/arrow_tpch  sample        17.662          ms/op
+NonVectorisedNonSimd.executeQuery:executeQuery·p0.99    /nvtmp/duckdb/arrow_tpch  sample        17.815          ms/op
+NonVectorisedNonSimd.executeQuery:executeQuery·p0.999   /nvtmp/duckdb/arrow_tpch  sample        17.957          ms/op
+NonVectorisedNonSimd.executeQuery:executeQuery·p0.9999  /nvtmp/duckdb/arrow_tpch  sample        17.957          ms/op
+NonVectorisedNonSimd.executeQuery:executeQuery·p1.00    /nvtmp/duckdb/arrow_tpch  sample        17.957          ms/op
+NonVectorisedSimd.executeQuery                          /nvtmp/duckdb/arrow_tpch  sample  599  108.516 ± 1.731  ms/op
+NonVectorisedSimd.executeQuery:executeQuery·p0.00       /nvtmp/duckdb/arrow_tpch  sample        86.245          ms/op
+NonVectorisedSimd.executeQuery:executeQuery·p0.50       /nvtmp/duckdb/arrow_tpch  sample       107.610          ms/op
+NonVectorisedSimd.executeQuery:executeQuery·p0.90       /nvtmp/duckdb/arrow_tpch  sample       123.994          ms/op
+NonVectorisedSimd.executeQuery:executeQuery·p0.95       /nvtmp/duckdb/arrow_tpch  sample       124.256          ms/op
+NonVectorisedSimd.executeQuery:executeQuery·p0.99       /nvtmp/duckdb/arrow_tpch  sample       135.004          ms/op
+NonVectorisedSimd.executeQuery:executeQuery·p0.999      /nvtmp/duckdb/arrow_tpch  sample       138.936          ms/op
+NonVectorisedSimd.executeQuery:executeQuery·p0.9999     /nvtmp/duckdb/arrow_tpch  sample       138.936          ms/op
+NonVectorisedSimd.executeQuery:executeQuery·p1.00       /nvtmp/duckdb/arrow_tpch  sample       138.936          ms/op
+VectorisedNonSimd.executeQuery                          /nvtmp/duckdb/arrow_tpch  sample  746   24.514 ± 0.049  ms/op
+VectorisedNonSimd.executeQuery:executeQuery·p0.00       /nvtmp/duckdb/arrow_tpch  sample        23.462          ms/op
+VectorisedNonSimd.executeQuery:executeQuery·p0.50       /nvtmp/duckdb/arrow_tpch  sample        24.510          ms/op
+VectorisedNonSimd.executeQuery:executeQuery·p0.90       /nvtmp/duckdb/arrow_tpch  sample        25.002          ms/op
+VectorisedNonSimd.executeQuery:executeQuery·p0.95       /nvtmp/duckdb/arrow_tpch  sample        25.100          ms/op
+VectorisedNonSimd.executeQuery:executeQuery·p0.99       /nvtmp/duckdb/arrow_tpch  sample        25.428          ms/op
+VectorisedNonSimd.executeQuery:executeQuery·p0.999      /nvtmp/duckdb/arrow_tpch  sample        29.491          ms/op
+VectorisedNonSimd.executeQuery:executeQuery·p0.9999     /nvtmp/duckdb/arrow_tpch  sample        29.491          ms/op
+VectorisedNonSimd.executeQuery:executeQuery·p1.00       /nvtmp/duckdb/arrow_tpch  sample        29.491          ms/op
+VectorisedSimd.executeQuery                             /nvtmp/duckdb/arrow_tpch  sample  730   24.600 ± 0.127  ms/op
+VectorisedSimd.executeQuery:executeQuery·p0.00          /nvtmp/duckdb/arrow_tpch  sample        23.462          ms/op
+VectorisedSimd.executeQuery:executeQuery·p0.50          /nvtmp/duckdb/arrow_tpch  sample        24.412          ms/op
+VectorisedSimd.executeQuery:executeQuery·p0.90          /nvtmp/duckdb/arrow_tpch  sample        25.002          ms/op
+VectorisedSimd.executeQuery:executeQuery·p0.95          /nvtmp/duckdb/arrow_tpch  sample        25.148          ms/op
+VectorisedSimd.executeQuery:executeQuery·p0.99          /nvtmp/duckdb/arrow_tpch  sample        32.475          ms/op
+VectorisedSimd.executeQuery:executeQuery·p0.999         /nvtmp/duckdb/arrow_tpch  sample        36.504          ms/op
+VectorisedSimd.executeQuery:executeQuery·p0.9999        /nvtmp/duckdb/arrow_tpch  sample        36.504          ms/op
+VectorisedSimd.executeQuery:executeQuery·p1.00          /nvtmp/duckdb/arrow_tpch  sample        36.504          ms/op
+
+Benchmark result is saved to jmh-result.csv
