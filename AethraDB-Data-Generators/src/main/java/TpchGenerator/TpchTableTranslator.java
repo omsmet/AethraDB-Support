@@ -146,75 +146,67 @@ public class TpchTableTranslator {
                 }
             }
 
-            // Now, write the values to the appropriate vectors per "column"
-            for (int i = 0; i < tableLayout.size(); i++) {
+            // Now, write the values to the appropriate vectors
 
-                // Deal with possible conversion
-                Pair<String, Types.MinorType> tableField = tableLayout.get(i);
-                String fieldName = tableField.getLeft();
-                int conversionEncodingCharacter = fieldName.indexOf('^');
-                String conversionType = null;
-                if (conversionEncodingCharacter >= 0)
-                    conversionType = fieldName.substring(0, conversionEncodingCharacter);
+            for (int v = 0; v < trueVectorLength; v++) {
+                String[] currentValue = inputFileList.get(currentPosition + v);
 
-                // Get the raw vector
-                FieldVector rawVector = tableSchemaRoot.getVector(i);
+                for (int i = 0; i < tableLayout.size(); i++) {
+                    String rawValue = currentValue[i];
 
-                switch (tableField.getRight()) {
-                    case INT -> {
-                        IntVector vector = ((IntVector) rawVector);
+                    // Deal with possible conversion
+                    Pair<String, Types.MinorType> tableField = tableLayout.get(i);
+                    String fieldName = tableField.getLeft();
 
-                        boolean decimalToIntConversionEnabled = conversionType != null && conversionType.equals("decimaltoint");
+                    // Get the raw vector
+                    FieldVector rawVector = tableSchemaRoot.getVector(i);
 
-                        if (decimalToIntConversionEnabled) {
-                            for (int v = 0; v < trueVectorLength; v++) {
-                                vector.set(v, Integer.parseInt(inputFileList.get(currentPosition + v)[i].replace(".", "")));
-                            }
+                    switch (tableField.getRight()) {
+                        case INT -> {
+                            IntVector vector = ((IntVector) rawVector);
 
-                        } else {
-                            for (int v = 0; v < trueVectorLength; v++) {
-                                vector.set(v, Integer.parseInt(inputFileList.get(currentPosition + v)[i]));
-                            }
+                            int conversionEncodingCharacter = fieldName.indexOf('^');
+                            String conversionType = null;
+                            if (conversionEncodingCharacter >= 0)
+                                conversionType = fieldName.substring(0, conversionEncodingCharacter);
+
+                            boolean decimalToIntConversionEnabled = conversionType != null && conversionType.equals("decimaltoint");
+
+                            if (decimalToIntConversionEnabled)
+                                rawValue = rawValue.replace(".", "");
+
+                            vector.set(v, Integer.parseInt(rawValue));
+
                         }
 
-                    }
+                        case FIXEDSIZEBINARY -> {
+                            FixedSizeBinaryVector vector = ((FixedSizeBinaryVector) rawVector);
 
-                    case FIXEDSIZEBINARY -> {
-                        FixedSizeBinaryVector vector = ((FixedSizeBinaryVector) rawVector);
-
-                        byte[] buffer = new byte[vector.getByteWidth()];
-
-                        for (int v = 0; v < trueVectorLength; v++) {
                             // Need to upgrade size
-                            Arrays.fill(buffer, (byte) 0);
-                            byte[] rawValueAsBytes = inputFileList.get(currentPosition + v)[i].getBytes(StandardCharsets.US_ASCII);
+                            byte[] buffer = new byte[vector.getByteWidth()];
+                            byte[] rawValueAsBytes = rawValue.getBytes(StandardCharsets.US_ASCII);
                             System.arraycopy(rawValueAsBytes, 0, buffer, 0, rawValueAsBytes.length);
 
                             vector.set(v, buffer);
                         }
-                    }
 
-                    case VARCHAR -> {
-                        VarCharVector vector = ((VarCharVector) rawVector);
-
-                        for (int v = 0; v < trueVectorLength; v++) {
-                            vector.setSafe(v, inputFileList.get(currentPosition + v)[i].getBytes(StandardCharsets.UTF_8));
+                        case VARCHAR -> {
+                            VarCharVector vector = ((VarCharVector) rawVector);
+                            vector.setSafe(v, rawValue.getBytes(StandardCharsets.UTF_8));
                         }
-                    }
 
-                    case DATEDAY -> {
-                        DateDayVector vector = ((DateDayVector) rawVector);
-
-                        for (int v = 0; v < trueVectorLength; v++) {
+                        case DATEDAY -> {
+                            DateDayVector vector = ((DateDayVector) rawVector);
                             // Compute "unix day": days since 1 Januari 1970
-                            LocalDateTime parsedDate = LocalDate.parse(inputFileList.get(currentPosition + v)[i], dateTimeFormatter).atStartOfDay();
+                            LocalDateTime parsedDate = LocalDate.parse(rawValue, dateTimeFormatter).atStartOfDay();
                             int unixDays = (int) Duration.between(day_zero, parsedDate).toDays();
 
                             vector.set(v, unixDays);
                         }
+
+                        default -> throw new UnsupportedOperationException("The current field is not yet supported by the TpchTableTranslator: " + tableField.getRight());
                     }
 
-                    default -> throw new UnsupportedOperationException("The current field is not yet supported by the TpchTableTranslator: " + tableField.getRight());
                 }
 
             }
