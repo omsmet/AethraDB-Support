@@ -45,6 +45,15 @@
             <version>${commons.math.version}</version>
         </dependency>
 
+        <!--
+            CSV Reader
+          -->
+        <dependency>
+            <groupId>com.opencsv</groupId>
+            <artifactId>opencsv</artifactId>
+            <version>5.8</version>
+        </dependency>
+
     </dependencies>
 
 </project>

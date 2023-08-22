@@ -19,3 +19,4 @@ con = duckdb.connect()
 lineitem_doubles = ds.dataset(dataset_file, format='arrow')
 result_df = con.sql("SELECT l_extendedprice * (1 - l_discount) * (1 + l_tax) FROM lineitem_doubles").df().astype(float)
 result_df.to_csv(result_file, header=False, index=False)
+
