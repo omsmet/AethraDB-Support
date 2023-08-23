@@ -1,19 +1,15 @@
 package TpchGenerator;
 
-import org.apache.arrow.vector.IntVector;
 import org.apache.arrow.vector.types.Types;
-import org.apache.arrow.vector.types.pojo.ArrowType;
 import org.apache.commons.lang3.tuple.Pair;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.InputStreamReader;
-import java.util.Dictionary;
-import java.util.Enumeration;
 import java.util.List;
-import java.util.Map;
 
 import static org.apache.arrow.vector.types.Types.MinorType.DATEDAY;
+import static org.apache.arrow.vector.types.Types.MinorType.DECIMAL;
 import static org.apache.arrow.vector.types.Types.MinorType.FIXEDSIZEBINARY;
 import static org.apache.arrow.vector.types.Types.MinorType.INT;
 import static org.apache.arrow.vector.types.Types.MinorType.VARCHAR;
@@ -60,35 +56,35 @@ public class TpchGenerator {
         String[] generateCommand = new String[] { dbgenExecutable.toString(), "-vf", "-s", Integer.toString(scaleFactor) };
         String[] generateArgs = new String[] {};
 
-//        System.out.println("Generating Official TPC-H Dataset ...");
-//        System.out.println("---");
-//        try {
-//            Process generationProcess = runtime.exec(generateCommand, generateArgs, TPCH_DBGEN_DIR);
-//
-//            BufferedReader input = new BufferedReader(new InputStreamReader(generationProcess.getErrorStream()));
-//
-//            String line = null;
-//
-//            while ((line = input.readLine()) != null)
-//            {
-//                System.out.println(line);
-//            }
-//
-//            int exitVal = generationProcess.waitFor();
-//            System.out.println("---");
-//            System.out.println("Finished Generating Official TPC-H Dataset!");
-//            System.out.println("Exited with error code " + exitVal);
-//
-//            if (exitVal != 0) {
-//                System.out.println("Could not successfully generate official TPC-H dataset");
-//                return;
-//            }
-//
-//            System.out.println("Official TPC-H Dataset Generation Successful!");
-//
-//        } catch (Exception e) {
-//            throw new RuntimeException("Could not successfully generate the TPC-H dataset: ", e);
-//        }
+        System.out.println("Generating Official TPC-H Dataset ...");
+        System.out.println("---");
+        try {
+            Process generationProcess = runtime.exec(generateCommand, generateArgs, TPCH_DBGEN_DIR);
+
+            BufferedReader input = new BufferedReader(new InputStreamReader(generationProcess.getErrorStream()));
+
+            String line = null;
+
+            while ((line = input.readLine()) != null)
+            {
+                System.out.println(line);
+            }
+
+            int exitVal = generationProcess.waitFor();
+            System.out.println("---");
+            System.out.println("Finished Generating Official TPC-H Dataset!");
+            System.out.println("Exited with error code " + exitVal);
+
+            if (exitVal != 0) {
+                System.out.println("Could not successfully generate official TPC-H dataset");
+                return;
+            }
+
+            System.out.println("Official TPC-H Dataset Generation Successful!");
+
+        } catch (Exception e) {
+            throw new RuntimeException("Could not successfully generate the TPC-H dataset: ", e);
+        }
 
         // Now translate each TPC-H table to an appropriate arrow file
         TpchTableTranslator.translateTable("part", targetFolder, List.of(
@@ -99,7 +95,7 @@ public class TpchGenerator {
                 Pair.of("p_type", Types.MinorType.VARCHAR),                     // SPEC: var text 25
                 Pair.of("p_size", INT),
                 Pair.of("10#p_container", Types.MinorType.FIXEDSIZEBINARY),     // SPEC: fixed text 10
-                Pair.of("decimaltoint^p_retailprice", INT),     // SPEC: decimal, we multiply x 100 to get integers
+                Pair.of("p_retailprice", DECIMAL),                              // SPEC: decimal, we multiply x 100 to get integers
                 Pair.of("p_comment", Types.MinorType.VARCHAR)                   // SPEC: var text 23
         ));
 
@@ -109,7 +105,7 @@ public class TpchGenerator {
                 Pair.of("s_address", Types.MinorType.VARCHAR),
                 Pair.of("s_nationkey", INT),
                 Pair.of("15#s_phone", Types.MinorType.FIXEDSIZEBINARY),
-                Pair.of("decimaltoint^s_acctbal", INT),
+                Pair.of("s_acctbal", DECIMAL),
                 Pair.of("s_comment", Types.MinorType.VARCHAR)
         ));
 
@@ -117,7 +113,7 @@ public class TpchGenerator {
                 Pair.of("ps_partkey", INT),
                 Pair.of("ps_suppkey", INT),
                 Pair.of("ps_availqty", INT),
-                Pair.of("decimaltoint^ps_supplycost", INT),
+                Pair.of("ps_supplycost", DECIMAL),
                 Pair.of("ps_comment", Types.MinorType.VARCHAR)
         ));
 
@@ -127,7 +123,7 @@ public class TpchGenerator {
                 Pair.of("c_address", Types.MinorType.VARCHAR),
                 Pair.of( "c_nationkey", INT),
                 Pair.of("15#c_phone", Types.MinorType.FIXEDSIZEBINARY),
-                Pair.of("decimaltoint^c_acctbal", INT),
+                Pair.of("c_acctbal", DECIMAL),
                 Pair.of("10#c_mktsegment", Types.MinorType.FIXEDSIZEBINARY),
                 Pair.of("c_comment", Types.MinorType.VARCHAR)
         ));
@@ -136,7 +132,7 @@ public class TpchGenerator {
                 Pair.of("o_orderkey", INT),
                 Pair.of("o_custkey", INT),
                 Pair.of("1#o_orderstatus", Types.MinorType.FIXEDSIZEBINARY),
-                Pair.of("decimaltoint^o_totalprice", INT),
+                Pair.of("o_totalprice", DECIMAL),
                 Pair.of("o_orderdate", Types.MinorType.DATEDAY),
                 Pair.of("15#o_orderpriority", Types.MinorType.FIXEDSIZEBINARY),
                 Pair.of("15#o_clerk", Types.MinorType.FIXEDSIZEBINARY),
@@ -149,10 +145,10 @@ public class TpchGenerator {
                 Pair.of("l_partkey", INT),
                 Pair.of("l_suppkey", INT),
                 Pair.of("l_linenumber", INT),
-                Pair.of("decimaltoint^l_quantity", INT),
-                Pair.of("decimaltoint^l_extendedprice", INT),
-                Pair.of("decimaltoint^l_discount", INT),
-                Pair.of("decimaltoint^l_tax", INT),
+                Pair.of("l_quantity", DECIMAL),
+                Pair.of("l_extendedprice", DECIMAL),
+                Pair.of("l_discount", DECIMAL),
+                Pair.of("l_tax", DECIMAL),
                 Pair.of("1#l_returnflag", FIXEDSIZEBINARY),
                 Pair.of("1#l_linestatus", FIXEDSIZEBINARY),
                 Pair.of("l_shipdate", DATEDAY),

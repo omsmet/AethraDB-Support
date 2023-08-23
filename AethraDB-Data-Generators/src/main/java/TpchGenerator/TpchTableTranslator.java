@@ -56,7 +56,7 @@ public class TpchTableTranslator {
             // Obtain the field definition from the table layout
             Pair<String, Types.MinorType> tableField = tableLayout.get(i);
 
-            // Extract the field name by removing conversion indicators
+            // Extract the field name by removing length indicators
             String fieldName = tableField.getLeft();
             int fixedLengthEncodingCharacter = fieldName.indexOf('#');
             int fixedLengthSize = 0;
@@ -66,15 +66,11 @@ public class TpchTableTranslator {
                 fieldName = fixedLengthInfo[1];
             }
 
-            int conversionEncodingCharacter = fieldName.indexOf('^');
-            if (conversionEncodingCharacter >= 0)
-                fieldName = fieldName.substring(conversionEncodingCharacter + 1);
-
             // Now define the field based on the provided type
             schemaFields[i] = new Field(
                     fieldName,
                     FieldType.notNullable(switch (tableField.getRight()) {
-                        case INT -> new ArrowType.Int(32, true);
+                        case DECIMAL, INT -> new ArrowType.Int(32, true);   // Convert decimal to int
                         case FIXEDSIZEBINARY -> new ArrowType.FixedSizeBinary(fixedLengthSize);
                         case VARCHAR -> new ArrowType.Utf8();
                         case DATEDAY -> new ArrowType.Date(DateUnit.DAY);
@@ -118,7 +114,7 @@ public class TpchTableTranslator {
                 FieldVector rawVector = tableSchemaRoot.getVector(i);
 
                 switch (tableField.getRight()) {
-                    case INT -> {
+                    case DECIMAL, INT -> {  // Convert decimal to int
                         IntVector vector = ((IntVector) rawVector);
                         vector.reset();
                         vector.allocateNew(trueVectorLength);
@@ -162,19 +158,15 @@ public class TpchTableTranslator {
                     FieldVector rawVector = tableSchemaRoot.getVector(i);
 
                     switch (tableField.getRight()) {
+                        case DECIMAL -> {   // Convert decimal to int
+                            IntVector vector = ((IntVector) rawVector);
+                            rawValue = rawValue.replace(".", "");
+                            vector.set(v, Integer.parseInt(rawValue));
+
+                        }
+
                         case INT -> {
                             IntVector vector = ((IntVector) rawVector);
-
-                            int conversionEncodingCharacter = fieldName.indexOf('^');
-                            String conversionType = null;
-                            if (conversionEncodingCharacter >= 0)
-                                conversionType = fieldName.substring(0, conversionEncodingCharacter);
-
-                            boolean decimalToIntConversionEnabled = conversionType != null && conversionType.equals("decimaltoint");
-
-                            if (decimalToIntConversionEnabled)
-                                rawValue = rawValue.replace(".", "");
-
                             vector.set(v, Integer.parseInt(rawValue));
 
                         }
@@ -217,7 +209,7 @@ public class TpchTableTranslator {
                 FieldVector rawVector = tableSchemaRoot.getVector(i);
 
                 switch (tableField.getRight()) {
-                    case INT -> {
+                    case DECIMAL, INT -> {  // Convert decimal to int
                         IntVector vector = ((IntVector) rawVector);
                         vector.setValueCount(trueVectorLength);
                     }
