@@ -9,11 +9,13 @@ import org.apache.arrow.memory.RootAllocator;
 import org.apache.arrow.vector.DateDayVector;
 import org.apache.arrow.vector.FieldVector;
 import org.apache.arrow.vector.FixedSizeBinaryVector;
+import org.apache.arrow.vector.Float8Vector;
 import org.apache.arrow.vector.IntVector;
 import org.apache.arrow.vector.VarCharVector;
 import org.apache.arrow.vector.VectorSchemaRoot;
 import org.apache.arrow.vector.ipc.ArrowFileWriter;
 import org.apache.arrow.vector.types.DateUnit;
+import org.apache.arrow.vector.types.FloatingPointPrecision;
 import org.apache.arrow.vector.types.Types;
 import org.apache.arrow.vector.types.pojo.ArrowType;
 import org.apache.arrow.vector.types.pojo.Field;
@@ -71,7 +73,8 @@ public class TpchTableTranslator {
             schemaFields[i] = new Field(
                     fieldName,
                     FieldType.notNullable(switch (tableField.getRight()) {
-                        case DECIMAL, INT -> new ArrowType.Int(32, true);   // Convert decimal to int
+                        case DECIMAL -> new ArrowType.FloatingPoint(FloatingPointPrecision.DOUBLE); // Convert decimal to double
+                        case INT -> new ArrowType.Int(32, true);
                         case FIXEDSIZEBINARY -> new ArrowType.FixedSizeBinary(fixedLengthSize);
                         case VARCHAR -> new ArrowType.Utf8();
                         case DATEDAY -> new ArrowType.Date(DateUnit.DAY);
@@ -115,7 +118,13 @@ public class TpchTableTranslator {
                 FieldVector rawVector = tableSchemaRoot.getVector(i);
 
                 switch (tableField.getRight()) {
-                    case DECIMAL, INT -> {  // Convert decimal to int
+                    case DECIMAL -> { // Convert decimal to double
+                        Float8Vector vector = ((Float8Vector) rawVector);
+                        vector.reset();
+                        vector.allocateNew(trueVectorLength);
+                    }
+
+                    case INT -> {
                         IntVector vector = ((IntVector) rawVector);
                         vector.reset();
                         vector.allocateNew(trueVectorLength);
@@ -159,10 +168,9 @@ public class TpchTableTranslator {
                     FieldVector rawVector = tableSchemaRoot.getVector(i);
 
                     switch (tableField.getRight()) {
-                        case DECIMAL -> {   // Convert decimal to int
-                            IntVector vector = ((IntVector) rawVector);
-                            rawValue = rawValue.replace(".", "");
-                            vector.set(v, Integer.parseInt(rawValue));
+                        case DECIMAL -> {   // Convert decimal to double
+                            Float8Vector vector = ((Float8Vector) rawVector);
+                            vector.set(v, Double.parseDouble(rawValue));
 
                         }
 
@@ -210,7 +218,12 @@ public class TpchTableTranslator {
                 FieldVector rawVector = tableSchemaRoot.getVector(i);
 
                 switch (tableField.getRight()) {
-                    case DECIMAL, INT -> {  // Convert decimal to int
+                    case DECIMAL -> { // Convert decimal to double
+                        Float8Vector vector = ((Float8Vector) rawVector);
+                        vector.setValueCount(trueVectorLength);
+                    }
+
+                    case INT -> {
                         IntVector vector = ((IntVector) rawVector);
                         vector.setValueCount(trueVectorLength);
                     }
