@@ -31,6 +31,7 @@ import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -92,7 +93,7 @@ public class TpchTableTranslator {
 
         try (Reader reader = Files.newBufferedReader(inputFile.toPath())) {
             try (CSVReader csvReader = new CSVReaderBuilder(reader).withSkipLines(0).withCSVParser(parser).build()) {
-                inputFileList = csvReader.readAll();
+                inputFileList = new ArrayList<>(csvReader.readAll());
 
             } catch (Exception e) {
                 throw new RuntimeException("Could not successfully read CSV table file", e);
