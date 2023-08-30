@@ -1,0 +1,5 @@
+olivier@viper:~/AethraDB-DuckDB-Comparison/tpch_q1_nosort$ source ~/python-envs/duckdb/bin/activate
+(duckdb) olivier@viper:~/AethraDB-DuckDB-Comparison/tpch_q1_nosort$ python duckdb_benchmark.py
+DuckDB Version 0.7.1 - PyArrow Version 11.0.0 - Single Threaded Mode
+/nvtmp/AethraTestData/tpch/sf-1/lineitem.arrow, 0.4609425999999999
+(duckdb) olivier@viper:~/AethraDB-DuckDB-Comparison/tpch_q1_nosort$
