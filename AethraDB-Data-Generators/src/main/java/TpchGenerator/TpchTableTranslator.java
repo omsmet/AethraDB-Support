@@ -185,6 +185,7 @@ public class TpchTableTranslator {
 
                             // Need to upgrade size
                             byte[] buffer = new byte[vector.getByteWidth()];
+                            Arrays.fill(buffer, (byte) 32); // Pad with trailing spaces
                             byte[] rawValueAsBytes = rawValue.getBytes(StandardCharsets.US_ASCII);
                             System.arraycopy(rawValueAsBytes, 0, buffer, 0, rawValueAsBytes.length);
 
