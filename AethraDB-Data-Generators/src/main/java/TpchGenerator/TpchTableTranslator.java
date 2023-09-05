@@ -2,8 +2,6 @@ package TpchGenerator;
 
 import com.opencsv.CSVParser;
 import com.opencsv.CSVParserBuilder;
-import com.opencsv.CSVReader;
-import com.opencsv.CSVReaderBuilder;
 import org.apache.arrow.memory.BufferAllocator;
 import org.apache.arrow.memory.RootAllocator;
 import org.apache.arrow.vector.DateDayVector;
@@ -23,17 +21,16 @@ import org.apache.arrow.vector.types.pojo.FieldType;
 import org.apache.arrow.vector.types.pojo.Schema;
 import org.apache.commons.lang3.tuple.Pair;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.Reader;
+import java.io.FileReader;
+import java.io.LineNumberReader;
 import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
 import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -90,27 +87,23 @@ public class TpchTableTranslator {
         ArrowFileWriter tableWriter = new ArrowFileWriter(tableSchemaRoot, null, tableOutputStream.getChannel());
         tableWriter.start();
 
-        // Now, read the input file into memory
+        // Now, prepare for reading the input file
+        // Get the number of lines first
+        LineNumberReader lineNumberReader = new LineNumberReader(new FileReader(inputFile));
+        lineNumberReader.skip(Long.MAX_VALUE);
+        int numberOfLines = lineNumberReader.getLineNumber();
+        lineNumberReader.close();
+
+        // Prepare the CSV parser and input file reader
         CSVParser parser = new CSVParserBuilder().withSeparator('|').build();
-        List<String[]> inputFileList;
-
-        try (Reader reader = Files.newBufferedReader(inputFile.toPath())) {
-            try (CSVReader csvReader = new CSVReaderBuilder(reader).withSkipLines(0).withCSVParser(parser).build()) {
-                inputFileList = new ArrayList<>(csvReader.readAll());
-
-            } catch (Exception e) {
-                throw new RuntimeException("Could not successfully read CSV table file", e);
-            }
-        } catch (IOException e) {
-            throw new RuntimeException("Could not successfully read table file", e);
-        }
+        BufferedReader inputFileReader = new BufferedReader(new FileReader(inputFile));
 
         // Now, convert the input file into an arrow table
         int currentPosition = 0;
-        while (currentPosition < inputFileList.size()) {
+        while (currentPosition < numberOfLines) {
 
             // Compute the length of the current output vector
-            int trueVectorLength = Math.min(vectorLength, inputFileList.size() - currentPosition);
+            int trueVectorLength = Math.min(vectorLength, numberOfLines - currentPosition);
 
             // Reset and allocate the new vectors
             for (int i = 0; i < tableLayout.size(); i++) {
@@ -155,7 +148,8 @@ public class TpchTableTranslator {
             // Now, write the values to the appropriate vectors
 
             for (int v = 0; v < trueVectorLength; v++) {
-                String[] currentValue = inputFileList.get(currentPosition + v);
+                String line = inputFileReader.readLine();
+                String[] currentValue = parser.parseLine(line);
 
                 for (int i = 0; i < tableLayout.size(); i++) {
                     String rawValue = currentValue[i];
@@ -258,6 +252,7 @@ public class TpchTableTranslator {
         }
 
         // Close all working objects
+        inputFileReader.close();
         tableWriter.end();
         tableWriter.close();
         tableOutputStream.close();
