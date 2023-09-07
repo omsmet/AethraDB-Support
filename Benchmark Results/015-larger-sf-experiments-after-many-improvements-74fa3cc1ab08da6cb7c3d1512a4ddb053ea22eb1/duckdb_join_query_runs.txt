@@ -1,0 +1,22 @@
+(duckdb) olivier@viper:~/AethraDB-DuckDB-Comparison/join_query$ python join_query_duckdb_benchmark.py 
+DuckDB Version 0.8.1 - PyArrow Version 13.0.0 - Single Threaded Mode
+/nvtmp/AethraTestData/join_query_int/A_B_0.8_C_0.8, 0.6687742999999999
+/nvtmp/AethraTestData/join_query_int/A_B_0.8_C_0.2, 0.6140364
+/nvtmp/AethraTestData/join_query_int/A_B_0.6_C_0.8, 0.6199583000000001
+/nvtmp/AethraTestData/join_query_int/A_B_0.4_C_0.2, 0.5273211
+/nvtmp/AethraTestData/join_query_int/A_B_0.2_C_0.6, 0.494954
+/nvtmp/AethraTestData/join_query_int/A_B_0.8_C_0.4, 0.6419727000000001
+/nvtmp/AethraTestData/join_query_int/A_B_0.6_C_0.2, 0.5770333000000001
+/nvtmp/AethraTestData/join_query_int/A_B_0.4_C_0.8, 0.5618408
+/nvtmp/AethraTestData/join_query_int/A_B_0.2_C_0.4, 0.4918291
+/nvtmp/AethraTestData/join_query_int/A_B_0.2_C_0.8, 0.4985016
+/nvtmp/AethraTestData/join_query_int/A_B_0.6_C_0.6, 0.6139063000000001
+/nvtmp/AethraTestData/join_query_int/A_B_0.2_C_0.2, 0.4840485
+/nvtmp/AethraTestData/join_query_int/A_B_0.4_C_0.4, 0.5435310999999999
+/nvtmp/AethraTestData/join_query_int/A_B_0.4_C_0.6, 0.5510922
+/nvtmp/AethraTestData/join_query_int/A_B_0.6_C_0.4, 0.5979213
+/nvtmp/AethraTestData/join_query_int/A_B_0.8_C_0.6, 0.6624429000000001
+
+(duckdb) olivier@viper:~/AethraDB-DuckDB-Comparison/join_query$ python join_query_duckdb_benchmark.py 
+DuckDB Version 0.8.1 - PyArrow Version 13.0.0 - Single Threaded Mode
+/nvtmp/AethraTestData/join_query_int_sf10/A_B_0.6_C_0.8, 7.290934

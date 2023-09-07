@@ -1,0 +1,5 @@
+"Running-Time","Scale-Factor","Engine","Hard-Coded"
+617.0,1,DuckDB,False
+617.0,1,DuckDB,True
+7290.9,10,DuckDB,False
+7290.9,10,DuckDB,True

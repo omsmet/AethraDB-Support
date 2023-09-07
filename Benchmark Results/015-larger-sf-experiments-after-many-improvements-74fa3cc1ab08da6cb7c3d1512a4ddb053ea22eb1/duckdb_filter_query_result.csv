@@ -1,0 +1,10 @@
+"Running-Time","Scale-Factor","Engine","Restrictive-Column"
+152.6, 1, DuckDB, 1
+151.1, 1, DuckDB, 2
+148.9, 1, DuckDB, 3
+872.9, 10, DuckDB, 1
+868.9, 10, DuckDB, 2
+866.9, 10, DuckDB, 3
+1728.5, 20, DuckDB, 1
+1720.7, 20, DuckDB, 2
+1722.8, 20, DuckDB, 3

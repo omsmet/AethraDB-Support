@@ -1,0 +1,17 @@
+(duckdb) olivier@viper:~/AethraDB-DuckDB-Comparison/filter_query$ python filter_query_duckdb_benchmark.py 
+DuckDB Version 0.8.1 - PyArrow Version 13.0.0 - Single Threaded Mode
+/nvtmp/AethraTestData/filter_query_int/arrow_col1_002_col2_098_col3_098/filter_query_table.arrow, 0.15259450000000002
+/nvtmp/AethraTestData/filter_query_int/arrow_col1_098_col2_002_col3_098/filter_query_table.arrow, 0.15111399999999997
+/nvtmp/AethraTestData/filter_query_int/arrow_col1_098_col2_098_col3_002/filter_query_table.arrow, 0.1489257
+
+(duckdb) olivier@viper:~/AethraDB-DuckDB-Comparison/filter_query$ python filter_query_duckdb_benchmark.py 
+DuckDB Version 0.8.1 - PyArrow Version 13.0.0 - Single Threaded Mode
+/nvtmp/AethraTestData/filter_query_int_sf10/arrow_col1_002_col2_098_col3_098/filter_query_table.arrow, 0.8729484000000001
+/nvtmp/AethraTestData/filter_query_int_sf10/arrow_col1_098_col2_002_col3_098/filter_query_table.arrow, 0.8688949000000001
+/nvtmp/AethraTestData/filter_query_int_sf10/arrow_col1_098_col2_098_col3_002/filter_query_table.arrow, 0.8669177999999998
+
+(duckdb) olivier@viper:~/AethraDB-DuckDB-Comparison/filter_query$ python filter_query_duckdb_benchmark.py 
+DuckDB Version 0.8.1 - PyArrow Version 13.0.0 - Single Threaded Mode
+/nvtmp/AethraTestData/filter_query_int_sf20/arrow_col1_002_col2_098_col3_098/filter_query_table.arrow, 1.7284757
+/nvtmp/AethraTestData/filter_query_int_sf20/arrow_col1_098_col2_002_col3_098/filter_query_table.arrow, 1.7206937
+/nvtmp/AethraTestData/filter_query_int_sf20/arrow_col1_098_col2_098_col3_002/filter_query_table.arrow, 1.7228313

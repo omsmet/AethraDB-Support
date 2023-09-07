@@ -1,0 +1,50 @@
+(duckdb) olivier@viper:~/AethraDB-DuckDB-Comparison/aggregation_query$ python aggregation_query_duckdb_benchmark.py 
+DuckDB Version 0.8.1 - PyArrow Version 13.0.0 - Single Threaded Mode
+/nvtmp/AethraTestData/aggregation_query_int/arrow_size_62914560_keys_262144_skew_2.0/aggregation_query_table.arrow, 0.9257549
+/nvtmp/AethraTestData/aggregation_query_int/arrow_size_31457280_keys_512/aggregation_query_table.arrow, 0.4702742
+/nvtmp/AethraTestData/aggregation_query_int/arrow_size_31457280_keys_128/aggregation_query_table.arrow, 0.4476883
+/nvtmp/AethraTestData/aggregation_query_int/arrow_size_31457280_keys_4/aggregation_query_table.arrow, 0.44109410000000004
+/nvtmp/AethraTestData/aggregation_query_int/arrow_size_62914560_keys_262144_skew_2.2/aggregation_query_table.arrow, 0.9438712
+/nvtmp/AethraTestData/aggregation_query_int/arrow_size_62914560_keys_262144_skew_0.6/aggregation_query_table.arrow, 3.0881635999999997
+/nvtmp/AethraTestData/aggregation_query_int/arrow_size_31457280_keys_4096/aggregation_query_table.arrow, 0.7263825000000002
+/nvtmp/AethraTestData/aggregation_query_int/arrow_size_62914560_keys_262144_skew_1.2/aggregation_query_table.arrow, 1.5615526000000002
+/nvtmp/AethraTestData/aggregation_query_int/arrow_size_62914560_keys_262144_skew_1.8/aggregation_query_table.arrow, 1.0360825000000002
+/nvtmp/AethraTestData/aggregation_query_int/arrow_size_31457280_keys_524288/aggregation_query_table.arrow, 2.1382483
+/nvtmp/AethraTestData/aggregation_query_int/arrow_size_31457280_keys_1/aggregation_query_table.arrow, 0.48791969999999996
+/nvtmp/AethraTestData/aggregation_query_int/arrow_size_31457280_keys_32/aggregation_query_table.arrow, 0.48428170000000004
+/nvtmp/AethraTestData/aggregation_query_int/arrow_size_62914560_keys_262144_skew_0.4/aggregation_query_table.arrow, 3.3715823
+/nvtmp/AethraTestData/aggregation_query_int/arrow_size_62914560_keys_262144_skew_1.0/aggregation_query_table.arrow, 2.1345389
+/nvtmp/AethraTestData/aggregation_query_int/arrow_size_31457280_keys_262144/aggregation_query_table.arrow, 1.8430974
+/nvtmp/AethraTestData/aggregation_query_int/arrow_size_31457280_keys_256/aggregation_query_table.arrow, 0.5142876999999999
+/nvtmp/AethraTestData/aggregation_query_int/arrow_size_62914560_keys_262144_skew_1.4/aggregation_query_table.arrow, 1.2390063999999998
+/nvtmp/AethraTestData/aggregation_query_int/arrow_size_31457280_keys_131072/aggregation_query_table.arrow, 1.4656431
+/nvtmp/AethraTestData/aggregation_query_int/arrow_size_31457280_keys_16384/aggregation_query_table.arrow, 0.8933072000000001
+/nvtmp/AethraTestData/aggregation_query_int/arrow_size_31457280_keys_32768/aggregation_query_table.arrow, 0.9682131999999999
+/nvtmp/AethraTestData/aggregation_query_int/arrow_size_62914560_keys_262144_skew_2.4/aggregation_query_table.arrow, 1.0038264999999997
+/nvtmp/AethraTestData/aggregation_query_int/arrow_size_62914560_keys_262144_skew_1.6/aggregation_query_table.arrow, 1.1204880000000002
+/nvtmp/AethraTestData/aggregation_query_int/arrow_size_31457280_keys_1024/aggregation_query_table.arrow, 0.5748121
+/nvtmp/AethraTestData/aggregation_query_int/arrow_size_31457280_keys_16/aggregation_query_table.arrow, 0.48728039999999995
+/nvtmp/AethraTestData/aggregation_query_int/arrow_size_31457280_keys_2048/aggregation_query_table.arrow, 0.5836094000000001
+/nvtmp/AethraTestData/aggregation_query_int/arrow_size_31457280_keys_8192/aggregation_query_table.arrow, 0.8050153999999999
+/nvtmp/AethraTestData/aggregation_query_int/arrow_size_62914560_keys_262144_skew_0.8/aggregation_query_table.arrow, 2.6825872
+/nvtmp/AethraTestData/aggregation_query_int/arrow_size_31457280_keys_64/aggregation_query_table.arrow, 0.4805619
+/nvtmp/AethraTestData/aggregation_query_int/arrow_size_31457280_keys_65536/aggregation_query_table.arrow, 1.0721956999999998
+/nvtmp/AethraTestData/aggregation_query_int/arrow_size_31457280_keys_2/aggregation_query_table.arrow, 0.4870149
+/nvtmp/AethraTestData/aggregation_query_int/arrow_size_62914560_keys_262144_skew_0.2/aggregation_query_table.arrow, 3.5561155999999996
+/nvtmp/AethraTestData/aggregation_query_int/arrow_size_31457280_keys_8/aggregation_query_table.arrow, 0.4830610999999999
+
+(duckdb) olivier@viper:~/AethraDB-DuckDB-Comparison/aggregation_query$ python aggregation_query_duckdb_benchmark.py 
+DuckDB Version 0.8.1 - PyArrow Version 13.0.0 - Single Threaded Mode
+/nvtmp/AethraTestData/aggregation_query_int_sf10/arrow_size_314572800_keys_16/aggregation_query_table.arrow, 4.868339799999999
+/nvtmp/AethraTestData/aggregation_query_int_sf10/arrow_size_314572800_keys_2/aggregation_query_table.arrow, 4.8230436999999995
+/nvtmp/AethraTestData/aggregation_query_int_sf10/arrow_size_314572800_keys_8192/aggregation_query_table.arrow, 7.9921013
+/nvtmp/AethraTestData/aggregation_query_int_sf10/arrow_size_314572800_keys_524288/aggregation_query_table.arrow, 20.944341200000004
+/nvtmp/AethraTestData/aggregation_query_int_sf10/arrow_size_314572800_keys_262144/aggregation_query_table.arrow, 18.3531819
+
+(duckdb) olivier@viper:~/AethraDB-DuckDB-Comparison/aggregation_query$ python aggregation_query_duckdb_benchmark.py 
+DuckDB Version 0.8.1 - PyArrow Version 13.0.0 - Single Threaded Mode
+/nvtmp/AethraTestData/aggregation_query_int_sf20/arrow_size_629145600_keys_16/aggregation_query_table.arrow, 9.6614917
+/nvtmp/AethraTestData/aggregation_query_int_sf20/arrow_size_629145600_keys_2/aggregation_query_table.arrow, 10.5036395
+/nvtmp/AethraTestData/aggregation_query_int_sf20/arrow_size_629145600_keys_8192/aggregation_query_table.arrow, 15.69284
+/nvtmp/AethraTestData/aggregation_query_int_sf20/arrow_size_629145600_keys_524288/aggregation_query_table.arrow, 42.3626164
+/nvtmp/AethraTestData/aggregation_query_int_sf20/arrow_size_629145600_keys_262144/aggregation_query_table.arrow, 37.2131032
