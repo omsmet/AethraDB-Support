@@ -25,3 +25,6 @@ hs_err_pid*
 
 # Intellij Idea #
 .idea
+
+# Python Files #
+__pycache__/
