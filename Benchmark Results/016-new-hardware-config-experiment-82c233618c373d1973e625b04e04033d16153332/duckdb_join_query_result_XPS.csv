@@ -1,0 +1,7 @@
+"Running-Time","Scale-Factor","Engine","BenchmarkStyle"
+685.8,1,DuckDB,Standard
+685.8,1,DuckDB,Hard-coded
+685.8,1,DuckDB,Hard-coded-optimised
+8609.7,10,DuckDB,Standard
+8609.7,10,DuckDB,Hard-coded
+8609.7,10,DuckDB,Hard-coded-optimised
