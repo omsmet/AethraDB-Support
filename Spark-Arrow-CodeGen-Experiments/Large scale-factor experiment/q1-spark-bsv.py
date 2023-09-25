@@ -1,25 +1,7 @@
 import pyarrow as pa
 from pyspark.sql import SparkSession
-from pyspark.storagelevel import StorageLevel
+from pyspark.sql.types import StructType, IntegerType, DoubleType, DateType, StringType
 import time
-
-# Support method (https://stackoverflow.com/questions/53569580/how-to-read-feather-arrow-file-natively)
-def read_arrow_ipc(spark, filename, schema=None):
-
-    def mapper(iterator):
-        with pa.memory_map(filename, "rb") as source:
-            f = pa.ipc.open_file(source)
-            for batch in iterator:
-                for i in batch['id']:
-                    yield f.get_batch(i.as_py())
-
-    tmp_reader = pa.ipc.open_file(filename)
-    num_batches = tmp_reader.num_record_batches
-    if schema is None:
-        # read first batch and convert just one row to pandas
-        tmp_row = tmp_reader.get_batch(0)[:1]
-        schema = spark.createDataFrame(tmp_row.to_pandas()).schema
-    return spark.range(num_batches).mapInArrow(mapper, schema)
 
 # Actual code
 sparkSession = SparkSession.builder.appName("SparkArrowCodeGenXperiments")\
@@ -30,8 +12,26 @@ sparkSession = SparkSession.builder.appName("SparkArrowCodeGenXperiments")\
                                    .getOrCreate()
 sparkSession.sparkContext.setLogLevel("ERROR")
 
-lineitem_table_file = '/nvtmp/AethraTestData/tpch/sf-100-no-flbin/lineitem.arrow'
-lineitem_table_df = read_arrow_ipc(sparkSession, lineitem_table_file)
+lineitem_table_bsv_file = '/nvtmp/TPC-H V3.0.1/dbgen/lineitem.tbl'
+lineitem_table_bsv_schema = StructType()\
+    .add("l_orderkey", IntegerType(), False)\
+    .add("l_partkey", IntegerType(), False)\
+    .add("l_suppkey", IntegerType(), False)\
+    .add("l_linenumber", IntegerType(), False)\
+    .add("l_quantity", DoubleType(), False)\
+    .add("l_extendedprice", DoubleType(), False)\
+    .add("l_discount", DoubleType(), False)\
+    .add("l_tax", DoubleType(), False)\
+    .add("l_returnflag", StringType(), False)\
+    .add("l_linestatus", StringType(), False)\
+    .add("l_shipdate", DateType(), False)\
+    .add("l_commitdate", DateType(), False)\
+    .add("l_receiptdate", DateType(), False)\
+    .add("l_shipinstruct", StringType(), False)\
+    .add("l_shipmode", StringType(), False)\
+    .add("l_comment", StringType(), False)
+
+lineitem_table_df = sparkSession.read.options(delimiter='|', header=False).schema(lineitem_table_bsv_schema).csv(lineitem_table_bsv_file)
 lineitem_table_df.createOrReplaceTempView("lineitem")
 
 q1_result = sparkSession.sql("""

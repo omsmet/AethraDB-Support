@@ -1,0 +1,3 @@
+Benchmark,Dataset,Scale-Factor,Paradigm,Running-Time,Repetitions,ResultSummarised
+tpch_q1,tpch,100,non-vectorised,61775.9,10,True
+tpch_q1,tpch,100,vectorised,63189.4,10,True

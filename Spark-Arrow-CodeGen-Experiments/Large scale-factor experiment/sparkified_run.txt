@@ -1,0 +1,2111 @@
+# JMH version: 1.36
+# VM version: JDK 20.0.1, OpenJDK 64-Bit Server VM, 20.0.1+9-29
+# VM invoker: /home/olivier/external_software/openjdk-20.0.1/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-opens=java.base/java.nio=ALL-UNNAMED -Darrow.enable_unsafe_memory_access=true -Darrow.enable_null_check_for_get=false --enable-preview -Xmx32g -Xms16g
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: benchmarks.tpch.q1_no_sort_hard_coded.NonVectorisedNonSimd.executeQuery
+# Parameters: (tpchInstance = /nvtmp/AethraTestData/tpch/sf-1)
+
+# Run progress: 0.00% complete, ETA 00:40:00
+# Fork: 1 of 2
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
+369.778 ±(99.9%) 45.728 ms/op
+# Warmup Iteration   2: 400.996 ±(99.9%) 32.545 ms/op
+# Warmup Iteration   3: 303.865 ±(99.9%) 4.714 ms/op
+# Warmup Iteration   4: 309.123 ±(99.9%) 5.534 ms/op
+# Warmup Iteration   5: 307.995 ±(99.9%) 5.361 ms/op
+Iteration   1: 298.752 ±(99.9%) 0.964 ms/op
+                 executeQuery·p0.00:   297.271 ms/op
+                 executeQuery·p0.50:   298.320 ms/op
+                 executeQuery·p0.90:   299.893 ms/op
+                 executeQuery·p0.95:   301.466 ms/op
+                 executeQuery·p0.99:   306.184 ms/op
+                 executeQuery·p0.999:  306.184 ms/op
+                 executeQuery·p0.9999: 306.184 ms/op
+                 executeQuery·p1.00:   306.184 ms/op
+
+Iteration   2: 300.556 ±(99.9%) 0.843 ms/op
+                 executeQuery·p0.00:   298.844 ms/op
+                 executeQuery·p0.50:   300.417 ms/op
+                 executeQuery·p0.90:   301.466 ms/op
+                 executeQuery·p0.95:   302.907 ms/op
+                 executeQuery·p0.99:   307.233 ms/op
+                 executeQuery·p0.999:  307.233 ms/op
+                 executeQuery·p0.9999: 307.233 ms/op
+                 executeQuery·p1.00:   307.233 ms/op
+
+Iteration   3: 299.600 ±(99.9%) 1.085 ms/op
+                 executeQuery·p0.00:   297.796 ms/op
+                 executeQuery·p0.50:   299.368 ms/op
+                 executeQuery·p0.90:   300.417 ms/op
+                 executeQuery·p0.95:   302.514 ms/op
+                 executeQuery·p0.99:   308.806 ms/op
+                 executeQuery·p0.999:  308.806 ms/op
+                 executeQuery·p0.9999: 308.806 ms/op
+                 executeQuery·p1.00:   308.806 ms/op
+
+Iteration   4: 299.045 ±(99.9%) 1.066 ms/op
+                 executeQuery·p0.00:   297.271 ms/op
+                 executeQuery·p0.50:   298.844 ms/op
+                 executeQuery·p0.90:   300.155 ms/op
+                 executeQuery·p0.95:   302.645 ms/op
+                 executeQuery·p0.99:   307.757 ms/op
+                 executeQuery·p0.999:  307.757 ms/op
+                 executeQuery·p0.9999: 307.757 ms/op
+                 executeQuery·p1.00:   307.757 ms/op
+
+Iteration   5: 299.384 ±(99.9%) 1.003 ms/op
+                 executeQuery·p0.00:   297.271 ms/op
+                 executeQuery·p0.50:   298.844 ms/op
+                 executeQuery·p0.90:   300.417 ms/op
+                 executeQuery·p0.95:   302.514 ms/op
+                 executeQuery·p0.99:   307.233 ms/op
+                 executeQuery·p0.999:  307.233 ms/op
+                 executeQuery·p0.9999: 307.233 ms/op
+                 executeQuery·p1.00:   307.233 ms/op
+
+
+# Run progress: 4.17% complete, ETA 00:39:34
+# Fork: 2 of 2
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
+391.704 ±(99.9%) 58.595 ms/op
+# Warmup Iteration   2: 455.034 ±(99.9%) 21.006 ms/op
+# Warmup Iteration   3: 340.543 ±(99.9%) 5.345 ms/op
+# Warmup Iteration   4: 346.500 ±(99.9%) 1.255 ms/op
+# Warmup Iteration   5: 347.024 ±(99.9%) 1.634 ms/op
+Iteration   1: 332.556 ±(99.9%) 0.952 ms/op
+                 executeQuery·p0.00:   331.874 ms/op
+                 executeQuery·p0.50:   332.399 ms/op
+                 executeQuery·p0.90:   333.395 ms/op
+                 executeQuery·p0.95:   336.278 ms/op
+                 executeQuery·p0.99:   339.739 ms/op
+                 executeQuery·p0.999:  339.739 ms/op
+                 executeQuery·p0.9999: 339.739 ms/op
+                 executeQuery·p1.00:   339.739 ms/op
+
+Iteration   2: 333.150 ±(99.9%) 0.968 ms/op
+                 executeQuery·p0.00:   331.874 ms/op
+                 executeQuery·p0.50:   332.661 ms/op
+                 executeQuery·p0.90:   334.496 ms/op
+                 executeQuery·p0.95:   337.196 ms/op
+                 executeQuery·p0.99:   339.214 ms/op
+                 executeQuery·p0.999:  339.214 ms/op
+                 executeQuery·p0.9999: 339.214 ms/op
+                 executeQuery·p1.00:   339.214 ms/op
+
+Iteration   3: 333.412 ±(99.9%) 1.104 ms/op
+                 executeQuery·p0.00:   331.874 ms/op
+                 executeQuery·p0.50:   332.923 ms/op
+                 executeQuery·p0.90:   334.496 ms/op
+                 executeQuery·p0.95:   337.851 ms/op
+                 executeQuery·p0.99:   341.311 ms/op
+                 executeQuery·p0.999:  341.311 ms/op
+                 executeQuery·p0.9999: 341.311 ms/op
+                 executeQuery·p1.00:   341.311 ms/op
+
+Iteration   4: 333.971 ±(99.9%) 0.478 ms/op
+                 executeQuery·p0.00:   332.923 ms/op
+                 executeQuery·p0.50:   333.971 ms/op
+                 executeQuery·p0.90:   335.020 ms/op
+                 executeQuery·p0.95:   335.256 ms/op
+                 executeQuery·p0.99:   335.544 ms/op
+                 executeQuery·p0.999:  335.544 ms/op
+                 executeQuery·p0.9999: 335.544 ms/op
+                 executeQuery·p1.00:   335.544 ms/op
+
+Iteration   5: 333.744 ±(99.9%) 1.011 ms/op
+                 executeQuery·p0.00:   332.399 ms/op
+                 executeQuery·p0.50:   333.447 ms/op
+                 executeQuery·p0.90:   334.968 ms/op
+                 executeQuery·p0.95:   337.615 ms/op
+                 executeQuery·p0.99:   340.787 ms/op
+                 executeQuery·p0.999:  340.787 ms/op
+                 executeQuery·p0.9999: 340.787 ms/op
+                 executeQuery·p1.00:   340.787 ms/op
+
+
+
+Result "benchmarks.tpch.q1_no_sort_hard_coded.NonVectorisedNonSimd.executeQuery":
+  N = 320
+  mean =    315.358 ±(99.9%) 3.160 ms/op
+
+  Histogram, ms/op:
+    [290.000, 295.000) = 0 
+    [295.000, 300.000) = 133 
+    [300.000, 305.000) = 32 
+    [305.000, 310.000) = 5 
+    [310.000, 315.000) = 0 
+    [315.000, 320.000) = 0 
+    [320.000, 325.000) = 0 
+    [325.000, 330.000) = 0 
+    [330.000, 335.000) = 136 
+    [335.000, 340.000) = 12 
+    [340.000, 345.000) = 2 
+
+  Percentiles, ms/op:
+      p(0.0000) =    297.271 ms/op
+     p(50.0000) =    300.941 ms/op
+     p(90.0000) =    333.971 ms/op
+     p(95.0000) =    334.496 ms/op
+     p(99.0000) =    339.629 ms/op
+     p(99.9000) =    341.311 ms/op
+     p(99.9900) =    341.311 ms/op
+     p(99.9990) =    341.311 ms/op
+     p(99.9999) =    341.311 ms/op
+    p(100.0000) =    341.311 ms/op
+
+
+# JMH version: 1.36
+# VM version: JDK 20.0.1, OpenJDK 64-Bit Server VM, 20.0.1+9-29
+# VM invoker: /home/olivier/external_software/openjdk-20.0.1/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-opens=java.base/java.nio=ALL-UNNAMED -Darrow.enable_unsafe_memory_access=true -Darrow.enable_null_check_for_get=false --enable-preview -Xmx32g -Xms16g
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: benchmarks.tpch.q1_no_sort_hard_coded.NonVectorisedNonSimd.executeQuery
+# Parameters: (tpchInstance = /nvtmp/AethraTestData/tpch/sf-10)
+
+# Run progress: 8.33% complete, ETA 00:37:43
+# Fork: 1 of 2
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
+3513.429 ±(99.9%) 10232.015 ms/op
+# Warmup Iteration   2: 3105.882 ±(99.9%) 3942.270 ms/op
+# Warmup Iteration   3: 2736.783 ±(99.9%) 1019.300 ms/op
+# Warmup Iteration   4: 2875.195 ±(99.9%) 15.648 ms/op
+# Warmup Iteration   5: 2881.487 ±(99.9%) 22.130 ms/op
+Iteration   1: 2882.535 ±(99.9%) 25.950 ms/op
+                 executeQuery·p0.00:   2877.293 ms/op
+                 executeQuery·p0.50:   2883.584 ms/op
+                 executeQuery·p0.90:   2885.681 ms/op
+                 executeQuery·p0.95:   2885.681 ms/op
+                 executeQuery·p0.99:   2885.681 ms/op
+                 executeQuery·p0.999:  2885.681 ms/op
+                 executeQuery·p0.9999: 2885.681 ms/op
+                 executeQuery·p1.00:   2885.681 ms/op
+
+Iteration   2: 2853.175 ±(99.9%) 13.552 ms/op
+                 executeQuery·p0.00:   2852.127 ms/op
+                 executeQuery·p0.50:   2852.127 ms/op
+                 executeQuery·p0.90:   2856.321 ms/op
+                 executeQuery·p0.95:   2856.321 ms/op
+                 executeQuery·p0.99:   2856.321 ms/op
+                 executeQuery·p0.999:  2856.321 ms/op
+                 executeQuery·p0.9999: 2856.321 ms/op
+                 executeQuery·p1.00:   2856.321 ms/op
+
+Iteration   3: 2858.418 ±(99.9%) 64.519 ms/op
+                 executeQuery·p0.00:   2847.932 ms/op
+                 executeQuery·p0.50:   2858.418 ms/op
+                 executeQuery·p0.90:   2868.904 ms/op
+                 executeQuery·p0.95:   2868.904 ms/op
+                 executeQuery·p0.99:   2868.904 ms/op
+                 executeQuery·p0.999:  2868.904 ms/op
+                 executeQuery·p0.9999: 2868.904 ms/op
+                 executeQuery·p1.00:   2868.904 ms/op
+
+Iteration   4: 2876.244 ±(99.9%) 67.759 ms/op
+                 executeQuery·p0.00:   2864.710 ms/op
+                 executeQuery·p0.50:   2875.195 ms/op
+                 executeQuery·p0.90:   2889.875 ms/op
+                 executeQuery·p0.95:   2889.875 ms/op
+                 executeQuery·p0.99:   2889.875 ms/op
+                 executeQuery·p0.999:  2889.875 ms/op
+                 executeQuery·p0.9999: 2889.875 ms/op
+                 executeQuery·p1.00:   2889.875 ms/op
+
+Iteration   5: 2875.195 ±(99.9%) 34.991 ms/op
+                 executeQuery·p0.00:   2868.904 ms/op
+                 executeQuery·p0.50:   2875.195 ms/op
+                 executeQuery·p0.90:   2881.487 ms/op
+                 executeQuery·p0.95:   2881.487 ms/op
+                 executeQuery·p0.99:   2881.487 ms/op
+                 executeQuery·p0.999:  2881.487 ms/op
+                 executeQuery·p0.9999: 2881.487 ms/op
+                 executeQuery·p1.00:   2881.487 ms/op
+
+
+# Run progress: 12.50% complete, ETA 00:37:32
+# Fork: 2 of 2
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
+3502.244 ±(99.9%) 9213.241 ms/op
+# Warmup Iteration   2: 3094.348 ±(99.9%) 4079.144 ms/op
+# Warmup Iteration   3: 2739.929 ±(99.9%) 1353.618 ms/op
+# Warmup Iteration   4: 2911.896 ±(99.9%) 51.306 ms/op
+# Warmup Iteration   5: 2910.847 ±(99.9%) 31.296 ms/op
+Iteration   1: 2908.750 ±(99.9%) 15.648 ms/op
+                 executeQuery·p0.00:   2906.653 ms/op
+                 executeQuery·p0.50:   2908.750 ms/op
+                 executeQuery·p0.90:   2910.847 ms/op
+                 executeQuery·p0.95:   2910.847 ms/op
+                 executeQuery·p0.99:   2910.847 ms/op
+                 executeQuery·p0.999:  2910.847 ms/op
+                 executeQuery·p0.9999: 2910.847 ms/op
+                 executeQuery·p1.00:   2910.847 ms/op
+
+Iteration   2: 2921.333 ±(99.9%) 46.945 ms/op
+                 executeQuery·p0.00:   2915.041 ms/op
+                 executeQuery·p0.50:   2919.236 ms/op
+                 executeQuery·p0.90:   2931.818 ms/op
+                 executeQuery·p0.95:   2931.818 ms/op
+                 executeQuery·p0.99:   2931.818 ms/op
+                 executeQuery·p0.999:  2931.818 ms/op
+                 executeQuery·p0.9999: 2931.818 ms/op
+                 executeQuery·p1.00:   2931.818 ms/op
+
+Iteration   3: 2930.770 ±(99.9%) 92.245 ms/op
+                 executeQuery·p0.00:   2919.236 ms/op
+                 executeQuery·p0.50:   2927.624 ms/op
+                 executeQuery·p0.90:   2948.596 ms/op
+                 executeQuery·p0.95:   2948.596 ms/op
+                 executeQuery·p0.99:   2948.596 ms/op
+                 executeQuery·p0.999:  2948.596 ms/op
+                 executeQuery·p0.9999: 2948.596 ms/op
+                 executeQuery·p1.00:   2948.596 ms/op
+
+Iteration   4: 2924.478 ±(99.9%) 51.306 ms/op
+                 executeQuery·p0.00:   2919.236 ms/op
+                 executeQuery·p0.50:   2921.333 ms/op
+                 executeQuery·p0.90:   2936.013 ms/op
+                 executeQuery·p0.95:   2936.013 ms/op
+                 executeQuery·p0.99:   2936.013 ms/op
+                 executeQuery·p0.999:  2936.013 ms/op
+                 executeQuery·p0.9999: 2936.013 ms/op
+                 executeQuery·p1.00:   2936.013 ms/op
+
+Iteration   5: 2918.187 ±(99.9%) 25.950 ms/op
+                 executeQuery·p0.00:   2915.041 ms/op
+                 executeQuery·p0.50:   2917.138 ms/op
+                 executeQuery·p0.90:   2923.430 ms/op
+                 executeQuery·p0.95:   2923.430 ms/op
+                 executeQuery·p0.99:   2923.430 ms/op
+                 executeQuery·p0.999:  2923.430 ms/op
+                 executeQuery·p0.9999: 2923.430 ms/op
+                 executeQuery·p1.00:   2923.430 ms/op
+
+
+
+Result "benchmarks.tpch.q1_no_sort_hard_coded.NonVectorisedNonSimd.executeQuery":
+  N = 40
+  mean =   2894.909 ±(99.9%) 16.121 ms/op
+
+  Histogram, ms/op:
+    [2800.000, 2812.500) = 0 
+    [2812.500, 2825.000) = 0 
+    [2825.000, 2837.500) = 0 
+    [2837.500, 2850.000) = 1 
+    [2850.000, 2862.500) = 5 
+    [2862.500, 2875.000) = 6 
+    [2875.000, 2887.500) = 7 
+    [2887.500, 2900.000) = 1 
+    [2900.000, 2912.500) = 4 
+    [2912.500, 2925.000) = 12 
+    [2925.000, 2937.500) = 3 
+    [2937.500, 2950.000) = 1 
+    [2950.000, 2962.500) = 0 
+    [2962.500, 2975.000) = 0 
+    [2975.000, 2987.500) = 0 
+
+  Percentiles, ms/op:
+      p(0.0000) =   2847.932 ms/op
+     p(50.0000) =   2898.264 ms/op
+     p(90.0000) =   2930.980 ms/op
+     p(95.0000) =   2936.013 ms/op
+     p(99.0000) =   2948.596 ms/op
+     p(99.9000) =   2948.596 ms/op
+     p(99.9900) =   2948.596 ms/op
+     p(99.9990) =   2948.596 ms/op
+     p(99.9999) =   2948.596 ms/op
+    p(100.0000) =   2948.596 ms/op
+
+
+# JMH version: 1.36
+# VM version: JDK 20.0.1, OpenJDK 64-Bit Server VM, 20.0.1+9-29
+# VM invoker: /home/olivier/external_software/openjdk-20.0.1/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-opens=java.base/java.nio=ALL-UNNAMED -Darrow.enable_unsafe_memory_access=true -Darrow.enable_null_check_for_get=false --enable-preview -Xmx32g -Xms16g
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: benchmarks.tpch.q1_no_sort_hard_coded.NonVectorisedNonSimd.executeQuery
+# Parameters: (tpchInstance = /nvtmp/AethraTestData/tpch/sf-100)
+
+# Run progress: 16.67% complete, ETA 00:36:34
+# Fork: 1 of 2
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
+108716.360 ms/op
+# Warmup Iteration   2: 109790.102 ms/op
+# Warmup Iteration   3: 113011.327 ms/op
+# Warmup Iteration   4: 110729.626 ms/op
+# Warmup Iteration   5: 110058.537 ms/op
+Iteration   1: 109790.102 ms/op
+                 executeQuery·p0.00:   109790.102 ms/op
+                 executeQuery·p0.50:   109790.102 ms/op
+                 executeQuery·p0.90:   109790.102 ms/op
+                 executeQuery·p0.95:   109790.102 ms/op
+                 executeQuery·p0.99:   109790.102 ms/op
+                 executeQuery·p0.999:  109790.102 ms/op
+                 executeQuery·p0.9999: 109790.102 ms/op
+                 executeQuery·p1.00:   109790.102 ms/op
+
+Iteration   2: 110595.408 ms/op
+                 executeQuery·p0.00:   110595.408 ms/op
+                 executeQuery·p0.50:   110595.408 ms/op
+                 executeQuery·p0.90:   110595.408 ms/op
+                 executeQuery·p0.95:   110595.408 ms/op
+                 executeQuery·p0.99:   110595.408 ms/op
+                 executeQuery·p0.999:  110595.408 ms/op
+                 executeQuery·p0.9999: 110595.408 ms/op
+                 executeQuery·p1.00:   110595.408 ms/op
+
+Iteration   3: 109253.231 ms/op
+                 executeQuery·p0.00:   109253.231 ms/op
+                 executeQuery·p0.50:   109253.231 ms/op
+                 executeQuery·p0.90:   109253.231 ms/op
+                 executeQuery·p0.95:   109253.231 ms/op
+                 executeQuery·p0.99:   109253.231 ms/op
+                 executeQuery·p0.999:  109253.231 ms/op
+                 executeQuery·p0.9999: 109253.231 ms/op
+                 executeQuery·p1.00:   109253.231 ms/op
+
+Iteration   4: 110461.190 ms/op
+                 executeQuery·p0.00:   110461.190 ms/op
+                 executeQuery·p0.50:   110461.190 ms/op
+                 executeQuery·p0.90:   110461.190 ms/op
+                 executeQuery·p0.95:   110461.190 ms/op
+                 executeQuery·p0.99:   110461.190 ms/op
+                 executeQuery·p0.999:  110461.190 ms/op
+                 executeQuery·p0.9999: 110461.190 ms/op
+                 executeQuery·p1.00:   110461.190 ms/op
+
+Iteration   5: 109387.448 ms/op
+                 executeQuery·p0.00:   109387.448 ms/op
+                 executeQuery·p0.50:   109387.448 ms/op
+                 executeQuery·p0.90:   109387.448 ms/op
+                 executeQuery·p0.95:   109387.448 ms/op
+                 executeQuery·p0.99:   109387.448 ms/op
+                 executeQuery·p0.999:  109387.448 ms/op
+                 executeQuery·p0.9999: 109387.448 ms/op
+                 executeQuery·p1.00:   109387.448 ms/op
+
+
+# Run progress: 20.83% complete, ETA 01:37:44
+# Fork: 2 of 2
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
+118916.907 ms/op
+# Warmup Iteration   2: 130459.632 ms/op
+# Warmup Iteration   3: 113145.545 ms/op
+# Warmup Iteration   4: 112071.803 ms/op
+# Warmup Iteration   5: 111803.367 ms/op
+Iteration   1: 111534.932 ms/op
+                 executeQuery·p0.00:   111534.932 ms/op
+                 executeQuery·p0.50:   111534.932 ms/op
+                 executeQuery·p0.90:   111534.932 ms/op
+                 executeQuery·p0.95:   111534.932 ms/op
+                 executeQuery·p0.99:   111534.932 ms/op
+                 executeQuery·p0.999:  111534.932 ms/op
+                 executeQuery·p0.9999: 111534.932 ms/op
+                 executeQuery·p1.00:   111534.932 ms/op
+
+Iteration   2: 111534.932 ms/op
+                 executeQuery·p0.00:   111534.932 ms/op
+                 executeQuery·p0.50:   111534.932 ms/op
+                 executeQuery·p0.90:   111534.932 ms/op
+                 executeQuery·p0.95:   111534.932 ms/op
+                 executeQuery·p0.99:   111534.932 ms/op
+                 executeQuery·p0.999:  111534.932 ms/op
+                 executeQuery·p0.9999: 111534.932 ms/op
+                 executeQuery·p1.00:   111534.932 ms/op
+
+Iteration   3: 112071.803 ms/op
+                 executeQuery·p0.00:   112071.803 ms/op
+                 executeQuery·p0.50:   112071.803 ms/op
+                 executeQuery·p0.90:   112071.803 ms/op
+                 executeQuery·p0.95:   112071.803 ms/op
+                 executeQuery·p0.99:   112071.803 ms/op
+                 executeQuery·p0.999:  112071.803 ms/op
+                 executeQuery·p0.9999: 112071.803 ms/op
+                 executeQuery·p1.00:   112071.803 ms/op
+
+Iteration   4: 112340.238 ms/op
+                 executeQuery·p0.00:   112340.238 ms/op
+                 executeQuery·p0.50:   112340.238 ms/op
+                 executeQuery·p0.90:   112340.238 ms/op
+                 executeQuery·p0.95:   112340.238 ms/op
+                 executeQuery·p0.99:   112340.238 ms/op
+                 executeQuery·p0.999:  112340.238 ms/op
+                 executeQuery·p0.9999: 112340.238 ms/op
+                 executeQuery·p1.00:   112340.238 ms/op
+
+Iteration   5: 111803.367 ms/op
+                 executeQuery·p0.00:   111803.367 ms/op
+                 executeQuery·p0.50:   111803.367 ms/op
+                 executeQuery·p0.90:   111803.367 ms/op
+                 executeQuery·p0.95:   111803.367 ms/op
+                 executeQuery·p0.99:   111803.367 ms/op
+                 executeQuery·p0.999:  111803.367 ms/op
+                 executeQuery·p0.9999: 111803.367 ms/op
+                 executeQuery·p1.00:   111803.367 ms/op
+
+
+
+Result "benchmarks.tpch.q1_no_sort_hard_coded.NonVectorisedNonSimd.executeQuery":
+  N = 10
+  mean = 110877.265 ±(99.9%) 1715.028 ms/op
+
+  Histogram, ms/op:
+    [109000.000, 109250.000) = 0 
+    [109250.000, 109500.000) = 2 
+    [109500.000, 109750.000) = 0 
+    [109750.000, 110000.000) = 1 
+    [110000.000, 110250.000) = 0 
+    [110250.000, 110500.000) = 1 
+    [110500.000, 110750.000) = 1 
+    [110750.000, 111000.000) = 0 
+    [111000.000, 111250.000) = 0 
+    [111250.000, 111500.000) = 0 
+    [111500.000, 111750.000) = 2 
+    [111750.000, 112000.000) = 1 
+    [112000.000, 112250.000) = 1 
+    [112250.000, 112500.000) = 1 
+    [112500.000, 112750.000) = 0 
+
+  Percentiles, ms/op:
+      p(0.0000) = 109253.231 ms/op
+     p(50.0000) = 111065.170 ms/op
+     p(90.0000) = 112313.395 ms/op
+     p(95.0000) = 112340.238 ms/op
+     p(99.0000) = 112340.238 ms/op
+     p(99.9000) = 112340.238 ms/op
+     p(99.9900) = 112340.238 ms/op
+     p(99.9990) = 112340.238 ms/op
+     p(99.9999) = 112340.238 ms/op
+    p(100.0000) = 112340.238 ms/op
+
+
+# JMH version: 1.36
+# VM version: JDK 20.0.1, OpenJDK 64-Bit Server VM, 20.0.1+9-29
+# VM invoker: /home/olivier/external_software/openjdk-20.0.1/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-opens=java.base/java.nio=ALL-UNNAMED -Darrow.enable_unsafe_memory_access=true -Darrow.enable_null_check_for_get=false --enable-preview -Xmx32g -Xms16g --add-exports=java.base/sun.nio.ch=ALL-UNNAMED
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: benchmarks.tpch.q1_no_sort_hard_coded.NonVectorisedNonSimdSparkified.executeQuery
+# Parameters: (tpchInstance = /nvtmp/AethraTestData/tpch/sf-1)
+
+# Run progress: 25.00% complete, ETA 02:14:34
+# Fork: 1 of 2
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
+498.965 ±(99.9%) 165.256 ms/op
+# Warmup Iteration   2: 513.776 ±(99.9%) 8.424 ms/op
+# Warmup Iteration   3: 435.410 ±(99.9%) 44.333 ms/op
+# Warmup Iteration   4: 393.075 ±(99.9%) 6.060 ms/op
+# Warmup Iteration   5: 399.046 ±(99.9%) 6.094 ms/op
+Iteration   1: 397.788 ±(99.9%) 7.153 ms/op
+                 executeQuery·p0.00:   383.255 ms/op
+                 executeQuery·p0.50:   402.653 ms/op
+                 executeQuery·p0.90:   407.791 ms/op
+                 executeQuery·p0.95:   414.764 ms/op
+                 executeQuery·p0.99:   416.809 ms/op
+                 executeQuery·p0.999:  416.809 ms/op
+                 executeQuery·p0.9999: 416.809 ms/op
+                 executeQuery·p1.00:   416.809 ms/op
+
+Iteration   2: 386.461 ±(99.9%) 4.463 ms/op
+                 executeQuery·p0.00:   381.682 ms/op
+                 executeQuery·p0.50:   383.779 ms/op
+                 executeQuery·p0.90:   395.628 ms/op
+                 executeQuery·p0.95:   404.541 ms/op
+                 executeQuery·p0.99:   408.945 ms/op
+                 executeQuery·p0.999:  408.945 ms/op
+                 executeQuery·p0.9999: 408.945 ms/op
+                 executeQuery·p1.00:   408.945 ms/op
+
+Iteration   3: 387.973 ±(99.9%) 6.239 ms/op
+                 executeQuery·p0.00:   381.682 ms/op
+                 executeQuery·p0.50:   384.041 ms/op
+                 executeQuery·p0.90:   403.125 ms/op
+                 executeQuery·p0.95:   411.042 ms/op
+                 executeQuery·p0.99:   414.712 ms/op
+                 executeQuery·p0.999:  414.712 ms/op
+                 executeQuery·p0.9999: 414.712 ms/op
+                 executeQuery·p1.00:   414.712 ms/op
+
+Iteration   4: 405.904 ±(99.9%) 12.435 ms/op
+                 executeQuery·p0.00:   381.157 ms/op
+                 executeQuery·p0.50:   405.799 ms/op
+                 executeQuery·p0.90:   426.980 ms/op
+                 executeQuery·p0.95:   453.457 ms/op
+                 executeQuery·p0.99:   454.558 ms/op
+                 executeQuery·p0.999:  454.558 ms/op
+                 executeQuery·p0.9999: 454.558 ms/op
+                 executeQuery·p1.00:   454.558 ms/op
+
+Iteration   5: 411.734 ±(99.9%) 2.845 ms/op
+                 executeQuery·p0.00:   408.945 ms/op
+                 executeQuery·p0.50:   410.518 ms/op
+                 executeQuery·p0.90:   417.962 ms/op
+                 executeQuery·p0.95:   423.887 ms/op
+                 executeQuery·p0.99:   424.673 ms/op
+                 executeQuery·p0.999:  424.673 ms/op
+                 executeQuery·p0.9999: 424.673 ms/op
+                 executeQuery·p1.00:   424.673 ms/op
+
+
+# Run progress: 29.17% complete, ETA 01:53:13
+# Fork: 2 of 2
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
+457.894 ±(99.9%) 52.911 ms/op
+# Warmup Iteration   2: 515.952 ±(99.9%) 5.785 ms/op
+# Warmup Iteration   3: 421.331 ±(99.9%) 33.151 ms/op
+# Warmup Iteration   4: 386.562 ±(99.9%) 4.567 ms/op
+# Warmup Iteration   5: 406.239 ±(99.9%) 5.658 ms/op
+Iteration   1: 397.494 ±(99.9%) 7.258 ms/op
+                 executeQuery·p0.00:   383.255 ms/op
+                 executeQuery·p0.50:   403.177 ms/op
+                 executeQuery·p0.90:   406.743 ms/op
+                 executeQuery·p0.95:   408.840 ms/op
+                 executeQuery·p0.99:   409.469 ms/op
+                 executeQuery·p0.999:  409.469 ms/op
+                 executeQuery·p0.9999: 409.469 ms/op
+                 executeQuery·p1.00:   409.469 ms/op
+
+Iteration   2: 386.864 ±(99.9%) 5.230 ms/op
+                 executeQuery·p0.00:   382.206 ms/op
+                 executeQuery·p0.50:   384.303 ms/op
+                 executeQuery·p0.90:   403.125 ms/op
+                 executeQuery·p0.95:   407.896 ms/op
+                 executeQuery·p0.99:   407.896 ms/op
+                 executeQuery·p0.999:  407.896 ms/op
+                 executeQuery·p0.9999: 407.896 ms/op
+                 executeQuery·p1.00:   407.896 ms/op
+
+Iteration   3: 388.437 ±(99.9%) 6.438 ms/op
+                 executeQuery·p0.00:   382.206 ms/op
+                 executeQuery·p0.50:   385.090 ms/op
+                 executeQuery·p0.90:   401.762 ms/op
+                 executeQuery·p0.95:   415.420 ms/op
+                 executeQuery·p0.99:   422.576 ms/op
+                 executeQuery·p0.999:  422.576 ms/op
+                 executeQuery·p0.9999: 422.576 ms/op
+                 executeQuery·p1.00:   422.576 ms/op
+
+Iteration   4: 405.149 ±(99.9%) 9.266 ms/op
+                 executeQuery·p0.00:   383.255 ms/op
+                 executeQuery·p0.50:   409.469 ms/op
+                 executeQuery·p0.90:   414.083 ms/op
+                 executeQuery·p0.95:   429.392 ms/op
+                 executeQuery·p0.99:   435.683 ms/op
+                 executeQuery·p0.999:  435.683 ms/op
+                 executeQuery·p0.9999: 435.683 ms/op
+                 executeQuery·p1.00:   435.683 ms/op
+
+Iteration   5: 409.175 ±(99.9%) 2.600 ms/op
+                 executeQuery·p0.00:   405.799 ms/op
+                 executeQuery·p0.50:   407.896 ms/op
+                 executeQuery·p0.90:   411.986 ms/op
+                 executeQuery·p0.95:   420.322 ms/op
+                 executeQuery·p0.99:   423.625 ms/op
+                 executeQuery·p0.999:  423.625 ms/op
+                 executeQuery·p0.9999: 423.625 ms/op
+                 executeQuery·p1.00:   423.625 ms/op
+
+
+
+Result "benchmarks.tpch.q1_no_sort_hard_coded.NonVectorisedNonSimdSparkified.executeQuery":
+  N = 254
+  mean =    397.536 ±(99.9%) 2.744 ms/op
+
+  Histogram, ms/op:
+    [380.000, 385.000) = 77 
+    [385.000, 390.000) = 34 
+    [390.000, 395.000) = 7 
+    [395.000, 400.000) = 6 
+    [400.000, 405.000) = 32 
+    [405.000, 410.000) = 61 
+    [410.000, 415.000) = 28 
+    [415.000, 420.000) = 2 
+    [420.000, 425.000) = 4 
+    [425.000, 430.000) = 0 
+    [430.000, 435.000) = 0 
+    [435.000, 440.000) = 1 
+    [440.000, 445.000) = 0 
+    [445.000, 450.000) = 0 
+    [450.000, 455.000) = 2 
+
+  Percentiles, ms/op:
+      p(0.0000) =    381.157 ms/op
+     p(50.0000) =    401.342 ms/op
+     p(90.0000) =    411.042 ms/op
+     p(95.0000) =    413.663 ms/op
+     p(99.0000) =    442.525 ms/op
+     p(99.9000) =    454.558 ms/op
+     p(99.9900) =    454.558 ms/op
+     p(99.9990) =    454.558 ms/op
+     p(99.9999) =    454.558 ms/op
+    p(100.0000) =    454.558 ms/op
+
+
+# JMH version: 1.36
+# VM version: JDK 20.0.1, OpenJDK 64-Bit Server VM, 20.0.1+9-29
+# VM invoker: /home/olivier/external_software/openjdk-20.0.1/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-opens=java.base/java.nio=ALL-UNNAMED -Darrow.enable_unsafe_memory_access=true -Darrow.enable_null_check_for_get=false --enable-preview -Xmx32g -Xms16g --add-exports=java.base/sun.nio.ch=ALL-UNNAMED
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: benchmarks.tpch.q1_no_sort_hard_coded.NonVectorisedNonSimdSparkified.executeQuery
+# Parameters: (tpchInstance = /nvtmp/AethraTestData/tpch/sf-10)
+
+# Run progress: 33.33% complete, ETA 01:36:46
+# Fork: 1 of 2
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
+11475.616 ms/op
+# Warmup Iteration   2: 5146.411 ms/op
+# Warmup Iteration   3: 4338.308 ±(99.9%) 12077.598 ms/op
+# Warmup Iteration   4: 3848.973 ±(99.9%) 233.772 ms/op
+# Warmup Iteration   5: 3830.798 ±(99.9%) 2231.351 ms/op
+Iteration   1: 3841.982 ±(99.9%) 1925.197 ms/op
+                 executeQuery·p0.00:   3774.874 ms/op
+                 executeQuery·p0.50:   3787.457 ms/op
+                 executeQuery·p0.90:   3963.617 ms/op
+                 executeQuery·p0.95:   3963.617 ms/op
+                 executeQuery·p0.99:   3963.617 ms/op
+                 executeQuery·p0.999:  3963.617 ms/op
+                 executeQuery·p0.9999: 3963.617 ms/op
+                 executeQuery·p1.00:   3963.617 ms/op
+
+Iteration   2: 3786.058 ±(99.9%) 637.154 ms/op
+                 executeQuery·p0.00:   3758.096 ms/op
+                 executeQuery·p0.50:   3774.874 ms/op
+                 executeQuery·p0.90:   3825.205 ms/op
+                 executeQuery·p0.95:   3825.205 ms/op
+                 executeQuery·p0.99:   3825.205 ms/op
+                 executeQuery·p0.999:  3825.205 ms/op
+                 executeQuery·p0.9999: 3825.205 ms/op
+                 executeQuery·p1.00:   3825.205 ms/op
+
+Iteration   3: 3791.651 ±(99.9%) 132.536 ms/op
+                 executeQuery·p0.00:   3787.457 ms/op
+                 executeQuery·p0.50:   3787.457 ms/op
+                 executeQuery·p0.90:   3800.039 ms/op
+                 executeQuery·p0.95:   3800.039 ms/op
+                 executeQuery·p0.99:   3800.039 ms/op
+                 executeQuery·p0.999:  3800.039 ms/op
+                 executeQuery·p0.9999: 3800.039 ms/op
+                 executeQuery·p1.00:   3800.039 ms/op
+
+Iteration   4: 3829.400 ±(99.9%) 852.088 ms/op
+                 executeQuery·p0.00:   3787.457 ms/op
+                 executeQuery·p0.50:   3821.011 ms/op
+                 executeQuery·p0.90:   3879.731 ms/op
+                 executeQuery·p0.95:   3879.731 ms/op
+                 executeQuery·p0.99:   3879.731 ms/op
+                 executeQuery·p0.999:  3879.731 ms/op
+                 executeQuery·p0.9999: 3879.731 ms/op
+                 executeQuery·p1.00:   3879.731 ms/op
+
+Iteration   5: 3780.466 ±(99.9%) 309.251 ms/op
+                 executeQuery·p0.00:   3762.291 ms/op
+                 executeQuery·p0.50:   3783.262 ms/op
+                 executeQuery·p0.90:   3795.845 ms/op
+                 executeQuery·p0.95:   3795.845 ms/op
+                 executeQuery·p0.99:   3795.845 ms/op
+                 executeQuery·p0.999:  3795.845 ms/op
+                 executeQuery·p0.9999: 3795.845 ms/op
+                 executeQuery·p1.00:   3795.845 ms/op
+
+
+# Run progress: 37.50% complete, ETA 01:23:56
+# Fork: 2 of 2
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
+5045.748 ms/op
+# Warmup Iteration   2: 5079.302 ms/op
+# Warmup Iteration   3: 3798.641 ±(99.9%) 968.914 ms/op
+# Warmup Iteration   4: 3780.466 ±(99.9%) 659.728 ms/op
+# Warmup Iteration   5: 3804.234 ±(99.9%) 1925.197 ms/op
+Iteration   1: 3749.708 ±(99.9%) 202.452 ms/op
+                 executeQuery·p0.00:   3737.125 ms/op
+                 executeQuery·p0.50:   3753.902 ms/op
+                 executeQuery·p0.90:   3758.096 ms/op
+                 executeQuery·p0.95:   3758.096 ms/op
+                 executeQuery·p0.99:   3758.096 ms/op
+                 executeQuery·p0.999:  3758.096 ms/op
+                 executeQuery·p0.9999: 3758.096 ms/op
+                 executeQuery·p1.00:   3758.096 ms/op
+
+Iteration   2: 3779.068 ±(99.9%) 1325.360 ms/op
+                 executeQuery·p0.00:   3737.125 ms/op
+                 executeQuery·p0.50:   3737.125 ms/op
+                 executeQuery·p0.90:   3862.954 ms/op
+                 executeQuery·p0.95:   3862.954 ms/op
+                 executeQuery·p0.99:   3862.954 ms/op
+                 executeQuery·p0.999:  3862.954 ms/op
+                 executeQuery·p0.9999: 3862.954 ms/op
+                 executeQuery·p1.00:   3862.954 ms/op
+
+Iteration   3: 3826.603 ±(99.9%) 268.728 ms/op
+                 executeQuery·p0.00:   3812.622 ms/op
+                 executeQuery·p0.50:   3825.205 ms/op
+                 executeQuery·p0.90:   3841.982 ms/op
+                 executeQuery·p0.95:   3841.982 ms/op
+                 executeQuery·p0.99:   3841.982 ms/op
+                 executeQuery·p0.999:  3841.982 ms/op
+                 executeQuery·p0.9999: 3841.982 ms/op
+                 executeQuery·p1.00:   3841.982 ms/op
+
+Iteration   4: 3837.788 ±(99.9%) 132.536 ms/op
+                 executeQuery·p0.00:   3829.400 ms/op
+                 executeQuery·p0.50:   3841.982 ms/op
+                 executeQuery·p0.90:   3841.982 ms/op
+                 executeQuery·p0.95:   3841.982 ms/op
+                 executeQuery·p0.99:   3841.982 ms/op
+                 executeQuery·p0.999:  3841.982 ms/op
+                 executeQuery·p0.9999: 3841.982 ms/op
+                 executeQuery·p1.00:   3841.982 ms/op
+
+Iteration   5: 3851.769 ±(99.9%) 159.288 ms/op
+                 executeQuery·p0.00:   3841.982 ms/op
+                 executeQuery·p0.50:   3854.565 ms/op
+                 executeQuery·p0.90:   3858.760 ms/op
+                 executeQuery·p0.95:   3858.760 ms/op
+                 executeQuery·p0.99:   3858.760 ms/op
+                 executeQuery·p0.999:  3858.760 ms/op
+                 executeQuery·p0.9999: 3858.760 ms/op
+                 executeQuery·p1.00:   3858.760 ms/op
+
+
+
+Result "benchmarks.tpch.q1_no_sort_hard_coded.NonVectorisedNonSimdSparkified.executeQuery":
+  N = 30
+  mean =   3807.449 ±(99.9%) 33.463 ms/op
+
+  Histogram, ms/op:
+    [3700.000, 3725.000) = 0 
+    [3725.000, 3750.000) = 3 
+    [3750.000, 3775.000) = 6 
+    [3775.000, 3800.000) = 6 
+    [3800.000, 3825.000) = 3 
+    [3825.000, 3850.000) = 7 
+    [3850.000, 3875.000) = 3 
+    [3875.000, 3900.000) = 1 
+    [3900.000, 3925.000) = 0 
+    [3925.000, 3950.000) = 0 
+    [3950.000, 3975.000) = 1 
+
+  Percentiles, ms/op:
+      p(0.0000) =   3737.125 ms/op
+     p(50.0000) =   3797.942 ms/op
+     p(90.0000) =   3862.535 ms/op
+     p(95.0000) =   3917.480 ms/op
+     p(99.0000) =   3963.617 ms/op
+     p(99.9000) =   3963.617 ms/op
+     p(99.9900) =   3963.617 ms/op
+     p(99.9990) =   3963.617 ms/op
+     p(99.9999) =   3963.617 ms/op
+    p(100.0000) =   3963.617 ms/op
+
+
+# JMH version: 1.36
+# VM version: JDK 20.0.1, OpenJDK 64-Bit Server VM, 20.0.1+9-29
+# VM invoker: /home/olivier/external_software/openjdk-20.0.1/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-opens=java.base/java.nio=ALL-UNNAMED -Darrow.enable_unsafe_memory_access=true -Darrow.enable_null_check_for_get=false --enable-preview -Xmx32g -Xms16g --add-exports=java.base/sun.nio.ch=ALL-UNNAMED
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: benchmarks.tpch.q1_no_sort_hard_coded.NonVectorisedNonSimdSparkified.executeQuery
+# Parameters: (tpchInstance = /nvtmp/AethraTestData/tpch/sf-100)
+
+# Run progress: 41.67% complete, ETA 01:13:12
+# Fork: 1 of 2
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
+114353.504 ms/op
+# Warmup Iteration   2: 114890.375 ms/op
+# Warmup Iteration   3: 113279.762 ms/op
+# Warmup Iteration   4: 113413.980 ms/op
+# Warmup Iteration   5: 112742.892 ms/op
+Iteration   1: 112877.109 ms/op
+                 executeQuery·p0.00:   112877.109 ms/op
+                 executeQuery·p0.50:   112877.109 ms/op
+                 executeQuery·p0.90:   112877.109 ms/op
+                 executeQuery·p0.95:   112877.109 ms/op
+                 executeQuery·p0.99:   112877.109 ms/op
+                 executeQuery·p0.999:  112877.109 ms/op
+                 executeQuery·p0.9999: 112877.109 ms/op
+                 executeQuery·p1.00:   112877.109 ms/op
+
+Iteration   2: 113145.545 ms/op
+                 executeQuery·p0.00:   113145.545 ms/op
+                 executeQuery·p0.50:   113145.545 ms/op
+                 executeQuery·p0.90:   113145.545 ms/op
+                 executeQuery·p0.95:   113145.545 ms/op
+                 executeQuery·p0.99:   113145.545 ms/op
+                 executeQuery·p0.999:  113145.545 ms/op
+                 executeQuery·p0.9999: 113145.545 ms/op
+                 executeQuery·p1.00:   113145.545 ms/op
+
+Iteration   3: 113145.545 ms/op
+                 executeQuery·p0.00:   113145.545 ms/op
+                 executeQuery·p0.50:   113145.545 ms/op
+                 executeQuery·p0.90:   113145.545 ms/op
+                 executeQuery·p0.95:   113145.545 ms/op
+                 executeQuery·p0.99:   113145.545 ms/op
+                 executeQuery·p0.999:  113145.545 ms/op
+                 executeQuery·p0.9999: 113145.545 ms/op
+                 executeQuery·p1.00:   113145.545 ms/op
+
+Iteration   4: 113279.762 ms/op
+                 executeQuery·p0.00:   113279.762 ms/op
+                 executeQuery·p0.50:   113279.762 ms/op
+                 executeQuery·p0.90:   113279.762 ms/op
+                 executeQuery·p0.95:   113279.762 ms/op
+                 executeQuery·p0.99:   113279.762 ms/op
+                 executeQuery·p0.999:  113279.762 ms/op
+                 executeQuery·p0.9999: 113279.762 ms/op
+                 executeQuery·p1.00:   113279.762 ms/op
+
+Iteration   5: 116098.335 ms/op
+                 executeQuery·p0.00:   116098.335 ms/op
+                 executeQuery·p0.50:   116098.335 ms/op
+                 executeQuery·p0.90:   116098.335 ms/op
+                 executeQuery·p0.95:   116098.335 ms/op
+                 executeQuery·p0.99:   116098.335 ms/op
+                 executeQuery·p0.999:  116098.335 ms/op
+                 executeQuery·p0.9999: 116098.335 ms/op
+                 executeQuery·p1.00:   116098.335 ms/op
+
+
+# Run progress: 45.83% complete, ETA 01:24:18
+# Fork: 2 of 2
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
+114085.069 ms/op
+# Warmup Iteration   2: 113548.198 ms/op
+# Warmup Iteration   3: 112340.238 ms/op
+# Warmup Iteration   4: 112474.456 ms/op
+# Warmup Iteration   5: 112474.456 ms/op
+Iteration   1: 112474.456 ms/op
+                 executeQuery·p0.00:   112474.456 ms/op
+                 executeQuery·p0.50:   112474.456 ms/op
+                 executeQuery·p0.90:   112474.456 ms/op
+                 executeQuery·p0.95:   112474.456 ms/op
+                 executeQuery·p0.99:   112474.456 ms/op
+                 executeQuery·p0.999:  112474.456 ms/op
+                 executeQuery·p0.9999: 112474.456 ms/op
+                 executeQuery·p1.00:   112474.456 ms/op
+
+Iteration   2: 113413.980 ms/op
+                 executeQuery·p0.00:   113413.980 ms/op
+                 executeQuery·p0.50:   113413.980 ms/op
+                 executeQuery·p0.90:   113413.980 ms/op
+                 executeQuery·p0.95:   113413.980 ms/op
+                 executeQuery·p0.99:   113413.980 ms/op
+                 executeQuery·p0.999:  113413.980 ms/op
+                 executeQuery·p0.9999: 113413.980 ms/op
+                 executeQuery·p1.00:   113413.980 ms/op
+
+Iteration   3: 112877.109 ms/op
+                 executeQuery·p0.00:   112877.109 ms/op
+                 executeQuery·p0.50:   112877.109 ms/op
+                 executeQuery·p0.90:   112877.109 ms/op
+                 executeQuery·p0.95:   112877.109 ms/op
+                 executeQuery·p0.99:   112877.109 ms/op
+                 executeQuery·p0.999:  112877.109 ms/op
+                 executeQuery·p0.9999: 112877.109 ms/op
+                 executeQuery·p1.00:   112877.109 ms/op
+
+Iteration   4: 115293.028 ms/op
+                 executeQuery·p0.00:   115293.028 ms/op
+                 executeQuery·p0.50:   115293.028 ms/op
+                 executeQuery·p0.90:   115293.028 ms/op
+                 executeQuery·p0.95:   115293.028 ms/op
+                 executeQuery·p0.99:   115293.028 ms/op
+                 executeQuery·p0.999:  115293.028 ms/op
+                 executeQuery·p0.9999: 115293.028 ms/op
+                 executeQuery·p1.00:   115293.028 ms/op
+
+Iteration   5: 112608.674 ms/op
+                 executeQuery·p0.00:   112608.674 ms/op
+                 executeQuery·p0.50:   112608.674 ms/op
+                 executeQuery·p0.90:   112608.674 ms/op
+                 executeQuery·p0.95:   112608.674 ms/op
+                 executeQuery·p0.99:   112608.674 ms/op
+                 executeQuery·p0.999:  112608.674 ms/op
+                 executeQuery·p0.9999: 112608.674 ms/op
+                 executeQuery·p1.00:   112608.674 ms/op
+
+
+
+Result "benchmarks.tpch.q1_no_sort_hard_coded.NonVectorisedNonSimdSparkified.executeQuery":
+  N = 10
+  mean = 113521.354 ±(99.9%) 1809.400 ms/op
+
+  Histogram, ms/op:
+    [112000.000, 112500.000) = 1 
+    [112500.000, 113000.000) = 3 
+    [113000.000, 113500.000) = 4 
+    [113500.000, 114000.000) = 0 
+    [114000.000, 114500.000) = 0 
+    [114500.000, 115000.000) = 0 
+    [115000.000, 115500.000) = 1 
+    [115500.000, 116000.000) = 0 
+    [116000.000, 116500.000) = 1 
+
+  Percentiles, ms/op:
+      p(0.0000) = 112474.456 ms/op
+     p(50.0000) = 113145.545 ms/op
+     p(90.0000) = 116017.804 ms/op
+     p(95.0000) = 116098.335 ms/op
+     p(99.0000) = 116098.335 ms/op
+     p(99.9000) = 116098.335 ms/op
+     p(99.9900) = 116098.335 ms/op
+     p(99.9990) = 116098.335 ms/op
+     p(99.9999) = 116098.335 ms/op
+    p(100.0000) = 116098.335 ms/op
+
+
+# JMH version: 1.36
+# VM version: JDK 20.0.1, OpenJDK 64-Bit Server VM, 20.0.1+9-29
+# VM invoker: /home/olivier/external_software/openjdk-20.0.1/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-opens=java.base/java.nio=ALL-UNNAMED -Darrow.enable_unsafe_memory_access=true -Darrow.enable_null_check_for_get=false --enable-preview -Xmx32g -Xms16g
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimd.executeQuery
+# Parameters: (tpchInstance = /nvtmp/AethraTestData/tpch/sf-1)
+
+# Run progress: 50.00% complete, ETA 01:30:17
+# Fork: 1 of 2
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
+696.919 ±(99.9%) 213.146 ms/op
+# Warmup Iteration   2: 664.273 ±(99.9%) 112.596 ms/op
+# Warmup Iteration   3: 530.028 ±(99.9%) 2.576 ms/op
+# Warmup Iteration   4: 529.089 ±(99.9%) 2.003 ms/op
+# Warmup Iteration   5: 530.331 ±(99.9%) 1.356 ms/op
+Iteration   1: 525.199 ±(99.9%) 7.615 ms/op
+                 executeQuery·p0.00:   509.084 ms/op
+                 executeQuery·p0.50:   529.531 ms/op
+                 executeQuery·p0.90:   531.628 ms/op
+                 executeQuery·p0.95:   532.152 ms/op
+                 executeQuery·p0.99:   532.152 ms/op
+                 executeQuery·p0.999:  532.152 ms/op
+                 executeQuery·p0.9999: 532.152 ms/op
+                 executeQuery·p1.00:   532.152 ms/op
+
+Iteration   2: 530.773 ±(99.9%) 1.373 ms/op
+                 executeQuery·p0.00:   529.007 ms/op
+                 executeQuery·p0.50:   530.579 ms/op
+                 executeQuery·p0.90:   532.152 ms/op
+                 executeQuery·p0.95:   535.822 ms/op
+                 executeQuery·p0.99:   535.822 ms/op
+                 executeQuery·p0.999:  535.822 ms/op
+                 executeQuery·p0.9999: 535.822 ms/op
+                 executeQuery·p1.00:   535.822 ms/op
+
+Iteration   3: 519.255 ±(99.9%) 8.511 ms/op
+                 executeQuery·p0.00:   510.132 ms/op
+                 executeQuery·p0.50:   512.492 ms/op
+                 executeQuery·p0.90:   531.104 ms/op
+                 executeQuery·p0.95:   536.583 ms/op
+                 executeQuery·p0.99:   536.871 ms/op
+                 executeQuery·p0.999:  536.871 ms/op
+                 executeQuery·p0.9999: 536.871 ms/op
+                 executeQuery·p1.00:   536.871 ms/op
+
+Iteration   4: 512.990 ±(99.9%) 4.169 ms/op
+                 executeQuery·p0.00:   510.657 ms/op
+                 executeQuery·p0.50:   511.443 ms/op
+                 executeQuery·p0.90:   518.259 ms/op
+                 executeQuery·p0.95:   530.973 ms/op
+                 executeQuery·p0.99:   531.628 ms/op
+                 executeQuery·p0.999:  531.628 ms/op
+                 executeQuery·p0.9999: 531.628 ms/op
+                 executeQuery·p1.00:   531.628 ms/op
+
+Iteration   5: 512.046 ±(99.9%) 1.939 ms/op
+                 executeQuery·p0.00:   509.608 ms/op
+                 executeQuery·p0.50:   511.181 ms/op
+                 executeQuery·p0.90:   515.375 ms/op
+                 executeQuery·p0.95:   518.862 ms/op
+                 executeQuery·p0.99:   519.045 ms/op
+                 executeQuery·p0.999:  519.045 ms/op
+                 executeQuery·p0.9999: 519.045 ms/op
+                 executeQuery·p1.00:   519.045 ms/op
+
+
+# Run progress: 54.17% complete, ETA 01:17:51
+# Fork: 2 of 2
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
+662.045 ±(99.9%) 114.686 ms/op
+# Warmup Iteration   2: 643.760 ±(99.9%) 114.383 ms/op
+# Warmup Iteration   3: 512.439 ±(99.9%) 3.288 ms/op
+# Warmup Iteration   4: 512.518 ±(99.9%) 3.706 ms/op
+# Warmup Iteration   5: 514.798 ±(99.9%) 14.631 ms/op
+Iteration   1: 519.098 ±(99.9%) 7.859 ms/op
+                 executeQuery·p0.00:   510.132 ms/op
+                 executeQuery·p0.50:   515.375 ms/op
+                 executeQuery·p0.90:   528.482 ms/op
+                 executeQuery·p0.95:   537.448 ms/op
+                 executeQuery·p0.99:   537.919 ms/op
+                 executeQuery·p0.999:  537.919 ms/op
+                 executeQuery·p0.9999: 537.919 ms/op
+                 executeQuery·p1.00:   537.919 ms/op
+
+Iteration   2: 511.102 ±(99.9%) 1.660 ms/op
+                 executeQuery·p0.00:   509.608 ms/op
+                 executeQuery·p0.50:   510.657 ms/op
+                 executeQuery·p0.90:   514.064 ms/op
+                 executeQuery·p0.95:   517.813 ms/op
+                 executeQuery·p0.99:   517.997 ms/op
+                 executeQuery·p0.999:  517.997 ms/op
+                 executeQuery·p0.9999: 517.997 ms/op
+                 executeQuery·p1.00:   517.997 ms/op
+
+Iteration   3: 529.476 ±(99.9%) 1.969 ms/op
+                 executeQuery·p0.00:   525.861 ms/op
+                 executeQuery·p0.50:   529.007 ms/op
+                 executeQuery·p0.90:   534.249 ms/op
+                 executeQuery·p0.95:   535.298 ms/op
+                 executeQuery·p0.99:   535.298 ms/op
+                 executeQuery·p0.999:  535.298 ms/op
+                 executeQuery·p0.9999: 535.298 ms/op
+                 executeQuery·p1.00:   535.298 ms/op
+
+Iteration   4: 528.703 ±(99.9%) 2.003 ms/op
+                 executeQuery·p0.00:   524.812 ms/op
+                 executeQuery·p0.50:   529.007 ms/op
+                 executeQuery·p0.90:   531.104 ms/op
+                 executeQuery·p0.95:   534.249 ms/op
+                 executeQuery·p0.99:   534.249 ms/op
+                 executeQuery·p0.999:  534.249 ms/op
+                 executeQuery·p0.9999: 534.249 ms/op
+                 executeQuery·p1.00:   534.249 ms/op
+
+Iteration   5: 529.255 ±(99.9%) 2.117 ms/op
+                 executeQuery·p0.00:   524.812 ms/op
+                 executeQuery·p0.50:   529.531 ms/op
+                 executeQuery·p0.90:   533.201 ms/op
+                 executeQuery·p0.95:   534.774 ms/op
+                 executeQuery·p0.99:   534.774 ms/op
+                 executeQuery·p0.999:  534.774 ms/op
+                 executeQuery·p0.9999: 534.774 ms/op
+                 executeQuery·p1.00:   534.774 ms/op
+
+
+
+Result "benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimd.executeQuery":
+  N = 195
+  mean =    521.613 ±(99.9%) 2.202 ms/op
+
+  Histogram, ms/op:
+    [500.000, 502.500) = 0 
+    [502.500, 505.000) = 0 
+    [505.000, 507.500) = 0 
+    [507.500, 510.000) = 5 
+    [510.000, 512.500) = 69 
+    [512.500, 515.000) = 5 
+    [515.000, 517.500) = 3 
+    [517.500, 520.000) = 5 
+    [520.000, 522.500) = 0 
+    [522.500, 525.000) = 3 
+    [525.000, 527.500) = 12 
+    [527.500, 530.000) = 45 
+    [530.000, 532.500) = 40 
+    [532.500, 535.000) = 4 
+    [535.000, 537.500) = 3 
+
+  Percentiles, ms/op:
+      p(0.0000) =    509.084 ms/op
+     p(50.0000) =    526.385 ms/op
+     p(90.0000) =    531.104 ms/op
+     p(95.0000) =    532.152 ms/op
+     p(99.0000) =    536.913 ms/op
+     p(99.9000) =    537.919 ms/op
+     p(99.9900) =    537.919 ms/op
+     p(99.9990) =    537.919 ms/op
+     p(99.9999) =    537.919 ms/op
+    p(100.0000) =    537.919 ms/op
+
+
+# JMH version: 1.36
+# VM version: JDK 20.0.1, OpenJDK 64-Bit Server VM, 20.0.1+9-29
+# VM invoker: /home/olivier/external_software/openjdk-20.0.1/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-opens=java.base/java.nio=ALL-UNNAMED -Darrow.enable_unsafe_memory_access=true -Darrow.enable_null_check_for_get=false --enable-preview -Xmx32g -Xms16g
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimd.executeQuery
+# Parameters: (tpchInstance = /nvtmp/AethraTestData/tpch/sf-10)
+
+# Run progress: 58.33% complete, ETA 01:06:58
+# Fork: 1 of 2
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
+11509.170 ms/op
+# Warmup Iteration   2: 6819.938 ms/op
+# Warmup Iteration   3: 5045.748 ms/op
+# Warmup Iteration   4: 5234.491 ms/op
+# Warmup Iteration   5: 5070.914 ms/op
+Iteration   1: 5070.914 ms/op
+                 executeQuery·p0.00:   5066.719 ms/op
+                 executeQuery·p0.50:   5070.914 ms/op
+                 executeQuery·p0.90:   5075.108 ms/op
+                 executeQuery·p0.95:   5075.108 ms/op
+                 executeQuery·p0.99:   5075.108 ms/op
+                 executeQuery·p0.999:  5075.108 ms/op
+                 executeQuery·p0.9999: 5075.108 ms/op
+                 executeQuery·p1.00:   5075.108 ms/op
+
+Iteration   2: 5066.719 ms/op
+                 executeQuery·p0.00:   5066.719 ms/op
+                 executeQuery·p0.50:   5066.719 ms/op
+                 executeQuery·p0.90:   5066.719 ms/op
+                 executeQuery·p0.95:   5066.719 ms/op
+                 executeQuery·p0.99:   5066.719 ms/op
+                 executeQuery·p0.999:  5066.719 ms/op
+                 executeQuery·p0.9999: 5066.719 ms/op
+                 executeQuery·p1.00:   5066.719 ms/op
+
+Iteration   3: 5070.914 ms/op
+                 executeQuery·p0.00:   5066.719 ms/op
+                 executeQuery·p0.50:   5070.914 ms/op
+                 executeQuery·p0.90:   5075.108 ms/op
+                 executeQuery·p0.95:   5075.108 ms/op
+                 executeQuery·p0.99:   5075.108 ms/op
+                 executeQuery·p0.999:  5075.108 ms/op
+                 executeQuery·p0.9999: 5075.108 ms/op
+                 executeQuery·p1.00:   5075.108 ms/op
+
+Iteration   4: 5075.108 ms/op
+                 executeQuery·p0.00:   5075.108 ms/op
+                 executeQuery·p0.50:   5075.108 ms/op
+                 executeQuery·p0.90:   5075.108 ms/op
+                 executeQuery·p0.95:   5075.108 ms/op
+                 executeQuery·p0.99:   5075.108 ms/op
+                 executeQuery·p0.999:  5075.108 ms/op
+                 executeQuery·p0.9999: 5075.108 ms/op
+                 executeQuery·p1.00:   5075.108 ms/op
+
+Iteration   5: 5070.914 ms/op
+                 executeQuery·p0.00:   5066.719 ms/op
+                 executeQuery·p0.50:   5070.914 ms/op
+                 executeQuery·p0.90:   5075.108 ms/op
+                 executeQuery·p0.95:   5075.108 ms/op
+                 executeQuery·p0.99:   5075.108 ms/op
+                 executeQuery·p0.999:  5075.108 ms/op
+                 executeQuery·p0.9999: 5075.108 ms/op
+                 executeQuery·p1.00:   5075.108 ms/op
+
+
+# Run progress: 62.50% complete, ETA 00:57:20
+# Fork: 2 of 2
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
+6354.371 ms/op
+# Warmup Iteration   2: 5607.784 ms/op
+# Warmup Iteration   3: 5024.776 ms/op
+# Warmup Iteration   4: 4999.610 ms/op
+# Warmup Iteration   5: 4999.610 ms/op
+Iteration   1: 5016.388 ms/op
+                 executeQuery·p0.00:   5007.999 ms/op
+                 executeQuery·p0.50:   5016.388 ms/op
+                 executeQuery·p0.90:   5024.776 ms/op
+                 executeQuery·p0.95:   5024.776 ms/op
+                 executeQuery·p0.99:   5024.776 ms/op
+                 executeQuery·p0.999:  5024.776 ms/op
+                 executeQuery·p0.9999: 5024.776 ms/op
+                 executeQuery·p1.00:   5024.776 ms/op
+
+Iteration   2: 5016.388 ms/op
+                 executeQuery·p0.00:   4991.222 ms/op
+                 executeQuery·p0.50:   5016.388 ms/op
+                 executeQuery·p0.90:   5041.553 ms/op
+                 executeQuery·p0.95:   5041.553 ms/op
+                 executeQuery·p0.99:   5041.553 ms/op
+                 executeQuery·p0.999:  5041.553 ms/op
+                 executeQuery·p0.9999: 5041.553 ms/op
+                 executeQuery·p1.00:   5041.553 ms/op
+
+Iteration   3: 5062.525 ms/op
+                 executeQuery·p0.00:   5016.388 ms/op
+                 executeQuery·p0.50:   5062.525 ms/op
+                 executeQuery·p0.90:   5108.662 ms/op
+                 executeQuery·p0.95:   5108.662 ms/op
+                 executeQuery·p0.99:   5108.662 ms/op
+                 executeQuery·p0.999:  5108.662 ms/op
+                 executeQuery·p0.9999: 5108.662 ms/op
+                 executeQuery·p1.00:   5108.662 ms/op
+
+Iteration   4: 5007.999 ms/op
+                 executeQuery·p0.00:   5007.999 ms/op
+                 executeQuery·p0.50:   5007.999 ms/op
+                 executeQuery·p0.90:   5007.999 ms/op
+                 executeQuery·p0.95:   5007.999 ms/op
+                 executeQuery·p0.99:   5007.999 ms/op
+                 executeQuery·p0.999:  5007.999 ms/op
+                 executeQuery·p0.9999: 5007.999 ms/op
+                 executeQuery·p1.00:   5007.999 ms/op
+
+Iteration   5: 4999.610 ms/op
+                 executeQuery·p0.00:   4999.610 ms/op
+                 executeQuery·p0.50:   4999.610 ms/op
+                 executeQuery·p0.90:   4999.610 ms/op
+                 executeQuery·p0.95:   4999.610 ms/op
+                 executeQuery·p0.99:   4999.610 ms/op
+                 executeQuery·p0.999:  4999.610 ms/op
+                 executeQuery·p0.9999: 4999.610 ms/op
+                 executeQuery·p1.00:   4999.610 ms/op
+
+
+
+Result "benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimd.executeQuery":
+  N = 20
+  mean =   5045.748 ±(99.9%) 30.404 ms/op
+
+  Histogram, ms/op:
+    [4900.000, 4925.000) = 0 
+    [4925.000, 4950.000) = 0 
+    [4950.000, 4975.000) = 0 
+    [4975.000, 5000.000) = 3 
+    [5000.000, 5025.000) = 5 
+    [5025.000, 5050.000) = 1 
+    [5050.000, 5075.000) = 5 
+    [5075.000, 5100.000) = 5 
+    [5100.000, 5125.000) = 1 
+    [5125.000, 5150.000) = 0 
+    [5150.000, 5175.000) = 0 
+
+  Percentiles, ms/op:
+      p(0.0000) =   4991.222 ms/op
+     p(50.0000) =   5066.719 ms/op
+     p(90.0000) =   5075.108 ms/op
+     p(95.0000) =   5106.985 ms/op
+     p(99.0000) =   5108.662 ms/op
+     p(99.9000) =   5108.662 ms/op
+     p(99.9900) =   5108.662 ms/op
+     p(99.9990) =   5108.662 ms/op
+     p(99.9999) =   5108.662 ms/op
+    p(100.0000) =   5108.662 ms/op
+
+
+# JMH version: 1.36
+# VM version: JDK 20.0.1, OpenJDK 64-Bit Server VM, 20.0.1+9-29
+# VM invoker: /home/olivier/external_software/openjdk-20.0.1/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-opens=java.base/java.nio=ALL-UNNAMED -Darrow.enable_unsafe_memory_access=true -Darrow.enable_null_check_for_get=false --enable-preview -Xmx32g -Xms16g
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimd.executeQuery
+# Parameters: (tpchInstance = /nvtmp/AethraTestData/tpch/sf-100)
+
+# Run progress: 66.67% complete, ETA 00:48:39
+# Fork: 1 of 2
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
+114353.504 ms/op
+# Warmup Iteration   2: 114621.940 ms/op
+# Warmup Iteration   3: 114756.157 ms/op
+# Warmup Iteration   4: 115158.811 ms/op
+# Warmup Iteration   5: 115024.593 ms/op
+Iteration   1: 115561.464 ms/op
+                 executeQuery·p0.00:   115561.464 ms/op
+                 executeQuery·p0.50:   115561.464 ms/op
+                 executeQuery·p0.90:   115561.464 ms/op
+                 executeQuery·p0.95:   115561.464 ms/op
+                 executeQuery·p0.99:   115561.464 ms/op
+                 executeQuery·p0.999:  115561.464 ms/op
+                 executeQuery·p0.9999: 115561.464 ms/op
+                 executeQuery·p1.00:   115561.464 ms/op
+
+Iteration   2: 115561.464 ms/op
+                 executeQuery·p0.00:   115561.464 ms/op
+                 executeQuery·p0.50:   115561.464 ms/op
+                 executeQuery·p0.90:   115561.464 ms/op
+                 executeQuery·p0.95:   115561.464 ms/op
+                 executeQuery·p0.99:   115561.464 ms/op
+                 executeQuery·p0.999:  115561.464 ms/op
+                 executeQuery·p0.9999: 115561.464 ms/op
+                 executeQuery·p1.00:   115561.464 ms/op
+
+Iteration   3: 117440.512 ms/op
+                 executeQuery·p0.00:   117440.512 ms/op
+                 executeQuery·p0.50:   117440.512 ms/op
+                 executeQuery·p0.90:   117440.512 ms/op
+                 executeQuery·p0.95:   117440.512 ms/op
+                 executeQuery·p0.99:   117440.512 ms/op
+                 executeQuery·p0.999:  117440.512 ms/op
+                 executeQuery·p0.9999: 117440.512 ms/op
+                 executeQuery·p1.00:   117440.512 ms/op
+
+Iteration   4: 115964.117 ms/op
+                 executeQuery·p0.00:   115964.117 ms/op
+                 executeQuery·p0.50:   115964.117 ms/op
+                 executeQuery·p0.90:   115964.117 ms/op
+                 executeQuery·p0.95:   115964.117 ms/op
+                 executeQuery·p0.99:   115964.117 ms/op
+                 executeQuery·p0.999:  115964.117 ms/op
+                 executeQuery·p0.9999: 115964.117 ms/op
+                 executeQuery·p1.00:   115964.117 ms/op
+
+Iteration   5: 115561.464 ms/op
+                 executeQuery·p0.00:   115561.464 ms/op
+                 executeQuery·p0.50:   115561.464 ms/op
+                 executeQuery·p0.90:   115561.464 ms/op
+                 executeQuery·p0.95:   115561.464 ms/op
+                 executeQuery·p0.99:   115561.464 ms/op
+                 executeQuery·p0.999:  115561.464 ms/op
+                 executeQuery·p0.9999: 115561.464 ms/op
+                 executeQuery·p1.00:   115561.464 ms/op
+
+
+# Run progress: 70.83% complete, ETA 00:48:00
+# Fork: 2 of 2
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
+116500.988 ms/op
+# Warmup Iteration   2: 114890.375 ms/op
+# Warmup Iteration   3: 115427.246 ms/op
+# Warmup Iteration   4: 115158.811 ms/op
+# Warmup Iteration   5: 115427.246 ms/op
+Iteration   1: 115158.811 ms/op
+                 executeQuery·p0.00:   115158.811 ms/op
+                 executeQuery·p0.50:   115158.811 ms/op
+                 executeQuery·p0.90:   115158.811 ms/op
+                 executeQuery·p0.95:   115158.811 ms/op
+                 executeQuery·p0.99:   115158.811 ms/op
+                 executeQuery·p0.999:  115158.811 ms/op
+                 executeQuery·p0.9999: 115158.811 ms/op
+                 executeQuery·p1.00:   115158.811 ms/op
+
+Iteration   2: 115964.117 ms/op
+                 executeQuery·p0.00:   115964.117 ms/op
+                 executeQuery·p0.50:   115964.117 ms/op
+                 executeQuery·p0.90:   115964.117 ms/op
+                 executeQuery·p0.95:   115964.117 ms/op
+                 executeQuery·p0.99:   115964.117 ms/op
+                 executeQuery·p0.999:  115964.117 ms/op
+                 executeQuery·p0.9999: 115964.117 ms/op
+                 executeQuery·p1.00:   115964.117 ms/op
+
+Iteration   3: 115427.246 ms/op
+                 executeQuery·p0.00:   115427.246 ms/op
+                 executeQuery·p0.50:   115427.246 ms/op
+                 executeQuery·p0.90:   115427.246 ms/op
+                 executeQuery·p0.95:   115427.246 ms/op
+                 executeQuery·p0.99:   115427.246 ms/op
+                 executeQuery·p0.999:  115427.246 ms/op
+                 executeQuery·p0.9999: 115427.246 ms/op
+                 executeQuery·p1.00:   115427.246 ms/op
+
+Iteration   4: 115829.899 ms/op
+                 executeQuery·p0.00:   115829.899 ms/op
+                 executeQuery·p0.50:   115829.899 ms/op
+                 executeQuery·p0.90:   115829.899 ms/op
+                 executeQuery·p0.95:   115829.899 ms/op
+                 executeQuery·p0.99:   115829.899 ms/op
+                 executeQuery·p0.999:  115829.899 ms/op
+                 executeQuery·p0.9999: 115829.899 ms/op
+                 executeQuery·p1.00:   115829.899 ms/op
+
+Iteration   5: 114085.069 ms/op
+                 executeQuery·p0.00:   114085.069 ms/op
+                 executeQuery·p0.50:   114085.069 ms/op
+                 executeQuery·p0.90:   114085.069 ms/op
+                 executeQuery·p0.95:   114085.069 ms/op
+                 executeQuery·p0.99:   114085.069 ms/op
+                 executeQuery·p0.999:  114085.069 ms/op
+                 executeQuery·p0.9999: 114085.069 ms/op
+                 executeQuery·p1.00:   114085.069 ms/op
+
+
+
+Result "benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimd.executeQuery":
+  N = 10
+  mean = 115655.416 ±(99.9%) 1254.705 ms/op
+
+  Histogram, ms/op:
+    [114000.000, 114250.000) = 1 
+    [114250.000, 114500.000) = 0 
+    [114500.000, 114750.000) = 0 
+    [114750.000, 115000.000) = 0 
+    [115000.000, 115250.000) = 1 
+    [115250.000, 115500.000) = 1 
+    [115500.000, 115750.000) = 3 
+    [115750.000, 116000.000) = 3 
+    [116000.000, 116250.000) = 0 
+    [116250.000, 116500.000) = 0 
+    [116500.000, 116750.000) = 0 
+    [116750.000, 117000.000) = 0 
+    [117000.000, 117250.000) = 0 
+    [117250.000, 117500.000) = 1 
+    [117500.000, 117750.000) = 0 
+
+  Percentiles, ms/op:
+      p(0.0000) = 114085.069 ms/op
+     p(50.0000) = 115561.464 ms/op
+     p(90.0000) = 117292.872 ms/op
+     p(95.0000) = 117440.512 ms/op
+     p(99.0000) = 117440.512 ms/op
+     p(99.9000) = 117440.512 ms/op
+     p(99.9900) = 117440.512 ms/op
+     p(99.9990) = 117440.512 ms/op
+     p(99.9999) = 117440.512 ms/op
+    p(100.0000) = 117440.512 ms/op
+
+
+# JMH version: 1.36
+# VM version: JDK 20.0.1, OpenJDK 64-Bit Server VM, 20.0.1+9-29
+# VM invoker: /home/olivier/external_software/openjdk-20.0.1/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-opens=java.base/java.nio=ALL-UNNAMED -Darrow.enable_unsafe_memory_access=true -Darrow.enable_null_check_for_get=false --enable-preview -Xmx32g -Xms16g
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimdReducedSelVecUse.executeQuery
+# Parameters: (tpchInstance = /nvtmp/AethraTestData/tpch/sf-1)
+
+# Run progress: 75.00% complete, ETA 00:45:17
+# Fork: 1 of 2
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
+658.571 ±(99.9%) 197.054 ms/op
+# Warmup Iteration   2: 598.706 ±(99.9%) 108.234 ms/op
+# Warmup Iteration   3: 480.423 ±(99.9%) 4.989 ms/op
+# Warmup Iteration   4: 482.170 ±(99.9%) 6.736 ms/op
+# Warmup Iteration   5: 478.950 ±(99.9%) 3.550 ms/op
+Iteration   1: 480.123 ±(99.9%) 4.928 ms/op
+                 executeQuery·p0.00:   471.335 ms/op
+                 executeQuery·p0.50:   478.151 ms/op
+                 executeQuery·p0.90:   491.048 ms/op
+                 executeQuery·p0.95:   493.145 ms/op
+                 executeQuery·p0.99:   493.355 ms/op
+                 executeQuery·p0.999:  493.355 ms/op
+                 executeQuery·p0.9999: 493.355 ms/op
+                 executeQuery·p1.00:   493.355 ms/op
+
+Iteration   2: 478.251 ±(99.9%) 4.810 ms/op
+                 executeQuery·p0.00:   471.335 ms/op
+                 executeQuery·p0.50:   476.578 ms/op
+                 executeQuery·p0.90:   487.483 ms/op
+                 executeQuery·p0.95:   493.774 ms/op
+                 executeQuery·p0.99:   494.404 ms/op
+                 executeQuery·p0.999:  494.404 ms/op
+                 executeQuery·p0.9999: 494.404 ms/op
+                 executeQuery·p1.00:   494.404 ms/op
+
+Iteration   3: 475.255 ±(99.9%) 2.777 ms/op
+                 executeQuery·p0.00:   471.335 ms/op
+                 executeQuery·p0.50:   474.481 ms/op
+                 executeQuery·p0.90:   479.933 ms/op
+                 executeQuery·p0.95:   484.495 ms/op
+                 executeQuery·p0.99:   484.966 ms/op
+                 executeQuery·p0.999:  484.966 ms/op
+                 executeQuery·p0.9999: 484.966 ms/op
+                 executeQuery·p1.00:   484.966 ms/op
+
+Iteration   4: 478.176 ±(99.9%) 3.759 ms/op
+                 executeQuery·p0.00:   471.859 ms/op
+                 executeQuery·p0.50:   476.054 ms/op
+                 executeQuery·p0.90:   485.491 ms/op
+                 executeQuery·p0.95:   486.959 ms/op
+                 executeQuery·p0.99:   487.064 ms/op
+                 executeQuery·p0.999:  487.064 ms/op
+                 executeQuery·p0.9999: 487.064 ms/op
+                 executeQuery·p1.00:   487.064 ms/op
+
+Iteration   5: 476.453 ±(99.9%) 4.519 ms/op
+                 executeQuery·p0.00:   470.286 ms/op
+                 executeQuery·p0.50:   475.529 ms/op
+                 executeQuery·p0.90:   484.023 ms/op
+                 executeQuery·p0.95:   491.520 ms/op
+                 executeQuery·p0.99:   492.306 ms/op
+                 executeQuery·p0.999:  492.306 ms/op
+                 executeQuery·p0.9999: 492.306 ms/op
+                 executeQuery·p1.00:   492.306 ms/op
+
+
+# Run progress: 79.17% complete, ETA 00:36:12
+# Fork: 2 of 2
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
+690.313 ±(99.9%) 136.933 ms/op
+# Warmup Iteration   2: 732.805 ±(99.9%) 119.198 ms/op
+# Warmup Iteration   3: 587.881 ±(99.9%) 6.666 ms/op
+# Warmup Iteration   4: 586.462 ±(99.9%) 4.373 ms/op
+# Warmup Iteration   5: 585.969 ±(99.9%) 4.710 ms/op
+Iteration   1: 584.581 ±(99.9%) 7.556 ms/op
+                 executeQuery·p0.00:   575.668 ms/op
+                 executeQuery·p0.50:   583.008 ms/op
+                 executeQuery·p0.90:   603.246 ms/op
+                 executeQuery·p0.95:   606.077 ms/op
+                 executeQuery·p0.99:   606.077 ms/op
+                 executeQuery·p0.999:  606.077 ms/op
+                 executeQuery·p0.9999: 606.077 ms/op
+                 executeQuery·p1.00:   606.077 ms/op
+
+Iteration   2: 577.474 ±(99.9%) 9.124 ms/op
+                 executeQuery·p0.00:   563.085 ms/op
+                 executeQuery·p0.50:   577.241 ms/op
+                 executeQuery·p0.90:   591.711 ms/op
+                 executeQuery·p0.95:   603.980 ms/op
+                 executeQuery·p0.99:   603.980 ms/op
+                 executeQuery·p0.999:  603.980 ms/op
+                 executeQuery·p0.9999: 603.980 ms/op
+                 executeQuery·p1.00:   603.980 ms/op
+
+Iteration   3: 580.736 ±(99.9%) 7.219 ms/op
+                 executeQuery·p0.00:   563.085 ms/op
+                 executeQuery·p0.50:   581.960 ms/op
+                 executeQuery·p0.90:   592.550 ms/op
+                 executeQuery·p0.95:   593.494 ms/op
+                 executeQuery·p0.99:   593.494 ms/op
+                 executeQuery·p0.999:  593.494 ms/op
+                 executeQuery·p0.9999: 593.494 ms/op
+                 executeQuery·p1.00:   593.494 ms/op
+
+Iteration   4: 583.474 ±(99.9%) 5.177 ms/op
+                 executeQuery·p0.00:   577.765 ms/op
+                 executeQuery·p0.50:   581.960 ms/op
+                 executeQuery·p0.90:   594.752 ms/op
+                 executeQuery·p0.95:   596.640 ms/op
+                 executeQuery·p0.99:   596.640 ms/op
+                 executeQuery·p0.999:  596.640 ms/op
+                 executeQuery·p0.9999: 596.640 ms/op
+                 executeQuery·p1.00:   596.640 ms/op
+
+Iteration   5: 585.352 ±(99.9%) 5.349 ms/op
+                 executeQuery·p0.00:   579.863 ms/op
+                 executeQuery·p0.50:   583.008 ms/op
+                 executeQuery·p0.90:   595.172 ms/op
+                 executeQuery·p0.95:   597.688 ms/op
+                 executeQuery·p0.99:   597.688 ms/op
+                 executeQuery·p0.999:  597.688 ms/op
+                 executeQuery·p0.9999: 597.688 ms/op
+                 executeQuery·p1.00:   597.688 ms/op
+
+
+
+Result "benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimdReducedSelVecUse.executeQuery":
+  N = 194
+  mean =    525.655 ±(99.9%) 12.640 ms/op
+
+  Histogram, ms/op:
+    [400.000, 425.000) = 0 
+    [425.000, 450.000) = 0 
+    [450.000, 475.000) = 33 
+    [475.000, 500.000) = 72 
+    [500.000, 525.000) = 0 
+    [525.000, 550.000) = 0 
+    [550.000, 575.000) = 11 
+    [575.000, 600.000) = 75 
+    [600.000, 625.000) = 3 
+    [625.000, 650.000) = 0 
+    [650.000, 675.000) = 0 
+
+  Percentiles, ms/op:
+      p(0.0000) =    470.286 ms/op
+     p(50.0000) =    485.753 ms/op
+     p(90.0000) =    585.105 ms/op
+     p(95.0000) =    592.445 ms/op
+     p(99.0000) =    604.085 ms/op
+     p(99.9000) =    606.077 ms/op
+     p(99.9900) =    606.077 ms/op
+     p(99.9990) =    606.077 ms/op
+     p(99.9999) =    606.077 ms/op
+    p(100.0000) =    606.077 ms/op
+
+
+# JMH version: 1.36
+# VM version: JDK 20.0.1, OpenJDK 64-Bit Server VM, 20.0.1+9-29
+# VM invoker: /home/olivier/external_software/openjdk-20.0.1/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-opens=java.base/java.nio=ALL-UNNAMED -Darrow.enable_unsafe_memory_access=true -Darrow.enable_null_check_for_get=false --enable-preview -Xmx32g -Xms16g
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimdReducedSelVecUse.executeQuery
+# Parameters: (tpchInstance = /nvtmp/AethraTestData/tpch/sf-10)
+
+# Run progress: 83.33% complete, ETA 00:27:51
+# Fork: 1 of 2
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
+11509.170 ms/op
+# Warmup Iteration   2: 6429.868 ms/op
+# Warmup Iteration   3: 4689.232 ±(99.9%) 1060.288 ms/op
+# Warmup Iteration   4: 4809.469 ±(99.9%) 3357.580 ms/op
+# Warmup Iteration   5: 4812.265 ±(99.9%) 4551.047 ms/op
+Iteration   1: 4708.805 ±(99.9%) 579.398 ms/op
+                 executeQuery·p0.00:   4672.455 ms/op
+                 executeQuery·p0.50:   4722.786 ms/op
+                 executeQuery·p0.90:   4731.175 ms/op
+                 executeQuery·p0.95:   4731.175 ms/op
+                 executeQuery·p0.99:   4731.175 ms/op
+                 executeQuery·p0.999:  4731.175 ms/op
+                 executeQuery·p0.9999: 4731.175 ms/op
+                 executeQuery·p1.00:   4731.175 ms/op
+
+Iteration   2: 4661.270 ±(99.9%) 233.772 ms/op
+                 executeQuery·p0.00:   4647.289 ms/op
+                 executeQuery·p0.50:   4664.066 ms/op
+                 executeQuery·p0.90:   4672.455 ms/op
+                 executeQuery·p0.95:   4672.455 ms/op
+                 executeQuery·p0.99:   4672.455 ms/op
+                 executeQuery·p0.999:  4672.455 ms/op
+                 executeQuery·p0.9999: 4672.455 ms/op
+                 executeQuery·p1.00:   4672.455 ms/op
+
+Iteration   3: 4711.601 ±(99.9%) 922.478 ms/op
+                 executeQuery·p0.00:   4664.066 ms/op
+                 executeQuery·p0.50:   4706.009 ms/op
+                 executeQuery·p0.90:   4764.729 ms/op
+                 executeQuery·p0.95:   4764.729 ms/op
+                 executeQuery·p0.99:   4764.729 ms/op
+                 executeQuery·p0.999:  4764.729 ms/op
+                 executeQuery·p0.9999: 4764.729 ms/op
+                 executeQuery·p1.00:   4764.729 ms/op
+
+Iteration   4: 4669.658 ±(99.9%) 88.357 ms/op
+                 executeQuery·p0.00:   4664.066 ms/op
+                 executeQuery·p0.50:   4672.455 ms/op
+                 executeQuery·p0.90:   4672.455 ms/op
+                 executeQuery·p0.95:   4672.455 ms/op
+                 executeQuery·p0.99:   4672.455 ms/op
+                 executeQuery·p0.999:  4672.455 ms/op
+                 executeQuery·p0.9999: 4672.455 ms/op
+                 executeQuery·p1.00:   4672.455 ms/op
+
+Iteration   5: 4664.066 ±(99.9%) 0.001 ms/op
+                 executeQuery·p0.00:   4664.066 ms/op
+                 executeQuery·p0.50:   4664.066 ms/op
+                 executeQuery·p0.90:   4664.066 ms/op
+                 executeQuery·p0.95:   4664.066 ms/op
+                 executeQuery·p0.99:   4664.066 ms/op
+                 executeQuery·p0.999:  4664.066 ms/op
+                 executeQuery·p0.9999: 4664.066 ms/op
+                 executeQuery·p1.00:   4664.066 ms/op
+
+
+# Run progress: 87.50% complete, ETA 00:20:14
+# Fork: 2 of 2
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
+6132.072 ms/op
+# Warmup Iteration   2: 5263.852 ms/op
+# Warmup Iteration   3: 4689.232 ±(99.9%) 2390.552 ms/op
+# Warmup Iteration   4: 4694.824 ±(99.9%) 2055.140 ms/op
+# Warmup Iteration   5: 4627.715 ±(99.9%) 233.772 ms/op
+Iteration   1: 4605.346 ±(99.9%) 306.079 ms/op
+                 executeQuery·p0.00:   4588.569 ms/op
+                 executeQuery·p0.50:   4605.346 ms/op
+                 executeQuery·p0.90:   4622.123 ms/op
+                 executeQuery·p0.95:   4622.123 ms/op
+                 executeQuery·p0.99:   4622.123 ms/op
+                 executeQuery·p0.999:  4622.123 ms/op
+                 executeQuery·p0.9999: 4622.123 ms/op
+                 executeQuery·p1.00:   4622.123 ms/op
+
+Iteration   2: 4650.085 ±(99.9%) 1563.201 ms/op
+                 executeQuery·p0.00:   4588.569 ms/op
+                 executeQuery·p0.50:   4613.734 ms/op
+                 executeQuery·p0.90:   4747.952 ms/op
+                 executeQuery·p0.95:   4747.952 ms/op
+                 executeQuery·p0.99:   4747.952 ms/op
+                 executeQuery·p0.999:  4747.952 ms/op
+                 executeQuery·p0.9999: 4747.952 ms/op
+                 executeQuery·p1.00:   4747.952 ms/op
+
+Iteration   3: 4608.142 ±(99.9%) 537.457 ms/op
+                 executeQuery·p0.00:   4580.180 ms/op
+                 executeQuery·p0.50:   4605.346 ms/op
+                 executeQuery·p0.90:   4638.900 ms/op
+                 executeQuery·p0.95:   4638.900 ms/op
+                 executeQuery·p0.99:   4638.900 ms/op
+                 executeQuery·p0.999:  4638.900 ms/op
+                 executeQuery·p0.9999: 4638.900 ms/op
+                 executeQuery·p1.00:   4638.900 ms/op
+
+Iteration   4: 4594.161 ±(99.9%) 467.543 ms/op
+                 executeQuery·p0.00:   4571.791 ms/op
+                 executeQuery·p0.50:   4588.569 ms/op
+                 executeQuery·p0.90:   4622.123 ms/op
+                 executeQuery·p0.95:   4622.123 ms/op
+                 executeQuery·p0.99:   4622.123 ms/op
+                 executeQuery·p0.999:  4622.123 ms/op
+                 executeQuery·p0.9999: 4622.123 ms/op
+                 executeQuery·p1.00:   4622.123 ms/op
+
+Iteration   5: 4605.346 ±(99.9%) 1071.276 ms/op
+                 executeQuery·p0.00:   4563.403 ms/op
+                 executeQuery·p0.50:   4580.180 ms/op
+                 executeQuery·p0.90:   4672.455 ms/op
+                 executeQuery·p0.95:   4672.455 ms/op
+                 executeQuery·p0.99:   4672.455 ms/op
+                 executeQuery·p0.999:  4672.455 ms/op
+                 executeQuery·p0.9999: 4672.455 ms/op
+                 executeQuery·p1.00:   4672.455 ms/op
+
+
+
+Result "benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimdReducedSelVecUse.executeQuery":
+  N = 30
+  mean =   4647.848 ±(99.9%) 35.748 ms/op
+
+  Histogram, ms/op:
+    [4500.000, 4525.000) = 0 
+    [4525.000, 4550.000) = 0 
+    [4550.000, 4575.000) = 2 
+    [4575.000, 4600.000) = 5 
+    [4600.000, 4625.000) = 5 
+    [4625.000, 4650.000) = 2 
+    [4650.000, 4675.000) = 11 
+    [4675.000, 4700.000) = 0 
+    [4700.000, 4725.000) = 2 
+    [4725.000, 4750.000) = 2 
+    [4750.000, 4775.000) = 1 
+
+  Percentiles, ms/op:
+      p(0.0000) =   4563.403 ms/op
+     p(50.0000) =   4664.066 ms/op
+     p(90.0000) =   4730.336 ms/op
+     p(95.0000) =   4755.502 ms/op
+     p(99.0000) =   4764.729 ms/op
+     p(99.9000) =   4764.729 ms/op
+     p(99.9900) =   4764.729 ms/op
+     p(99.9990) =   4764.729 ms/op
+     p(99.9999) =   4764.729 ms/op
+    p(100.0000) =   4764.729 ms/op
+
+
+# JMH version: 1.36
+# VM version: JDK 20.0.1, OpenJDK 64-Bit Server VM, 20.0.1+9-29
+# VM invoker: /home/olivier/external_software/openjdk-20.0.1/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-opens=java.base/java.nio=ALL-UNNAMED -Darrow.enable_unsafe_memory_access=true -Darrow.enable_null_check_for_get=false --enable-preview -Xmx32g -Xms16g
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimdReducedSelVecUse.executeQuery
+# Parameters: (tpchInstance = /nvtmp/AethraTestData/tpch/sf-100)
+
+# Run progress: 91.67% complete, ETA 00:13:04
+# Fork: 1 of 2
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
+116098.335 ms/op
+# Warmup Iteration   2: 116500.988 ms/op
+# Warmup Iteration   3: 116232.552 ms/op
+# Warmup Iteration   4: 116098.335 ms/op
+# Warmup Iteration   5: 116769.423 ms/op
+Iteration   1: 117843.165 ms/op
+                 executeQuery·p0.00:   117843.165 ms/op
+                 executeQuery·p0.50:   117843.165 ms/op
+                 executeQuery·p0.90:   117843.165 ms/op
+                 executeQuery·p0.95:   117843.165 ms/op
+                 executeQuery·p0.99:   117843.165 ms/op
+                 executeQuery·p0.999:  117843.165 ms/op
+                 executeQuery·p0.9999: 117843.165 ms/op
+                 executeQuery·p1.00:   117843.165 ms/op
+
+Iteration   2: 116769.423 ms/op
+                 executeQuery·p0.00:   116769.423 ms/op
+                 executeQuery·p0.50:   116769.423 ms/op
+                 executeQuery·p0.90:   116769.423 ms/op
+                 executeQuery·p0.95:   116769.423 ms/op
+                 executeQuery·p0.99:   116769.423 ms/op
+                 executeQuery·p0.999:  116769.423 ms/op
+                 executeQuery·p0.9999: 116769.423 ms/op
+                 executeQuery·p1.00:   116769.423 ms/op
+
+Iteration   3: 116366.770 ms/op
+                 executeQuery·p0.00:   116366.770 ms/op
+                 executeQuery·p0.50:   116366.770 ms/op
+                 executeQuery·p0.90:   116366.770 ms/op
+                 executeQuery·p0.95:   116366.770 ms/op
+                 executeQuery·p0.99:   116366.770 ms/op
+                 executeQuery·p0.999:  116366.770 ms/op
+                 executeQuery·p0.9999: 116366.770 ms/op
+                 executeQuery·p1.00:   116366.770 ms/op
+
+Iteration   4: 115561.464 ms/op
+                 executeQuery·p0.00:   115561.464 ms/op
+                 executeQuery·p0.50:   115561.464 ms/op
+                 executeQuery·p0.90:   115561.464 ms/op
+                 executeQuery·p0.95:   115561.464 ms/op
+                 executeQuery·p0.99:   115561.464 ms/op
+                 executeQuery·p0.999:  115561.464 ms/op
+                 executeQuery·p0.9999: 115561.464 ms/op
+                 executeQuery·p1.00:   115561.464 ms/op
+
+Iteration   5: 116635.206 ms/op
+                 executeQuery·p0.00:   116635.206 ms/op
+                 executeQuery·p0.50:   116635.206 ms/op
+                 executeQuery·p0.90:   116635.206 ms/op
+                 executeQuery·p0.95:   116635.206 ms/op
+                 executeQuery·p0.99:   116635.206 ms/op
+                 executeQuery·p0.999:  116635.206 ms/op
+                 executeQuery·p0.9999: 116635.206 ms/op
+                 executeQuery·p1.00:   116635.206 ms/op
+
+
+# Run progress: 95.83% complete, ETA 00:07:06
+# Fork: 2 of 2
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
+126030.447 ms/op
+# Warmup Iteration   2: 121467.044 ms/op
+# Warmup Iteration   3: 123748.745 ms/op
+# Warmup Iteration   4: 115829.899 ms/op
+# Warmup Iteration   5: 116366.770 ms/op
+Iteration   1: 116769.423 ms/op
+                 executeQuery·p0.00:   116769.423 ms/op
+                 executeQuery·p0.50:   116769.423 ms/op
+                 executeQuery·p0.90:   116769.423 ms/op
+                 executeQuery·p0.95:   116769.423 ms/op
+                 executeQuery·p0.99:   116769.423 ms/op
+                 executeQuery·p0.999:  116769.423 ms/op
+                 executeQuery·p0.9999: 116769.423 ms/op
+                 executeQuery·p1.00:   116769.423 ms/op
+
+Iteration   2: 116232.552 ms/op
+                 executeQuery·p0.00:   116232.552 ms/op
+                 executeQuery·p0.50:   116232.552 ms/op
+                 executeQuery·p0.90:   116232.552 ms/op
+                 executeQuery·p0.95:   116232.552 ms/op
+                 executeQuery·p0.99:   116232.552 ms/op
+                 executeQuery·p0.999:  116232.552 ms/op
+                 executeQuery·p0.9999: 116232.552 ms/op
+                 executeQuery·p1.00:   116232.552 ms/op
+
+Iteration   3: 115561.464 ms/op
+                 executeQuery·p0.00:   115561.464 ms/op
+                 executeQuery·p0.50:   115561.464 ms/op
+                 executeQuery·p0.90:   115561.464 ms/op
+                 executeQuery·p0.95:   115561.464 ms/op
+                 executeQuery·p0.99:   115561.464 ms/op
+                 executeQuery·p0.999:  115561.464 ms/op
+                 executeQuery·p0.9999: 115561.464 ms/op
+                 executeQuery·p1.00:   115561.464 ms/op
+
+Iteration   4: 115964.117 ms/op
+                 executeQuery·p0.00:   115964.117 ms/op
+                 executeQuery·p0.50:   115964.117 ms/op
+                 executeQuery·p0.90:   115964.117 ms/op
+                 executeQuery·p0.95:   115964.117 ms/op
+                 executeQuery·p0.99:   115964.117 ms/op
+                 executeQuery·p0.999:  115964.117 ms/op
+                 executeQuery·p0.9999: 115964.117 ms/op
+                 executeQuery·p1.00:   115964.117 ms/op
+
+Iteration   5: 116366.770 ms/op
+                 executeQuery·p0.00:   116366.770 ms/op
+                 executeQuery·p0.50:   116366.770 ms/op
+                 executeQuery·p0.90:   116366.770 ms/op
+                 executeQuery·p0.95:   116366.770 ms/op
+                 executeQuery·p0.99:   116366.770 ms/op
+                 executeQuery·p0.999:  116366.770 ms/op
+                 executeQuery·p0.9999: 116366.770 ms/op
+                 executeQuery·p1.00:   116366.770 ms/op
+
+
+
+Result "benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimdReducedSelVecUse.executeQuery":
+  N = 10
+  mean = 116407.035 ±(99.9%) 1012.559 ms/op
+
+  Histogram, ms/op:
+    [115000.000, 115250.000) = 0 
+    [115250.000, 115500.000) = 0 
+    [115500.000, 115750.000) = 2 
+    [115750.000, 116000.000) = 1 
+    [116000.000, 116250.000) = 1 
+    [116250.000, 116500.000) = 2 
+    [116500.000, 116750.000) = 1 
+    [116750.000, 117000.000) = 2 
+    [117000.000, 117250.000) = 0 
+    [117250.000, 117500.000) = 0 
+    [117500.000, 117750.000) = 0 
+
+  Percentiles, ms/op:
+      p(0.0000) = 115561.464 ms/op
+     p(50.0000) = 116366.770 ms/op
+     p(90.0000) = 117735.791 ms/op
+     p(95.0000) = 117843.165 ms/op
+     p(99.0000) = 117843.165 ms/op
+     p(99.9000) = 117843.165 ms/op
+     p(99.9900) = 117843.165 ms/op
+     p(99.9990) = 117843.165 ms/op
+     p(99.9999) = 117843.165 ms/op
+    p(100.0000) = 117843.165 ms/op
+
+
+# Run complete. Total time: 03:03:08
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                                                               (tpchInstance)    Mode  Cnt       Score      Error  Units
+NonVectorisedNonSimd.executeQuery                                      /nvtmp/AethraTestData/tpch/sf-1  sample  320     315.358 ±    3.160  ms/op
+NonVectorisedNonSimd.executeQuery:executeQuery·p0.00                   /nvtmp/AethraTestData/tpch/sf-1  sample          297.271             ms/op
+NonVectorisedNonSimd.executeQuery:executeQuery·p0.50                   /nvtmp/AethraTestData/tpch/sf-1  sample          300.941             ms/op
+NonVectorisedNonSimd.executeQuery:executeQuery·p0.90                   /nvtmp/AethraTestData/tpch/sf-1  sample          333.971             ms/op
+NonVectorisedNonSimd.executeQuery:executeQuery·p0.95                   /nvtmp/AethraTestData/tpch/sf-1  sample          334.496             ms/op
+NonVectorisedNonSimd.executeQuery:executeQuery·p0.99                   /nvtmp/AethraTestData/tpch/sf-1  sample          339.629             ms/op
+NonVectorisedNonSimd.executeQuery:executeQuery·p0.999                  /nvtmp/AethraTestData/tpch/sf-1  sample          341.311             ms/op
+NonVectorisedNonSimd.executeQuery:executeQuery·p0.9999                 /nvtmp/AethraTestData/tpch/sf-1  sample          341.311             ms/op
+NonVectorisedNonSimd.executeQuery:executeQuery·p1.00                   /nvtmp/AethraTestData/tpch/sf-1  sample          341.311             ms/op
+NonVectorisedNonSimd.executeQuery                                     /nvtmp/AethraTestData/tpch/sf-10  sample   40    2894.909 ±   16.121  ms/op
+NonVectorisedNonSimd.executeQuery:executeQuery·p0.00                  /nvtmp/AethraTestData/tpch/sf-10  sample         2847.932             ms/op
+NonVectorisedNonSimd.executeQuery:executeQuery·p0.50                  /nvtmp/AethraTestData/tpch/sf-10  sample         2898.264             ms/op
+NonVectorisedNonSimd.executeQuery:executeQuery·p0.90                  /nvtmp/AethraTestData/tpch/sf-10  sample         2930.980             ms/op
+NonVectorisedNonSimd.executeQuery:executeQuery·p0.95                  /nvtmp/AethraTestData/tpch/sf-10  sample         2936.013             ms/op
+NonVectorisedNonSimd.executeQuery:executeQuery·p0.99                  /nvtmp/AethraTestData/tpch/sf-10  sample         2948.596             ms/op
+NonVectorisedNonSimd.executeQuery:executeQuery·p0.999                 /nvtmp/AethraTestData/tpch/sf-10  sample         2948.596             ms/op
+NonVectorisedNonSimd.executeQuery:executeQuery·p0.9999                /nvtmp/AethraTestData/tpch/sf-10  sample         2948.596             ms/op
+NonVectorisedNonSimd.executeQuery:executeQuery·p1.00                  /nvtmp/AethraTestData/tpch/sf-10  sample         2948.596             ms/op
+NonVectorisedNonSimd.executeQuery                                    /nvtmp/AethraTestData/tpch/sf-100  sample   10  110877.265 ± 1715.028  ms/op
+NonVectorisedNonSimd.executeQuery:executeQuery·p0.00                 /nvtmp/AethraTestData/tpch/sf-100  sample       109253.231             ms/op
+NonVectorisedNonSimd.executeQuery:executeQuery·p0.50                 /nvtmp/AethraTestData/tpch/sf-100  sample       111065.170             ms/op
+NonVectorisedNonSimd.executeQuery:executeQuery·p0.90                 /nvtmp/AethraTestData/tpch/sf-100  sample       112313.395             ms/op
+NonVectorisedNonSimd.executeQuery:executeQuery·p0.95                 /nvtmp/AethraTestData/tpch/sf-100  sample       112340.238             ms/op
+NonVectorisedNonSimd.executeQuery:executeQuery·p0.99                 /nvtmp/AethraTestData/tpch/sf-100  sample       112340.238             ms/op
+NonVectorisedNonSimd.executeQuery:executeQuery·p0.999                /nvtmp/AethraTestData/tpch/sf-100  sample       112340.238             ms/op
+NonVectorisedNonSimd.executeQuery:executeQuery·p0.9999               /nvtmp/AethraTestData/tpch/sf-100  sample       112340.238             ms/op
+NonVectorisedNonSimd.executeQuery:executeQuery·p1.00                 /nvtmp/AethraTestData/tpch/sf-100  sample       112340.238             ms/op
+NonVectorisedNonSimdSparkified.executeQuery                            /nvtmp/AethraTestData/tpch/sf-1  sample  254     397.536 ±    2.744  ms/op
+NonVectorisedNonSimdSparkified.executeQuery:executeQuery·p0.00         /nvtmp/AethraTestData/tpch/sf-1  sample          381.157             ms/op
+NonVectorisedNonSimdSparkified.executeQuery:executeQuery·p0.50         /nvtmp/AethraTestData/tpch/sf-1  sample          401.342             ms/op
+NonVectorisedNonSimdSparkified.executeQuery:executeQuery·p0.90         /nvtmp/AethraTestData/tpch/sf-1  sample          411.042             ms/op
+NonVectorisedNonSimdSparkified.executeQuery:executeQuery·p0.95         /nvtmp/AethraTestData/tpch/sf-1  sample          413.663             ms/op
+NonVectorisedNonSimdSparkified.executeQuery:executeQuery·p0.99         /nvtmp/AethraTestData/tpch/sf-1  sample          442.525             ms/op
+NonVectorisedNonSimdSparkified.executeQuery:executeQuery·p0.999        /nvtmp/AethraTestData/tpch/sf-1  sample          454.558             ms/op
+NonVectorisedNonSimdSparkified.executeQuery:executeQuery·p0.9999       /nvtmp/AethraTestData/tpch/sf-1  sample          454.558             ms/op
+NonVectorisedNonSimdSparkified.executeQuery:executeQuery·p1.00         /nvtmp/AethraTestData/tpch/sf-1  sample          454.558             ms/op
+NonVectorisedNonSimdSparkified.executeQuery                           /nvtmp/AethraTestData/tpch/sf-10  sample   30    3807.449 ±   33.463  ms/op
+NonVectorisedNonSimdSparkified.executeQuery:executeQuery·p0.00        /nvtmp/AethraTestData/tpch/sf-10  sample         3737.125             ms/op
+NonVectorisedNonSimdSparkified.executeQuery:executeQuery·p0.50        /nvtmp/AethraTestData/tpch/sf-10  sample         3797.942             ms/op
+NonVectorisedNonSimdSparkified.executeQuery:executeQuery·p0.90        /nvtmp/AethraTestData/tpch/sf-10  sample         3862.535             ms/op
+NonVectorisedNonSimdSparkified.executeQuery:executeQuery·p0.95        /nvtmp/AethraTestData/tpch/sf-10  sample         3917.480             ms/op
+NonVectorisedNonSimdSparkified.executeQuery:executeQuery·p0.99        /nvtmp/AethraTestData/tpch/sf-10  sample         3963.617             ms/op
+NonVectorisedNonSimdSparkified.executeQuery:executeQuery·p0.999       /nvtmp/AethraTestData/tpch/sf-10  sample         3963.617             ms/op
+NonVectorisedNonSimdSparkified.executeQuery:executeQuery·p0.9999      /nvtmp/AethraTestData/tpch/sf-10  sample         3963.617             ms/op
+NonVectorisedNonSimdSparkified.executeQuery:executeQuery·p1.00        /nvtmp/AethraTestData/tpch/sf-10  sample         3963.617             ms/op
+NonVectorisedNonSimdSparkified.executeQuery                          /nvtmp/AethraTestData/tpch/sf-100  sample   10  113521.354 ± 1809.400  ms/op
+NonVectorisedNonSimdSparkified.executeQuery:executeQuery·p0.00       /nvtmp/AethraTestData/tpch/sf-100  sample       112474.456             ms/op
+NonVectorisedNonSimdSparkified.executeQuery:executeQuery·p0.50       /nvtmp/AethraTestData/tpch/sf-100  sample       113145.545             ms/op
+NonVectorisedNonSimdSparkified.executeQuery:executeQuery·p0.90       /nvtmp/AethraTestData/tpch/sf-100  sample       116017.804             ms/op
+NonVectorisedNonSimdSparkified.executeQuery:executeQuery·p0.95       /nvtmp/AethraTestData/tpch/sf-100  sample       116098.335             ms/op
+NonVectorisedNonSimdSparkified.executeQuery:executeQuery·p0.99       /nvtmp/AethraTestData/tpch/sf-100  sample       116098.335             ms/op
+NonVectorisedNonSimdSparkified.executeQuery:executeQuery·p0.999      /nvtmp/AethraTestData/tpch/sf-100  sample       116098.335             ms/op
+NonVectorisedNonSimdSparkified.executeQuery:executeQuery·p0.9999     /nvtmp/AethraTestData/tpch/sf-100  sample       116098.335             ms/op
+NonVectorisedNonSimdSparkified.executeQuery:executeQuery·p1.00       /nvtmp/AethraTestData/tpch/sf-100  sample       116098.335             ms/op
+VectorisedNonSimd.executeQuery                                         /nvtmp/AethraTestData/tpch/sf-1  sample  195     521.613 ±    2.202  ms/op
+VectorisedNonSimd.executeQuery:executeQuery·p0.00                      /nvtmp/AethraTestData/tpch/sf-1  sample          509.084             ms/op
+VectorisedNonSimd.executeQuery:executeQuery·p0.50                      /nvtmp/AethraTestData/tpch/sf-1  sample          526.385             ms/op
+VectorisedNonSimd.executeQuery:executeQuery·p0.90                      /nvtmp/AethraTestData/tpch/sf-1  sample          531.104             ms/op
+VectorisedNonSimd.executeQuery:executeQuery·p0.95                      /nvtmp/AethraTestData/tpch/sf-1  sample          532.152             ms/op
+VectorisedNonSimd.executeQuery:executeQuery·p0.99                      /nvtmp/AethraTestData/tpch/sf-1  sample          536.913             ms/op
+VectorisedNonSimd.executeQuery:executeQuery·p0.999                     /nvtmp/AethraTestData/tpch/sf-1  sample          537.919             ms/op
+VectorisedNonSimd.executeQuery:executeQuery·p0.9999                    /nvtmp/AethraTestData/tpch/sf-1  sample          537.919             ms/op
+VectorisedNonSimd.executeQuery:executeQuery·p1.00                      /nvtmp/AethraTestData/tpch/sf-1  sample          537.919             ms/op
+VectorisedNonSimd.executeQuery                                        /nvtmp/AethraTestData/tpch/sf-10  sample   20    5045.748 ±   30.404  ms/op
+VectorisedNonSimd.executeQuery:executeQuery·p0.00                     /nvtmp/AethraTestData/tpch/sf-10  sample         4991.222             ms/op
+VectorisedNonSimd.executeQuery:executeQuery·p0.50                     /nvtmp/AethraTestData/tpch/sf-10  sample         5066.719             ms/op
+VectorisedNonSimd.executeQuery:executeQuery·p0.90                     /nvtmp/AethraTestData/tpch/sf-10  sample         5075.108             ms/op
+VectorisedNonSimd.executeQuery:executeQuery·p0.95                     /nvtmp/AethraTestData/tpch/sf-10  sample         5106.985             ms/op
+VectorisedNonSimd.executeQuery:executeQuery·p0.99                     /nvtmp/AethraTestData/tpch/sf-10  sample         5108.662             ms/op
+VectorisedNonSimd.executeQuery:executeQuery·p0.999                    /nvtmp/AethraTestData/tpch/sf-10  sample         5108.662             ms/op
+VectorisedNonSimd.executeQuery:executeQuery·p0.9999                   /nvtmp/AethraTestData/tpch/sf-10  sample         5108.662             ms/op
+VectorisedNonSimd.executeQuery:executeQuery·p1.00                     /nvtmp/AethraTestData/tpch/sf-10  sample         5108.662             ms/op
+VectorisedNonSimd.executeQuery                                       /nvtmp/AethraTestData/tpch/sf-100  sample   10  115655.416 ± 1254.705  ms/op
+VectorisedNonSimd.executeQuery:executeQuery·p0.00                    /nvtmp/AethraTestData/tpch/sf-100  sample       114085.069             ms/op
+VectorisedNonSimd.executeQuery:executeQuery·p0.50                    /nvtmp/AethraTestData/tpch/sf-100  sample       115561.464             ms/op
+VectorisedNonSimd.executeQuery:executeQuery·p0.90                    /nvtmp/AethraTestData/tpch/sf-100  sample       117292.872             ms/op
+VectorisedNonSimd.executeQuery:executeQuery·p0.95                    /nvtmp/AethraTestData/tpch/sf-100  sample       117440.512             ms/op
+VectorisedNonSimd.executeQuery:executeQuery·p0.99                    /nvtmp/AethraTestData/tpch/sf-100  sample       117440.512             ms/op
+VectorisedNonSimd.executeQuery:executeQuery·p0.999                   /nvtmp/AethraTestData/tpch/sf-100  sample       117440.512             ms/op
+VectorisedNonSimd.executeQuery:executeQuery·p0.9999                  /nvtmp/AethraTestData/tpch/sf-100  sample       117440.512             ms/op
+VectorisedNonSimd.executeQuery:executeQuery·p1.00                    /nvtmp/AethraTestData/tpch/sf-100  sample       117440.512             ms/op
+VectorisedNonSimdReducedSelVecUse.executeQuery                         /nvtmp/AethraTestData/tpch/sf-1  sample  194     525.655 ±   12.640  ms/op
+VectorisedNonSimdReducedSelVecUse.executeQuery:executeQuery·p0.00      /nvtmp/AethraTestData/tpch/sf-1  sample          470.286             ms/op
+VectorisedNonSimdReducedSelVecUse.executeQuery:executeQuery·p0.50      /nvtmp/AethraTestData/tpch/sf-1  sample          485.753             ms/op
+VectorisedNonSimdReducedSelVecUse.executeQuery:executeQuery·p0.90      /nvtmp/AethraTestData/tpch/sf-1  sample          585.105             ms/op
+VectorisedNonSimdReducedSelVecUse.executeQuery:executeQuery·p0.95      /nvtmp/AethraTestData/tpch/sf-1  sample          592.445             ms/op
+VectorisedNonSimdReducedSelVecUse.executeQuery:executeQuery·p0.99      /nvtmp/AethraTestData/tpch/sf-1  sample          604.085             ms/op
+VectorisedNonSimdReducedSelVecUse.executeQuery:executeQuery·p0.999     /nvtmp/AethraTestData/tpch/sf-1  sample          606.077             ms/op
+VectorisedNonSimdReducedSelVecUse.executeQuery:executeQuery·p0.9999    /nvtmp/AethraTestData/tpch/sf-1  sample          606.077             ms/op
+VectorisedNonSimdReducedSelVecUse.executeQuery:executeQuery·p1.00      /nvtmp/AethraTestData/tpch/sf-1  sample          606.077             ms/op
+VectorisedNonSimdReducedSelVecUse.executeQuery                        /nvtmp/AethraTestData/tpch/sf-10  sample   30    4647.848 ±   35.748  ms/op
+VectorisedNonSimdReducedSelVecUse.executeQuery:executeQuery·p0.00     /nvtmp/AethraTestData/tpch/sf-10  sample         4563.403             ms/op
+VectorisedNonSimdReducedSelVecUse.executeQuery:executeQuery·p0.50     /nvtmp/AethraTestData/tpch/sf-10  sample         4664.066             ms/op
+VectorisedNonSimdReducedSelVecUse.executeQuery:executeQuery·p0.90     /nvtmp/AethraTestData/tpch/sf-10  sample         4730.336             ms/op
+VectorisedNonSimdReducedSelVecUse.executeQuery:executeQuery·p0.95     /nvtmp/AethraTestData/tpch/sf-10  sample         4755.502             ms/op
+VectorisedNonSimdReducedSelVecUse.executeQuery:executeQuery·p0.99     /nvtmp/AethraTestData/tpch/sf-10  sample         4764.729             ms/op
+VectorisedNonSimdReducedSelVecUse.executeQuery:executeQuery·p0.999    /nvtmp/AethraTestData/tpch/sf-10  sample         4764.729             ms/op
+VectorisedNonSimdReducedSelVecUse.executeQuery:executeQuery·p0.9999   /nvtmp/AethraTestData/tpch/sf-10  sample         4764.729             ms/op
+VectorisedNonSimdReducedSelVecUse.executeQuery:executeQuery·p1.00     /nvtmp/AethraTestData/tpch/sf-10  sample         4764.729             ms/op
+VectorisedNonSimdReducedSelVecUse.executeQuery                       /nvtmp/AethraTestData/tpch/sf-100  sample   10  116407.035 ± 1012.559  ms/op
+VectorisedNonSimdReducedSelVecUse.executeQuery:executeQuery·p0.00    /nvtmp/AethraTestData/tpch/sf-100  sample       115561.464             ms/op
+VectorisedNonSimdReducedSelVecUse.executeQuery:executeQuery·p0.50    /nvtmp/AethraTestData/tpch/sf-100  sample       116366.770             ms/op
+VectorisedNonSimdReducedSelVecUse.executeQuery:executeQuery·p0.90    /nvtmp/AethraTestData/tpch/sf-100  sample       117735.791             ms/op
+VectorisedNonSimdReducedSelVecUse.executeQuery:executeQuery·p0.95    /nvtmp/AethraTestData/tpch/sf-100  sample       117843.165             ms/op
+VectorisedNonSimdReducedSelVecUse.executeQuery:executeQuery·p0.99    /nvtmp/AethraTestData/tpch/sf-100  sample       117843.165             ms/op
+VectorisedNonSimdReducedSelVecUse.executeQuery:executeQuery·p0.999   /nvtmp/AethraTestData/tpch/sf-100  sample       117843.165             ms/op
+VectorisedNonSimdReducedSelVecUse.executeQuery:executeQuery·p0.9999  /nvtmp/AethraTestData/tpch/sf-100  sample       117843.165             ms/op
+VectorisedNonSimdReducedSelVecUse.executeQuery:executeQuery·p1.00    /nvtmp/AethraTestData/tpch/sf-100  sample       117843.165             ms/op
+
+Benchmark result is saved to jmh-result.csv
