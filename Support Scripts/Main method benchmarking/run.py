@@ -116,7 +116,7 @@ for benchmark_name, benchmark_definition in benchmarks.benchmarks.items():
                 average_time = round(total_time / number_repetitions, 1)
                 print('Finished executing current benchmark configuration!')
                 print('Average planning time was ' + str(average_planning_time) + 'ms.')
-                print('Average codgen time was ' + str(average_codegen_time) + 'ms.')
+                print('Average codegen time was ' + str(average_codegen_time) + 'ms.')
                 print('Average compilation time was ' + str(average_compilation_time) + 'ms.')
                 print('Average execution time was ' + str(average_execution_time) + 'ms.')
                 print('Average total time was ' + str(average_time) + 'ms.\n\n')
