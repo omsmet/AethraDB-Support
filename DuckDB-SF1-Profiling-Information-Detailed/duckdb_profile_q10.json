@@ -1,0 +1,222 @@
+{
+   "name":  "Query", 
+   "result": 0.209956,
+   "timing": 0.209956,
+   "cardinality": 0,
+   "extra-info": "", 
+   "timings": [
+   {
+   "annotation": "optimizer", 
+   "timing": 0.000260
+   },
+   {
+   "annotation": "optimizer > column_lifetime", 
+   "timing": 0.000009
+   },
+   {
+   "annotation": "optimizer > common_aggregate", 
+   "timing": 0.000004
+   },
+   {
+   "annotation": "optimizer > common_subexpressions", 
+   "timing": 0.000011
+   },
+   {
+   "annotation": "optimizer > deliminator", 
+   "timing": 0.000001
+   },
+   {
+   "annotation": "optimizer > expression_rewriter", 
+   "timing": 0.000061
+   },
+   {
+   "annotation": "optimizer > filter_pullup", 
+   "timing": 0.000002
+   },
+   {
+   "annotation": "optimizer > filter_pushdown", 
+   "timing": 0.000060
+   },
+   {
+   "annotation": "optimizer > in_clause", 
+   "timing": 0.000002
+   },
+   {
+   "annotation": "optimizer > join_order", 
+   "timing": 0.000073
+   },
+   {
+   "annotation": "optimizer > regex_range", 
+   "timing": 0.000000
+   },
+   {
+   "annotation": "optimizer > reorder_filter", 
+   "timing": 0.000004
+   },
+   {
+   "annotation": "optimizer > statistics_propagation", 
+   "timing": 0.000010
+   },
+   {
+   "annotation": "optimizer > top_n", 
+   "timing": 0.000000
+   },
+   {
+   "annotation": "optimizer > unnest_rewriter", 
+   "timing": 0.000001
+   },
+   {
+   "annotation": "optimizer > unused_columns", 
+   "timing": 0.000010
+   },
+   {
+   "annotation": "physical_planner", 
+   "timing": 0.000037
+   },
+   {
+   "annotation": "physical_planner > column_binding", 
+   "timing": 0.000007
+   },
+   {
+   "annotation": "physical_planner > create_plan", 
+   "timing": 0.000022
+   },
+   {
+   "annotation": "physical_planner > resolve_types", 
+   "timing": 0.000004
+   },
+   {
+   "annotation": "planner", 
+   "timing": 0.000382
+   },
+   {
+   "annotation": "planner > binder", 
+   "timing": 0.000380
+   }
+   ],
+   "children": [
+    {
+      "name": "RESULT_COLLECTOR",
+      "timing":0.001989,
+      "cardinality":0,
+      "extra_info": "",
+      "timings": [
+      ],
+      "children": [
+       {
+         "name": "STREAMING_LIMIT",
+         "timing":0.000002,
+         "cardinality":10000,
+         "extra_info": "",
+         "timings": [
+         ],
+         "children": [
+          {
+            "name": "PROJECTION",
+            "timing":0.000005,
+            "cardinality":12288,
+            "extra_info": "c_custkey\nc_name\nrevenue\nc_acctbal\nn_name\nc_address\nc_phone\nc_comment\n",
+            "timings": [
+            ],
+            "children": [
+             {
+               "name": "HASH_GROUP_BY",
+               "timing":0.026828,
+               "cardinality":12288,
+               "extra_info": "#0\n#1\n#2\n#3\n#4\n#5\n#6\nsum(#7)",
+               "timings": [
+               ],
+               "children": [
+                {
+                  "name": "PROJECTION",
+                  "timing":0.000689,
+                  "cardinality":114705,
+                  "extra_info": "c_custkey\nc_name\nc_acctbal\nc_phone\nn_name\nc_address\nc_comment\n(l_extendedprice * (1.0 - l_discount))\n",
+                  "timings": [
+                  ],
+                  "children": [
+                   {
+                     "name": "HASH_JOIN",
+                     "timing":0.046047,
+                     "cardinality":114705,
+                     "extra_info": "INNER\nn_nationkey = c_nationkey\n\n[INFOSEPARATOR]\nEC: 1\nCost: 3",
+                     "timings": [
+                     ],
+                     "children": [
+                      {
+                        "name": "ARROW_SCAN ",
+                        "timing":0.000027,
+                        "cardinality":25,
+                        "extra_info": "n_nationkey\nn_name\n[INFOSEPARATOR]\nEC: 1",
+                        "timings": [
+                        ],
+                        "children": [
+                        ]
+                      }
+,
+                      {
+                        "name": "HASH_JOIN",
+                        "timing":0.012933,
+                        "cardinality":114705,
+                        "extra_info": "INNER\nc_custkey = o_custkey\n\n[INFOSEPARATOR]\nEC: 1\nCost: 2",
+                        "timings": [
+                        ],
+                        "children": [
+                         {
+                           "name": "ARROW_SCAN ",
+                           "timing":0.007843,
+                           "cardinality":150000,
+                           "extra_info": "c_custkey\nc_nationkey\nc_name\nc_acctbal\nc_phone\nc_address\nc_comment\n[INFOSEPARATOR]\nEC: 1",
+                           "timings": [
+                           ],
+                           "children": [
+                           ]
+                         }
+,
+                         {
+                           "name": "HASH_JOIN",
+                           "timing":0.036991,
+                           "cardinality":114705,
+                           "extra_info": "INNER\no_orderkey = l_orderkey\n\n[INFOSEPARATOR]\nEC: 1\nCost: 1",
+                           "timings": [
+                           ],
+                           "children": [
+                            {
+                              "name": "ARROW_SCAN ",
+                              "timing":0.001631,
+                              "cardinality":57069,
+                              "extra_info": "o_custkey\no_orderkey\n[INFOSEPARATOR]\nFilters: o_orderdate>=1993-10-01 AND o_orderdate<1994-01-01 AND o_orderdate IS NOT NULL\n\n[INFOSEPARATOR]\nEC: 1",
+                              "timings": [
+                              ],
+                              "children": [
+                              ]
+                            }
+,
+                            {
+                              "name": "ARROW_SCAN ",
+                              "timing":0.026361,
+                              "cardinality":1478870,
+                              "extra_info": "l_orderkey\nl_extendedprice\nl_discount\n[INFOSEPARATOR]\nFilters: l_returnflag=R AND l_returnflag IS NOT NULL\n\n[INFOSEPARATOR]\nEC: 1",
+                              "timings": [
+                              ],
+                              "children": [
+                              ]
+                            }
+                           ]
+                         }
+                        ]
+                      }
+                     ]
+                   }
+                  ]
+                }
+               ]
+             }
+            ]
+          }
+         ]
+       }
+      ]
+    }
+   ]
+}

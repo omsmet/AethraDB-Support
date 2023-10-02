@@ -1,0 +1,5 @@
+Query,Dataset,Optimiser Time,Physical Planner Time,Planner Time,Execuction Time,Total Time
+TPC-H Q1, /nvtmp/AethraTestData/tpch/sf-1, 0.3, 0.0, 0.6, 391.7, 400.7
+TPC-H Q3, /nvtmp/AethraTestData/tpch/sf-1, 0.5, 0.1, 0.7, 132.3, 201.4
+TPC-H Q6, /nvtmp/AethraTestData/tpch/sf-1, 0.3, 0.0, 0.3, 18.2, 22.7
+TPC-H Q10, /nvtmp/AethraTestData/tpch/sf-1, 0.6, 0.1, 0.8, 166.5, 214.2

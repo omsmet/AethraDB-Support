@@ -1,0 +1,159 @@
+{
+   "name":  "Query", 
+   "result": 0.401955,
+   "timing": 0.401955,
+   "cardinality": 0,
+   "extra-info": "", 
+   "timings": [
+   {
+   "annotation": "optimizer", 
+   "timing": 0.000156
+   },
+   {
+   "annotation": "optimizer > column_lifetime", 
+   "timing": 0.000004
+   },
+   {
+   "annotation": "optimizer > common_aggregate", 
+   "timing": 0.000005
+   },
+   {
+   "annotation": "optimizer > common_subexpressions", 
+   "timing": 0.000031
+   },
+   {
+   "annotation": "optimizer > deliminator", 
+   "timing": 0.000000
+   },
+   {
+   "annotation": "optimizer > expression_rewriter", 
+   "timing": 0.000055
+   },
+   {
+   "annotation": "optimizer > filter_pullup", 
+   "timing": 0.000001
+   },
+   {
+   "annotation": "optimizer > filter_pushdown", 
+   "timing": 0.000015
+   },
+   {
+   "annotation": "optimizer > in_clause", 
+   "timing": 0.000002
+   },
+   {
+   "annotation": "optimizer > join_order", 
+   "timing": 0.000005
+   },
+   {
+   "annotation": "optimizer > regex_range", 
+   "timing": 0.000000
+   },
+   {
+   "annotation": "optimizer > reorder_filter", 
+   "timing": 0.000004
+   },
+   {
+   "annotation": "optimizer > statistics_propagation", 
+   "timing": 0.000011
+   },
+   {
+   "annotation": "optimizer > top_n", 
+   "timing": 0.000000
+   },
+   {
+   "annotation": "optimizer > unnest_rewriter", 
+   "timing": 0.000000
+   },
+   {
+   "annotation": "optimizer > unused_columns", 
+   "timing": 0.000007
+   },
+   {
+   "annotation": "physical_planner", 
+   "timing": 0.000024
+   },
+   {
+   "annotation": "physical_planner > column_binding", 
+   "timing": 0.000005
+   },
+   {
+   "annotation": "physical_planner > create_plan", 
+   "timing": 0.000013
+   },
+   {
+   "annotation": "physical_planner > resolve_types", 
+   "timing": 0.000002
+   },
+   {
+   "annotation": "planner", 
+   "timing": 0.000284
+   },
+   {
+   "annotation": "planner > binder", 
+   "timing": 0.000281
+   }
+   ],
+   "children": [
+    {
+      "name": "RESULT_COLLECTOR",
+      "timing":0.000003,
+      "cardinality":0,
+      "extra_info": "",
+      "timings": [
+      ],
+      "children": [
+       {
+         "name": "STREAMING_LIMIT",
+         "timing":0.000001,
+         "cardinality":4,
+         "extra_info": "",
+         "timings": [
+         ],
+         "children": [
+          {
+            "name": "HASH_GROUP_BY",
+            "timing":0.208631,
+            "cardinality":4,
+            "extra_info": "#0\n#1\nsum(#2)\nsum(#3)\nsum(#4)\nsum(#5)\navg(#6)\navg(#7)\navg(#8)\ncount_star()",
+            "timings": [
+            ],
+            "children": [
+             {
+               "name": "PROJECTION",
+               "timing":0.029672,
+               "cardinality":5916591,
+               "extra_info": "l_returnflag\nl_linestatus\nl_quantity\nl_extendedprice\n#4\n(#4 * (1.0 + l_tax))\nl_quantity\nl_extendedprice\nl_discount\n",
+               "timings": [
+               ],
+               "children": [
+                {
+                  "name": "PROJECTION",
+                  "timing":0.034348,
+                  "cardinality":5916591,
+                  "extra_info": "l_returnflag\nl_linestatus\nl_quantity\nl_extendedprice\n(l_extendedprice * (1.0 - l_discount))\nl_tax\nl_discount\n",
+                  "timings": [
+                  ],
+                  "children": [
+                   {
+                     "name": "ARROW_SCAN ",
+                     "timing":0.119805,
+                     "cardinality":5916591,
+                     "extra_info": "l_returnflag\nl_linestatus\nl_quantity\nl_extendedprice\nl_discount\nl_tax\n[INFOSEPARATOR]\nFilters: l_shipdate<=1998-09-02 AND l_shipdate IS NOT NULL\n\n[INFOSEPARATOR]\nEC: 0",
+                     "timings": [
+                     ],
+                     "children": [
+                     ]
+                   }
+                  ]
+                }
+               ]
+             }
+            ]
+          }
+         ]
+       }
+      ]
+    }
+   ]
+}
