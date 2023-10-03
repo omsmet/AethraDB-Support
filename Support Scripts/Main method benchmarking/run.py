@@ -87,13 +87,11 @@ for benchmark_name, benchmark_definition in benchmarks.benchmarks.items():
                 for i in range(number_repetitions):
                     print('Benchmarking iteration ' + str(i) + ' ...')
 
-                    start_time = time.time_ns()
                     benchmark_process = subprocess.Popen(
                         benchmark_arguments,
                         stdout = subprocess.DEVNULL,
                         stderr = subprocess.PIPE)
                     benchmark_process.wait()
-                    end_time = time.time_ns()
 
                     # Extract the timing information from std.err
                     for line in iter(benchmark_process.stderr.readline, b''):
@@ -106,7 +104,7 @@ for benchmark_name, benchmark_definition in benchmarks.benchmarks.items():
                             total_codegen_time += timing_information["codegen"]
                             total_compilation_time += timing_information["compilation"]
                             total_execution_time += timing_information["execution"]
-                            total_time += (end_time - start_time) / 1_000_000.0
+                            total_time += timing_information["total"]
                             break
 
                 average_planning_time = round(total_planning_time / number_repetitions, 1)
