@@ -1,0 +1,1038 @@
+# JMH version: 1.36
+# VM version: JDK 20.0.1, OpenJDK 64-Bit Server VM, 20.0.1+9-29
+# VM invoker: /usr/lib/jvm/openjdk-20.0.1/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-opens=java.base/java.nio=ALL-UNNAMED -Darrow.enable_unsafe_memory_access=true -Darrow.enable_null_check_for_get=false --enable-preview -Xmx32g -Xms16g
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.NonVectorisedNonSimd.executeQuery
+# Parameters: (tpchInstance = /nvtmp/AethraTestData/tpch/sf-10)
+
+# Run progress: 0.00% complete, ETA 00:15:00
+# Fork: 1 of 1
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: 1798.657 ±(99.9%) 354.953 ms/op
+# Warmup Iteration   2: 1875.203 ±(99.9%) 306.444 ms/op
+# Warmup Iteration   3: 1966.779 ±(99.9%) 21.500 ms/op
+# Warmup Iteration   4: 1969.925 ±(99.9%) 17.708 ms/op
+# Warmup Iteration   5: 1992.294 ±(99.9%) 75.403 ms/op
+Iteration   1: 2026.688 ±(99.9%) 58.400 ms/op
+                 executeQuery·p0.00:   2013.266 ms/op
+                 executeQuery·p0.50:   2023.752 ms/op
+                 executeQuery·p0.90:   2051.015 ms/op
+                 executeQuery·p0.95:   2051.015 ms/op
+                 executeQuery·p0.99:   2051.015 ms/op
+                 executeQuery·p0.999:  2051.015 ms/op
+                 executeQuery·p0.9999: 2051.015 ms/op
+                 executeQuery·p1.00:   2051.015 ms/op
+
+Iteration   2: 2019.138 ±(99.9%) 31.997 ms/op
+                 executeQuery·p0.00:   2011.169 ms/op
+                 executeQuery·p0.50:   2017.460 ms/op
+                 executeQuery·p0.90:   2032.140 ms/op
+                 executeQuery·p0.95:   2032.140 ms/op
+                 executeQuery·p0.99:   2032.140 ms/op
+                 executeQuery·p0.999:  2032.140 ms/op
+                 executeQuery·p0.9999: 2032.140 ms/op
+                 executeQuery·p1.00:   2032.140 ms/op
+
+Iteration   3: 1990.547 ±(99.9%) 89.683 ms/op
+                 executeQuery·p0.00:   1960.837 ms/op
+                 executeQuery·p0.50:   1988.100 ms/op
+                 executeQuery·p0.90:   2023.752 ms/op
+                 executeQuery·p0.95:   2023.752 ms/op
+                 executeQuery·p0.99:   2023.752 ms/op
+                 executeQuery·p0.999:  2023.752 ms/op
+                 executeQuery·p0.9999: 2023.752 ms/op
+                 executeQuery·p1.00:   2023.752 ms/op
+
+Iteration   4: 1962.235 ±(99.9%) 13.750 ms/op
+                 executeQuery·p0.00:   1956.643 ms/op
+                 executeQuery·p0.50:   1962.934 ms/op
+                 executeQuery·p0.90:   1967.129 ms/op
+                 executeQuery·p0.95:   1967.129 ms/op
+                 executeQuery·p0.99:   1967.129 ms/op
+                 executeQuery·p0.999:  1967.129 ms/op
+                 executeQuery·p0.9999: 1967.129 ms/op
+                 executeQuery·p1.00:   1967.129 ms/op
+
+Iteration   5: 1959.789 ±(99.9%) 11.002 ms/op
+                 executeQuery·p0.00:   1954.546 ms/op
+                 executeQuery·p0.50:   1959.789 ms/op
+                 executeQuery·p0.90:   1965.031 ms/op
+                 executeQuery·p0.95:   1965.031 ms/op
+                 executeQuery·p0.99:   1965.031 ms/op
+                 executeQuery·p0.999:  1965.031 ms/op
+                 executeQuery·p0.9999: 1965.031 ms/op
+                 executeQuery·p1.00:   1965.031 ms/op
+
+
+
+Result "AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.NonVectorisedNonSimd.executeQuery":
+  N = 28
+  mean =   1989.448 ±(99.9%) 22.284 ms/op
+
+  Histogram, ms/op:
+    [1950.000, 1960.000) = 5 
+    [1960.000, 1970.000) = 10 
+    [1970.000, 1980.000) = 0 
+    [1980.000, 1990.000) = 0 
+    [1990.000, 2000.000) = 0 
+    [2000.000, 2010.000) = 0 
+    [2010.000, 2020.000) = 6 
+    [2020.000, 2030.000) = 4 
+    [2030.000, 2040.000) = 2 
+    [2040.000, 2050.000) = 0 
+
+  Percentiles, ms/op:
+      p(0.0000) =   1954.546 ms/op
+     p(50.0000) =   1967.129 ms/op
+     p(90.0000) =   2030.253 ms/op
+     p(95.0000) =   2042.521 ms/op
+     p(99.0000) =   2051.015 ms/op
+     p(99.9000) =   2051.015 ms/op
+     p(99.9900) =   2051.015 ms/op
+     p(99.9990) =   2051.015 ms/op
+     p(99.9999) =   2051.015 ms/op
+    p(100.0000) =   2051.015 ms/op
+
+
+# JMH version: 1.36
+# VM version: JDK 20.0.1, OpenJDK 64-Bit Server VM, 20.0.1+9-29
+# VM invoker: /usr/lib/jvm/openjdk-20.0.1/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-opens=java.base/java.nio=ALL-UNNAMED -Darrow.enable_unsafe_memory_access=true -Darrow.enable_null_check_for_get=false --enable-preview -Xmx32g -Xms16g
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.NonVectorisedNonSimd_Class.executeQuery
+# Parameters: (tpchInstance = /nvtmp/AethraTestData/tpch/sf-10)
+
+# Run progress: 11.11% complete, ETA 00:15:09
+# Fork: 1 of 1
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: 1704.985 ±(99.9%) 249.196 ms/op
+# Warmup Iteration   2: 1723.859 ±(99.9%) 212.622 ms/op
+# Warmup Iteration   3: 1797.259 ±(99.9%) 19.681 ms/op
+# Warmup Iteration   4: 1796.211 ±(99.9%) 22.852 ms/op
+# Warmup Iteration   5: 1797.609 ±(99.9%) 13.624 ms/op
+Iteration   1: 1803.900 ±(99.9%) 15.522 ms/op
+                 executeQuery·p0.00:   1799.356 ms/op
+                 executeQuery·p0.50:   1802.502 ms/op
+                 executeQuery·p0.90:   1814.036 ms/op
+                 executeQuery·p0.95:   1814.036 ms/op
+                 executeQuery·p0.99:   1814.036 ms/op
+                 executeQuery·p0.999:  1814.036 ms/op
+                 executeQuery·p0.9999: 1814.036 ms/op
+                 executeQuery·p1.00:   1814.036 ms/op
+
+Iteration   2: 1803.900 ±(99.9%) 17.998 ms/op
+                 executeQuery·p0.00:   1797.259 ms/op
+                 executeQuery·p0.50:   1803.551 ms/op
+                 executeQuery·p0.90:   1814.036 ms/op
+                 executeQuery·p0.95:   1814.036 ms/op
+                 executeQuery·p0.99:   1814.036 ms/op
+                 executeQuery·p0.999:  1814.036 ms/op
+                 executeQuery·p0.9999: 1814.036 ms/op
+                 executeQuery·p1.00:   1814.036 ms/op
+
+Iteration   3: 1799.007 ±(99.9%) 10.129 ms/op
+                 executeQuery·p0.00:   1795.162 ms/op
+                 executeQuery·p0.50:   1798.308 ms/op
+                 executeQuery·p0.90:   1805.648 ms/op
+                 executeQuery·p0.95:   1805.648 ms/op
+                 executeQuery·p0.99:   1805.648 ms/op
+                 executeQuery·p0.999:  1805.648 ms/op
+                 executeQuery·p0.9999: 1805.648 ms/op
+                 executeQuery·p1.00:   1805.648 ms/op
+
+Iteration   4: 1798.657 ±(99.9%) 7.122 ms/op
+                 executeQuery·p0.00:   1795.162 ms/op
+                 executeQuery·p0.50:   1798.308 ms/op
+                 executeQuery·p0.90:   1801.454 ms/op
+                 executeQuery·p0.95:   1801.454 ms/op
+                 executeQuery·p0.99:   1801.454 ms/op
+                 executeQuery·p0.999:  1801.454 ms/op
+                 executeQuery·p0.9999: 1801.454 ms/op
+                 executeQuery·p1.00:   1801.454 ms/op
+
+Iteration   5: 1800.755 ±(99.9%) 12.704 ms/op
+                 executeQuery·p0.00:   1793.065 ms/op
+                 executeQuery·p0.50:   1801.454 ms/op
+                 executeQuery·p0.90:   1805.648 ms/op
+                 executeQuery·p0.95:   1805.648 ms/op
+                 executeQuery·p0.99:   1805.648 ms/op
+                 executeQuery·p0.999:  1805.648 ms/op
+                 executeQuery·p0.9999: 1805.648 ms/op
+                 executeQuery·p1.00:   1805.648 ms/op
+
+
+
+Result "AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.NonVectorisedNonSimd_Class.executeQuery":
+  N = 30
+  mean =   1801.244 ±(99.9%) 3.319 ms/op
+
+  Histogram, ms/op:
+    [1790.000, 1792.500) = 0 
+    [1792.500, 1795.000) = 1 
+    [1795.000, 1797.500) = 8 
+    [1797.500, 1800.000) = 7 
+    [1800.000, 1802.500) = 3 
+    [1802.500, 1805.000) = 5 
+    [1805.000, 1807.500) = 3 
+    [1807.500, 1810.000) = 1 
+    [1810.000, 1812.500) = 0 
+    [1812.500, 1815.000) = 2 
+    [1815.000, 1817.500) = 0 
+
+  Percentiles, ms/op:
+      p(0.0000) =   1793.065 ms/op
+     p(50.0000) =   1799.356 ms/op
+     p(90.0000) =   1807.535 ms/op
+     p(95.0000) =   1814.036 ms/op
+     p(99.0000) =   1814.036 ms/op
+     p(99.9000) =   1814.036 ms/op
+     p(99.9900) =   1814.036 ms/op
+     p(99.9990) =   1814.036 ms/op
+     p(99.9999) =   1814.036 ms/op
+    p(100.0000) =   1814.036 ms/op
+
+
+# JMH version: 1.36
+# VM version: JDK 20.0.1, OpenJDK 64-Bit Server VM, 20.0.1+9-29
+# VM invoker: /usr/lib/jvm/openjdk-20.0.1/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-opens=java.base/java.nio=ALL-UNNAMED -Darrow.enable_unsafe_memory_access=true -Darrow.enable_null_check_for_get=false --enable-preview -Xmx32g -Xms16g
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.NonVectorisedNonSimd_Records.executeQuery
+# Parameters: (tpchInstance = /nvtmp/AethraTestData/tpch/sf-10)
+
+# Run progress: 22.22% complete, ETA 00:12:53
+# Fork: 1 of 1
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: 1915.748 ±(99.9%) 589.499 ms/op
+# Warmup Iteration   2: 1858.776 ±(99.9%) 359.387 ms/op
+# Warmup Iteration   3: 1960.138 ±(99.9%) 22.213 ms/op
+# Warmup Iteration   4: 1959.089 ±(99.9%) 5.782 ms/op
+# Warmup Iteration   5: 1960.488 ±(99.9%) 5.782 ms/op
+Iteration   1: 1960.488 ±(99.9%) 4.427 ms/op
+                 executeQuery·p0.00:   1958.740 ms/op
+                 executeQuery·p0.50:   1960.837 ms/op
+                 executeQuery·p0.90:   1962.934 ms/op
+                 executeQuery·p0.95:   1962.934 ms/op
+                 executeQuery·p0.99:   1962.934 ms/op
+                 executeQuery·p0.999:  1962.934 ms/op
+                 executeQuery·p0.9999: 1962.934 ms/op
+                 executeQuery·p1.00:   1962.934 ms/op
+
+Iteration   2: 2009.910 ±(99.9%) 349.889 ms/op
+                 executeQuery·p0.00:   1956.643 ms/op
+                 executeQuery·p0.50:   1960.837 ms/op
+                 executeQuery·p0.90:   2168.455 ms/op
+                 executeQuery·p0.95:   2168.455 ms/op
+                 executeQuery·p0.99:   2168.455 ms/op
+                 executeQuery·p0.999:  2168.455 ms/op
+                 executeQuery·p0.9999: 2168.455 ms/op
+                 executeQuery·p1.00:   2168.455 ms/op
+
+Iteration   3: 2285.896 ±(99.9%) 11.420 ms/op
+                 executeQuery·p0.00:   2281.701 ms/op
+                 executeQuery·p0.50:   2285.896 ms/op
+                 executeQuery·p0.90:   2290.090 ms/op
+                 executeQuery·p0.95:   2290.090 ms/op
+                 executeQuery·p0.99:   2290.090 ms/op
+                 executeQuery·p0.999:  2290.090 ms/op
+                 executeQuery·p0.9999: 2290.090 ms/op
+                 executeQuery·p1.00:   2290.090 ms/op
+
+Iteration   4: 2284.218 ±(99.9%) 8.846 ms/op
+                 executeQuery·p0.00:   2281.701 ms/op
+                 executeQuery·p0.50:   2285.896 ms/op
+                 executeQuery·p0.90:   2285.896 ms/op
+                 executeQuery·p0.95:   2285.896 ms/op
+                 executeQuery·p0.99:   2285.896 ms/op
+                 executeQuery·p0.999:  2285.896 ms/op
+                 executeQuery·p0.9999: 2285.896 ms/op
+                 executeQuery·p1.00:   2285.896 ms/op
+
+Iteration   5: 2285.057 ±(99.9%) 13.513 ms/op
+                 executeQuery·p0.00:   2281.701 ms/op
+                 executeQuery·p0.50:   2285.896 ms/op
+                 executeQuery·p0.90:   2290.090 ms/op
+                 executeQuery·p0.95:   2290.090 ms/op
+                 executeQuery·p0.99:   2290.090 ms/op
+                 executeQuery·p0.999:  2290.090 ms/op
+                 executeQuery·p0.9999: 2290.090 ms/op
+                 executeQuery·p1.00:   2290.090 ms/op
+
+
+
+Result "AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.NonVectorisedNonSimd_Records.executeQuery":
+  N = 26
+  mean =   2157.243 ±(99.9%) 114.957 ms/op
+
+  Histogram, ms/op:
+    [1900.000, 1925.000) = 0 
+    [1925.000, 1950.000) = 0 
+    [1950.000, 1975.000) = 9 
+    [1975.000, 2000.000) = 0 
+    [2000.000, 2025.000) = 1 
+    [2025.000, 2050.000) = 0 
+    [2050.000, 2075.000) = 0 
+    [2075.000, 2100.000) = 0 
+    [2100.000, 2125.000) = 0 
+    [2125.000, 2150.000) = 0 
+    [2150.000, 2175.000) = 1 
+    [2175.000, 2200.000) = 0 
+    [2200.000, 2225.000) = 0 
+    [2225.000, 2250.000) = 0 
+    [2250.000, 2275.000) = 0 
+
+  Percentiles, ms/op:
+      p(0.0000) =   1956.643 ms/op
+     p(50.0000) =   2281.701 ms/op
+     p(90.0000) =   2287.154 ms/op
+     p(95.0000) =   2290.090 ms/op
+     p(99.0000) =   2290.090 ms/op
+     p(99.9000) =   2290.090 ms/op
+     p(99.9900) =   2290.090 ms/op
+     p(99.9990) =   2290.090 ms/op
+     p(99.9999) =   2290.090 ms/op
+    p(100.0000) =   2290.090 ms/op
+
+
+# JMH version: 1.36
+# VM version: JDK 20.0.1, OpenJDK 64-Bit Server VM, 20.0.1+9-29
+# VM invoker: /usr/lib/jvm/openjdk-20.0.1/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-opens=java.base/java.nio=ALL-UNNAMED -Darrow.enable_unsafe_memory_access=true -Darrow.enable_null_check_for_get=false --enable-preview -Xmx32g -Xms16g
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimd.executeQuery
+# Parameters: (tpchInstance = /nvtmp/AethraTestData/tpch/sf-10)
+
+# Run progress: 33.33% complete, ETA 00:11:10
+# Fork: 1 of 1
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: 3160.408 ±(99.9%) 1484.605 ms/op
+# Warmup Iteration   2: 3142.582 ±(99.9%) 537.706 ms/op
+# Warmup Iteration   3: 3070.231 ±(99.9%) 73.397 ms/op
+# Warmup Iteration   4: 3078.619 ±(99.9%) 151.715 ms/op
+# Warmup Iteration   5: 3073.376 ±(99.9%) 40.655 ms/op
+Iteration   1: 3067.085 ±(99.9%) 60.098 ms/op
+                 executeQuery·p0.00:   3053.453 ms/op
+                 executeQuery·p0.50:   3070.231 ms/op
+                 executeQuery·p0.90:   3074.425 ms/op
+                 executeQuery·p0.95:   3074.425 ms/op
+                 executeQuery·p0.99:   3074.425 ms/op
+                 executeQuery·p0.999:  3074.425 ms/op
+                 executeQuery·p0.9999: 3074.425 ms/op
+                 executeQuery·p1.00:   3074.425 ms/op
+
+Iteration   2: 3070.231 ±(99.9%) 0.001 ms/op
+                 executeQuery·p0.00:   3070.231 ms/op
+                 executeQuery·p0.50:   3070.231 ms/op
+                 executeQuery·p0.90:   3070.231 ms/op
+                 executeQuery·p0.95:   3070.231 ms/op
+                 executeQuery·p0.99:   3070.231 ms/op
+                 executeQuery·p0.999:  3070.231 ms/op
+                 executeQuery·p0.9999: 3070.231 ms/op
+                 executeQuery·p1.00:   3070.231 ms/op
+
+Iteration   3: 3068.133 ±(99.9%) 64.519 ms/op
+                 executeQuery·p0.00:   3053.453 ms/op
+                 executeQuery·p0.50:   3072.328 ms/op
+                 executeQuery·p0.90:   3074.425 ms/op
+                 executeQuery·p0.95:   3074.425 ms/op
+                 executeQuery·p0.99:   3074.425 ms/op
+                 executeQuery·p0.999:  3074.425 ms/op
+                 executeQuery·p0.9999: 3074.425 ms/op
+                 executeQuery·p1.00:   3074.425 ms/op
+
+Iteration   4: 3077.571 ±(99.9%) 13.552 ms/op
+                 executeQuery·p0.00:   3074.425 ms/op
+                 executeQuery·p0.50:   3078.619 ms/op
+                 executeQuery·p0.90:   3078.619 ms/op
+                 executeQuery·p0.95:   3078.619 ms/op
+                 executeQuery·p0.99:   3078.619 ms/op
+                 executeQuery·p0.999:  3078.619 ms/op
+                 executeQuery·p0.9999: 3078.619 ms/op
+                 executeQuery·p1.00:   3078.619 ms/op
+
+Iteration   5: 3071.279 ±(99.9%) 25.950 ms/op
+                 executeQuery·p0.00:   3066.036 ms/op
+                 executeQuery·p0.50:   3072.328 ms/op
+                 executeQuery·p0.90:   3074.425 ms/op
+                 executeQuery·p0.95:   3074.425 ms/op
+                 executeQuery·p0.99:   3074.425 ms/op
+                 executeQuery·p0.999:  3074.425 ms/op
+                 executeQuery·p0.9999: 3074.425 ms/op
+                 executeQuery·p1.00:   3074.425 ms/op
+
+
+
+Result "AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimd.executeQuery":
+  N = 20
+  mean =   3070.860 ±(99.9%) 5.941 ms/op
+
+  Histogram, ms/op:
+    [3050.000, 3052.500) = 0 
+    [3052.500, 3055.000) = 2 
+    [3055.000, 3057.500) = 0 
+    [3057.500, 3060.000) = 0 
+    [3060.000, 3062.500) = 0 
+    [3062.500, 3065.000) = 0 
+    [3065.000, 3067.500) = 1 
+    [3067.500, 3070.000) = 0 
+    [3070.000, 3072.500) = 8 
+    [3072.500, 3075.000) = 6 
+    [3075.000, 3077.500) = 0 
+
+  Percentiles, ms/op:
+      p(0.0000) =   3053.453 ms/op
+     p(50.0000) =   3070.231 ms/op
+     p(90.0000) =   3078.619 ms/op
+     p(95.0000) =   3078.619 ms/op
+     p(99.0000) =   3078.619 ms/op
+     p(99.9000) =   3078.619 ms/op
+     p(99.9900) =   3078.619 ms/op
+     p(99.9990) =   3078.619 ms/op
+     p(99.9999) =   3078.619 ms/op
+    p(100.0000) =   3078.619 ms/op
+
+
+# JMH version: 1.36
+# VM version: JDK 20.0.1, OpenJDK 64-Bit Server VM, 20.0.1+9-29
+# VM invoker: /usr/lib/jvm/openjdk-20.0.1/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-opens=java.base/java.nio=ALL-UNNAMED -Darrow.enable_unsafe_memory_access=true -Darrow.enable_null_check_for_get=false --enable-preview -Xmx32g -Xms16g
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimdReducedSelVecUse.executeQuery
+# Parameters: (tpchInstance = /nvtmp/AethraTestData/tpch/sf-10)
+
+# Run progress: 44.44% complete, ETA 00:09:34
+# Fork: 1 of 1
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: 2859.467 ±(99.9%) 995.202 ms/op
+# Warmup Iteration   2: 2809.135 ±(99.9%) 727.391 ms/op
+# Warmup Iteration   3: 2758.803 ±(99.9%) 25.950 ms/op
+# Warmup Iteration   4: 2754.609 ±(99.9%) 46.288 ms/op
+# Warmup Iteration   5: 2770.338 ±(99.9%) 71.709 ms/op
+Iteration   1: 2759.852 ±(99.9%) 73.397 ms/op
+                 executeQuery·p0.00:   2751.463 ms/op
+                 executeQuery·p0.50:   2755.658 ms/op
+                 executeQuery·p0.90:   2776.629 ms/op
+                 executeQuery·p0.95:   2776.629 ms/op
+                 executeQuery·p0.99:   2776.629 ms/op
+                 executeQuery·p0.999:  2776.629 ms/op
+                 executeQuery·p0.9999: 2776.629 ms/op
+                 executeQuery·p1.00:   2776.629 ms/op
+
+Iteration   2: 2785.018 ±(99.9%) 175.651 ms/op
+                 executeQuery·p0.00:   2759.852 ms/op
+                 executeQuery·p0.50:   2782.921 ms/op
+                 executeQuery·p0.90:   2814.378 ms/op
+                 executeQuery·p0.95:   2814.378 ms/op
+                 executeQuery·p0.99:   2814.378 ms/op
+                 executeQuery·p0.999:  2814.378 ms/op
+                 executeQuery·p0.9999: 2814.378 ms/op
+                 executeQuery·p1.00:   2814.378 ms/op
+
+Iteration   3: 2785.018 ±(99.9%) 175.651 ms/op
+                 executeQuery·p0.00:   2751.463 ms/op
+                 executeQuery·p0.50:   2787.115 ms/op
+                 executeQuery·p0.90:   2814.378 ms/op
+                 executeQuery·p0.95:   2814.378 ms/op
+                 executeQuery·p0.99:   2814.378 ms/op
+                 executeQuery·p0.999:  2814.378 ms/op
+                 executeQuery·p0.9999: 2814.378 ms/op
+                 executeQuery·p1.00:   2814.378 ms/op
+
+Iteration   4: 2772.435 ±(99.9%) 127.127 ms/op
+                 executeQuery·p0.00:   2759.852 ms/op
+                 executeQuery·p0.50:   2764.046 ms/op
+                 executeQuery·p0.90:   2801.795 ms/op
+                 executeQuery·p0.95:   2801.795 ms/op
+                 executeQuery·p0.99:   2801.795 ms/op
+                 executeQuery·p0.999:  2801.795 ms/op
+                 executeQuery·p0.9999: 2801.795 ms/op
+                 executeQuery·p1.00:   2801.795 ms/op
+
+Iteration   5: 2774.532 ±(99.9%) 51.899 ms/op
+                 executeQuery·p0.00:   2768.241 ms/op
+                 executeQuery·p0.50:   2772.435 ms/op
+                 executeQuery·p0.90:   2785.018 ms/op
+                 executeQuery·p0.95:   2785.018 ms/op
+                 executeQuery·p0.99:   2785.018 ms/op
+                 executeQuery·p0.999:  2785.018 ms/op
+                 executeQuery·p0.9999: 2785.018 ms/op
+                 executeQuery·p1.00:   2785.018 ms/op
+
+
+
+Result "AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimdReducedSelVecUse.executeQuery":
+  N = 20
+  mean =   2775.371 ±(99.9%) 17.729 ms/op
+
+  Histogram, ms/op:
+    [2750.000, 2755.000) = 2 
+    [2755.000, 2760.000) = 4 
+    [2760.000, 2765.000) = 3 
+    [2765.000, 2770.000) = 2 
+    [2770.000, 2775.000) = 0 
+    [2775.000, 2780.000) = 3 
+    [2780.000, 2785.000) = 0 
+    [2785.000, 2790.000) = 1 
+    [2790.000, 2795.000) = 0 
+    [2795.000, 2800.000) = 1 
+    [2800.000, 2805.000) = 2 
+    [2805.000, 2810.000) = 0 
+    [2810.000, 2815.000) = 2 
+
+  Percentiles, ms/op:
+      p(0.0000) =   2751.463 ms/op
+     p(50.0000) =   2768.241 ms/op
+     p(90.0000) =   2813.120 ms/op
+     p(95.0000) =   2814.378 ms/op
+     p(99.0000) =   2814.378 ms/op
+     p(99.9000) =   2814.378 ms/op
+     p(99.9900) =   2814.378 ms/op
+     p(99.9990) =   2814.378 ms/op
+     p(99.9999) =   2814.378 ms/op
+    p(100.0000) =   2814.378 ms/op
+
+
+# JMH version: 1.36
+# VM version: JDK 20.0.1, OpenJDK 64-Bit Server VM, 20.0.1+9-29
+# VM invoker: /usr/lib/jvm/openjdk-20.0.1/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-opens=java.base/java.nio=ALL-UNNAMED -Darrow.enable_unsafe_memory_access=true -Darrow.enable_null_check_for_get=false --enable-preview -Xmx32g -Xms16g
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimdReducedSelVecUse_Class.executeQuery
+# Parameters: (tpchInstance = /nvtmp/AethraTestData/tpch/sf-10)
+
+# Run progress: 55.56% complete, ETA 00:07:36
+# Fork: 1 of 1
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: 2739.929 ±(99.9%) 819.817 ms/op
+# Warmup Iteration   2: 2715.812 ±(99.9%) 605.447 ms/op
+# Warmup Iteration   3: 2691.695 ±(99.9%) 257.484 ms/op
+# Warmup Iteration   4: 2668.626 ±(99.9%) 25.950 ms/op
+# Warmup Iteration   5: 2671.772 ±(99.9%) 31.296 ms/op
+Iteration   1: 2665.480 ±(99.9%) 27.104 ms/op
+                 executeQuery·p0.00:   2659.189 ms/op
+                 executeQuery·p0.50:   2667.577 ms/op
+                 executeQuery·p0.90:   2667.577 ms/op
+                 executeQuery·p0.95:   2667.577 ms/op
+                 executeQuery·p0.99:   2667.577 ms/op
+                 executeQuery·p0.999:  2667.577 ms/op
+                 executeQuery·p0.9999: 2667.577 ms/op
+                 executeQuery·p1.00:   2667.577 ms/op
+
+Iteration   2: 2670.723 ±(99.9%) 25.950 ms/op
+                 executeQuery·p0.00:   2667.577 ms/op
+                 executeQuery·p0.50:   2669.674 ms/op
+                 executeQuery·p0.90:   2675.966 ms/op
+                 executeQuery·p0.95:   2675.966 ms/op
+                 executeQuery·p0.99:   2675.966 ms/op
+                 executeQuery·p0.999:  2675.966 ms/op
+                 executeQuery·p0.9999: 2675.966 ms/op
+                 executeQuery·p1.00:   2675.966 ms/op
+
+Iteration   3: 2683.306 ±(99.9%) 89.551 ms/op
+                 executeQuery·p0.00:   2667.577 ms/op
+                 executeQuery·p0.50:   2682.257 ms/op
+                 executeQuery·p0.90:   2701.132 ms/op
+                 executeQuery·p0.95:   2701.132 ms/op
+                 executeQuery·p0.99:   2701.132 ms/op
+                 executeQuery·p0.999:  2701.132 ms/op
+                 executeQuery·p0.9999: 2701.132 ms/op
+                 executeQuery·p1.00:   2701.132 ms/op
+
+Iteration   4: 2667.577 ±(99.9%) 110.650 ms/op
+                 executeQuery·p0.00:   2654.994 ms/op
+                 executeQuery·p0.50:   2661.286 ms/op
+                 executeQuery·p0.90:   2692.743 ms/op
+                 executeQuery·p0.95:   2692.743 ms/op
+                 executeQuery·p0.99:   2692.743 ms/op
+                 executeQuery·p0.999:  2692.743 ms/op
+                 executeQuery·p0.9999: 2692.743 ms/op
+                 executeQuery·p1.00:   2692.743 ms/op
+
+Iteration   5: 2661.286 ±(99.9%) 15.648 ms/op
+                 executeQuery·p0.00:   2659.189 ms/op
+                 executeQuery·p0.50:   2661.286 ms/op
+                 executeQuery·p0.90:   2663.383 ms/op
+                 executeQuery·p0.95:   2663.383 ms/op
+                 executeQuery·p0.99:   2663.383 ms/op
+                 executeQuery·p0.999:  2663.383 ms/op
+                 executeQuery·p0.9999: 2663.383 ms/op
+                 executeQuery·p1.00:   2663.383 ms/op
+
+
+
+Result "AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimdReducedSelVecUse_Class.executeQuery":
+  N = 20
+  mean =   2669.674 ±(99.9%) 10.335 ms/op
+
+  Histogram, ms/op:
+    [2650.000, 2655.000) = 1 
+    [2655.000, 2660.000) = 4 
+    [2660.000, 2665.000) = 3 
+    [2665.000, 2670.000) = 6 
+    [2670.000, 2675.000) = 1 
+    [2675.000, 2680.000) = 1 
+    [2680.000, 2685.000) = 2 
+    [2685.000, 2690.000) = 0 
+    [2690.000, 2695.000) = 1 
+    [2695.000, 2700.000) = 0 
+    [2700.000, 2705.000) = 1 
+
+  Percentiles, ms/op:
+      p(0.0000) =   2654.994 ms/op
+     p(50.0000) =   2667.577 ms/op
+     p(90.0000) =   2691.904 ms/op
+     p(95.0000) =   2700.712 ms/op
+     p(99.0000) =   2701.132 ms/op
+     p(99.9000) =   2701.132 ms/op
+     p(99.9900) =   2701.132 ms/op
+     p(99.9990) =   2701.132 ms/op
+     p(99.9999) =   2701.132 ms/op
+    p(100.0000) =   2701.132 ms/op
+
+
+# JMH version: 1.36
+# VM version: JDK 20.0.1, OpenJDK 64-Bit Server VM, 20.0.1+9-29
+# VM invoker: /usr/lib/jvm/openjdk-20.0.1/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-opens=java.base/java.nio=ALL-UNNAMED -Darrow.enable_unsafe_memory_access=true -Darrow.enable_null_check_for_get=false --enable-preview -Xmx32g -Xms16g
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimdReducedSelVecUse_Record.executeQuery
+# Parameters: (tpchInstance = /nvtmp/AethraTestData/tpch/sf-10)
+
+# Run progress: 66.67% complete, ETA 00:05:39
+# Fork: 1 of 1
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: 2888.827 ±(99.9%) 938.731 ms/op
+# Warmup Iteration   2: 2733.638 ±(99.9%) 270.470 ms/op
+# Warmup Iteration   3: 2742.026 ±(99.9%) 266.824 ms/op
+# Warmup Iteration   4: 2667.577 ±(99.9%) 22.130 ms/op
+# Warmup Iteration   5: 2670.723 ±(99.9%) 34.105 ms/op
+Iteration   1: 2971.664 ±(99.9%) 388.694 ms/op
+                 executeQuery·p0.00:   2881.487 ms/op
+                 executeQuery·p0.50:   3001.025 ms/op
+                 executeQuery·p0.90:   3003.122 ms/op
+                 executeQuery·p0.95:   3003.122 ms/op
+                 executeQuery·p0.99:   3003.122 ms/op
+                 executeQuery·p0.999:  3003.122 ms/op
+                 executeQuery·p0.9999: 3003.122 ms/op
+                 executeQuery·p1.00:   3003.122 ms/op
+
+Iteration   2: 3010.462 ±(99.9%) 25.950 ms/op
+                 executeQuery·p0.00:   3007.316 ms/op
+                 executeQuery·p0.50:   3009.413 ms/op
+                 executeQuery·p0.90:   3015.705 ms/op
+                 executeQuery·p0.95:   3015.705 ms/op
+                 executeQuery·p0.99:   3015.705 ms/op
+                 executeQuery·p0.999:  3015.705 ms/op
+                 executeQuery·p0.9999: 3015.705 ms/op
+                 executeQuery·p1.00:   3015.705 ms/op
+
+Iteration   3: 3001.025 ±(99.9%) 46.945 ms/op
+                 executeQuery·p0.00:   2990.539 ms/op
+                 executeQuery·p0.50:   3003.122 ms/op
+                 executeQuery·p0.90:   3007.316 ms/op
+                 executeQuery·p0.95:   3007.316 ms/op
+                 executeQuery·p0.99:   3007.316 ms/op
+                 executeQuery·p0.999:  3007.316 ms/op
+                 executeQuery·p0.9999: 3007.316 ms/op
+                 executeQuery·p1.00:   3007.316 ms/op
+
+Iteration   4: 2999.976 ±(99.9%) 25.950 ms/op
+                 executeQuery·p0.00:   2994.733 ms/op
+                 executeQuery·p0.50:   3001.025 ms/op
+                 executeQuery·p0.90:   3003.122 ms/op
+                 executeQuery·p0.95:   3003.122 ms/op
+                 executeQuery·p0.99:   3003.122 ms/op
+                 executeQuery·p0.999:  3003.122 ms/op
+                 executeQuery·p0.9999: 3003.122 ms/op
+                 executeQuery·p1.00:   3003.122 ms/op
+
+Iteration   5: 3003.122 ±(99.9%) 22.130 ms/op
+                 executeQuery·p0.00:   2998.927 ms/op
+                 executeQuery·p0.50:   3003.122 ms/op
+                 executeQuery·p0.90:   3007.316 ms/op
+                 executeQuery·p0.95:   3007.316 ms/op
+                 executeQuery·p0.99:   3007.316 ms/op
+                 executeQuery·p0.999:  3007.316 ms/op
+                 executeQuery·p0.9999: 3007.316 ms/op
+                 executeQuery·p1.00:   3007.316 ms/op
+
+
+
+Result "AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimdReducedSelVecUse_Record.executeQuery":
+  N = 20
+  mean =   2997.250 ±(99.9%) 24.142 ms/op
+
+  Histogram, ms/op:
+    [2800.000, 2825.000) = 0 
+    [2825.000, 2850.000) = 0 
+    [2850.000, 2875.000) = 0 
+    [2875.000, 2900.000) = 1 
+    [2900.000, 2925.000) = 0 
+    [2925.000, 2950.000) = 0 
+    [2950.000, 2975.000) = 0 
+    [2975.000, 3000.000) = 5 
+    [3000.000, 3025.000) = 14 
+    [3025.000, 3050.000) = 0 
+    [3050.000, 3075.000) = 0 
+
+  Percentiles, ms/op:
+      p(0.0000) =   2881.487 ms/op
+     p(50.0000) =   3003.122 ms/op
+     p(90.0000) =   3011.091 ms/op
+     p(95.0000) =   3015.495 ms/op
+     p(99.0000) =   3015.705 ms/op
+     p(99.9000) =   3015.705 ms/op
+     p(99.9900) =   3015.705 ms/op
+     p(99.9990) =   3015.705 ms/op
+     p(99.9999) =   3015.705 ms/op
+    p(100.0000) =   3015.705 ms/op
+
+
+# JMH version: 1.36
+# VM version: JDK 20.0.1, OpenJDK 64-Bit Server VM, 20.0.1+9-29
+# VM invoker: /usr/lib/jvm/openjdk-20.0.1/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-opens=java.base/java.nio=ALL-UNNAMED -Darrow.enable_unsafe_memory_access=true -Darrow.enable_null_check_for_get=false --enable-preview -Xmx32g -Xms16g
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimd_Class.executeQuery
+# Parameters: (tpchInstance = /nvtmp/AethraTestData/tpch/sf-10)
+
+# Run progress: 77.78% complete, ETA 00:03:46
+# Fork: 1 of 1
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: 2989.490 ±(99.9%) 779.708 ms/op
+# Warmup Iteration   2: 3034.579 ±(99.9%) 499.520 ms/op
+# Warmup Iteration   3: 2976.907 ±(99.9%) 131.622 ms/op
+# Warmup Iteration   4: 2987.393 ±(99.9%) 34.105 ms/op
+# Warmup Iteration   5: 2979.004 ±(99.9%) 133.469 ms/op
+Iteration   1: 2982.150 ±(99.9%) 132.780 ms/op
+                 executeQuery·p0.00:   2956.984 ms/op
+                 executeQuery·p0.50:   2982.150 ms/op
+                 executeQuery·p0.90:   3007.316 ms/op
+                 executeQuery·p0.95:   3007.316 ms/op
+                 executeQuery·p0.99:   3007.316 ms/op
+                 executeQuery·p0.999:  3007.316 ms/op
+                 executeQuery·p0.9999: 3007.316 ms/op
+                 executeQuery·p1.00:   3007.316 ms/op
+
+Iteration   2: 3006.267 ±(99.9%) 149.070 ms/op
+                 executeQuery·p0.00:   2986.344 ms/op
+                 executeQuery·p0.50:   3005.219 ms/op
+                 executeQuery·p0.90:   3028.287 ms/op
+                 executeQuery·p0.95:   3028.287 ms/op
+                 executeQuery·p0.99:   3028.287 ms/op
+                 executeQuery·p0.999:  3028.287 ms/op
+                 executeQuery·p0.9999: 3028.287 ms/op
+                 executeQuery·p1.00:   3028.287 ms/op
+
+Iteration   3: 3005.219 ±(99.9%) 95.185 ms/op
+                 executeQuery·p0.00:   2990.539 ms/op
+                 executeQuery·p0.50:   3005.219 ms/op
+                 executeQuery·p0.90:   3019.899 ms/op
+                 executeQuery·p0.95:   3019.899 ms/op
+                 executeQuery·p0.99:   3019.899 ms/op
+                 executeQuery·p0.999:  3019.899 ms/op
+                 executeQuery·p0.9999: 3019.899 ms/op
+                 executeQuery·p1.00:   3019.899 ms/op
+
+Iteration   4: 2995.782 ±(99.9%) 74.637 ms/op
+                 executeQuery·p0.00:   2982.150 ms/op
+                 executeQuery·p0.50:   2996.830 ms/op
+                 executeQuery·p0.90:   3007.316 ms/op
+                 executeQuery·p0.95:   3007.316 ms/op
+                 executeQuery·p0.99:   3007.316 ms/op
+                 executeQuery·p0.999:  3007.316 ms/op
+                 executeQuery·p0.9999: 3007.316 ms/op
+                 executeQuery·p1.00:   3007.316 ms/op
+
+Iteration   5: 2990.539 ±(99.9%) 22.130 ms/op
+                 executeQuery·p0.00:   2986.344 ms/op
+                 executeQuery·p0.50:   2990.539 ms/op
+                 executeQuery·p0.90:   2994.733 ms/op
+                 executeQuery·p0.95:   2994.733 ms/op
+                 executeQuery·p0.99:   2994.733 ms/op
+                 executeQuery·p0.999:  2994.733 ms/op
+                 executeQuery·p0.9999: 2994.733 ms/op
+                 executeQuery·p1.00:   2994.733 ms/op
+
+
+
+Result "AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimd_Class.executeQuery":
+  N = 20
+  mean =   2995.991 ±(99.9%) 14.905 ms/op
+
+  Histogram, ms/op:
+    [2950.000, 2955.000) = 0 
+    [2955.000, 2960.000) = 1 
+    [2960.000, 2965.000) = 0 
+    [2965.000, 2970.000) = 0 
+    [2970.000, 2975.000) = 0 
+    [2975.000, 2980.000) = 0 
+    [2980.000, 2985.000) = 3 
+    [2985.000, 2990.000) = 3 
+    [2990.000, 2995.000) = 6 
+    [2995.000, 3000.000) = 0 
+    [3000.000, 3005.000) = 1 
+    [3005.000, 3010.000) = 2 
+    [3010.000, 3015.000) = 0 
+    [3015.000, 3020.000) = 2 
+    [3020.000, 3025.000) = 1 
+
+  Percentiles, ms/op:
+      p(0.0000) =   2956.984 ms/op
+     p(50.0000) =   2990.539 ms/op
+     p(90.0000) =   3023.674 ms/op
+     p(95.0000) =   3028.078 ms/op
+     p(99.0000) =   3028.287 ms/op
+     p(99.9000) =   3028.287 ms/op
+     p(99.9900) =   3028.287 ms/op
+     p(99.9990) =   3028.287 ms/op
+     p(99.9999) =   3028.287 ms/op
+    p(100.0000) =   3028.287 ms/op
+
+
+# JMH version: 1.36
+# VM version: JDK 20.0.1, OpenJDK 64-Bit Server VM, 20.0.1+9-29
+# VM invoker: /usr/lib/jvm/openjdk-20.0.1/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-opens=java.base/java.nio=ALL-UNNAMED -Darrow.enable_unsafe_memory_access=true -Darrow.enable_null_check_for_get=false --enable-preview -Xmx32g -Xms16g
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimd_Records.executeQuery
+# Parameters: (tpchInstance = /nvtmp/AethraTestData/tpch/sf-10)
+
+# Run progress: 88.89% complete, ETA 00:01:54
+# Fork: 1 of 1
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: 3165.651 ±(99.9%) 1171.295 ms/op
+# Warmup Iteration   2: 2987.393 ±(99.9%) 202.068 ms/op
+# Warmup Iteration   3: 3013.607 ±(99.9%) 166.343 ms/op
+# Warmup Iteration   4: 3033.530 ±(99.9%) 55.875 ms/op
+# Warmup Iteration   5: 3033.530 ±(99.9%) 55.875 ms/op
+Iteration   1: 3319.792 ±(99.9%) 361.268 ms/op
+                 executeQuery·p0.00:   3238.003 ms/op
+                 executeQuery·p0.50:   3340.763 ms/op
+                 executeQuery·p0.90:   3359.638 ms/op
+                 executeQuery·p0.95:   3359.638 ms/op
+                 executeQuery·p0.99:   3359.638 ms/op
+                 executeQuery·p0.999:  3359.638 ms/op
+                 executeQuery·p0.9999: 3359.638 ms/op
+                 executeQuery·p1.00:   3359.638 ms/op
+
+Iteration   2: 3356.841 ±(99.9%) 220.893 ms/op
+                 executeQuery·p0.00:   3342.860 ms/op
+                 executeQuery·p0.50:   3363.832 ms/op
+                 executeQuery·p0.90:   3363.832 ms/op
+                 executeQuery·p0.95:   3363.832 ms/op
+                 executeQuery·p0.99:   3363.832 ms/op
+                 executeQuery·p0.999:  3363.832 ms/op
+                 executeQuery·p0.9999: 3363.832 ms/op
+                 executeQuery·p1.00:   3363.832 ms/op
+
+Iteration   3: 3361.036 ±(99.9%) 289.699 ms/op
+                 executeQuery·p0.00:   3342.860 ms/op
+                 executeQuery·p0.50:   3368.026 ms/op
+                 executeQuery·p0.90:   3372.220 ms/op
+                 executeQuery·p0.95:   3372.220 ms/op
+                 executeQuery·p0.99:   3372.220 ms/op
+                 executeQuery·p0.999:  3372.220 ms/op
+                 executeQuery·p0.9999: 3372.220 ms/op
+                 executeQuery·p1.00:   3372.220 ms/op
+
+Iteration   4: 3359.638 ±(99.9%) 202.452 ms/op
+                 executeQuery·p0.00:   3347.055 ms/op
+                 executeQuery·p0.50:   3363.832 ms/op
+                 executeQuery·p0.90:   3368.026 ms/op
+                 executeQuery·p0.95:   3368.026 ms/op
+                 executeQuery·p0.99:   3368.026 ms/op
+                 executeQuery·p0.999:  3368.026 ms/op
+                 executeQuery·p0.9999: 3368.026 ms/op
+                 executeQuery·p1.00:   3368.026 ms/op
+
+Iteration   5: 3365.230 ±(99.9%) 159.288 ms/op
+                 executeQuery·p0.00:   3355.443 ms/op
+                 executeQuery·p0.50:   3368.026 ms/op
+                 executeQuery·p0.90:   3372.220 ms/op
+                 executeQuery·p0.95:   3372.220 ms/op
+                 executeQuery·p0.99:   3372.220 ms/op
+                 executeQuery·p0.999:  3372.220 ms/op
+                 executeQuery·p0.9999: 3372.220 ms/op
+                 executeQuery·p1.00:   3372.220 ms/op
+
+
+
+Result "AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimd_Records.executeQuery":
+  N = 16
+  mean =   3350.462 ±(99.9%) 32.941 ms/op
+
+  Histogram, ms/op:
+    [3200.000, 3212.500) = 0 
+    [3212.500, 3225.000) = 0 
+    [3225.000, 3237.500) = 0 
+    [3237.500, 3250.000) = 1 
+    [3250.000, 3262.500) = 0 
+    [3262.500, 3275.000) = 0 
+    [3275.000, 3287.500) = 0 
+    [3287.500, 3300.000) = 0 
+    [3300.000, 3312.500) = 0 
+    [3312.500, 3325.000) = 0 
+    [3325.000, 3337.500) = 1 
+    [3337.500, 3350.000) = 3 
+    [3350.000, 3362.500) = 3 
+    [3362.500, 3375.000) = 8 
+    [3375.000, 3387.500) = 0 
+
+  Percentiles, ms/op:
+      p(0.0000) =   3238.003 ms/op
+     p(50.0000) =   3361.735 ms/op
+     p(90.0000) =   3372.220 ms/op
+     p(95.0000) =   3372.220 ms/op
+     p(99.0000) =   3372.220 ms/op
+     p(99.9000) =   3372.220 ms/op
+     p(99.9900) =   3372.220 ms/op
+     p(99.9990) =   3372.220 ms/op
+     p(99.9999) =   3372.220 ms/op
+    p(100.0000) =   3372.220 ms/op
+
+
+# Run complete. Total time: 00:17:09
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                                                                                                                    (tpchInstance)    Mode  Cnt     Score     Error  Units
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.NonVectorisedNonSimd.executeQuery                                           /nvtmp/AethraTestData/tpch/sf-10  sample   28  1989.448 ±  22.284  ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.NonVectorisedNonSimd.executeQuery:executeQuery·p0.00                        /nvtmp/AethraTestData/tpch/sf-10  sample       1954.546            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.NonVectorisedNonSimd.executeQuery:executeQuery·p0.50                        /nvtmp/AethraTestData/tpch/sf-10  sample       1967.129            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.NonVectorisedNonSimd.executeQuery:executeQuery·p0.90                        /nvtmp/AethraTestData/tpch/sf-10  sample       2030.253            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.NonVectorisedNonSimd.executeQuery:executeQuery·p0.95                        /nvtmp/AethraTestData/tpch/sf-10  sample       2042.521            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.NonVectorisedNonSimd.executeQuery:executeQuery·p0.99                        /nvtmp/AethraTestData/tpch/sf-10  sample       2051.015            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.NonVectorisedNonSimd.executeQuery:executeQuery·p0.999                       /nvtmp/AethraTestData/tpch/sf-10  sample       2051.015            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.NonVectorisedNonSimd.executeQuery:executeQuery·p0.9999                      /nvtmp/AethraTestData/tpch/sf-10  sample       2051.015            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.NonVectorisedNonSimd.executeQuery:executeQuery·p1.00                        /nvtmp/AethraTestData/tpch/sf-10  sample       2051.015            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.NonVectorisedNonSimd_Class.executeQuery                                     /nvtmp/AethraTestData/tpch/sf-10  sample   30  1801.244 ±   3.319  ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.NonVectorisedNonSimd_Class.executeQuery:executeQuery·p0.00                  /nvtmp/AethraTestData/tpch/sf-10  sample       1793.065            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.NonVectorisedNonSimd_Class.executeQuery:executeQuery·p0.50                  /nvtmp/AethraTestData/tpch/sf-10  sample       1799.356            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.NonVectorisedNonSimd_Class.executeQuery:executeQuery·p0.90                  /nvtmp/AethraTestData/tpch/sf-10  sample       1807.535            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.NonVectorisedNonSimd_Class.executeQuery:executeQuery·p0.95                  /nvtmp/AethraTestData/tpch/sf-10  sample       1814.036            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.NonVectorisedNonSimd_Class.executeQuery:executeQuery·p0.99                  /nvtmp/AethraTestData/tpch/sf-10  sample       1814.036            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.NonVectorisedNonSimd_Class.executeQuery:executeQuery·p0.999                 /nvtmp/AethraTestData/tpch/sf-10  sample       1814.036            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.NonVectorisedNonSimd_Class.executeQuery:executeQuery·p0.9999                /nvtmp/AethraTestData/tpch/sf-10  sample       1814.036            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.NonVectorisedNonSimd_Class.executeQuery:executeQuery·p1.00                  /nvtmp/AethraTestData/tpch/sf-10  sample       1814.036            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.NonVectorisedNonSimd_Records.executeQuery                                   /nvtmp/AethraTestData/tpch/sf-10  sample   26  2157.243 ± 114.957  ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.NonVectorisedNonSimd_Records.executeQuery:executeQuery·p0.00                /nvtmp/AethraTestData/tpch/sf-10  sample       1956.643            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.NonVectorisedNonSimd_Records.executeQuery:executeQuery·p0.50                /nvtmp/AethraTestData/tpch/sf-10  sample       2281.701            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.NonVectorisedNonSimd_Records.executeQuery:executeQuery·p0.90                /nvtmp/AethraTestData/tpch/sf-10  sample       2287.154            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.NonVectorisedNonSimd_Records.executeQuery:executeQuery·p0.95                /nvtmp/AethraTestData/tpch/sf-10  sample       2290.090            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.NonVectorisedNonSimd_Records.executeQuery:executeQuery·p0.99                /nvtmp/AethraTestData/tpch/sf-10  sample       2290.090            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.NonVectorisedNonSimd_Records.executeQuery:executeQuery·p0.999               /nvtmp/AethraTestData/tpch/sf-10  sample       2290.090            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.NonVectorisedNonSimd_Records.executeQuery:executeQuery·p0.9999              /nvtmp/AethraTestData/tpch/sf-10  sample       2290.090            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.NonVectorisedNonSimd_Records.executeQuery:executeQuery·p1.00                /nvtmp/AethraTestData/tpch/sf-10  sample       2290.090            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimd.executeQuery                                              /nvtmp/AethraTestData/tpch/sf-10  sample   20  3070.860 ±   5.941  ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimd.executeQuery:executeQuery·p0.00                           /nvtmp/AethraTestData/tpch/sf-10  sample       3053.453            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimd.executeQuery:executeQuery·p0.50                           /nvtmp/AethraTestData/tpch/sf-10  sample       3070.231            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimd.executeQuery:executeQuery·p0.90                           /nvtmp/AethraTestData/tpch/sf-10  sample       3078.619            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimd.executeQuery:executeQuery·p0.95                           /nvtmp/AethraTestData/tpch/sf-10  sample       3078.619            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimd.executeQuery:executeQuery·p0.99                           /nvtmp/AethraTestData/tpch/sf-10  sample       3078.619            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimd.executeQuery:executeQuery·p0.999                          /nvtmp/AethraTestData/tpch/sf-10  sample       3078.619            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimd.executeQuery:executeQuery·p0.9999                         /nvtmp/AethraTestData/tpch/sf-10  sample       3078.619            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimd.executeQuery:executeQuery·p1.00                           /nvtmp/AethraTestData/tpch/sf-10  sample       3078.619            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimdReducedSelVecUse.executeQuery                              /nvtmp/AethraTestData/tpch/sf-10  sample   20  2775.371 ±  17.729  ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimdReducedSelVecUse.executeQuery:executeQuery·p0.00           /nvtmp/AethraTestData/tpch/sf-10  sample       2751.463            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimdReducedSelVecUse.executeQuery:executeQuery·p0.50           /nvtmp/AethraTestData/tpch/sf-10  sample       2768.241            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimdReducedSelVecUse.executeQuery:executeQuery·p0.90           /nvtmp/AethraTestData/tpch/sf-10  sample       2813.120            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimdReducedSelVecUse.executeQuery:executeQuery·p0.95           /nvtmp/AethraTestData/tpch/sf-10  sample       2814.378            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimdReducedSelVecUse.executeQuery:executeQuery·p0.99           /nvtmp/AethraTestData/tpch/sf-10  sample       2814.378            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimdReducedSelVecUse.executeQuery:executeQuery·p0.999          /nvtmp/AethraTestData/tpch/sf-10  sample       2814.378            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimdReducedSelVecUse.executeQuery:executeQuery·p0.9999         /nvtmp/AethraTestData/tpch/sf-10  sample       2814.378            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimdReducedSelVecUse.executeQuery:executeQuery·p1.00           /nvtmp/AethraTestData/tpch/sf-10  sample       2814.378            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimdReducedSelVecUse_Class.executeQuery                        /nvtmp/AethraTestData/tpch/sf-10  sample   20  2669.674 ±  10.335  ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimdReducedSelVecUse_Class.executeQuery:executeQuery·p0.00     /nvtmp/AethraTestData/tpch/sf-10  sample       2654.994            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimdReducedSelVecUse_Class.executeQuery:executeQuery·p0.50     /nvtmp/AethraTestData/tpch/sf-10  sample       2667.577            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimdReducedSelVecUse_Class.executeQuery:executeQuery·p0.90     /nvtmp/AethraTestData/tpch/sf-10  sample       2691.904            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimdReducedSelVecUse_Class.executeQuery:executeQuery·p0.95     /nvtmp/AethraTestData/tpch/sf-10  sample       2700.712            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimdReducedSelVecUse_Class.executeQuery:executeQuery·p0.99     /nvtmp/AethraTestData/tpch/sf-10  sample       2701.132            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimdReducedSelVecUse_Class.executeQuery:executeQuery·p0.999    /nvtmp/AethraTestData/tpch/sf-10  sample       2701.132            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimdReducedSelVecUse_Class.executeQuery:executeQuery·p0.9999   /nvtmp/AethraTestData/tpch/sf-10  sample       2701.132            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimdReducedSelVecUse_Class.executeQuery:executeQuery·p1.00     /nvtmp/AethraTestData/tpch/sf-10  sample       2701.132            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimdReducedSelVecUse_Record.executeQuery                       /nvtmp/AethraTestData/tpch/sf-10  sample   20  2997.250 ±  24.142  ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimdReducedSelVecUse_Record.executeQuery:executeQuery·p0.00    /nvtmp/AethraTestData/tpch/sf-10  sample       2881.487            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimdReducedSelVecUse_Record.executeQuery:executeQuery·p0.50    /nvtmp/AethraTestData/tpch/sf-10  sample       3003.122            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimdReducedSelVecUse_Record.executeQuery:executeQuery·p0.90    /nvtmp/AethraTestData/tpch/sf-10  sample       3011.091            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimdReducedSelVecUse_Record.executeQuery:executeQuery·p0.95    /nvtmp/AethraTestData/tpch/sf-10  sample       3015.495            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimdReducedSelVecUse_Record.executeQuery:executeQuery·p0.99    /nvtmp/AethraTestData/tpch/sf-10  sample       3015.705            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimdReducedSelVecUse_Record.executeQuery:executeQuery·p0.999   /nvtmp/AethraTestData/tpch/sf-10  sample       3015.705            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimdReducedSelVecUse_Record.executeQuery:executeQuery·p0.9999  /nvtmp/AethraTestData/tpch/sf-10  sample       3015.705            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimdReducedSelVecUse_Record.executeQuery:executeQuery·p1.00    /nvtmp/AethraTestData/tpch/sf-10  sample       3015.705            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimd_Class.executeQuery                                        /nvtmp/AethraTestData/tpch/sf-10  sample   20  2995.991 ±  14.905  ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimd_Class.executeQuery:executeQuery·p0.00                     /nvtmp/AethraTestData/tpch/sf-10  sample       2956.984            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimd_Class.executeQuery:executeQuery·p0.50                     /nvtmp/AethraTestData/tpch/sf-10  sample       2990.539            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimd_Class.executeQuery:executeQuery·p0.90                     /nvtmp/AethraTestData/tpch/sf-10  sample       3023.674            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimd_Class.executeQuery:executeQuery·p0.95                     /nvtmp/AethraTestData/tpch/sf-10  sample       3028.078            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimd_Class.executeQuery:executeQuery·p0.99                     /nvtmp/AethraTestData/tpch/sf-10  sample       3028.287            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimd_Class.executeQuery:executeQuery·p0.999                    /nvtmp/AethraTestData/tpch/sf-10  sample       3028.287            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimd_Class.executeQuery:executeQuery·p0.9999                   /nvtmp/AethraTestData/tpch/sf-10  sample       3028.287            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimd_Class.executeQuery:executeQuery·p1.00                     /nvtmp/AethraTestData/tpch/sf-10  sample       3028.287            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimd_Records.executeQuery                                      /nvtmp/AethraTestData/tpch/sf-10  sample   16  3350.462 ±  32.941  ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimd_Records.executeQuery:executeQuery·p0.00                   /nvtmp/AethraTestData/tpch/sf-10  sample       3238.003            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimd_Records.executeQuery:executeQuery·p0.50                   /nvtmp/AethraTestData/tpch/sf-10  sample       3361.735            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimd_Records.executeQuery:executeQuery·p0.90                   /nvtmp/AethraTestData/tpch/sf-10  sample       3372.220            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimd_Records.executeQuery:executeQuery·p0.95                   /nvtmp/AethraTestData/tpch/sf-10  sample       3372.220            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimd_Records.executeQuery:executeQuery·p0.99                   /nvtmp/AethraTestData/tpch/sf-10  sample       3372.220            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimd_Records.executeQuery:executeQuery·p0.999                  /nvtmp/AethraTestData/tpch/sf-10  sample       3372.220            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimd_Records.executeQuery:executeQuery·p0.9999                 /nvtmp/AethraTestData/tpch/sf-10  sample       3372.220            ms/op
+AethraDB.benchmarks.tpch.q1_no_sort_hard_coded.VectorisedNonSimd_Records.executeQuery:executeQuery·p1.00                   /nvtmp/AethraTestData/tpch/sf-10  sample       3372.220            ms/op
+
+Benchmark result is saved to jmh-result.csv
