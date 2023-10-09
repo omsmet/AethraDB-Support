@@ -16,20 +16,16 @@ def computeCumulativeChildrenTime(start_element):
     return total_time
 
 # The base directory for the datasets
-datasets_path = Path("/nvtmp/AethraTestData/tpch/sf-1")
+scale_factor = "sf-1"
 print("DuckDB Version " + duckdb.__version__ + " - PyArrow Version " + pa.__version__ + " - Single Threaded Mode")
 
 # Execute the query using duckdb and compute the average query time over 10 runs
-temp_profile_file = datasets_path / 'duckdb_profile.json'
+temp_profile_file = Path('duckdb_profile.json')
 
-con = duckdb.connect()
+con = duckdb.connect(scale_factor + ".db")
 con.sql("PRAGMA enable_profiling='json'")
 con.sql("PRAGMA profile_output='" + str(temp_profile_file) + "'")
 con.sql("SET threads TO 1;")
-
-customer = ds.dataset(datasets_path / 'customer.arrow', format='arrow')
-orders = ds.dataset(datasets_path / 'orders.arrow', format='arrow')
-lineitem = ds.dataset(datasets_path / 'lineitem.arrow', format='arrow')
 
 cumulative_optimiser_time = 0
 cumulative_physical_planner_time = 0
@@ -44,27 +40,36 @@ for i in range(number_of_iterations_to_average_over):
     with redirect_stdout(io.StringIO()) as f:
         con.sql("""
                     select
-                        l_orderkey,
-                        sum(l_extendedprice * (1 - l_discount)) as revenue,
-                        o_orderdate,
-                        o_shippriority
+	                    c_custkey,
+	                    c_name,
+	                    sum(l_extendedprice * (1 - l_discount)) as revenue,
+	                    c_acctbal,
+	                    n_name,
+	                    c_address,
+	                    c_phone,
+	                    c_comment
                     from
-                        customer,
-                        orders,
-                        lineitem
+	                    tpch.nation,
+	                    tpch.customer,
+	                    tpch.orders,
+	                    tpch.lineitem
                     where
-                        c_mktsegment = 'BUILDING  '
-                        and c_custkey = o_custkey
-                        and l_orderkey = o_orderkey
-                        and o_orderdate < date '1995-03-15'
-                        and l_shipdate > date '1995-03-15'
+	                    c_custkey = o_custkey
+	                    and l_orderkey = o_orderkey
+	                    and o_orderdate >= date '1993-10-01'
+	                    and o_orderdate < date '1993-10-01' + interval 3 month
+	                    and l_returnflag = 'R'
+	                    and c_nationkey = n_nationkey
                     group by
-                        l_orderkey,
-                        o_orderdate,
-                        o_shippriority
+	                    c_custkey,
+	                    c_name,
+	                    c_acctbal,
+	                    c_phone,
+	                    n_name,
+	                    c_address,
+	                    c_comment
                     -- order by
-                    -- 	revenue desc,
-                    -- 	o_orderdate
+                    -- 	revenue desc;
                 """).show()
 
     # Read the total query time back
@@ -98,4 +103,4 @@ average_exec_time = round(cumulative_exec_time / number_of_iterations_to_average
 average_total_time = round(cumulative_total_time / number_of_iterations_to_average_over, 1)
 
 print("Query,Dataset,Optimiser Time,Physical Planner Time,Planner Time,Execuction Time,Total Time")
-print("TPC-H Q3, " + str(datasets_path) + ", " + str(average_optimiser_time) + ", " + str(average_physical_planner_time) + ", " + str(average_planner_time) + ", " + str(average_exec_time) + ", " + str(average_total_time))
+print("TPC-H Q10, " + scale_factor + ", " + str(average_optimiser_time) + ", " + str(average_physical_planner_time) + ", " + str(average_planner_time) + ", " + str(average_exec_time) + ", " + str(average_total_time))
