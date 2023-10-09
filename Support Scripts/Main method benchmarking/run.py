@@ -11,15 +11,15 @@ import datasets
 
 # Some local configuration definitions
 aethra_jar_path = '/home/olivier/Repositories/AethraDB/target/AethraDB.jar'
-java_executable_path = '/usr/lib/jvm/openjdk-20.0.1/bin/java'
+# java_executable_path = '/usr/lib/jvm/graalvm-jdk-21+35.1/bin/java'
+java_executable_path = '/usr/lib/jvm/java-21-openjdk/bin/java'
 
 # aethra_jar_path = '/home/olivier/AethraDB/AethraDB.jar'
-# java_executable_path = '/home/olivier/external_software/openjdk-20.0.1/bin/java'
+# java_executable_path = '/home/olivier/external_software/graalvm-jdk-21+35.1/bin/java'
 
 java_options = [
     java_executable_path,
     "--add-opens=java.base/java.nio=ALL-UNNAMED",
-    "--add-modules=jdk.incubator.vector",
     "--enable-preview",
     "-Darrow.enable_unsafe_memory_access=true",
     "-Darrow.enable_null_check_for_get=false",

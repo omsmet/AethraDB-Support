@@ -1,0 +1,17 @@
+Benchmark,Dataset,Scale-Factor,Paradigm,Repetitions,ResultSummarised,Planning-Time,Codegen-Time,Compilation-Time,Execution-Time,Total-Time
+tpch_q1,tpch,1,non-vectorised,10,True,15.2,4.2,59.9,222.9,332.9
+tpch_q1,tpch,1,vectorised,10,True,15.3,4.7,58.5,376.1,484.9
+tpch_q1,tpch,10,non-vectorised,10,True,15.1,4.4,59.9,1703.7,1813.4
+tpch_q1,tpch,10,vectorised,10,True,15.0,4.8,60.7,2982.3,3093.2
+tpch_q3,tpch,1,non-vectorised,10,True,15.8,8.2,60.6,202.6,317.5
+tpch_q3,tpch,1,vectorised,10,True,15.7,8.8,60.7,294.1,409.4
+tpch_q3,tpch,10,non-vectorised,10,True,15.8,8.4,61.2,1841.4,1956.9
+tpch_q3,tpch,10,vectorised,10,True,15.9,9.0,62.1,1945.4,2062.5
+tpch_q6,tpch,1,non-vectorised,10,False,14.2,2.2,56.0,81.7,184.1
+tpch_q6,tpch,1,vectorised,10,False,14.1,1.8,55.4,82.6,183.7
+tpch_q6,tpch,10,non-vectorised,10,False,14.2,2.4,57.4,366.0,470.2
+tpch_q6,tpch,10,vectorised,10,False,14.2,2.0,57.5,366.3,469.9
+tpch_q10,tpch,1,non-vectorised,10,True,16.1,14.7,63.0,517.0,640.9
+tpch_q10,tpch,1,vectorised,10,True,16.1,15.9,64.4,494.4,620.8
+tpch_q10,tpch,10,non-vectorised,10,True,16.2,15.0,64.2,5383.7,5508.9
+tpch_q10,tpch,10,vectorised,10,True,16.2,16.2,65.9,4690.7,4819.0

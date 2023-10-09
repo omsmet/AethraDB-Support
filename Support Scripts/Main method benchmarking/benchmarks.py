@@ -70,7 +70,7 @@ benchmarks = {
         'scale_factors': [
             1,
             10,
-            #100,
+            100,
         ],
         'query_file': 'tpch_q1_no_sort.sql',
         'paradigms': [
@@ -87,7 +87,7 @@ benchmarks = {
         'scale_factors': [
             1,
             10,
-            #100,
+            100,
         ],
         'query_file': 'tpch_q3_no_sort.sql',
         'paradigms': [
@@ -104,7 +104,7 @@ benchmarks = {
         'scale_factors': [
             1,
             10,
-            #100,
+            100,
         ],
         'query_file': 'tpch_q6.sql',
         'paradigms': [
@@ -121,7 +121,7 @@ benchmarks = {
         'scale_factors': [
             1,
             10,
-            #100,
+            100,
         ],
         'query_file': 'tpch_q10_no_sort.sql',
         'paradigms': [
