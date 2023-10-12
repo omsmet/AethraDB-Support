@@ -1,0 +1,79 @@
+[16:49] Smet, Olivier
+
+Hi Daniele, I once more have an update from my side, regarding the investigation of the deteriorated query performance of Q3 that we discussed yesterday.
+
+ 
+
+Since yesterday, I have performed some experiments to see were we lost some performance in the new join map, which uses an array of records compared to an array of primitives. To get an idea of where we lost performance, I used the intellij profiler on both the old query implementation and the new one, which gave some interesting insights.
+
+ 
+
+For TPC-H query 3, the "expensive" part of the query is the probe phase of the two joins that exist in this query. This is because for many records on the "probe" side of the joins, no join partner exists in the build phase, and to conclude this fact, we need to probe the table, and sometimes perform key comparisons to see if a table it is a join candidate, or if it is a hash-collision, in which case we effectively follow a collision chain.
+
+ 
+
+In the original query implementation (Q3, Non-Vectorised, SF-10), the combined probing of the hash-tables accounts for roughly 50% of query time. In the probing, roughly 70% is spent performing hash-table lookups, while the remaining 30% is spent in the remainder of the probe (i.e. performing key comparisons, following collision chains etc.).
+
+ 
+
+However, in the new query implementation (also for Q3, Non-Vectorised, SF-10), the combined probing of the hash-tables accounts for roughly 60% of query time, which is already more in a relative sense, but recall that the query also runs longer in an absolute sense. Additionally, the time split within the probing is also different: now, the hash-table lookups account for only ~40% of the probing time, while another 40% is spent on key comparisons, not even including the logic for following the collision chains themselves.
+
+ 
+
+To understand why this could be, let me first illustrate the new approach of doing a lookup:
+
+Using the key, hash it, and use the hash-table to get the index into the array which stores the records
+Get the record from the array, compare the key field against the field and check if they are equal
+If not equal, follow the next pointer from the current record into another record, until either you find a record with matching key, or no more next pointer exists, in which case return that the record does not exist.
+
+This thus amounts to at least 2 index out of bounds checks (1 for the hash table array lookup, 1 for the records array lookup) and 3 memory reads (1 for the hash table lookup, 1 for the record array, and 1 for the key field on the record), but potentially more depending on the collision chain.
+
+For each step in the collision chain, we follow 1 reference to the next record in the chain, and read the key field, and thus does not lead to index out of bounds checks, and causes two memory reads.
+
+ 
+
+Crucially -- given the above profiling information -- it seems that this sequence is more expensive than the old one, where we:
+
+Used the key, hashed it, and used the hash-table to get the index into the array storing keys
+Got the "record key" from the primitive key array using the provided index, and compared this obtained value against the request key to check if they are equal
+And if not, looked up the next key index in another "next array" which stored collision chains, and use this next key index to perform another read in the primitive key array until a matching key is found, or no more next indices exist.
+
+The initial lookup here also amounts to 2 array out of bounds checks (1 for the hash table array lookup, 1 for the primitive key array lookup) but only 2 memory reads (1 for the hash table array lookup, 1 for the primitive key lookup) which is 1 access less than the new setup and might thus explain the performance difference.
+
+However, following collision steps is a bit more expensive, as we now need two array out of bounds checks per step (1 for the next array lookup, 1 for the keys array lookup), but still requires only two memory accesses (1 for the next array lookup, 1 for the keys array lookup).
+
+ 
+
+Additionally, we also know that the memory access in the new approach could be more randomised, since the records need not be contiguously allocated in memory, while the primitive key arrays in the old setup likely are contiguous.
+
+ 
+
+Now, to test this theory and potentially remedy the issue, I have created yet another map generation strategy for join maps, which basically aims to be the best of both worlds. That is: we want to do fast table lookups, for which we apparently need the keys and next indices to be stored in primitive arrays --and not be part of the record class--, but want to save as many array out of bounds checks as possible by grouping the non-key ordinals of the join records into a single array containing the record-like objects we had before but now without the key and collision chain (instead of having a single array per ordinal).
+
+ 
+
+I have just finished running the experiments which belong to this structure and the results are quite good:
+
+The portion of the query which is spent in hash-table probes (and the time split within these probes) has returned to roughly the original situation in a relative sense (47% of total query time)
+But: the absolute query times are now better than before across the board for the TPC-H queries:
+
+On average, we save approximately 15% of query running-time over the full body of queries
+Every query runs at least on par with the old implementation (accounting for a small margin of error)
+Q1 runs as fast as before
+Q3 gains 10% speed on average, compared to the original primitive array map implementation
+
+This is in constrast to the 10% loss we saw with the non-hybrid record map
+Q10 gains roughly 50% on average, compared to the original primitive array map implementation
+
+But: for small scale factors we are slightly faster with the non-hybrid record map (difference of 5-10% of the running-time)
+While we are now slightly faster on the larger scale factors then before (also difference of roughly 3% of running-time)
+
+I think this thus gives us a good improvement compared to the situation yesterday and I will once more create a full overview of our current performance state, including the optimal paradigm per query, our performance relative to duckdb and perhaps also another run on Graal EE to see if anything has changed. I think I will have these number ready by tomorrow late in the morning, so perhaps it would be a good idea to plan a meeting once more and discuss where to go next -- also with respect to the time planning for the remainder of the project. Could you please let me know your thoughts and if/when we could plan a meeting?
+
+ 
+
+Best, Olivier
+
+ 
+
+P.S. For most microbenchmarks that involve hash-tables (either aggregations or joins) the new "hybrid" map also performs on par with/much better than the original primitive arrays approach. However, there are still some cases where we loose performance. However, these performance  degradations now appear in niche areas (e.g. aggregations with many keys, or on joins with very simple table structures) which might not be very representative of real query workloads (both from a mental point of view, as compared to the TPC-H benchmarks). I would thus propose to not investigate these in detail. 

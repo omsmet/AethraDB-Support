@@ -11,8 +11,10 @@ import datasets
 
 # Some local configuration definitions
 aethra_jar_path = '/home/olivier/Repositories/AethraDB/target/AethraDB.jar'
-# java_executable_path = '/usr/lib/jvm/graalvm-jdk-21+35.1/bin/java'
+# aethra_jar_path = '/nvtmp/AethraDB.jar'
 java_executable_path = '/usr/lib/jvm/java-21-openjdk/bin/java'
+# java_executable_path = '/usr/lib/jvm/graalvm-jdk-21+35.1/bin/java'
+# java_executable_path = '/usr/lib/jvm/graalvm-community-openjdk-21+35.1/bin/java'
 
 # aethra_jar_path = '/home/olivier/AethraDB/AethraDB.jar'
 # java_executable_path = '/home/olivier/external_software/graalvm-jdk-21+35.1/bin/java'
