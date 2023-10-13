@@ -1,0 +1,4 @@
+"Running-Time","Scale-Factor","Engine"
+219.0,1,DuckDB
+2264.3,10,DuckDB
+23400.1,100,DuckDB
