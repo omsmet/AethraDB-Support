@@ -1,0 +1,26 @@
+(duckdb) [olivier@olivier-xps-arch TPC-H-Q6-Aethra-vs-Duck]$ perf stat -B -e context-switches,cpu-migrations,page-faults,cycles,instructions,branches,branch-misses,cache-references,cache-misses,L1-dcache-load-misses,L1-dcache-loads,L1-dcache-stores,L1-icache-load-misses /usr/lib/jvm/java-21-openjdk/bin/java --add-opens=java.base/java.nio=ALL-UNNAMED -Darrow.enable_unsafe_memory_access=true -Darrow.enable_null_check_for_get=false --enable-preview -Xmx32g -Xms16g -jar /home/olivier/Repositories/AethraDB/target/AethraDB.jar -d /nvtmp/AethraTestData/tpch/sf-100 -q /home/olivier/Repositories/AethraDB-Support/Support\ Scripts/Main\ method\ benchmarking/queries/tpch_q6.sql -p non-vectorised
+12330426888.47
+
+ Performance counter stats for '/usr/lib/jvm/java-21-openjdk/bin/java --add-opens=java.base/java.nio=ALL-UNNAMED -Darrow.enable_unsafe_memory_access=true -Darrow.enable_null_check_for_get=false --enable-preview -Xmx32g -Xms16g -jar /home/olivier/Repositories/AethraDB/target/AethraDB.jar -d /nvtmp/AethraTestData/tpch/sf-100 -q /home/olivier/Repositories/AethraDB-Support/Support Scripts/Main method benchmarking/queries/tpch_q6.sql -p non-vectorised':
+
+            38,842      context-switches                                                      
+                38      cpu-migrations                                                        
+            34,096      page-faults                                                           
+    24,267,237,896      cycles                                                                  (40.62%)
+    25,580,059,475      instructions                     #    1.05  insn per cycle              (50.53%)
+     4,522,147,682      branches                                                                (50.39%)
+       256,649,119      branch-misses                    #    5.68% of all branches             (50.42%)
+     1,948,763,373      cache-references                                                        (50.18%)
+       412,014,033      cache-misses                     #   21.14% of all cache refs           (50.18%)
+       957,022,039      L1-dcache-load-misses            #   13.54% of all L1-dcache accesses   (40.24%)
+     7,068,253,358      L1-dcache-loads                                                         (40.09%)
+     2,638,496,585      L1-dcache-stores                                                        (40.62%)
+       204,075,150      L1-icache-load-misses                                                   (40.30%)
+
+       3.235009546 seconds time elapsed
+
+       5.063428000 seconds user
+       2.053690000 seconds sys
+
+
+(duckdb) [olivier@olivier-xps-arch TPC-H-Q6-Aethra-vs-Duck]$

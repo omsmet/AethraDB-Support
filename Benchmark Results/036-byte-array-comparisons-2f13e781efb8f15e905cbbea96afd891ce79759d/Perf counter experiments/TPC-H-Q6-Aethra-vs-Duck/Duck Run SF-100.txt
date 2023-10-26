@@ -1,0 +1,33 @@
+(duckdb) [olivier@olivier-xps-arch TPC-H-Q6-Aethra-vs-Duck]$ perf stat -B -e context-switches,cpu-migrations,page-faults,cycles,instructions,branches,branch-misses,cache-references,cache-misses,L1-dcache-load-misses,L1-dcache-loads,L1-dcache-stores,L1-icache-load-misses python duckdb_runner.py
+DuckDB Version 0.8.1 - PyArrow Version 13.0.0 - Single Threaded Mode
+┌────────────────────┐
+│      revenue       │
+│       double       │
+├────────────────────┤
+│ 12330426888.465288 │
+└────────────────────┘
+
+
+ Performance counter stats for 'python duckdb_runner.py':
+
+           179,904      context-switches                                                      
+            54,254      cpu-migrations                                                        
+            40,080      page-faults                                                           
+    76,727,915,326      cycles                                                                  (40.47%)
+    87,780,505,842      instructions                     #    1.14  insn per cycle              (50.37%)
+    13,992,945,662      branches                                                                (49.91%)
+       171,173,732      branch-misses                    #    1.22% of all branches             (49.66%)
+     3,821,124,515      cache-references                                                        (49.64%)
+       901,568,963      cache-misses                     #   23.59% of all cache refs           (49.77%)
+     1,687,224,006      L1-dcache-load-misses            #    8.59% of all L1-dcache accesses   (40.29%)
+    19,639,685,501      L1-dcache-loads                                                         (40.56%)
+     8,527,981,244      L1-dcache-stores                                                        (41.08%)
+     1,187,824,966      L1-icache-load-misses                                                   (40.52%)
+
+       2.581871650 seconds time elapsed
+
+      16.917781000 seconds user
+       5.834141000 seconds sys
+
+
+(duckdb) [olivier@olivier-xps-arch TPC-H-Q6-Aethra-vs-Duck]$
