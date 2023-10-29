@@ -59,4 +59,10 @@ datasets = {
         10: '/nvtmp/AethraTestData/tpch/sf-10',
         100: '/nvtmp/AethraTestData/tpch/sf-100',
     },
+
+    'SSB': {
+        1: '/nvtmp/AethraTestData/SSB/sf-1',
+        10: '/nvtmp/AethraTestData/SSB/sf-10',
+        100: '/nvtmp/AethraTestData/SSB/sf-100',
+    },
 }

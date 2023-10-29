@@ -130,4 +130,123 @@ benchmarks = {
         ],
         'summarise': True,
     },
+
+    'ssb_q1_1': {
+        'datasets': [
+            'SSB',
+        ],
+        'scale_factors': [
+            1,
+            10,
+            100,
+        ],
+        'query_file': 'ssb_q1_1.sql',
+        'paradigms': [
+            "non-vectorised",
+            "vectorised",
+        ],
+        'summarise': False,
+    },
+
+    'ssb_q1_2': {
+        'datasets': [
+            'SSB',
+        ],
+        'scale_factors': [
+            1,
+            10,
+            100,
+        ],
+        'query_file': 'ssb_q1_2.sql',
+        'paradigms': [
+            "non-vectorised",
+            "vectorised",
+        ],
+        'summarise': False,
+    },
+
+    'ssb_q1_3': {
+        'datasets': [
+            'SSB',
+        ],
+        'scale_factors': [
+            1,
+            10,
+            100,
+        ],
+        'query_file': 'ssb_q1_3.sql',
+        'paradigms': [
+            "non-vectorised",
+            "vectorised",
+        ],
+        'summarise': False,
+    },
+
+    'ssb_q2_1': {
+        'datasets': [
+            'SSB',
+        ],
+        'scale_factors': [
+            1,
+            10,
+            100,
+        ],
+        'query_file': 'ssb_q2_1_no_sort.sql',
+        'paradigms': [
+            "non-vectorised",
+            "vectorised",
+        ],
+        'summarise': True,
+    },
+
+    'ssb_q2_3': {
+        'datasets': [
+            'SSB',
+        ],
+        'scale_factors': [
+            1,
+            10,
+            100,
+        ],
+        'query_file': 'ssb_q2_3_no_sort.sql',
+        'paradigms': [
+            "non-vectorised",
+            "vectorised",
+        ],
+        'summarise': True,
+    },
+
+    'ssb_q3_1': {
+        'datasets': [
+            'SSB',
+        ],
+        'scale_factors': [
+            1,
+            10,
+            100,
+        ],
+        'query_file': 'ssb_q3_1_no_sort.sql',
+        'paradigms': [
+            "non-vectorised",
+            "vectorised",
+        ],
+        'summarise': True,
+    },
+
+    'ssb_q3_2': {
+        'datasets': [
+            'SSB',
+        ],
+        'scale_factors': [
+            1,
+            10,
+            100,
+        ],
+        'query_file': 'ssb_q3_2_no_sort.sql',
+        'paradigms': [
+            "non-vectorised",
+            "vectorised",
+        ],
+        'summarise': True,
+    },
 }
