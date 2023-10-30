@@ -1,0 +1,29 @@
+[olivier@olivier-xps-arch TPC-H Q1 Aethra NV-vs-V]$ perf stat -B -e context-switches,cpu-migrations,page-faults,cycles,instructions,branches,branch-misses,cache-references,cache-misses,L1-dcache-load-misses,L1-dcache-loads,L1-dcache-stores,L1-icache-load-misses /usr/lib/jvm/java-21-openjdk/bin/java --add-opens=java.base/java.nio=ALL-UNNAMED -Darrow.enable_unsafe_memory_access=true -Darrow.enable_null_check_for_get=false --enable-preview -Xmx32g -Xms16g -jar /home/olivier/Repositories/AethraDB/target/AethraDB.jar -d /nvtmp/AethraTestData/tpch/sf-100 -q /home/olivier/Repositories/AethraDB-Support/Support\ Scripts/Main\ method\ benchmarking/queries/tpch_q1_no_sort.sql -p non-vectorised
+N, O, 7436302976.00, 11150725681369.30, 10593195308239.98, 11016932248181.23, 25.50, 38237.23, 0.05, 291619617
+R, F, 3775724970.00, 5661603032747.28, 5378513563913.31, 5593662252666.55, 25.50, 38236.70, 0.05, 148067261
+A, F, 3775127758.00, 5660776097195.48, 5377736398185.13, 5592847429515.82, 25.50, 38236.12, 0.05, 148047881
+N, F, 98553062.00, 147771098385.98, 140384965965.03, 145999793032.78, 25.50, 38237.20, 0.05, 3864590
+
+ Performance counter stats for '/usr/lib/jvm/java-21-openjdk/bin/java --add-opens=java.base/java.nio=ALL-UNNAMED -Darrow.enable_unsafe_memory_access=true -Darrow.enable_null_check_for_get=false --enable-preview -Xmx32g -Xms16g -jar /home/olivier/Repositories/AethraDB/target/AethraDB.jar -d /nvtmp/AethraTestData/tpch/sf-100 -q /home/olivier/Repositories/AethraDB-Support/Support Scripts/Main method benchmarking/queries/tpch_q1_no_sort.sql -p non-vectorised':
+
+            41,181      context-switches                                                      
+                48      cpu-migrations                                                        
+            28,857      page-faults                                                           
+    71,999,816,837      cycles                                                                  (40.19%)
+   210,841,012,398      instructions                     #    2.93  insn per cycle              (50.26%)
+    38,585,173,451      branches                                                                (50.52%)
+        60,456,481      branch-misses                    #    0.16% of all branches             (50.12%)
+     2,899,956,533      cache-references                                                        (50.31%)
+       766,701,016      cache-misses                     #   26.44% of all cache refs           (49.74%)
+     1,388,233,743      L1-dcache-load-misses            #    2.45% of all L1-dcache accesses   (40.01%)
+    56,752,310,766      L1-dcache-loads                                                         (39.88%)
+    17,768,822,105      L1-dcache-stores                                                        (39.88%)
+       292,614,344      L1-icache-load-misses                                                   (40.17%)
+
+      15.675864662 seconds time elapsed
+
+      17.401642000 seconds user
+       2.843862000 seconds sys
+
+
+[olivier@olivier-xps-arch TPC-H Q1 Aethra NV-vs-V]$
