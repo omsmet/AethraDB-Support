@@ -1,0 +1,26 @@
+[olivier@olivier-xps-arch TPC-H Q10 Aethra NV-vs-V]$ perf stat -B -e context-switches,cpu-migrations,page-faults,cycles,instructions,branches,branch-misses,cache-references,cache-misses,L1-dcache-load-misses,L1-dcache-loads,L1-dcache-stores,L1-icache-load-misses /usr/lib/jvm/java-21-openjdk/bin/java --add-opens=java.base/java.nio=ALL-UNNAMED -Darrow.enable_unsafe_memory_access=true -Darrow.enable_null_check_for_get=false --enable-preview -Xmx32g -Xms16g -jar /home/olivier/Repositories/AethraDB/target/AethraDB.jar -d /nvtmp/AethraTestData/tpch/sf-100 -q /home/olivier/Repositories/AethraDB-Support/Support\ Scripts/Main\ method\ benchmarking/queries/tpch_q10_no_sort.sql -p non-vectorised -s
+3884218
+
+ Performance counter stats for '/usr/lib/jvm/java-21-openjdk/bin/java --add-opens=java.base/java.nio=ALL-UNNAMED -Darrow.enable_unsafe_memory_access=true -Darrow.enable_null_check_for_get=false --enable-preview -Xmx32g -Xms16g -jar /home/olivier/Repositories/AethraDB/target/AethraDB.jar -d /nvtmp/AethraTestData/tpch/sf-100 -q /home/olivier/Repositories/AethraDB-Support/Support Scripts/Main method benchmarking/queries/tpch_q10_no_sort.sql -p non-vectorised -s':
+
+            63,448      context-switches                                                      
+               170      cpu-migrations                                                        
+           955,209      page-faults                                                           
+   173,783,156,118      cycles                                                                  (40.10%)
+   197,172,874,764      instructions                     #    1.13  insn per cycle              (50.31%)
+    35,896,910,324      branches                                                                (50.23%)
+       618,334,818      branch-misses                    #    1.72% of all branches             (49.98%)
+     4,995,203,143      cache-references                                                        (50.02%)
+     2,384,332,860      cache-misses                     #   47.73% of all cache refs           (50.13%)
+     2,704,840,823      L1-dcache-load-misses            #    5.07% of all L1-dcache accesses   (39.88%)
+    53,298,417,093      L1-dcache-loads                                                         (40.15%)
+    19,131,461,707      L1-dcache-stores                                                        (40.25%)
+       425,365,510      L1-icache-load-misses                                                   (40.10%)
+
+      27.884456750 seconds time elapsed
+
+      44.244918000 seconds user
+       8.808065000 seconds sys
+
+
+[olivier@olivier-xps-arch TPC-H Q10 Aethra NV-vs-V]$

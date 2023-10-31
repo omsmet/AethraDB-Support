@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <office:document xmlns:presentation="urn:oasis:names:tc:opendocument:xmlns:presentation:1.0" xmlns:css3t="http://www.w3.org/TR/css3-text/" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:drawooo="http://openoffice.org/2010/draw" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:rpt="http://openoffice.org/2005/report" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:loext="urn:org:documentfoundation:names:experimental:office:xmlns:loext:1.0" office:version="1.3" office:mimetype="application/vnd.oasis.opendocument.spreadsheet">
- <office:meta><meta:creation-date>2023-10-13T14:04:38.563950628</meta:creation-date><dc:date>2023-10-30T14:36:09.565153852</dc:date><meta:editing-duration>PT1H51M39S</meta:editing-duration><meta:editing-cycles>23</meta:editing-cycles><meta:generator>LibreOffice/7.6.2.1$Linux_X86_64 LibreOffice_project/60$Build-1</meta:generator><meta:document-statistic meta:table-count="1" meta:cell-count="37" meta:object-count="0"/></office:meta>
+ <office:meta><meta:creation-date>2023-10-26T14:48:13.285302997</meta:creation-date><dc:date>2023-10-30T14:29:39.636441721</dc:date><meta:editing-duration>PT1H47M5S</meta:editing-duration><meta:editing-cycles>6</meta:editing-cycles><meta:generator>LibreOffice/7.6.2.1$Linux_X86_64 LibreOffice_project/60$Build-1</meta:generator><meta:document-statistic meta:table-count="1" meta:cell-count="82" meta:object-count="0"/></office:meta>
  <office:settings>
   <config:config-item-set config:name="ooo:view-settings">
    <config:config-item config:name="VisibleAreaTop" config:type="int">452</config:config-item>
-   <config:config-item config:name="VisibleAreaLeft" config:type="int">499</config:config-item>
-   <config:config-item config:name="VisibleAreaWidth" config:type="int">43286</config:config-item>
-   <config:config-item config:name="VisibleAreaHeight" config:type="int">15721</config:config-item>
+   <config:config-item config:name="VisibleAreaLeft" config:type="int">2258</config:config-item>
+   <config:config-item config:name="VisibleAreaWidth" config:type="int">20561</config:config-item>
+   <config:config-item config:name="VisibleAreaHeight" config:type="int">12192</config:config-item>
    <config:config-item-map-indexed config:name="Views">
     <config:config-item-map-entry>
      <config:config-item config:name="ViewId" config:type="string">view1</config:config-item>
      <config:config-item-map-named config:name="Tables">
       <config:config-item-map-entry config:name="Sheet1">
-       <config:config-item config:name="CursorPositionX" config:type="int">2</config:config-item>
-       <config:config-item config:name="CursorPositionY" config:type="int">9</config:config-item>
+       <config:config-item config:name="CursorPositionX" config:type="int">8</config:config-item>
+       <config:config-item config:name="CursorPositionY" config:type="int">12</config:config-item>
        <config:config-item config:name="ActiveSplitRange" config:type="short">2</config:config-item>
        <config:config-item config:name="PositionLeft" config:type="int">0</config:config-item>
        <config:config-item config:name="PositionRight" config:type="int">0</config:config-item>
@@ -70,15 +70,6 @@
    <config:config-item config:name="EmbedFonts" config:type="boolean">false</config:config-item>
    <config:config-item config:name="EmbedLatinScriptFonts" config:type="boolean">true</config:config-item>
    <config:config-item config:name="EmbedOnlyUsedFonts" config:type="boolean">false</config:config-item>
-   <config:config-item-map-indexed config:name="ForbiddenCharacters">
-    <config:config-item-map-entry>
-     <config:config-item config:name="Language" config:type="string">en</config:config-item>
-     <config:config-item config:name="Country" config:type="string">GB</config:config-item>
-     <config:config-item config:name="Variant" config:type="string"/>
-     <config:config-item config:name="BeginLine" config:type="string"/>
-     <config:config-item config:name="EndLine" config:type="string"/>
-    </config:config-item-map-entry>
-   </config:config-item-map-indexed>
    <config:config-item config:name="GridColor" config:type="int">12632256</config:config-item>
    <config:config-item config:name="HasColumnRowHeaders" config:type="boolean">true</config:config-item>
    <config:config-item config:name="HasSheetTabs" config:type="boolean">true</config:config-item>
@@ -143,6 +134,45 @@
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
+  </number:number-style>
+  <number:number-style style:name="N119">
+   <number:number number:decimal-places="14" number:min-decimal-places="14" number:min-integer-digits="1"/>
+  </number:number-style>
+  <number:number-style style:name="N120">
+   <number:number number:decimal-places="13" number:min-decimal-places="13" number:min-integer-digits="1"/>
+  </number:number-style>
+  <number:number-style style:name="N121">
+   <number:number number:decimal-places="12" number:min-decimal-places="12" number:min-integer-digits="1"/>
+  </number:number-style>
+  <number:number-style style:name="N122">
+   <number:number number:decimal-places="11" number:min-decimal-places="11" number:min-integer-digits="1"/>
+  </number:number-style>
+  <number:number-style style:name="N123">
+   <number:number number:decimal-places="10" number:min-decimal-places="10" number:min-integer-digits="1"/>
+  </number:number-style>
+  <number:number-style style:name="N124">
+   <number:number number:decimal-places="9" number:min-decimal-places="9" number:min-integer-digits="1"/>
+  </number:number-style>
+  <number:number-style style:name="N125">
+   <number:number number:decimal-places="8" number:min-decimal-places="8" number:min-integer-digits="1"/>
+  </number:number-style>
+  <number:number-style style:name="N126">
+   <number:number number:decimal-places="7" number:min-decimal-places="7" number:min-integer-digits="1"/>
+  </number:number-style>
+  <number:number-style style:name="N127">
+   <number:number number:decimal-places="6" number:min-decimal-places="6" number:min-integer-digits="1"/>
+  </number:number-style>
+  <number:number-style style:name="N128">
+   <number:number number:decimal-places="5" number:min-decimal-places="5" number:min-integer-digits="1"/>
+  </number:number-style>
+  <number:number-style style:name="N129">
+   <number:number number:decimal-places="4" number:min-decimal-places="4" number:min-integer-digits="1"/>
+  </number:number-style>
+  <number:number-style style:name="N130">
+   <number:number number:decimal-places="3" number:min-decimal-places="3" number:min-integer-digits="1"/>
+  </number:number-style>
+  <number:number-style style:name="N131">
+   <number:number number:decimal-places="1" number:min-decimal-places="1" number:min-integer-digits="1" number:grouping="true"/>
   </number:number-style>
   <style:style style:name="Default" style:family="table-cell"/>
   <style:style style:name="Heading" style:family="table-cell" style:parent-style-name="Default">
@@ -218,49 +248,19 @@
  </office:styles>
  <office:automatic-styles>
   <style:style style:name="co1" style:family="table-column">
-   <style:table-column-properties fo:break-before="auto" style:column-width="0.499cm"/>
-  </style:style>
-  <style:style style:name="co2" style:family="table-column">
-   <style:table-column-properties fo:break-before="auto" style:column-width="2.353cm"/>
-  </style:style>
-  <style:style style:name="co3" style:family="table-column">
-   <style:table-column-properties fo:break-before="auto" style:column-width="8.244cm"/>
-  </style:style>
-  <style:style style:name="co4" style:family="table-column">
-   <style:table-column-properties fo:break-before="auto" style:column-width="5.001cm"/>
-  </style:style>
-  <style:style style:name="co5" style:family="table-column">
-   <style:table-column-properties fo:break-before="auto" style:column-width="5.346cm"/>
-  </style:style>
-  <style:style style:name="co6" style:family="table-column">
    <style:table-column-properties fo:break-before="auto" style:column-width="2.258cm"/>
   </style:style>
-  <style:style style:name="co7" style:family="table-column">
-   <style:table-column-properties fo:break-before="auto" style:column-width="5.272cm"/>
+  <style:style style:name="co2" style:family="table-column">
+   <style:table-column-properties fo:break-before="auto" style:column-width="6.017cm"/>
   </style:style>
-  <style:style style:name="co8" style:family="table-column">
-   <style:table-column-properties fo:break-before="auto" style:column-width="5.274cm"/>
+  <style:style style:name="co3" style:family="table-column">
+   <style:table-column-properties fo:break-before="auto" style:column-width="3.787cm"/>
   </style:style>
-  <style:style style:name="co9" style:family="table-column">
-   <style:table-column-properties fo:break-before="auto" style:column-width="7.28cm"/>
+  <style:style style:name="co4" style:family="table-column">
+   <style:table-column-properties fo:break-before="auto" style:column-width="3.985cm"/>
   </style:style>
   <style:style style:name="ro1" style:family="table-row">
    <style:table-row-properties style:row-height="0.452cm" fo:break-before="auto" style:use-optimal-row-height="true"/>
-  </style:style>
-  <style:style style:name="ro2" style:family="table-row">
-   <style:table-row-properties style:row-height="0.453cm" fo:break-before="auto" style:use-optimal-row-height="true"/>
-  </style:style>
-  <style:style style:name="ro3" style:family="table-row">
-   <style:table-row-properties style:row-height="5.336cm" fo:break-before="auto" style:use-optimal-row-height="true"/>
-  </style:style>
-  <style:style style:name="ro4" style:family="table-row">
-   <style:table-row-properties style:row-height="4.93cm" fo:break-before="auto" style:use-optimal-row-height="true"/>
-  </style:style>
-  <style:style style:name="ro5" style:family="table-row">
-   <style:table-row-properties style:row-height="0.841cm" fo:break-before="auto" style:use-optimal-row-height="true"/>
-  </style:style>
-  <style:style style:name="ro6" style:family="table-row">
-   <style:table-row-properties style:row-height="3.709cm" fo:break-before="auto" style:use-optimal-row-height="true"/>
   </style:style>
   <style:style style:name="ta1" style:family="table" style:master-page-name="Default">
    <style:table-properties table:display="true" style:writing-mode="lr-tb"/>
@@ -268,12 +268,15 @@
   <number:number-style style:name="N2">
    <number:number number:decimal-places="2" number:min-decimal-places="2" number:min-integer-digits="1"/>
   </number:number-style>
-  <style:style style:name="ce1" style:family="table-cell" style:parent-style-name="Default">
-   <style:table-cell-properties style:vertical-align="top"/>
-  </style:style>
-  <style:style style:name="ce2" style:family="table-cell" style:parent-style-name="Default">
-   <style:table-cell-properties fo:wrap-option="wrap" style:vertical-align="top"/>
-  </style:style>
+  <number:number-style style:name="N3">
+   <number:number number:decimal-places="0" number:min-decimal-places="0" number:min-integer-digits="1" number:grouping="true"/>
+  </number:number-style>
+  <number:number-style style:name="N4">
+   <number:number number:decimal-places="2" number:min-decimal-places="2" number:min-integer-digits="1" number:grouping="true"/>
+  </number:number-style>
+  <style:style style:name="ce1" style:family="table-cell" style:parent-style-name="Default" style:data-style-name="N3"/>
+  <style:style style:name="ce2" style:family="table-cell" style:parent-style-name="Default" style:data-style-name="N4"/>
+  <style:style style:name="ce3" style:family="table-cell" style:parent-style-name="Default" style:data-style-name="N2"/>
   <style:page-layout style:name="pm1">
    <style:page-layout-properties style:writing-mode="lr-tb"/>
    <style:header-style>
@@ -296,9 +299,6 @@
     </style:header-footer-properties>
    </style:footer-style>
   </style:page-layout>
-  <style:style style:name="T1" style:family="text">
-   <style:text-properties style:font-name="Liberation Sans" fo:font-size="10pt" fo:font-weight="normal" style:text-underline-style="none" style:text-underline-color="font-color" style:text-line-through-type="none" fo:font-style="normal" style:text-outline="false" fo:text-shadow="none" style:text-line-through-mode="continuous" fo:language="en" fo:country="GB" style:language-asian="zh" style:country-asian="CN" style:language-complex="hi" style:country-complex="IN" style:font-name-asian="Tahoma" style:font-name-complex="FreeSans" style:font-size-asian="10pt" style:font-size-complex="10pt" style:font-weight-asian="normal" style:font-weight-complex="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-emphasize="none" style:font-relief="none" style:text-overline-style="none" style:text-overline-color="font-color"/>
-  </style:style>
  </office:automatic-styles>
  <office:master-styles>
   <style:master-page style:name="Default" style:page-layout-name="pm1">
@@ -319,7 +319,7 @@
      <text:p><text:sheet-name>???</text:sheet-name><text:s/>(<text:title>???</text:title>)</text:p>
     </style:region-left>
     <style:region-right>
-     <text:p><text:date style:data-style-name="N2" text:date-value="2023-10-30">00/00/0000</text:date>, <text:time style:data-style-name="N2" text:time-value="14:35:56.137664048">00:00:00</text:time></text:p>
+     <text:p><text:date style:data-style-name="N2" text:date-value="2023-10-30">00/00/0000</text:date>, <text:time style:data-style-name="N2" text:time-value="14:16:05.187046279">00:00:00</text:time></text:p>
     </style:region-right>
    </style:header>
    <style:header-left style:display="false"/>
@@ -336,158 +336,372 @@
    <table:calculation-settings table:automatic-find-labels="false" table:use-regular-expressions="false" table:use-wildcards="true"/>
    <table:table table:name="Sheet1" table:style-name="ta1">
     <table:table-column table:style-name="co1" table:default-cell-style-name="Default"/>
-    <table:table-column table:style-name="co2" table:default-cell-style-name="ce1"/>
+    <table:table-column table:style-name="co2" table:default-cell-style-name="Default"/>
     <table:table-column table:style-name="co3" table:default-cell-style-name="ce1"/>
     <table:table-column table:style-name="co4" table:default-cell-style-name="ce1"/>
-    <table:table-column table:style-name="co5" table:default-cell-style-name="ce1"/>
-    <table:table-column table:style-name="co6" table:number-columns-repeated="2" table:default-cell-style-name="ce1"/>
-    <table:table-column table:style-name="co7" table:default-cell-style-name="ce1"/>
-    <table:table-column table:style-name="co8" table:default-cell-style-name="ce1"/>
-    <table:table-column table:style-name="co9" table:default-cell-style-name="ce1"/>
+    <table:table-column table:style-name="co1" table:default-cell-style-name="ce3"/>
+    <table:table-column table:style-name="co1" table:number-columns-repeated="2" table:default-cell-style-name="Default"/>
     <table:table-row table:style-name="ro1">
-     <table:table-cell/>
-     <table:table-cell table:style-name="Default" table:number-columns-repeated="9"/>
+     <table:table-cell table:number-columns-repeated="2"/>
+     <table:table-cell table:style-name="Default" table:number-columns-repeated="3"/>
+     <table:table-cell table:number-columns-repeated="2"/>
     </table:table-row>
     <table:table-row table:style-name="ro1">
-     <table:table-cell/>
-     <table:table-cell office:value-type="string" calcext:value-type="string">
-      <text:p>OpenJDK</text:p>
+     <table:table-cell table:number-columns-repeated="2"/>
+     <table:table-cell table:style-name="Default" office:value-type="string" calcext:value-type="string">
+      <text:p>AethraDB Non-Vec</text:p>
      </table:table-cell>
-     <table:table-cell table:number-columns-repeated="8"/>
-    </table:table-row>
-    <table:table-row table:style-name="ro2">
-     <table:table-cell/>
-     <table:table-cell office:value-type="string" calcext:value-type="string">
-      <text:p>Scale Factor</text:p>
+     <table:table-cell table:style-name="Default" office:value-type="string" calcext:value-type="string">
+      <text:p>AethraDB Vec</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce2" office:value-type="string" calcext:value-type="string">
-      <text:p>AethraDB Non-Vectorised Fastest</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="string" calcext:value-type="string">
-      <text:p>On-Par</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="string" calcext:value-type="string">
-      <text:p>AethraDB Vectorised Fastest</text:p>
-     </table:table-cell>
-     <table:table-cell/>
-     <table:table-cell office:value-type="string" calcext:value-type="string">
-      <text:p>Scale-Factor</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="string" calcext:value-type="string">
-      <text:p>DuckDB Fastest</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="string" calcext:value-type="string">
-      <text:p>On-Par</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="string" calcext:value-type="string">
-      <text:p>AethraDB Fastest</text:p>
-     </table:table-cell>
-    </table:table-row>
-    <table:table-row table:style-name="ro3">
-     <table:table-cell/>
-     <table:table-cell office:value-type="string" calcext:value-type="string">
-      <text:p>SF-1</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="string" calcext:value-type="string"><text:p>Aggregation query (many keys, otherwise on par)</text:p><text:p/><text:p/><text:p>TPC-H Q1, ~37%</text:p><text:p/><text:p/><text:p>SSB Q1.1, ~15%</text:p><text:p>SSB Q1.2, ~10%</text:p><text:p>SSB Q1.3, ~10%</text:p><text:p>SSB Q2.1, ~23%</text:p><text:p>SSB Q2.3, ~19%</text:p><text:p>SSB Q3.1, ~20%</text:p><text:p>SSB Q3.2, ~20%</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="string" calcext:value-type="string"><text:p/><text:p/><text:p/><text:p>TPC-H Q3</text:p><text:p>TPC-H Q6</text:p><text:p>TPC-H Q10</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="string" calcext:value-type="string"><text:p>Filter query, ~15%</text:p><text:p>Join query, ~10%</text:p>
-     </table:table-cell>
-     <table:table-cell/>
-     <table:table-cell office:value-type="string" calcext:value-type="string">
-      <text:p>SF-1</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="ce2" office:value-type="string" calcext:value-type="string"><text:p>Filter query (~2.3x to A-V)</text:p><text:p>Join Query (~2.8x to A-V)</text:p><text:p/><text:p>TPC-H Q3 (~22% to A-*)</text:p><text:p>TPC-H Q6 (~6x to A-*)</text:p><text:p>TPC-H Q10 (~1.8x to A-V)</text:p><text:p/><text:p>SSB Q1.1 (~3.5x to A-NV)</text:p><text:p>SSB Q1.2 (~5x to A-NV)</text:p><text:p><text:span text:style-name="T1">SSB Q1.3 (~5x to A-NV)</text:span></text:p><text:p><text:span text:style-name="T1">SSB Q2.1 (~20% to A-NV)</text:span></text:p><text:p><text:span text:style-name="T1">SSB Q3.2 (~2.3x to A-NV)</text:span></text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="string" calcext:value-type="string"><text:p/><text:p/><text:p/><text:p/><text:p/><text:p/><text:p/><text:p>SSB Q2.3 (A-NV)</text:p><text:p>SSB Q3.1 (A-NV)</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="string" calcext:value-type="string"><text:p>Aggregation query (&lt;= 262144 keys, A-NV)</text:p><text:p/><text:p/><text:p><text:span text:style-name="T1">TPC-H Q1 (A-NV, ~33%)</text:span></text:p>
-     </table:table-cell>
-    </table:table-row>
-    <table:table-row table:style-name="ro4">
-     <table:table-cell/>
-     <table:table-cell office:value-type="string" calcext:value-type="string">
-      <text:p>SF-10</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="string" calcext:value-type="string"><text:p>Aggregation query (many keys, otherwise on par)</text:p><text:p/><text:p/><text:p><text:span text:style-name="T1">TPC-H Q1, ~46%</text:span></text:p><text:p/><text:p><text:span text:style-name="T1">SSB Q1.1, ~15%</text:span></text:p><text:p><text:span text:style-name="T1">SSB Q1.2, ~8%</text:span></text:p><text:p><text:span text:style-name="T1">SSB Q1.3, ~7%</text:span></text:p><text:p><text:span text:style-name="T1">SSB Q2.1, ~13%</text:span></text:p><text:p><text:span text:style-name="T1">SSB Q2.3, ~15%</text:span></text:p><text:p><text:span text:style-name="T1">SSB Q3.1, ~6%</text:span></text:p><text:p><text:span text:style-name="T1">SSB Q3.2, ~15%</text:span></text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="string" calcext:value-type="string"><text:p/><text:p/><text:p/><text:p><text:span text:style-name="T1">TPC-H Q3</text:span></text:p><text:p><text:span text:style-name="T1">TPC-H Q6</text:span></text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="string" calcext:value-type="string"><text:p>Filter query, upto 1.5x (restr col)</text:p><text:p>Join query, ~14%</text:p><text:p/><text:p>TPC-H Q10, ~13%</text:p>
-     </table:table-cell>
-     <table:table-cell/>
-     <table:table-cell office:value-type="string" calcext:value-type="string">
-      <text:p>SF-10</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="string" calcext:value-type="string"><text:p>Join Query (~2.3x to A-V)</text:p><text:p/><text:p/><text:p>TPC-H Q6 (~2x to A-*)</text:p><text:p>TPC-H Q10 (~1.05x to A-V)</text:p><text:p/><text:p>SSB Q1.1 (~50% to A-NV)</text:p><text:p>SSB Q1.2 (~2.4x to A-NV)</text:p><text:p><text:span text:style-name="T1">SSB Q1.3 (~2.6x to A-NV)</text:span></text:p>
-     </table:table-cell>
-     <table:table-cell/>
-     <table:table-cell office:value-type="string" calcext:value-type="string"><text:p>Filter query (A-V ~17%)</text:p><text:p>Aggregation query (&lt;= 262144 keys, A-NV)</text:p><text:p/><text:p>TPC-H Q1 (A-NV, 2x)</text:p><text:p>TPC-H Q3 (A-*, ~16%)</text:p><text:p/><text:p>SSB Q2.1 (A-NV, ~70%)</text:p><text:p>SSB Q2.3 (A-NV, ~4.2x)</text:p><text:p>SSB Q3.1 (A-NV, ~10%)</text:p><text:p>SSB Q3.2 (A-NV, ~40%)</text:p>
-     </table:table-cell>
-    </table:table-row>
-    <table:table-row table:style-name="ro5">
-     <table:table-cell/>
-     <table:table-cell office:value-type="string" calcext:value-type="string">
-      <text:p>SF-20</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="string" calcext:value-type="string">
-      <text:p>Aggregation query (many keys, otherwise on par)</text:p>
-     </table:table-cell>
-     <table:table-cell/>
-     <table:table-cell office:value-type="string" calcext:value-type="string">
-      <text:p>Filter query, upto 1.5x (restr col)</text:p>
-     </table:table-cell>
-     <table:table-cell/>
-     <table:table-cell office:value-type="string" calcext:value-type="string">
-      <text:p>SF-20</text:p>
+     <table:table-cell table:style-name="Default" office:value-type="string" calcext:value-type="string">
+      <text:p>Relative</text:p>
      </table:table-cell>
      <table:table-cell table:number-columns-repeated="2"/>
-     <table:table-cell table:style-name="ce2" office:value-type="string" calcext:value-type="string"><text:p>Filter query (A-V ~1.3x, restr col 1,2)</text:p><text:p><text:span text:style-name="T1">Aggregation query (&lt;= 262144 keys, A-NV)</text:span></text:p>
-     </table:table-cell>
     </table:table-row>
-    <table:table-row table:style-name="ro6">
+    <table:table-row table:style-name="ro1">
      <table:table-cell/>
      <table:table-cell office:value-type="string" calcext:value-type="string">
-      <text:p>SF-100</text:p>
+      <text:p>Context-switches</text:p>
      </table:table-cell>
-     <table:table-cell office:value-type="string" calcext:value-type="string"><text:p>TPC-H Q1, ~52%</text:p><text:p/><text:p/><text:p>SSB Q1.1, ~8%</text:p><text:p>SSB Q1.2, ~6%</text:p><text:p>SSB Q1.3, ~6%</text:p><text:p>SSB Q2.1, ~7%</text:p><text:p>SSB Q2.3, ~24%</text:p><text:p>SSB Q3.1, ~6%</text:p>
+     <table:table-cell office:value-type="float" office:value="63448" calcext:value-type="float">
+      <text:p>63,448</text:p>
      </table:table-cell>
-     <table:table-cell office:value-type="string" calcext:value-type="string"><text:p>TPC-H Q3</text:p><text:p>TPC-H Q6</text:p><text:p/><text:p>SSB Q3.2</text:p>
+     <table:table-cell office:value-type="float" office:value="73151" calcext:value-type="float">
+      <text:p>73,151</text:p>
      </table:table-cell>
+     <table:table-cell table:formula="of:=[.C3]/[.D3]" office:value-type="float" office:value="0.867356563820043" calcext:value-type="float">
+      <text:p>0.87</text:p>
+     </table:table-cell>
+     <table:table-cell table:number-columns-repeated="2"/>
+    </table:table-row>
+    <table:table-row table:style-name="ro1">
+     <table:table-cell/>
      <table:table-cell office:value-type="string" calcext:value-type="string">
-      <text:p>TPC-H Q10, ~15%</text:p>
+      <text:p>CPU migrations</text:p>
+     </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="170" calcext:value-type="float">
+      <text:p>170</text:p>
+     </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="156" calcext:value-type="float">
+      <text:p>156</text:p>
+     </table:table-cell>
+     <table:table-cell table:formula="of:=[.C4]/[.D4]" office:value-type="float" office:value="1.08974358974359" calcext:value-type="float">
+      <text:p>1.09</text:p>
+     </table:table-cell>
+     <table:table-cell table:number-columns-repeated="2"/>
+    </table:table-row>
+    <table:table-row table:style-name="ro1">
+     <table:table-cell/>
+     <table:table-cell office:value-type="string" calcext:value-type="string">
+      <text:p>Page faults</text:p>
+     </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="955209" calcext:value-type="float">
+      <text:p>955,209</text:p>
+     </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="949655" calcext:value-type="float">
+      <text:p>949,655</text:p>
+     </table:table-cell>
+     <table:table-cell table:formula="of:=[.C5]/[.D5]" office:value-type="float" office:value="1.00584843969652" calcext:value-type="float">
+      <text:p>1.01</text:p>
+     </table:table-cell>
+     <table:table-cell table:number-columns-repeated="2"/>
+    </table:table-row>
+    <table:table-row table:style-name="ro1">
+     <table:table-cell/>
+     <table:table-cell office:value-type="string" calcext:value-type="string">
+      <text:p>Cycles</text:p>
+     </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="173783156118" calcext:value-type="float">
+      <text:p>173,783,156,118</text:p>
+     </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="168490252783" calcext:value-type="float">
+      <text:p>168,490,252,783</text:p>
+     </table:table-cell>
+     <table:table-cell table:formula="of:=[.C6]/[.D6]" office:value-type="float" office:value="1.0314137064167" calcext:value-type="float">
+      <text:p>1.03</text:p>
+     </table:table-cell>
+     <table:table-cell table:number-columns-repeated="2"/>
+    </table:table-row>
+    <table:table-row table:style-name="ro1">
+     <table:table-cell/>
+     <table:table-cell office:value-type="string" calcext:value-type="string">
+      <text:p>Instructions</text:p>
+     </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="197172874764" calcext:value-type="float">
+      <text:p>197,172,874,764</text:p>
+     </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="181515955844" calcext:value-type="float">
+      <text:p>181,515,955,844</text:p>
+     </table:table-cell>
+     <table:table-cell table:formula="of:=[.C7]/[.D7]" office:value-type="float" office:value="1.08625643320004" calcext:value-type="float">
+      <text:p>1.09</text:p>
+     </table:table-cell>
+     <table:table-cell table:number-columns-repeated="2"/>
+    </table:table-row>
+    <table:table-row table:style-name="ro1">
+     <table:table-cell/>
+     <table:table-cell office:value-type="string" calcext:value-type="string">
+      <text:p>Instructions per Cycle</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce2" table:formula="of:=[.C7]/[.C6]" office:value-type="float" office:value="1.13459140211562" calcext:value-type="float">
+      <text:p>1.13</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce2" table:formula="of:=[.D7]/[.D6]" office:value-type="float" office:value="1.07730834778779" calcext:value-type="float">
+      <text:p>1.08</text:p>
+     </table:table-cell>
+     <table:table-cell table:formula="of:=[.C8]/[.D8]" office:value-type="float" office:value="1.0531723850887" calcext:value-type="float">
+      <text:p>1.05</text:p>
+     </table:table-cell>
+     <table:table-cell table:number-columns-repeated="2"/>
+    </table:table-row>
+    <table:table-row table:style-name="ro1">
+     <table:table-cell/>
+     <table:table-cell office:value-type="string" calcext:value-type="string">
+      <text:p>Branches</text:p>
+     </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="35869910324" calcext:value-type="float">
+      <text:p>35,869,910,324</text:p>
+     </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="28513614120" calcext:value-type="float">
+      <text:p>28,513,614,120</text:p>
+     </table:table-cell>
+     <table:table-cell table:formula="of:=[.C9]/[.D9]" office:value-type="float" office:value="1.25799241629072" calcext:value-type="float">
+      <text:p>1.26</text:p>
+     </table:table-cell>
+     <table:table-cell table:number-columns-repeated="2"/>
+    </table:table-row>
+    <table:table-row table:style-name="ro1">
+     <table:table-cell/>
+     <table:table-cell office:value-type="string" calcext:value-type="string">
+      <text:p>Branch-misses</text:p>
+     </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="618334818" calcext:value-type="float">
+      <text:p>618,334,818</text:p>
+     </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="643785688" calcext:value-type="float">
+      <text:p>643,785,688</text:p>
+     </table:table-cell>
+     <table:table-cell table:formula="of:=[.C10]/[.D10]" office:value-type="float" office:value="0.960466859586354" calcext:value-type="float">
+      <text:p>0.96</text:p>
+     </table:table-cell>
+     <table:table-cell table:number-columns-repeated="2"/>
+    </table:table-row>
+    <table:table-row table:style-name="ro1">
+     <table:table-cell/>
+     <table:table-cell office:value-type="string" calcext:value-type="string">
+      <text:p>Branch-misses relative (%)</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce2" table:formula="of:=[.C10]/[.C9]*100" office:value-type="float" office:value="1.72382593771438" calcext:value-type="float">
+      <text:p>1.72</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce2" table:formula="of:=[.D10]/[.D9]*100" office:value-type="float" office:value="2.25781861706698" calcext:value-type="float">
+      <text:p>2.26</text:p>
+     </table:table-cell>
+     <table:table-cell table:formula="of:=[.C11]/[.D11]" office:value-type="float" office:value="0.7634917724054" calcext:value-type="float">
+      <text:p>0.76</text:p>
+     </table:table-cell>
+     <table:table-cell table:number-columns-repeated="2"/>
+    </table:table-row>
+    <table:table-row table:style-name="ro1">
+     <table:table-cell/>
+     <table:table-cell office:value-type="string" calcext:value-type="string">
+      <text:p>Cache-references</text:p>
+     </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="4995203143" calcext:value-type="float">
+      <text:p>4,995,203,143</text:p>
+     </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="6772153737" calcext:value-type="float">
+      <text:p>6,772,153,737</text:p>
+     </table:table-cell>
+     <table:table-cell table:formula="of:=[.C12]/[.D12]" office:value-type="float" office:value="0.737609235848923" calcext:value-type="float">
+      <text:p>0.74</text:p>
+     </table:table-cell>
+     <table:table-cell table:number-columns-repeated="2"/>
+    </table:table-row>
+    <table:table-row table:style-name="ro1">
+     <table:table-cell/>
+     <table:table-cell office:value-type="string" calcext:value-type="string">
+      <text:p>Cache-misses</text:p>
+     </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="2384332860" calcext:value-type="float">
+      <text:p>2,384,332,860</text:p>
+     </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="2616985260" calcext:value-type="float">
+      <text:p>2,616,985,260</text:p>
+     </table:table-cell>
+     <table:table-cell table:formula="of:=[.C13]/[.D13]" office:value-type="float" office:value="0.911099078945519" calcext:value-type="float">
+      <text:p>0.91</text:p>
+     </table:table-cell>
+     <table:table-cell table:number-columns-repeated="2"/>
+    </table:table-row>
+    <table:table-row table:style-name="ro1">
+     <table:table-cell/>
+     <table:table-cell office:value-type="string" calcext:value-type="string">
+      <text:p>Cache-misses relative (%)</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce2" table:formula="of:=[.C13]/[.C12]*100" office:value-type="float" office:value="47.7324503477155" calcext:value-type="float">
+      <text:p>47.73</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce2" table:formula="of:=[.D13]/[.D12]*100" office:value-type="float" office:value="38.6433232562629" calcext:value-type="float">
+      <text:p>38.64</text:p>
+     </table:table-cell>
+     <table:table-cell table:formula="of:=[.C14]/[.D14]" office:value-type="float" office:value="1.23520562740368" calcext:value-type="float">
+      <text:p>1.24</text:p>
+     </table:table-cell>
+     <table:table-cell table:number-columns-repeated="2"/>
+    </table:table-row>
+    <table:table-row table:style-name="ro1">
+     <table:table-cell/>
+     <table:table-cell office:value-type="string" calcext:value-type="string">
+      <text:p>L1-dcache-load-misses</text:p>
+     </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="2704840823" calcext:value-type="float">
+      <text:p>2,704,840,823</text:p>
+     </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="3536115127" calcext:value-type="float">
+      <text:p>3,536,115,127</text:p>
+     </table:table-cell>
+     <table:table-cell table:formula="of:=[.C15]/[.D15]" office:value-type="float" office:value="0.764918767024069" calcext:value-type="float">
+      <text:p>0.76</text:p>
+     </table:table-cell>
+     <table:table-cell table:number-columns-repeated="2"/>
+    </table:table-row>
+    <table:table-row table:style-name="ro1">
+     <table:table-cell/>
+     <table:table-cell office:value-type="string" calcext:value-type="string">
+      <text:p>L1-dcache-loads</text:p>
+     </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="53298417093" calcext:value-type="float">
+      <text:p>53,298,417,093</text:p>
+     </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="54566793831" calcext:value-type="float">
+      <text:p>54,566,793,831</text:p>
+     </table:table-cell>
+     <table:table-cell table:formula="of:=[.C16]/[.D16]" office:value-type="float" office:value="0.976755520180857" calcext:value-type="float">
+      <text:p>0.98</text:p>
+     </table:table-cell>
+     <table:table-cell table:number-columns-repeated="2"/>
+    </table:table-row>
+    <table:table-row table:style-name="ro1">
+     <table:table-cell/>
+     <table:table-cell office:value-type="string" calcext:value-type="string">
+      <text:p>L1-dcache-load-misses relative (%)</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce2" table:formula="of:=[.C15]/[.C16]*100" office:value-type="float" office:value="5.07489897548054" calcext:value-type="float">
+      <text:p>5.07</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce2" table:formula="of:=[.D15]/[.D16]*100" office:value-type="float" office:value="6.48034249172084" calcext:value-type="float">
+      <text:p>6.48</text:p>
+     </table:table-cell>
+     <table:table-cell table:formula="of:=[.C17]/[.D17]" office:value-type="float" office:value="0.78312203127599" calcext:value-type="float">
+      <text:p>0.78</text:p>
+     </table:table-cell>
+     <table:table-cell table:number-columns-repeated="2"/>
+    </table:table-row>
+    <table:table-row table:style-name="ro1">
+     <table:table-cell/>
+     <table:table-cell office:value-type="string" calcext:value-type="string">
+      <text:p>L1-dcache-stores</text:p>
+     </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="19131461707" calcext:value-type="float">
+      <text:p>19,131,461,707</text:p>
+     </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="18476283085" calcext:value-type="float">
+      <text:p>18,476,283,085</text:p>
+     </table:table-cell>
+     <table:table-cell table:formula="of:=[.C18]/[.D18]" office:value-type="float" office:value="1.03546052087348" calcext:value-type="float">
+      <text:p>1.04</text:p>
+     </table:table-cell>
+     <table:table-cell table:number-columns-repeated="2"/>
+    </table:table-row>
+    <table:table-row table:style-name="ro1">
+     <table:table-cell/>
+     <table:table-cell office:value-type="string" calcext:value-type="string">
+      <text:p>L1-icache-load-misses</text:p>
+     </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="425365510" calcext:value-type="float">
+      <text:p>425,365,510</text:p>
+     </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="404719576" calcext:value-type="float">
+      <text:p>404,719,576</text:p>
+     </table:table-cell>
+     <table:table-cell table:formula="of:=[.C19]/[.D19]" office:value-type="float" office:value="1.05101293642391" calcext:value-type="float">
+      <text:p>1.05</text:p>
+     </table:table-cell>
+     <table:table-cell table:number-columns-repeated="2"/>
+    </table:table-row>
+    <table:table-row table:style-name="ro1">
+     <table:table-cell table:number-columns-repeated="2"/>
+     <table:table-cell table:style-name="Default" table:number-columns-repeated="2"/>
+     <table:table-cell table:number-columns-repeated="3"/>
+    </table:table-row>
+    <table:table-row table:style-name="ro1">
+     <table:table-cell/>
+     <table:table-cell office:value-type="string" calcext:value-type="string">
+      <text:p>Time elapsed</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Default" office:value-type="float" office:value="27.8" calcext:value-type="float">
+      <text:p>27.8</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Default" office:value-type="float" office:value="26.5" calcext:value-type="float">
+      <text:p>26.5</text:p>
+     </table:table-cell>
+     <table:table-cell table:formula="of:=[.C21]/[.D21]" office:value-type="float" office:value="1.04905660377359" calcext:value-type="float">
+      <text:p>1.05</text:p>
      </table:table-cell>
      <table:table-cell/>
      <table:table-cell office:value-type="string" calcext:value-type="string">
-      <text:p>SF-100</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="string" calcext:value-type="string"><text:p>TPC-H Q6 (~1.45x to A-*)</text:p><text:p/><text:p/><text:p>SSB Q1.1 (~20% to A-NV)</text:p><text:p>SSB Q1.2 (~2.3x to A-NV)</text:p><text:p><text:span text:style-name="T1">SSB Q1.3 (~2.3x to A-NV)</text:span></text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="string" calcext:value-type="string">
-      <text:p>TPC-H Q10 (A-V)</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="string" calcext:value-type="string"><text:p>TPC-H Q1 (A-NV, 2x)</text:p><text:p>TPC-H Q3 (A-*, 1.1x)</text:p><text:p/><text:p>SSB Q2.1 (A-NV, ~60%)</text:p><text:p>SSB Q2.3 (A-NV, ~5.5x)</text:p><text:p>SSB Q3.1 (A-NV, ~40%)</text:p><text:p>SSB Q3.2 (A-NV, ~10%)</text:p>
+      <text:p>← This difference is slightly smaller than on the benchmarks</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro1" table:number-rows-repeated="2">
-     <table:table-cell table:number-columns-repeated="10"/>
-    </table:table-row>
-    <table:table-row table:style-name="ro1" table:number-rows-repeated="6">
-     <table:table-cell/>
-     <table:table-cell table:style-name="Default" table:number-columns-repeated="2"/>
-     <table:table-cell table:number-columns-repeated="7"/>
-    </table:table-row>
-    <table:table-row table:style-name="ro1" table:number-rows-repeated="16">
-     <table:table-cell table:number-columns-repeated="10"/>
-    </table:table-row>
-    <table:table-row table:style-name="ro1" table:number-rows-repeated="5">
-     <table:table-cell table:number-columns-repeated="3"/>
-     <table:table-cell table:style-name="Default" table:number-columns-repeated="7"/>
+     <table:table-cell table:number-columns-repeated="2"/>
+     <table:table-cell table:style-name="Default" table:number-columns-repeated="3"/>
+     <table:table-cell table:number-columns-repeated="2"/>
     </table:table-row>
     <table:table-row table:style-name="ro1">
-     <table:table-cell table:number-columns-repeated="3"/>
-     <table:table-cell table:style-name="Default" table:number-columns-repeated="7"/>
+     <table:table-cell/>
+     <table:table-cell office:value-type="string" calcext:value-type="string">
+      <text:p>Performance difference hypothesis:</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Default" office:value-type="string" calcext:value-type="string">
+      <text:p>Many more cycles &amp; instructions in NV code</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Default" table:number-columns-repeated="2"/>
+     <table:table-cell table:number-columns-repeated="2"/>
+    </table:table-row>
+    <table:table-row table:style-name="ro1">
+     <table:table-cell table:number-columns-repeated="2"/>
+     <table:table-cell table:style-name="Default" office:value-type="string" calcext:value-type="string">
+      <text:p>Many more branches</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Default" table:number-columns-repeated="2"/>
+     <table:table-cell table:number-columns-repeated="2"/>
+    </table:table-row>
+    <table:table-row table:style-name="ro1">
+     <table:table-cell table:number-columns-repeated="2"/>
+     <table:table-cell table:style-name="Default" office:value-type="string" calcext:value-type="string">
+      <text:p>Relatively higher percentage of cache misses</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Default" table:number-columns-repeated="2"/>
+     <table:table-cell table:number-columns-repeated="2"/>
+    </table:table-row>
+    <table:table-row table:style-name="ro1">
+     <table:table-cell table:number-columns-repeated="2"/>
+     <table:table-cell table:style-name="Default" table:number-columns-repeated="3"/>
+     <table:table-cell table:number-columns-repeated="2"/>
+    </table:table-row>
+    <table:table-row table:style-name="ro1">
+     <table:table-cell/>
+     <table:table-cell office:value-type="string" calcext:value-type="string">
+      <text:p>But</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Default" office:value-type="string" calcext:value-type="string">
+      <text:p>Fewer branch misses, and fewer L1 cache load misses compared to vec</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Default" table:number-columns-repeated="2"/>
+     <table:table-cell table:number-columns-repeated="2"/>
     </table:table-row>
    </table:table>
    <table:named-expressions/>

@@ -65,4 +65,12 @@ datasets = {
         10: '/nvtmp/AethraTestData/SSB/sf-10',
         100: '/nvtmp/AethraTestData/SSB/sf-100',
     },
+
+    'increasing_filter_count': {
+        75: '/nvtmp/AethraTestData/increasing_filter_count_sf75',
+    },
+
+    'arithmetic_table': {
+        75: '/nvtmp/AethraTestData/arithmetic_table_sf75',
+    },
 }

@@ -1,0 +1,9 @@
+Benchmark,Dataset,Scale-Factor,Paradigm,Repetitions,ResultSummarised,Planning-Time,Codegen-Time,Compilation-Time,Execution-Time,Total-Time
+increasing_arithmetic_1_ops,arithmetic_table,75,non-vectorised,10,False,14.5,2.6,58.7,71805.1,71899.3
+increasing_arithmetic_1_ops,arithmetic_table,75,vectorised,10,False,14.6,2.7,60.8,71760.8,71857.8
+increasing_arithmetic_2_ops,arithmetic_table,75,non-vectorised,10,False,14.6,2.7,58.3,70478.3,70572.4
+increasing_arithmetic_2_ops,arithmetic_table,75,vectorised,10,False,14.7,2.7,63.4,71748.1,71847.9
+increasing_arithmetic_3_ops,arithmetic_table,75,non-vectorised,10,False,14.8,2.8,59.5,70611.6,70707.5
+increasing_arithmetic_3_ops,arithmetic_table,75,vectorised,10,False,14.7,2.7,58.9,71881.7,71976.4
+increasing_arithmetic_4_ops,arithmetic_table,75,non-vectorised,10,False,14.9,2.7,60.6,71886.4,71983.2
+increasing_arithmetic_4_ops,arithmetic_table,75,vectorised,10,False,15.1,2.7,59.0,71728.0,71823.5

@@ -249,4 +249,139 @@ benchmarks = {
         ],
         'summarise': True,
     },
+
+    'increasing_filter_count_1_filters': {
+        'datasets': [
+            'increasing_filter_count',
+        ],
+        'scale_factors': [
+            75
+        ],
+        'query_file': 'increasing_filter_count_microbenchmark/1_filters.sql',
+        'paradigms': [
+            "non-vectorised",
+            "vectorised"
+        ],
+        'summarise': True,
+    },
+
+    'increasing_filter_count_2_filters': {
+        'datasets': [
+            'increasing_filter_count',
+        ],
+        'scale_factors': [
+            75
+        ],
+        'query_file': 'increasing_filter_count_microbenchmark/2_filters.sql',
+        'paradigms': [
+            "non-vectorised",
+            "vectorised"
+        ],
+        'summarise': True,
+    },
+
+    'increasing_filter_count_3_filters': {
+        'datasets': [
+            'increasing_filter_count',
+        ],
+        'scale_factors': [
+            75
+        ],
+        'query_file': 'increasing_filter_count_microbenchmark/3_filters.sql',
+        'paradigms': [
+            "non-vectorised",
+            "vectorised"
+        ],
+        'summarise': True,
+    },
+
+    'increasing_filter_count_4_filters': {
+        'datasets': [
+            'increasing_filter_count',
+        ],
+        'scale_factors': [
+            75
+        ],
+        'query_file': 'increasing_filter_count_microbenchmark/4_filters.sql',
+        'paradigms': [
+            "non-vectorised",
+            "vectorised"
+        ],
+        'summarise': True,
+    },
+
+    'increasing_filter_count_5_filters': {
+        'datasets': [
+            'increasing_filter_count',
+        ],
+        'scale_factors': [
+            75
+        ],
+        'query_file': 'increasing_filter_count_microbenchmark/5_filters.sql',
+        'paradigms': [
+            "non-vectorised",
+            "vectorised"
+        ],
+        'summarise': True,
+    },
+
+    'increasing_arithmetic_1_ops': {
+        'datasets': [
+            'arithmetic_table',
+        ],
+        'scale_factors': [
+            75
+        ],
+        'query_file': 'increasing_arithmetic_microbenchmark/1_ops.sql',
+        'paradigms': [
+            "non-vectorised",
+            "vectorised"
+        ],
+        'summarise': False,
+    },
+
+    'increasing_arithmetic_2_ops': {
+        'datasets': [
+            'arithmetic_table',
+        ],
+        'scale_factors': [
+            75
+        ],
+        'query_file': 'increasing_arithmetic_microbenchmark/2_ops.sql',
+        'paradigms': [
+            "non-vectorised",
+            "vectorised"
+        ],
+        'summarise': False,
+    },
+
+    'increasing_arithmetic_3_ops': {
+        'datasets': [
+            'arithmetic_table',
+        ],
+        'scale_factors': [
+            75
+        ],
+        'query_file': 'increasing_arithmetic_microbenchmark/3_ops.sql',
+        'paradigms': [
+            "non-vectorised",
+            "vectorised"
+        ],
+        'summarise': False,
+    },
+
+    'increasing_arithmetic_4_ops': {
+        'datasets': [
+            'arithmetic_table',
+        ],
+        'scale_factors': [
+            75
+        ],
+        'query_file': 'increasing_arithmetic_microbenchmark/4_ops.sql',
+        'paradigms': [
+            "non-vectorised",
+            "vectorised"
+        ],
+        'summarise': False,
+    },
 }
