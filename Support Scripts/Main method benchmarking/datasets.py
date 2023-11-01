@@ -70,6 +70,10 @@ datasets = {
         75: '/nvtmp/AethraTestData/increasing_filter_count_sf75',
     },
 
+    'increasing_filter_count_100_cols': {
+        75: '/nvtmp/AethraTestData/increasing_filter_count_100_cols_sf75',
+    },
+
     'arithmetic_table': {
         75: '/nvtmp/AethraTestData/arithmetic_table_sf75',
     },

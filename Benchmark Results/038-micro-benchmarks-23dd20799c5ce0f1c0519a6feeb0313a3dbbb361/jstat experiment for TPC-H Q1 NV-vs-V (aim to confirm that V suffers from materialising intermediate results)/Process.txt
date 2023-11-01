@@ -1,0 +1,9 @@
+1) Launch the benchmark as usual
+2) Find the vm PID using jcmd
+3) Use `jstat -gc [PID] 500ms` to obtain garbage collection stats
+4) Analyse (e.g. visualise using http://nix-on.blogspot.com/2015/01/java-jstat-how-to-visualize-garbage.html)
+
+Or: combined command: jstat -gc -t $(pgrep java) 250ms
+
+Useful information on garbage collection:
+https://stackoverflow.com/questions/13660871/jvm-garbage-collection-in-young-generation/13661014#13661014
