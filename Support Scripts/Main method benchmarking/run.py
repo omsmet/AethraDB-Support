@@ -32,7 +32,7 @@ java_options = [
 number_repetitions = 10
 
 # Constant definitions
-csv_header = ['Benchmark', 'Dataset', 'Scale-Factor', 'Paradigm', 'Repetitions', 'ResultSummarised', 'Planning-Time', 'Codegen-Time', 'Compilation-Time', 'Execution-Time', 'Total-Time']
+csv_header = ['Benchmark', 'Dataset', 'Scale-Factor', 'Paradigm', 'Iteration', 'ResultSummarised', 'Planning-Time', 'Codegen-Time', 'Compilation-Time', 'Execution-Time', 'Total-Time']
 
 # Initialise CSV writer
 file_name = 'main_method_benchmark_result_{date:%Y-%m-%d_%H:%M:%S}.csv'.format( date = datetime.now() )
@@ -78,12 +78,6 @@ for benchmark_name, benchmark_definition in benchmarks.benchmarks.items():
                 summarise_result = benchmark_definition['summarise']
                 if summarise_result:
                     benchmark_arguments = benchmark_arguments + ['-s']
-
-                total_planning_time = 0.0
-                total_codegen_time = 0.0
-                total_compilation_time = 0.0
-                total_execution_time = 0.0
-                total_time = 0.0
                 
                 # Repeat the experiment number_repetitions times
                 for i in range(number_repetitions):
@@ -102,39 +96,30 @@ for benchmark_name, benchmark_definition in benchmarks.benchmarks.items():
                         # Detect the line that has the actual timing information
                         if decoded_line[0] == '{' and decoded_line[-1] == '}':
                             timing_information = json.loads(decoded_line)
-                            total_planning_time += timing_information["planning"]
-                            total_codegen_time += timing_information["codegen"]
-                            total_compilation_time += timing_information["compilation"]
-                            total_execution_time += timing_information["execution"]
-                            total_time += timing_information["total"]
+                            planning_time = round(timing_information["planning"], 1)
+                            codegen_time = round(timing_information["codegen"], 1)
+                            compilation_time = round(timing_information["compilation"], 1)
+                            execution_time = round(timing_information["execution"], 1)
+                            total_time = round(timing_information["total"], 1)
+
+                            # Write a line to the benchmark output file
+                            csv_writer.writerow([
+                                benchmark_name,
+                                benchmark_dataset,
+                                benchmark_scale_factor,
+                                benchmark_paradigm,
+                                i,
+                                summarise_result,
+                                planning_time,
+                                codegen_time,
+                                compilation_time,
+                                execution_time,
+                                total_time
+                            ])
+
                             break
 
-                average_planning_time = round(total_planning_time / number_repetitions, 1)
-                average_codegen_time = round(total_codegen_time / number_repetitions, 1)
-                average_compilation_time = round(total_compilation_time / number_repetitions, 1)
-                average_execution_time = round(total_execution_time / number_repetitions, 1)
-                average_time = round(total_time / number_repetitions, 1)
-                print('Finished executing current benchmark configuration!')
-                print('Average planning time was ' + str(average_planning_time) + 'ms.')
-                print('Average codegen time was ' + str(average_codegen_time) + 'ms.')
-                print('Average compilation time was ' + str(average_compilation_time) + 'ms.')
-                print('Average execution time was ' + str(average_execution_time) + 'ms.')
-                print('Average total time was ' + str(average_time) + 'ms.\n\n')
-
-                # Write a line to the benchmark output file
-                csv_writer.writerow([
-                    benchmark_name,
-                    benchmark_dataset,
-                    benchmark_scale_factor,
-                    benchmark_paradigm,
-                    number_repetitions,
-                    summarise_result,
-                    average_planning_time,
-                    average_codegen_time,
-                    average_compilation_time,
-                    average_execution_time,
-                    average_time
-                ])
+                print('Finished executing current benchmark configuration!\n\n')
 
 # Clean up
 csv_file.close()

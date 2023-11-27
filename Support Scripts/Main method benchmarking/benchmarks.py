@@ -6,62 +6,62 @@
 #   - Whether to summarise the result as a count of the number of rows in the result
 
 benchmarks = {
-    'filter_query': {
-        'datasets': [
-            'filter_query_int_rest_1',
-            'filter_query_int_rest_2',
-            'filter_query_int_rest_3',
-        ],
-        'scale_factors': [
-            1,
-            10,
-            20,
-        ],
-        'query_file': 'filter_query.sql',
-        'paradigms': [
-            "non-vectorised",
-            "vectorised",
-        ],
-        'summarise': False,
-    },
+    # 'filter_query': {
+    #     'datasets': [
+    #         'filter_query_int_rest_1',
+    #         'filter_query_int_rest_2',
+    #         'filter_query_int_rest_3',
+    #     ],
+    #     'scale_factors': [
+    #         1,
+    #         10,
+    #         20,
+    #     ],
+    #     'query_file': 'filter_query.sql',
+    #     'paradigms': [
+    #         "non-vectorised",
+    #         "vectorised",
+    #     ],
+    #     'summarise': False,
+    # },
 
-    'aggregation_query': {
-        'datasets': [
-            'aggregation_query_int_keys_2',
-            'aggregation_query_int_keys_16',
-            'aggregation_query_int_keys_8192',
-            'aggregation_query_int_keys_262144',
-            'aggregation_query_int_keys_524288',
-        ],
-        'scale_factors': [
-            1,
-            10,
-            20,
-        ],
-        'query_file': 'aggregation_query.sql',
-        'paradigms': [
-            "non-vectorised",
-            "vectorised",
-        ],
-        'summarise': True,
-    },
+    # 'aggregation_query': {
+    #     'datasets': [
+    #         'aggregation_query_int_keys_2',
+    #         'aggregation_query_int_keys_16',
+    #         'aggregation_query_int_keys_8192',
+    #         'aggregation_query_int_keys_262144',
+    #         'aggregation_query_int_keys_524288',
+    #     ],
+    #     'scale_factors': [
+    #         1,
+    #         10,
+    #         20,
+    #     ],
+    #     'query_file': 'aggregation_query.sql',
+    #     'paradigms': [
+    #         "non-vectorised",
+    #         "vectorised",
+    #     ],
+    #     'summarise': True,
+    # },
 
-    'join_query': {
-        'datasets': [
-            'join_query_int_B_0.6_C_0.8',
-        ],
-        'scale_factors': [
-            1,
-            10,
-            #20,
-        ],
-        'query_file': 'join_query.sql',
-        'paradigms': [
-            "non-vectorised",
-            "vectorised",
-        ],
-        'summarise': True,
-    },
+    # 'join_query': {
+    #     'datasets': [
+    #         'join_query_int_B_0.6_C_0.8',
+    #     ],
+    #     'scale_factors': [
+    #         1,
+    #         10,
+    #         #20,
+    #     ],
+    #     'query_file': 'join_query.sql',
+    #     'paradigms': [
+    #         "non-vectorised",
+    #         "vectorised",
+    #     ],
+    #     'summarise': True,
+    # },
 
     'tpch_q1': {
         'datasets': [
